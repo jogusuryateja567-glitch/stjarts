@@ -1,0 +1,3609 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="S.T.J.A.R.T.S — Bespoke graphite &amp; charcoal portraits hand-drawn by Surya Teja. Tactile realism, timeless emotion, and archival craftsmanship." name="description"/>
+<meta name="theme-color" content="#e6e3dc"/>
+<meta property="og:title" content="S.T.J.A.R.T.S — Handcrafted Fine Pencil Portraits"/>
+<meta property="og:description" content="Bespoke graphite &amp; charcoal portraits hand-drawn by Surya Teja."/>
+<meta property="og:type" content="website"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2311110f'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='900' font-size='26' text-anchor='middle' fill='%23f4f2ec'%3EST%3C/text%3E%3C/svg%3E"/>
+<script>try{var t=localStorage.getItem("stjarts_theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<noscript><style>.scroll-reveal{opacity:1!important;transform:none!important}
+/* ======================================================================
+   COMMISSION STUDIO — EDITORIAL CONVERSION LAYOUT
+   Keeps all existing calculator IDs/logic intact; changes only composition.
+   ====================================================================== */
+#pricing{
+  position:relative;
+  overflow:hidden;
+}
+#pricing::before{
+  content:"COMMISSION / 01";
+  position:absolute;
+  top:110px;
+  right:-42px;
+  font-family:var(--font-mono);
+  font-size:9px;
+  letter-spacing:.22em;
+  color:var(--mut);
+  opacity:.55;
+  transform:rotate(90deg);
+}
+#pricing .section-header-atelier{
+  align-items:end;
+  grid-template-columns:minmax(0,1fr) minmax(280px,.62fr);
+  margin-bottom:34px;
+}
+#pricing .section-header-atelier h2{
+  max-width:760px;
+  font-size:clamp(42px,5.2vw,76px);
+  line-height:.94;
+  letter-spacing:-.045em;
+}
+#pricing .section-header-atelier>p{
+  max-width:390px;
+  padding-bottom:5px;
+  border-left:1px solid var(--line-strong);
+  padding-left:22px;
+}
+#pricing .drafting-desk-outer{
+  padding:16px;
+  border-radius:34px;
+  background:linear-gradient(135deg,rgba(255,255,255,.74),rgba(232,229,220,.8));
+  box-shadow:0 28px 70px rgba(22,22,20,.12),inset 0 1px 0 rgba(255,255,255,.85);
+}
+#pricing .drafting-desk-outer::before{
+  top:8px;
+  left:34px;
+  right:34px;
+  opacity:.22;
+}
+#pricing .drafting-grid-inner{
+  grid-template-columns:minmax(280px,.82fr) minmax(420px,1.18fr);
+  gap:16px;
+  align-items:stretch;
+}
+#pricing .drafting-ticket-well{
+  grid-column:1;
+  grid-row:1;
+  min-height:590px;
+  padding:42px;
+  border-radius:27px;
+  background:linear-gradient(155deg,rgba(250,249,245,.94),rgba(239,236,228,.82));
+  border:1px solid rgba(36,36,32,.09);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 18px 45px rgba(30,28,22,.08);
+  justify-content:space-between;
+}
+#pricing .drafting-ticket-well::before{
+  content:"THE BRIEF";
+  display:block;
+  position:absolute;
+  top:25px;
+  right:28px;
+  font-family:var(--font-mono);
+  font-size:8px;
+  letter-spacing:.2em;
+  color:var(--mut);
+  opacity:.7;
+}
+#pricing .drafting-ticket-well .eyebrow{
+  margin-bottom:12px;
+}
+#pricing .drafting-ticket-well h3{
+  font-size:clamp(28px,3vw,44px);
+  line-height:1;
+  letter-spacing:-.035em;
+  max-width:430px;
+}
+#pricing .drafting-ticket-well p{
+  max-width:430px;
+  font-size:14px!important;
+  line-height:1.75;
+}
+#pricing .feature-check-list{
+  display:grid;
+  gap:12px;
+  margin-top:28px;
+}
+#pricing .feature-check-list li{
+  padding:12px 0 12px 26px;
+  border-bottom:1px solid rgba(30,30,25,.09);
+  font-size:11px;
+}
+#pricing .drafting-controls-well{
+  grid-column:2;
+  grid-row:1;
+  padding:38px;
+  border-radius:27px;
+  background:var(--paper);
+  box-shadow:0 20px 48px rgba(25,24,20,.09),inset 0 1px 0 rgba(255,255,255,.85);
+  border:1px solid rgba(35,35,30,.08);
+}
+#pricing .drafting-controls-well>.mono-tag{
+  margin-top:3px;
+  font-size:9px!important;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+#pricing .segment-control{
+  width:100%;
+  margin-bottom:30px;
+}
+#pricing .segment-btn{
+  flex:1;
+  min-height:52px;
+}
+#pricing .pill-group{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:7px;
+  margin-bottom:24px;
+}
+#pricing .size-pill{
+  min-width:0;
+  min-height:46px;
+  padding:10px 5px;
+  white-space:nowrap;
+}
+#pricing .calc-toggles{
+  border-top:1px solid var(--line-strong);
+  padding-top:7px;
+}
+#pricing .toggle-row{
+  min-height:62px;
+  border-bottom:1px solid rgba(30,30,25,.08);
+}
+#pricing .price-display-box{
+  margin-top:24px;
+  padding:24px 26px;
+  border-radius:20px;
+  background:var(--ink);
+  color:var(--paper);
+  box-shadow:0 18px 34px rgba(25,24,20,.18);
+}
+#pricing .price-display-box .mono-tag{
+  color:rgba(247,244,236,.62)!important;
+}
+#pricing .price-figure{
+  margin:7px 0 8px;
+  font-size:clamp(48px,5vw,72px);
+  letter-spacing:-.055em;
+  color:var(--paper);
+}
+#pricing .price-figure span{
+  color:rgba(247,244,236,.52);
+}
+#pricing .price-display-box p{
+  color:rgba(247,244,236,.58)!important;
+}
+#pricing #startCommissionBtn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  min-height:58px;
+  margin-top:16px!important;
+  border-radius:16px;
+  letter-spacing:.02em;
+}
+#pricing .drafting-ticket-well>div:last-child{
+  padding-top:20px!important;
+  margin-top:28px!important;
+}
+#pricing .drafting-ticket-well>div:last-child span:first-child{
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--paper);
+  box-shadow:var(--neu-subtle);
+  font-size:0;
+}
+#pricing .drafting-ticket-well>div:last-child span:first-child::after{
+  content:"✓";
+  font-family:var(--font-mono);
+  font-size:13px;
+}
+@media(max-width:960px){
+  #pricing .section-header-atelier{grid-template-columns:1fr .8fr}
+  #pricing .drafting-grid-inner{grid-template-columns:1fr 1.08fr}
+  #pricing .drafting-ticket-well,#pricing .drafting-controls-well{padding:30px}
+  #pricing .pill-group{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:680px){
+  #pricing::before{display:none}
+  #pricing .section-header-atelier{display:block;margin-bottom:24px}
+  #pricing .section-header-atelier h2{font-size:clamp(39px,12vw,58px);line-height:.92}
+  #pricing .section-header-atelier>p{margin-top:18px;padding:14px 0 0;border-left:0;border-top:1px solid var(--line-strong);max-width:none}
+  #pricing .drafting-desk-outer{padding:10px!important;border-radius:28px!important}
+  #pricing .drafting-grid-inner{display:flex!important;flex-direction:column!important;gap:10px!important}
+  #pricing .drafting-ticket-well{order:-1;min-height:0;padding:25px!important;border-radius:22px!important}
+  #pricing .drafting-controls-well{padding:22px!important;border-radius:22px!important}
+  #pricing .drafting-ticket-well h3{font-size:31px}
+  #pricing .drafting-ticket-well::before{top:20px;right:20px}
+  #pricing .pill-group{grid-template-columns:repeat(2,1fr);gap:7px}
+  #pricing .size-pill{min-height:44px}
+  #pricing .price-display-box{padding:20px;margin-top:18px}
+  #pricing .price-figure{font-size:clamp(46px,15vw,66px)}
+  #pricing #startCommissionBtn{min-height:56px}
+}
+
+</style></noscript>
+<title>S.T.J.A.R.T.S — Handcrafted Fine Pencil Portraits</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,700&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,400&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #e6e3dc;
+  --bg-deep: #dad6cd;
+  --paper: #f4f2ec;
+  --ink: #11110f;
+  --ink-secondary: #24231f;
+  --mut: #686761;
+  --soft: #99968d;
+  --line: rgba(17, 17, 15, 0.08);
+  --line-strong: rgba(17, 17, 15, 0.16);
+  --line-glass: rgba(255, 255, 255, 0.45);
+  
+  /* Neumorphic tactile extrusions & insets */
+  --neu-flat: 14px 14px 34px rgba(22, 20, 16, 0.11), -14px -14px 32px rgba(255, 255, 255, 0.85);
+  --neu-lift: 24px 28px 56px rgba(20, 18, 14, 0.15), -18px -18px 42px rgba(255, 255, 255, 0.95);
+  --neu-pressed: inset 5px 5px 12px rgba(20, 18, 14, 0.13), inset -5px -5px 12px rgba(255, 255, 255, 0.88);
+  --neu-groove: inset 2px 2px 5px rgba(20, 18, 14, 0.18), inset -2px -2px 5px rgba(255, 255, 255, 0.95);
+  --neu-subtle: 8px 8px 22px rgba(22, 20, 16, 0.08), -8px -8px 20px rgba(255, 255, 255, 0.78);
+  --neu-pill: 6px 7px 18px rgba(20, 18, 14, 0.1), -6px -6px 16px rgba(255, 255, 255, 0.82);
+
+  /* Frosted Glassmorphism overlays */
+  --glass-bg: rgba(246, 244, 239, 0.62);
+  --glass-bg-card: rgba(244, 242, 236, 0.74);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.65);
+  --glass-shadow: 0 30px 60px -15px rgba(17, 17, 15, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+
+  --font-display: 'Epilogue', -apple-system, sans-serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-mono: 'Space Mono', monospace;
+  --max: 1380px;
+}
+
+[data-theme="dark"] {
+  --bg: #121211;
+  --bg-deep: #090908;
+  --paper: #1b1a18;
+  --ink: #f2f0e8;
+  --ink-secondary: #dedad0;
+  --mut: #a09d93;
+  --soft: #6c6960;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --line-glass: rgba(255, 255, 255, 0.14);
+  --neu-flat: 12px 14px 34px rgba(0, 0, 0, 0.6), -8px -8px 24px rgba(255, 255, 255, 0.035);
+  --neu-lift: 18px 24px 50px rgba(0, 0, 0, 0.75), -12px -12px 30px rgba(255, 255, 255, 0.045);
+  --neu-pressed: inset 5px 5px 14px rgba(0, 0, 0, 0.7), inset -5px -5px 14px rgba(255, 255, 255, 0.04);
+  --neu-groove: inset 2px 2px 6px rgba(0, 0, 0, 0.8), inset -2px -2px 6px rgba(255, 255, 255, 0.05);
+  --neu-subtle: 6px 7px 18px rgba(0, 0, 0, 0.45), -5px -5px 14px rgba(255, 255, 255, 0.025);
+  --neu-pill: 5px 6px 14px rgba(0, 0, 0, 0.5), -4px -4px 12px rgba(255, 255, 255, 0.03);
+  --glass-bg: rgba(27, 26, 24, 0.72);
+  --glass-bg-card: rgba(24, 23, 21, 0.82);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  background-color: var(--bg);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: 
+    radial-gradient(ellipse 120% 90% at 10% 5%, rgba(255,255,255,0.55) 0%, transparent 55%),
+    radial-gradient(circle 800px at 90% 40%, rgba(218, 214, 205, 0.6) 0%, transparent 60%),
+    linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 40%);
+  color: var(--ink);
+  font: 400 15px/1.65 var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  position: relative;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Drafting grid subtle watermark */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-size: 64px 64px;
+  background-image: 
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+/* Interactive light tracker */
+.ambient-glow {
+  position: fixed;
+  width: 580px;
+  height: 580px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.32) 0%, rgba(240, 235, 225, 0.08) 50%, transparent 70%);
+  transform: translate(-50%, -50%);
+  mix-blend-mode: soft-light;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  left: 50%;
+  top: 30%;
+}
+
+.scroll-indicator-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #11110f, #686761, #11110f);
+  transform-origin: 0% 50%;
+  transform: scaleX(0);
+  z-index: 1000;
+}
+
+.w {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  padding: 140px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Architectural Neo-Grotesque Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: clamp(64px, 8.8vw, 136px);
+  line-height: 0.88;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(44px, 5.8vw, 84px);
+  line-height: 0.92;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+h3 {
+  font-size: clamp(24px, 2.8vw, 38px);
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--mut);
+  text-transform: none;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--mut);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.eyebrow::before {
+  content: "§";
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Floating Glass-Neumorphic Tactile Cards */
+.neu-card {
+  background: var(--glass-bg-card);
+  backdrop-filter: blur(28px) saturate(135%);
+  -webkit-backdrop-filter: blur(28px) saturate(135%);
+  border: var(--glass-border);
+  border-radius: 28px;
+  box-shadow: var(--neu-flat), var(--glass-shadow);
+  padding: 38px;
+  position: relative;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+.neu-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.05) 55%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.neu-card > * {
+  position: relative;
+  z-index: 1;
+}
+.neu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--neu-lift), var(--glass-shadow);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 999px;
+  padding: 17px 32px;
+  font: 700 12px/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  position: relative;
+  user-select: none;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--bg);
+  box-shadow: 0 16px 32px -8px rgba(17, 17, 15, 0.32);
+}
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 22px 42px -8px rgba(17, 17, 15, 0.42);
+}
+.btn-neu {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--ink);
+  border: var(--glass-border);
+  box-shadow: var(--neu-pill);
+}
+.btn-neu:hover {
+  box-shadow: var(--neu-flat);
+  transform: translateY(-2px);
+}
+
+/* Floating Navigation */
+nav.glass-nav {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 48px), 1180px);
+  padding: 10px 14px 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(32px) saturate(140%);
+  -webkit-backdrop-filter: blur(32px) saturate(140%);
+  border: var(--glass-border);
+  box-shadow: var(--neu-pill), 0 20px 40px -10px rgba(0,0,0,0.08);
+  z-index: 100;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+nav.glass-nav.scrolled {
+  top: 14px;
+  background: rgba(245, 243, 238, 0.92);
+  box-shadow: var(--neu-flat), 0 25px 45px -8px rgba(0, 0, 0, 0.12);
+}
+nav.glass-nav.nav-hidden {
+  transform: translate(-50%, -140%);
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  font: 800 14px var(--font-mono);
+  letter-spacing: 0.16em;
+}
+.brand-mark .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ink);
+  box-shadow: inset -1px -1px 2px rgba(255,255,255,0.4), 0 0 0 4px rgba(17, 17, 15, 0.08);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.22);
+  padding: 4px;
+  border-radius: 999px;
+  box-shadow: var(--neu-pressed);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.nav-links a {
+  text-decoration: none;
+  font: 700 11px var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mut);
+  padding: 8px 18px;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: var(--neu-pill);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: var(--glass-border);
+  background: var(--glass-bg);
+  box-shadow: var(--neu-pill);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--ink);
+  transition: transform 0.3s;
+}
+.theme-btn:hover {
+  transform: rotate(25deg);
+}
+
+.mobile-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  box-shadow: var(--neu-pill);
+  cursor: pointer;
+  place-items: center;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+
+/* Hero availability + artist introduction */
+.hero-availability-stack{position:absolute;top:150px;right:5%;z-index:8;display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.hero-availability-stack .atelier-badge-rotated{position:static}
+.hero-commission-btn{padding:13px 20px;font-size:10px;box-shadow:0 16px 34px -10px rgba(17,17,15,.28)}
+.hero-artist-intro h3{font-size:clamp(30px,3.2vw,48px);line-height:1.02;margin-top:4px;max-width:620px}
+.hero-artist-intro h3 em{display:block;margin-top:4px}
+.hero-artist-note{color:var(--mut);font-size:15px;line-height:1.7;max-width:560px;margin:0}
+.hero-artist-signature{display:flex;align-items:center;gap:14px;margin-top:30px;color:var(--mut);flex-wrap:wrap}
+.hero-artist-rule{height:1px;width:54px;background:var(--line-strong);display:block}
+@media(max-width:1100px){.hero-availability-stack{top:132px;right:3%}}
+@media(max-width:820px){.hero-availability-stack{position:static;align-items:flex-start;margin:0 0 28px}.hero-commission-btn{align-self:flex-start}.hero-artist-intro h3{font-size:clamp(30px,8vw,44px)}}
+
+/* ==========================================================================
+   RADICAL SWISS MODULAR DECONSTRUCTION: HERO SECTION
+   Colliding parchment planes, angled typographic banners, overlapping z-index
+   ========================================================================== */
+.hero-atelier {
+  min-height: 100vh;
+  padding: 175px 0 110px;
+  position: relative;
+}
+
+/* Kinetic Staggered Typographic Stack */
+.hero-stack {
+  position: relative;
+  z-index: 3;
+}
+.hero-title-line {
+  display: block;
+  overflow: visible;
+}
+.hero-title-line.stagger-1 {
+  transform: translateX(-8px);
+}
+.hero-title-line.stagger-2 {
+  transform: translateX(36px);
+  margin-top: -8px;
+}
+
+/* Deconstructed Rotated Atelier Tape / Stamp */
+.atelier-badge-rotated {
+  position: absolute;
+  top: 150px;
+  right: 5%;
+  transform: rotate(6deg);
+  background: var(--paper);
+  border: 1px dashed var(--mut);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: var(--neu-flat);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pulse-orb {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #178a48;
+  box-shadow: 0 0 0 5px rgba(23, 138, 72, 0.18);
+  animation: pulse 2.4s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(23, 138, 72, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(23, 138, 72, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(23, 138, 72, 0); }
+}
+
+/* Irregular Asymmetric Atelier Grid for Hero */
+.hero-modular-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+.hero-copy-plane {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: var(--glass-border);
+  padding: 40px;
+  border-radius: 32px;
+  box-shadow: var(--neu-flat);
+  position: relative;
+  z-index: 4;
+}
+
+.hero-sub {
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.65;
+  color: var(--mut);
+  margin: 0 0 36px;
+  font-weight: 400;
+}
+
+/* Inset Technical Meter Stats */
+.hero-meter-dock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 36px;
+  padding: 16px;
+  border-radius: 20px;
+  background: var(--bg-deep);
+  box-shadow: var(--neu-groove);
+}
+.meter-cell {
+  background: var(--paper);
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow: var(--neu-subtle);
+  border: 1px solid var(--line-glass);
+}
+.meter-cell h4 {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+.meter-cell span {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mut);
+  display: block;
+  margin-top: 6px;
+}
+
+/* Floating Art Plane with Offset Overlapping Back-layer */
+.hero-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1400px;
+}
+
+.parchment-backing-plane {
+  position: absolute;
+  width: 90%;
+  height: 98%;
+  background: var(--bg-deep);
+  border-radius: 36px;
+  box-shadow: var(--neu-flat);
+  transform: rotate(-5deg) translate(-20px, 10px);
+  z-index: 1;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.hero-canvas-frame {
+  width: min(440px, 90vw);
+  height: 560px;
+  border-radius: 36px;
+  background: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 16px;
+  box-shadow: var(--neu-lift), 0 40px 80px -20px rgba(17, 17, 15, 0.25);
+  transform-style: preserve-3d;
+  transform: rotate3d(0.3, -0.4, 0.05, 5deg);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.7s ease;
+  position: relative;
+  z-index: 3;
+}
+.hero-canvas-frame:hover {
+  transform: rotate3d(0, 0, 0, 0deg) scale(1.02);
+  box-shadow: 26px 36px 65px rgba(17, 17, 15, 0.2), -18px -18px 45px rgba(255, 255, 255, 0.95);
+}
+
+.hero-drawing-board {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  background: radial-gradient(circle at 35% 30%, #ffffff 0%, #ebe8e1 60%, #dedad1 100%);
+  box-shadow: var(--neu-pressed);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.hero-drawing-board svg.pencil-sketch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 82%;
+  height: auto;
+  opacity: 0.88;
+  filter: drop-shadow(0 14px 22px rgba(20, 18, 15, 0.15));
+  transition: transform 0.5s ease;
+}
+.hero-canvas-frame:hover svg.pencil-sketch {
+  transform: translate(-50%, -52%) scale(1.03);
+}
+
+.floating-glass-badge {
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+  padding: 16px 24px;
+  background: var(--glass-bg-card);
+  backdrop-filter: blur(24px) saturate(140%);
+  border: var(--glass-border);
+  border-radius: 22px;
+  box-shadow: var(--neu-flat), 0 20px 40px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 6;
+  transform: translateZ(40px);
+}
+.floating-glass-badge strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+.floating-glass-badge span {
+  font-size: 11px;
+  color: var(--mut);
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   IRREGULAR 3-COLUMN BRICK RHYTHM GALLERY WITH FLOATING GLASS TILES
+   ========================================================================== */
+.section-header-atelier {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  position: relative;
+}
+.section-header-atelier p {
+  color: var(--mut);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+.filter-chip {
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  color: var(--mut);
+  font: 700 11px var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: var(--neu-subtle);
+  transition: all 0.25s ease;
+}
+.filter-chip:hover {
+  color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: var(--neu-pill);
+}
+.filter-chip.active {
+  background: var(--ink);
+  color: var(--bg);
+  box-shadow: 0 12px 24px rgba(17, 17, 15, 0.25);
+}
+
+/* Pinterest-style 3-column masonry gallery.
+   Every artwork keeps its own intrinsic aspect ratio; nothing is cropped. */
+.brick-gallery-grid {
+  --gallery-gap: 30px;
+  column-count: var(--cols, 3);
+  column-gap: var(--gallery-gap);
+  display: block;
+  position: relative;
+  padding-bottom: 64px;
+}
+
+.brick-gallery-col {
+  display: contents;
+}
+
+.art-card {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 var(--gallery-gap);
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  border-radius: 28px;
+  background: var(--glass-bg-card);
+  backdrop-filter: blur(24px);
+  border: var(--glass-border);
+  box-shadow: var(--neu-flat);
+  padding: 14px;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+.art-card:hover {
+  transform: translateY(-8px) scale(1.012);
+  box-shadow: var(--neu-lift), 0 32px 64px -16px rgba(17, 17, 15, 0.2);
+}
+
+.art-preview-wrap {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: radial-gradient(circle at 40% 30%, #f6f5f1 0%, #e2ded5 100%);
+  box-shadow: var(--neu-pressed);
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+.art-preview-wrap img {
+  width: 100%;
+  height: auto !important;
+  max-width: 100%;
+  display: block;
+  object-fit: contain !important;
+}
+.art-card.tall .art-preview-wrap {
+  aspect-ratio: auto;
+}
+
+.art-placeholder-vector {
+  width: 100%;
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  position: relative;
+  line-height: 1.5;
+}
+
+/* Floating Glass Inspection Loupe Tile on Artwork */
+.inspection-glass-tile {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--neu-subtle);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.art-meta-row {
+  padding: 20px 8px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.art-meta-title {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.art-meta-subtitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--mut);
+  margin-top: 6px;
+}
+.art-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--neu-subtle);
+  color: var(--mut);
+}
+
+/* ==========================================================================
+   DECONSTRUCTED PROCESS JOURNEY: COLLIDING PARCHMENT PANELS
+   ========================================================================== */
+.process-deconstructed-wrap {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+  position: relative;
+}
+.sticky-column {
+  position: sticky;
+  top: 130px;
+}
+
+.process-cascade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  position: relative;
+}
+
+.process-sheet {
+  background: var(--glass-bg-card);
+  border-radius: 28px;
+  border: var(--glass-border);
+  box-shadow: var(--neu-flat);
+  padding: 38px 44px;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 28px;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+.process-sheet:hover {
+  transform: translateX(10px);
+}
+.step-number-stamp {
+  font-family: var(--font-mono);
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--mut);
+  opacity: 0.4;
+  border-right: 1px dashed var(--line-strong);
+  padding-right: 20px;
+}
+.process-sheet h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.process-sheet p {
+  color: var(--mut);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   INSET DRAFTING TABLE COMMISSION CALCULATOR
+   Recessed grooves, extruded toggles, stamped live calculation ticket
+   ========================================================================== */
+.drafting-desk-outer {
+  background: var(--bg-deep);
+  border-radius: 40px;
+  box-shadow: var(--neu-groove), 0 30px 60px rgba(0,0,0,0.1);
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+
+/* Mechanical Drafting Rulers / Grooves */
+.drafting-desk-outer::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 32px;
+  right: 32px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--mut) 0px, var(--mut) 1px, transparent 1px, transparent 12px);
+  opacity: 0.4;
+}
+
+.drafting-grid-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+}
+
+.drafting-controls-well {
+  background: var(--paper);
+  border-radius: 28px;
+  padding: 44px;
+  box-shadow: var(--neu-subtle);
+  border: 1px solid var(--line-glass);
+}
+
+.drafting-ticket-well {
+  background: var(--glass-bg-card);
+  backdrop-filter: blur(28px);
+  border-radius: 28px;
+  padding: 44px;
+  box-shadow: var(--neu-flat);
+  border: var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Ticket Serrated Top Edge Detail */
+.drafting-ticket-well::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 20px;
+  right: 20px;
+  height: 6px;
+  background: radial-gradient(circle, var(--bg-deep) 3px, transparent 4px) repeat-x;
+  background-size: 12px 6px;
+}
+
+.segment-control {
+  display: inline-flex;
+  padding: 6px;
+  border-radius: 999px;
+  background: var(--bg-deep);
+  box-shadow: var(--neu-pressed);
+  margin-bottom: 30px;
+}
+.segment-btn {
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  font: 700 11px var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mut);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.segment-btn.active {
+  background: var(--ink);
+  color: var(--bg);
+  box-shadow: var(--neu-pill), 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.pill-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 12px 0 32px;
+}
+.size-pill {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: var(--glass-border);
+  background: var(--bg);
+  box-shadow: var(--neu-subtle);
+  font: 700 11px var(--font-mono);
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.size-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neu-pill);
+}
+.size-pill.active {
+  background: var(--paper);
+  border-color: var(--ink);
+  box-shadow: var(--neu-pressed);
+  color: var(--ink);
+}
+
+.calc-toggles {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0 34px;
+}
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  border-radius: 18px;
+  background: var(--bg);
+  box-shadow: var(--neu-groove);
+}
+.toggle-row label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.toggle-row input[type="checkbox"] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--paper);
+  box-shadow: var(--neu-subtle);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+.toggle-row input[type="checkbox"]:checked {
+  background: var(--ink);
+}
+.toggle-row input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.custom-select {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: var(--glass-border);
+  background: var(--paper);
+  box-shadow: var(--neu-subtle);
+  font: 700 12px var(--font-mono);
+  color: var(--ink);
+  cursor: pointer;
+  outline: none;
+}
+
+.price-display-box {
+  margin: 28px 0 16px;
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: var(--neu-pressed);
+}
+.price-figure {
+  font-family: var(--font-mono);
+  font-size: clamp(52px, 5.5vw, 84px);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin: 8px 0;
+}
+.price-figure span {
+  font-size: 20px;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  color: var(--mut);
+  margin-left: 8px;
+}
+
+.feature-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+.feature-check-list li {
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--line-strong);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--mut);
+  font-size: 14px;
+}
+.feature-check-list li::before {
+  content: "✓";
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: var(--neu-subtle);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   INTERLOCKING DIAGONAL CONTAINER: ARTIST BIO & REFLECTIONS
+   ========================================================================== */
+.interlocking-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.diagonal-artist-card {
+  padding: 56px;
+  border-radius: 36px;
+  background: var(--glass-bg-card);
+  backdrop-filter: blur(28px);
+  border: var(--glass-border);
+  box-shadow: var(--neu-flat);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 520px;
+}
+.artist-monogram {
+  font-family: var(--font-display);
+  font-size: 190px;
+  font-weight: 900;
+  line-height: 0.7;
+  color: rgba(17, 17, 15, 0.05);
+  align-self: flex-end;
+  user-select: none;
+  letter-spacing: -0.05em;
+}
+
+.interlocking-stack-right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  justify-content: space-between;
+}
+
+.testimonial-pennant {
+  background: var(--paper);
+  border-radius: 32px;
+  box-shadow: var(--neu-lift);
+  padding: 44px;
+  border: 1px solid var(--line-glass);
+  position: relative;
+  transform: rotate(1deg);
+}
+.testimonial-pennant p {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+
+.materials-slate {
+  background: var(--glass-bg);
+  border-radius: 32px;
+  box-shadow: var(--neu-subtle);
+  border: var(--glass-border);
+  padding: 40px;
+  transform: rotate(-1deg);
+}
+
+/* ==========================================================================
+   FAQ ACCORDION & DIRECT CONTACT
+   ========================================================================== */
+.faq-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-radius: 20px;
+  background: var(--glass-bg-card);
+  border: var(--glass-border);
+  box-shadow: var(--neu-subtle);
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 26px 32px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary .icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: var(--neu-subtle);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+.faq-item[open] summary .icon {
+  transform: rotate(45deg);
+  background: var(--ink);
+  color: var(--bg);
+}
+.faq-item .content {
+  padding: 0 32px 30px;
+  color: var(--mut);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.contact-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.contact-form {
+  padding: 48px;
+}
+.form-field {
+  margin-bottom: 22px;
+}
+.form-field label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mut);
+  margin-bottom: 8px;
+}
+.form-field input, .form-field textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: var(--glass-border);
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: var(--neu-pressed);
+  font: 500 14px var(--font-display);
+  color: var(--ink);
+  outline: none;
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+.form-field input:focus, .form-field textarea:focus {
+  border-color: var(--ink);
+  box-shadow: var(--neu-pressed), 0 0 0 4px rgba(17, 17, 15, 0.05);
+}
+
+/* Architectural Footer */
+footer.editorial-footer {
+  background: #0e0e0d;
+  color: #f2f0ea;
+  border-radius: 48px 48px 0 0;
+  padding: 120px 0 50px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.3);
+}
+footer.editorial-footer h2 {
+  color: #f2f0ea;
+}
+footer.editorial-footer em {
+  color: #928f86;
+}
+.footer-cta-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin: 48px 0 70px;
+  flex-wrap: wrap;
+}
+
+/* Full-focus artwork lightbox */
+dialog#artModal {
+  border: 1px solid rgba(255,255,255,.55);
+  background: var(--glass-bg-card);
+  backdrop-filter: blur(36px) saturate(150%);
+  -webkit-backdrop-filter: blur(36px) saturate(150%);
+  border-radius: 30px;
+  box-shadow: 0 50px 140px -25px rgba(0,0,0,.58), var(--neu-lift);
+  padding: 0;
+  width: min(1440px, 94vw);
+  max-width: 1440px;
+  max-height: 92vh;
+  color: var(--ink);
+  overflow: hidden;
+}
+dialog#artModal::backdrop {
+  background: rgba(8, 8, 7, .78);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+}
+.modal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  min-height: min(760px, 92vh);
+  max-height: 92vh;
+}
+.modal-image-col {
+  min-width: 0;
+  min-height: 0;
+  max-height: 92vh;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255,255,255,.9), rgba(235,232,226,.98) 70%);
+  box-shadow: inset -1px 0 0 var(--line);
+  display: grid;
+  place-items: center;
+  padding: clamp(24px, 4vw, 56px);
+  overflow: auto;
+}
+.modal-image-col img {
+  display: block;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100%;
+  max-height: calc(92vh - 96px);
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 28px 70px rgba(17,17,15,.18);
+}
+.modal-content-col {
+  min-width: 0;
+  padding: clamp(38px, 4vw, 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: var(--glass-bg-card);
+}
+.modal-content-col .eyebrow {
+  margin-bottom: 18px;
+}
+.modal-content-col h2 {
+  font-size: clamp(38px, 4vw, 62px) !important;
+  line-height: .96;
+  max-width: 9ch;
+}
+.modal-content-col #modalDesc {
+  max-width: 38rem;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 4;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: var(--glass-border);
+  background: var(--glass-bg);
+  box-shadow: var(--neu-subtle);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.modal-close-btn:hover {
+  transform: rotate(8deg) scale(1.05);
+  box-shadow: var(--neu-flat);
+}
+
+/* Scroll Revealer */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  filter: blur(6px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.95s cubic-bezier(0.16, 1, 0.3, 1), 
+              filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+.scroll-reveal[data-delay="1"] { transition-delay: 0.12s; }
+.scroll-reveal[data-delay="2"] { transition-delay: 0.22s; }
+.scroll-reveal[data-delay="3"] { transition-delay: 0.32s; }
+
+
+/* Private Studio CMS — isolated from public site styling */
+html.admin-open, body.admin-open { overflow:hidden; }
+#adminGate,#adminPanel{display:none}
+#adminGate.admin-visible,#adminPanel.admin-visible{display:flex}
+.admin-overlay{position:fixed;inset:0;z-index:6000;align-items:center;justify-content:center;padding:18px;background:rgba(7,7,6,.72);backdrop-filter:blur(22px) saturate(120%);-webkit-backdrop-filter:blur(22px)}
+.admin-login-card,.admin-shell{width:min(1380px,100%);max-height:96vh;overflow:hidden;border-radius:30px;background:var(--paper);border:1px solid rgba(255,255,255,.55);box-shadow:0 50px 140px rgba(0,0,0,.42),var(--neu-lift);color:var(--ink)}
+.admin-login-card{max-width:460px;padding:36px}
+.admin-kicker{font:700 10px var(--font-mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.admin-login-card h2{font-size:clamp(38px,6vw,58px);margin:12px 0 10px}.admin-login-card p{color:var(--mut);margin:0 0 24px}.admin-lock-note{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line-strong);color:var(--soft);font:10px/1.5 var(--font-mono)}
+.admin-field{display:grid;gap:7px;margin:12px 0}.admin-field label{font:700 10px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.admin-field input,.admin-field textarea,.admin-field select{width:100%;min-width:0;padding:12px 14px;border-radius:13px;border:1px solid var(--line-strong);background:var(--bg);color:var(--ink);font:500 13px var(--font-display);outline:none;box-shadow:var(--neu-subtle)}
+.admin-field textarea{min-height:96px;resize:vertical}.admin-field input:focus,.admin-field textarea:focus,.admin-field select:focus{border-color:var(--ink);box-shadow:var(--neu-pressed),0 0 0 3px rgba(17,17,15,.05)}
+.admin-error{min-height:20px;color:#a33a2a;font:700 11px var(--font-mono)}
+.admin-shell{display:grid;grid-template-rows:auto 1fr}.admin-topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 22px;border-bottom:1px solid var(--line);background:var(--glass-bg);backdrop-filter:blur(24px);position:relative;z-index:5}
+.admin-brand{display:flex;align-items:center;gap:12px}.admin-brand-mark{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--bg);font:700 12px var(--font-mono)}.admin-topbar h3{font-size:22px}.admin-topbar small{display:block;color:var(--mut);font:10px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+.admin-top-actions{display:flex;gap:8px;flex-wrap:wrap}.admin-main{display:grid;grid-template-columns:230px minmax(0,1fr);min-height:0}.admin-sidebar{padding:18px;border-right:1px solid var(--line);background:var(--bg-deep);overflow:auto}.admin-nav{display:grid;gap:7px}.admin-nav button{width:100%;text-align:left;border:0;background:transparent;color:var(--mut);padding:13px 14px;border-radius:14px;cursor:pointer;font:700 10px var(--font-mono);letter-spacing:.09em;text-transform:uppercase}.admin-nav button:hover{color:var(--ink);background:rgba(255,255,255,.28)}.admin-nav button.active{color:var(--bg);background:var(--ink);box-shadow:var(--neu-pill)}
+.admin-side-note{margin-top:22px;padding:14px;border-radius:16px;background:var(--paper);box-shadow:var(--neu-subtle);font:10px/1.5 var(--font-mono);color:var(--mut)}.admin-content{padding:26px;overflow:auto;min-width:0}.admin-view{display:none}.admin-view.active{display:block}.admin-view-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:22px}.admin-view-head h2{font-size:clamp(30px,4vw,48px);line-height:.95}.admin-view-head p{max-width:580px;color:var(--mut);font-size:13px;margin:7px 0 0}.admin-toolbar{display:flex;gap:8px;flex-wrap:wrap}
+.admin-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.admin-stat{padding:18px;border-radius:20px;background:var(--glass-bg-card);border:1px solid var(--line);box-shadow:var(--neu-subtle)}.admin-stat strong{display:block;font:700 28px var(--font-mono)}.admin-stat span{font:10px var(--font-mono);color:var(--mut);text-transform:uppercase;letter-spacing:.08em}
+.admin-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.admin-card{min-width:0;padding:20px;border-radius:22px;background:var(--glass-bg-card);border:1px solid var(--line);box-shadow:var(--neu-subtle)}.admin-card.full{grid-column:1/-1}.admin-card h4{font-size:18px;margin:0 0 4px}.admin-card>p{color:var(--mut);font-size:12px;margin:0 0 15px}.admin-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.admin-row.three{grid-template-columns:repeat(3,minmax(0,1fr))}.admin-price-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}.admin-price-grid .admin-field{margin:0}.admin-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.admin-status{margin-top:9px;color:var(--mut);font:700 10px var(--font-mono);letter-spacing:.07em;text-transform:uppercase}
+.admin-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.admin-work-card{overflow:hidden;border-radius:20px;background:var(--glass-bg-card);border:1px solid var(--line);box-shadow:var(--neu-subtle)}.admin-work-media{aspect-ratio:4/3;background:var(--bg-deep);display:grid;place-items:center;overflow:hidden}.admin-work-media img{width:100%;height:100%;object-fit:cover;display:block}.admin-empty-media{padding:20px;text-align:center;color:var(--mut);font:10px/1.5 var(--font-mono);text-transform:uppercase}.admin-work-info{padding:14px}.admin-work-info strong{display:block;font-size:15px}.admin-work-info span{display:block;color:var(--mut);font:10px var(--font-mono);margin-top:4px}.admin-work-actions{display:flex;gap:7px;margin-top:11px}.admin-mini{padding:9px 11px;border-radius:10px;border:1px solid var(--line-strong);background:var(--bg);color:var(--ink);cursor:pointer;font:700 9px var(--font-mono);text-transform:uppercase}.admin-mini.danger{color:#9d3528}
+.admin-image-editor{display:grid;grid-template-columns:320px 1fr;gap:18px}.admin-image-preview{min-height:250px;border-radius:20px;background:var(--bg-deep);display:grid;place-items:center;overflow:hidden;box-shadow:var(--neu-pressed)}.admin-image-preview img{width:100%;height:100%;object-fit:contain}.admin-image-preview span{padding:20px;color:var(--mut);font:10px var(--font-mono);text-align:center}.admin-upload{position:relative;display:flex;align-items:center;justify-content:center;min-height:120px;border:1px dashed var(--line-strong);border-radius:18px;background:rgba(255,255,255,.2);cursor:pointer}.admin-upload input{position:absolute;inset:0;opacity:0;cursor:pointer}.admin-upload strong{font-size:13px}.admin-upload small{display:block;color:var(--mut);font:10px var(--font-mono);margin-top:5px}
+.admin-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}.admin-tab{border:1px solid var(--line);background:var(--bg);color:var(--mut);padding:9px 13px;border-radius:999px;cursor:pointer;font:700 9px var(--font-mono);text-transform:uppercase}.admin-tab.active{background:var(--ink);color:var(--bg)}
+.admin-json{min-height:160px!important;font-family:var(--font-mono)!important;font-size:11px!important}
+@media(max-width:1050px){.admin-main{grid-template-columns:190px 1fr}.admin-stats{grid-template-columns:repeat(2,1fr)}.admin-gallery-grid{grid-template-columns:repeat(2,1fr)}.admin-image-editor{grid-template-columns:1fr}.admin-price-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.admin-overlay{padding:7px}.admin-shell{max-height:98vh;border-radius:20px}.admin-topbar{padding:13px;align-items:flex-start}.admin-top-actions .btn{padding:10px 12px}.admin-main{grid-template-columns:1fr}.admin-sidebar{border-right:0;border-bottom:1px solid var(--line);padding:8px;overflow-x:auto}.admin-nav{display:flex;gap:6px;overflow-x:auto}.admin-nav button{width:auto;white-space:nowrap;padding:10px 11px}.admin-side-note{display:none}.admin-content{padding:14px}.admin-view-head{display:block}.admin-toolbar{margin-top:14px}.admin-stats,.admin-grid,.admin-row,.admin-row.three{grid-template-columns:1fr}.admin-gallery-grid{grid-template-columns:1fr}.admin-price-grid{grid-template-columns:repeat(2,1fr)}.admin-card.full{grid-column:auto}.admin-topbar h3{font-size:17px}.admin-topbar small{font-size:8px}}
+/* Public pricing overflow safeguard — no visual redesign */
+@media(max-width:680px){#pricing .drafting-desk-outer{padding:14px;border-radius:28px;overflow:hidden}#pricing .drafting-controls-well,#pricing .drafting-ticket-well{min-width:0;padding:20px}#pricing .segment-control{display:flex;width:100%;overflow:hidden}#pricing .segment-btn{flex:1;min-width:0;padding:11px 8px;font-size:9px}#pricing .size-pill{padding:10px 12px;font-size:9px}#pricing .toggle-row{align-items:flex-start;gap:10px;padding:13px 14px}#pricing .toggle-row label{min-width:0;flex:1}#pricing #facesCount{max-width:145px}#pricing .price-display-box{padding:18px;margin-top:20px}#pricing .price-figure{font-size:clamp(42px,13vw,64px);white-space:nowrap}#pricing .price-figure span{font-size:14px;margin-left:3px}#pricing #startCommissionBtn{width:100%;padding-left:14px;padding-right:14px;text-align:center;white-space:normal;line-height:1.35}}
+
+/* ===== v2 polish layer ===== */
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8px}
+.btn:focus-visible,.filter-chip:focus-visible,.size-pill:focus-visible,.segment-btn:focus-visible,.theme-btn:focus-visible,.mobile-toggle:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.skip-link{position:fixed;left:16px;top:-64px;z-index:7000;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font:700 11px var(--font-mono);text-decoration:none;transition:top .25s}
+.skip-link:focus{top:14px}
+img{max-width:100%}
+.hero-atelier{min-height:100svh;padding:clamp(120px,16vh,175px) clamp(18px,3vw,40px) clamp(56px,9vh,110px)}
+.brick-gallery-grid{grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));padding-bottom:64px}
+.brick-gallery-grid[data-cols="1"] .brick-gallery-col{transform:none}
+.brick-gallery-grid[data-cols="2"] .brick-gallery-col:nth-child(2){transform:translateY(32px)}
+.hp-empty{grid-column:1/-1;text-align:center;padding:70px 20px;font:700 11px var(--font-mono);text-transform:uppercase;letter-spacing:.14em;color:var(--mut)}
+/* reveal: cheaper (no blur), then settles so hovers stay snappy */
+.scroll-reveal{filter:none;transform:translateY(28px);will-change:auto}
+.scroll-reveal.is-visible{filter:none}
+.scroll-reveal.settled{transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s cubic-bezier(.16,1,.3,1),background .3s;transition-delay:0s}
+/* hero empty-state: graphite hatch + monogram instead of a blank board */
+.hero-drawing-board>div{position:relative;z-index:1}
+.hero-drawing-board:not(.has-image)::before{content:"STJ";position:absolute;inset:0;display:grid;place-items:center;font:900 clamp(120px,15vw,190px)/1 var(--font-display);letter-spacing:-.06em;color:var(--ink);background:repeating-linear-gradient(115deg,transparent 0 7px,var(--line) 7px 8px);-webkit-text-fill-color:transparent;-webkit-text-stroke:1px var(--line-strong)}
+.art-placeholder-vector{background:repeating-linear-gradient(115deg,transparent 0 7px,var(--line) 7px 8px)}
+/* dark-theme contrast fixes */
+[data-theme=dark] nav.glass-nav.scrolled{background:rgba(27,26,24,.92)}
+[data-theme=dark] .hero-drawing-board,[data-theme=dark] .art-preview-wrap{background:radial-gradient(circle at 40% 30%,#2a2926,#161615)}
+[data-theme=dark] .modal-image-col{background:#181817}
+[data-theme=dark] .form-field input,[data-theme=dark] .form-field textarea{background:rgba(255,255,255,.05)}
+[data-theme=dark] .artist-monogram{color:rgba(255,255,255,.06)}
+[data-theme=dark] .inspection-glass-tile{background:rgba(20,20,19,.6);border-color:rgba(255,255,255,.14)}
+[data-theme=dark] .custom-select option{background:#1b1a18;color:#f2f0e8}
+/* Final gallery + lightbox responsive tuning */
+@media(max-width:1100px){
+  .brick-gallery-grid{--gallery-gap:24px}
+  .modal-grid{grid-template-columns:minmax(0,1fr) 340px}
+  .modal-content-col{padding:34px}
+}
+@media(max-width:680px){
+  .brick-gallery-grid{--gallery-gap:16px}
+  .art-card{padding:10px;border-radius:22px}
+  .art-preview-wrap{border-radius:16px}
+  .art-meta-row{padding:14px 5px 4px;gap:8px}
+  .art-meta-title{font-size:16px}
+  .art-meta-subtitle{font-size:9px}
+  .art-tag{font-size:8px;padding:5px 8px}
+  dialog#artModal{
+    width:calc(100vw - 20px);
+    max-height:94vh;
+    border-radius:24px;
+  }
+  .modal-grid{
+    grid-template-columns:1fr;
+    max-height:94vh;
+  }
+  .modal-image-col{
+    max-height:62vh;
+    min-height:0;
+    padding:18px;
+  }
+  .modal-image-col img{
+    max-width:100%;
+    max-height:58vh;
+  }
+  .modal-content-col{
+    padding:28px 24px 30px;
+    max-height:32vh;
+    overflow:auto;
+  }
+  .modal-content-col h2{font-size:36px !important;max-width:none}
+  .modal-content-col #modalDesc{font-size:14px !important}
+  .modal-close-btn{top:12px;right:12px;width:40px;height:40px}
+}
+
+/* dialog + faq motion, form states */
+dialog#artModal[open]{animation:modalIn .45s cubic-bezier(.16,1,.3,1)}
+@keyframes modalIn{from{opacity:0;transform:translateY(24px) scale(.97)}}
+.faq-item[open] .content{animation:faqIn .4s cubic-bezier(.16,1,.3,1)}
+@keyframes faqIn{from{opacity:0;transform:translateY(-8px)}}
+.form-status{min-height:20px;margin-top:14px;font:700 11px/1.5 var(--font-mono);color:var(--mut)}
+.form-status.err{color:#c0503d}
+.form-field input.bad,.form-field textarea.bad{border-color:#c0503d}
+/* viewport-first sections on large screens */
+@media(min-width:1024px) and (min-height:640px){
+  #process,#about,#faq,#contact{min-height:100svh;display:flex;align-items:center}
+}
+/* tablet */
+@media(max-width:1100px){
+  .w{padding:0 28px}
+  section{padding:clamp(72px,10vw,110px) 0}
+  .hero-modular-grid,.section-header-atelier,.process-deconstructed-wrap,.drafting-grid-inner,.interlocking-wrapper,.contact-section-grid{grid-template-columns:1fr}
+  .section-header-atelier{gap:20px;align-items:start}
+  .process-deconstructed-wrap{gap:40px}.sticky-column{position:static}
+  .hero-modular-grid{gap:56px}.contact-section-grid{gap:44px}
+  .atelier-badge-rotated{position:static;transform:none;display:inline-flex;margin-bottom:0}
+  .hero-canvas-frame{margin-inline:auto}
+}
+/* mobile nav */
+@media(max-width:960px){
+  .mobile-toggle{display:grid}
+  nav.glass-nav{width:calc(100% - 24px);top:12px;padding:8px 10px 8px 18px}
+  .nav-links{position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;align-items:stretch;padding:10px;border-radius:28px;background:var(--glass-bg-card);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);box-shadow:var(--neu-flat);opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transition:opacity .3s,transform .3s,visibility .3s}
+  nav.glass-nav.menu-open .nav-links{opacity:1;visibility:visible;transform:none}
+  .nav-links a{padding:14px 18px;font-size:12px}
+}
+/* phones */
+@media(max-width:680px){
+  .w,.hero-atelier{padding-inline:18px}
+  h1{font-size:clamp(42px,13vw,64px)}h2{font-size:clamp(34px,10vw,48px)}
+  #headerCtaBtn{display:none}
+  .hero-title-line.stagger-1,.hero-title-line.stagger-2{transform:none;margin-top:0}
+  .hero-copy-plane,.neu-card,.contact-form,.diagonal-artist-card,.testimonial-pennant,.materials-slate{padding:26px}
+  .meter-cell{padding:10px}.meter-cell h4{font-size:15px}.meter-cell span{font-size:8px}.hero-meter-dock{padding:10px;gap:8px}
+  .hero-canvas-frame{height:auto;aspect-ratio:4/5;width:min(360px,86vw)}
+  .floating-glass-badge{left:-6px;bottom:-18px;padding:12px 16px}
+  .process-sheet{grid-template-columns:52px 1fr;padding:24px;gap:16px}.step-number-stamp{font-size:28px;padding-right:12px}
+  .faq-item summary{font-size:17px;padding:20px}.faq-item .content{padding:0 20px 22px}
+  .modal-grid{grid-template-columns:1fr}.modal-image-col{min-height:260px}.modal-content-col{padding:28px}
+  .artist-monogram{font-size:110px}.diagonal-artist-card{min-height:0}
+  .testimonial-pennant,.materials-slate{transform:none}.testimonial-pennant p{font-size:21px}
+  footer.editorial-footer{border-radius:32px 32px 0 0;padding:80px 0 40px}
+  .footer-cta-row .btn{width:100%}
+  .filter-bar{flex-wrap:nowrap;overflow-x:auto;margin-inline:-18px;padding:4px 18px 14px;scrollbar-width:none}.filter-chip{white-space:nowrap;flex:none}
+}
+@media(max-height:520px) and (orientation:landscape){.hero-atelier{padding-top:96px}}
+@media(hover:none){.ambient-glow{display:none}.art-card:hover,.neu-card:hover,.process-sheet:hover{transform:none}}
+/* Final lightbox overrides */
+@media(max-width:680px){
+  dialog#artModal{width:calc(100vw - 20px);max-height:94vh;border-radius:24px}
+  dialog#artModal .modal-grid{grid-template-columns:1fr;max-height:94vh}
+  dialog#artModal .modal-image-col{min-height:0;max-height:62vh;padding:18px}
+  dialog#artModal .modal-image-col img{max-width:100%;max-height:58vh}
+  dialog#artModal .modal-content-col{padding:28px 24px 30px;max-height:32vh;overflow:auto}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}.scroll-reveal{opacity:1!important;transform:none!important}.ambient-glow{display:none}}
+
+/* ===== v3 refinement: scale, rhythm, scroll choreography ===== */
+:root{--max:1240px}
+body{font-size:14px;line-height:1.6}
+.w{padding:0 clamp(20px,3vw,36px)}
+section{padding:clamp(64px,9vw,112px) 0}
+h1{font-size:clamp(36px,5.3vw,80px);line-height:1.02;letter-spacing:-.045em}
+.hero-title-line.stagger-1,.hero-title-line.stagger-2{transform:none;margin-top:0}
+h2{font-size:clamp(28px,3.9vw,58px);line-height:.98}
+h3{font-size:clamp(19px,2vw,28px)}
+.eyebrow{font-size:10px;letter-spacing:.18em;margin-bottom:16px}
+.neu-card{padding:clamp(22px,2.4vw,30px);border-radius:22px}
+.btn{padding:14px 26px;font-size:11px}
+.hero-atelier{min-height:100svh;padding-top:clamp(92px,12vh,120px);padding-bottom:clamp(32px,6vh,64px);display:flex;flex-direction:column;justify-content:center}
+.hero-modular-grid{grid-template-columns:1.3fr .7fr;gap:clamp(28px,4vw,56px);margin-top:clamp(22px,4vh,40px)}
+.hero-copy-plane{padding:clamp(24px,2.6vw,34px);border-radius:26px}
+.hero-artist-intro h3{font-size:clamp(24px,2.5vw,36px)}
+.hero-artist-note{font-size:14px;line-height:1.65}
+.hero-sub{margin-bottom:14px;max-width:62ch}
+.hero-artist-signature{margin-top:20px}
+.hero-canvas-frame{width:min(340px,86vw);height:clamp(360px,56vh,470px);border-radius:28px;padding:14px}
+.parchment-backing-plane{border-radius:28px}
+.hero-cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:22px}
+.hero-cta-row .hero-availability-stack{display:contents}
+.hero-cta-row .atelier-badge-rotated{order:-1;flex-basis:100%;justify-content:flex-start;margin-bottom:4px}
+.hero-cta-row{display:grid!important;grid-template-columns:auto auto 1fr;gap:12px}
+.hero-cta-row .atelier-badge-rotated{grid-column:1/-1;justify-self:start;flex-basis:auto}
+.hero-cta-row .hero-commission-btn{order:1}
+.hero-cta-row>.btn-neu{order:2;justify-self:start}
+.hero-artist-intro h3 + .hero-sub{margin-top:14px}
+.hero-drawing-board:not(.has-image)::before{font-size:clamp(84px,9vw,124px)!important}
+.hero-cta-row .atelier-badge-rotated{transform:none}
+.hero-cta-row .hero-commission-btn{padding:14px 26px;font-size:11px}
+.hero-sub{font-size:clamp(14px,1.15vw,16px);line-height:1.65;max-width:52ch}
+.section-header-atelier p{font-size:clamp(14px,1.1vw,16px);max-width:46ch}
+.sticky-column p{font-size:14px!important}
+.process-sheet{padding:clamp(22px,2.6vw,32px)}
+nav.glass-nav{top:16px;width:min(calc(100% - 40px),1080px);padding:7px 10px 7px 20px}
+.art-meta-title{font-size:15px}
+.scroll-reveal{transform:translateY(16px)}
+/* scroll-linked layers: only the properties below are driven by JS */
+.js-motion .sw{display:inline-block;opacity:.14;will-change:opacity}
+.js-motion .hero-stack h1{will-change:translate,opacity}
+.js-motion .brick-gallery-col{translate:0 calc(var(--py,0)*1px)}
+.js-motion .hero-showcase{translate:0 calc(var(--hy,0)*1px)}
+.js-motion .art-preview-wrap{clip-path:inset(calc((1 - var(--p,1))*16%) 0 0 0)}
+.js-motion .art-preview-wrap img{scale:calc(1.16 - .16*var(--p,1))}
+.js-motion .process-sheet.is-visible.settled{opacity:calc(.38 + .62*var(--a,1));scale:calc(.965 + .035*var(--a,1))}
+.js-motion .process-sheet{transition:opacity .2s linear,scale .2s linear,transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s}
+.hero-word{display:inline-block;overflow:hidden;padding-right:.06em;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.hero-word>span{display:inline-block;transform:translateY(105%);animation:hw 1.1s cubic-bezier(.16,1,.3,1) forwards;animation-delay:calc(.15s + var(--i)*.07s)}
+@keyframes hw{to{transform:none}}
+@media(max-width:680px){.js-motion .brick-gallery-col{translate:none}h1{font-size:clamp(34px,10.5vw,52px)}}
+@media(prefers-reduced-motion:reduce){.hero-word>span{animation:none;transform:none}}
+.admin-work-card.is-hidden,.admin-card.is-hidden{opacity:.55}
+.admin-mini:disabled{opacity:.35;cursor:not-allowed}
+.admin-image-preview img{max-width:100%;max-height:100%;object-fit:contain}
+
+/* =====================================================================
+   MOBILE ART-DIRECTION SYSTEM — premium first-class mobile experience
+   ===================================================================== */
+@media (max-width: 680px){
+  :root{--mobile-pad:18px;--mobile-radius:26px;--mobile-shadow:0 18px 50px rgba(17,17,15,.12)}
+  html{scroll-padding-top:82px}
+  body{font-size:15px;line-height:1.65;background-image:radial-gradient(circle 520px at 0 0,rgba(255,255,255,.72),transparent 58%),radial-gradient(circle 420px at 100% 28%,rgba(218,214,205,.42),transparent 62%)}
+  body::after{background-size:48px 48px;opacity:.16}
+  .w{padding-inline:var(--mobile-pad);width:100%;max-width:none}
+  section{padding:92px 0}
+
+  /* Navigation: compact luxury bar + large touch-first sheet */
+  nav.glass-nav{top:10px;width:calc(100% - 20px);padding:7px 8px 7px 14px;border-radius:20px;min-height:56px;z-index:5000}
+  nav.glass-nav.scrolled{top:8px;background:color-mix(in srgb,var(--paper) 88%,transparent);}
+  .brand-mark{font-size:11px;letter-spacing:.12em;gap:9px;min-width:0}
+  .brand-mark span:last-child{white-space:nowrap}
+  .brand-mark .dot{width:7px;height:7px}
+  .nav-actions{gap:7px}
+  .theme-btn,.mobile-toggle{width:40px;height:40px}
+  .mobile-toggle{font-size:0}
+  .mobile-toggle::before{content:"";width:18px;height:12px;border-top:2px solid currentColor;border-bottom:2px solid currentColor;box-shadow:0 5px 0 -3px currentColor;display:block}
+  nav.glass-nav.menu-open .mobile-toggle::before{height:2px;border:0;box-shadow:none;background:currentColor;transform:rotate(45deg)}
+  nav.glass-nav.menu-open .mobile-toggle::after{content:"";position:absolute;width:18px;height:2px;background:currentColor;transform:rotate(-45deg)}
+  .nav-links{top:calc(100% + 8px);padding:10px;border-radius:24px;gap:4px;background:color-mix(in srgb,var(--paper) 92%,transparent);border:var(--glass-border);box-shadow:0 26px 70px rgba(0,0,0,.18);max-height:calc(100svh - 86px);overflow:auto}
+  .nav-links a{min-height:50px;display:flex;align-items:center;justify-content:space-between;padding:13px 15px;font-size:11px;border-radius:15px}
+  .nav-links a::after{content:"↗";font-size:13px;opacity:.35}
+  .nav-links a.active{background:var(--bg-deep)}
+
+  /* Hero: dramatic stacked editorial composition */
+  .hero-atelier{min-height:auto;padding-top:104px;padding-bottom:58px;display:block}
+  .hero-availability-stack{position:static;display:flex;align-items:stretch;gap:10px;margin:0 0 24px}
+  .hero-availability-stack .atelier-badge-rotated{display:flex;width:100%;justify-content:flex-start;padding:10px 13px;border-radius:13px;transform:none;margin:0;background:color-mix(in srgb,var(--paper) 78%,transparent);box-shadow:var(--neu-subtle)}
+  .hero-availability-stack .mono-tag{font-size:8px;letter-spacing:.12em;line-height:1.4}
+  .hero-commission-btn{width:100%;min-height:52px;font-size:10px}
+  .hero-stack{margin-top:10px}
+  .hero-stack .eyebrow{margin-bottom:17px}
+  h1{font-size:clamp(45px,13.2vw,70px);line-height:.91;letter-spacing:-.065em}
+  .hero-title-line{display:block}
+  .hero-title-line.stagger-1,.hero-title-line.stagger-2{transform:none;margin:0}
+  .hero-title-line em{display:inline;font-size:.92em}
+  .hero-modular-grid{display:flex;flex-direction:column;gap:20px;margin-top:26px}
+  .hero-copy-plane{order:2;padding:24px 21px;border-radius:var(--mobile-radius);box-shadow:var(--mobile-shadow)}
+  .hero-artist-intro .eyebrow{margin-bottom:12px}
+  .hero-artist-intro h3{font-size:clamp(29px,8.4vw,40px);line-height:1;letter-spacing:-.055em}
+  .hero-artist-intro h3 em{margin-top:5px}
+  .hero-sub{font-size:15px;line-height:1.62;margin:19px 0 13px;max-width:none}
+  .hero-artist-note{font-size:13px;line-height:1.65}
+  .hero-artist-signature{margin-top:21px;gap:9px}
+  .hero-artist-signature .mono-tag{font-size:8px;letter-spacing:.1em}
+  .hero-artist-rule{width:28px}
+  .hero-artist-intro > div:last-child{margin-top:22px!important}
+  .hero-artist-intro > div:last-child .btn{width:100%}
+  .hero-showcase{order:1;width:100%;min-height:0;padding:6px 8px 30px}
+  .parchment-backing-plane{width:88%;height:92%;border-radius:27px;transform:rotate(-4deg) translate(-9px,8px)}
+  .hero-canvas-frame{width:min(100%,350px);height:auto;aspect-ratio:4/5;margin:auto;border-radius:29px;padding:11px;transform:none;box-shadow:0 24px 55px rgba(17,17,15,.18)}
+  .hero-canvas-frame:hover{transform:none}
+  .hero-drawing-board{border-radius:21px;padding:22px;min-height:100%}
+  .hero-drawing-board > div:first-child{font-size:10px!important}
+  .hero-drawing-board > div:last-child span:first-child{font-size:19px!important}
+  .floating-glass-badge{left:4px;bottom:0;padding:11px 14px;border-radius:16px;gap:9px;box-shadow:0 15px 35px rgba(0,0,0,.14)}
+  .floating-glass-badge i{font-size:16px}
+  .floating-glass-badge strong{font-size:11px}.floating-glass-badge span{font-size:8px}
+
+  /* Section headers become poster-like */
+  .section-header-atelier{display:block;margin-bottom:28px}
+  .section-header-atelier h2{font-size:clamp(38px,10.8vw,54px);line-height:.94;letter-spacing:-.06em}
+  .section-header-atelier p{margin:18px 0 0;font-size:14px;line-height:1.65}
+  .filter-bar{margin:0 -18px 25px;padding:4px 18px 13px;gap:8px;overflow-x:auto;scroll-snap-type:x proximity}
+  .filter-chip{min-height:42px;padding:11px 15px;font-size:9px;scroll-snap-align:start}
+
+  /* Gallery: generous cards, not compressed desktop columns */
+  .brick-gallery-grid{column-count:1;--gallery-gap:18px;padding-bottom:24px}
+  .art-card{padding:10px;margin-bottom:18px;border-radius:24px;box-shadow:var(--mobile-shadow)}
+  .art-card:hover{transform:none}
+  .art-preview-wrap{border-radius:17px}
+  .inspection-glass-tile{top:10px;right:10px;font-size:8px;padding:5px 9px}
+  .art-meta-row{padding:15px 4px 4px;gap:10px}
+  .art-meta-title{font-size:18px;line-height:1.1}
+  .art-meta-subtitle{font-size:9px;margin-top:5px}
+  .art-tag{font-size:8px;padding:6px 8px;white-space:nowrap}
+
+  /* Process: numbered editorial cards */
+  .process-deconstructed-wrap{display:flex;flex-direction:column;gap:34px}
+  .sticky-column{position:static}
+  .sticky-column h2{font-size:clamp(40px,11vw,54px);line-height:.94}
+  .sticky-column p{font-size:14px!important;line-height:1.65!important;margin:19px 0 24px!important}
+  .sticky-column .btn{width:100%}
+  .process-cascade{gap:12px}
+  .process-sheet{grid-template-columns:50px 1fr;padding:23px 19px;gap:15px;border-radius:21px;box-shadow:var(--mobile-shadow)}
+  .process-sheet:hover{transform:none}
+  .step-number-stamp{font-size:25px;padding-right:11px}
+  .process-sheet h3{font-size:21px;line-height:1.05}
+  .process-sheet p{font-size:13px;line-height:1.6}
+
+  /* Commission/pricing: make this the mobile conversion centerpiece */
+  .drafting-desk-outer{padding:11px!important;border-radius:30px!important}
+  .drafting-grid-inner{display:flex!important;flex-direction:column;gap:11px!important}
+  .drafting-controls-well,.drafting-ticket-well{padding:23px!important;border-radius:23px!important}
+  .drafting-ticket-well{order:-1}
+  .segment-control{width:100%;margin-bottom:21px;display:grid!important;grid-template-columns:1fr 1fr}
+  .segment-btn{padding:13px 8px;font-size:9px}
+  .pill-group{gap:7px;margin:10px 0 24px}
+  .size-pill{flex:1 1 calc(33.333% - 7px);padding:12px 7px;text-align:center;font-size:9px;min-height:44px}
+  .calc-toggles{gap:9px;margin:20px 0 24px}
+  .toggle-row{padding:13px 14px;border-radius:15px}
+  .toggle-row label{font-size:13px;line-height:1.35}
+  .price-display-box{padding:22px!important;border-radius:20px!important}
+  .price-figure{font-size:clamp(48px,15vw,70px)!important;letter-spacing:-.07em;line-height:.9}
+  .price-figure span{font-size:13px!important}
+  #pricing #startCommissionBtn{min-height:54px;margin-top:12px}
+
+  /* Contact: large, direct, conversion-oriented */
+  .contact-section-grid{display:flex;flex-direction:column;gap:22px}
+  .contact-section-grid > *{min-width:0}
+  .contact-form,.diagonal-artist-card,.testimonial-pennant,.materials-slate{padding:24px!important;border-radius:24px!important}
+  .contact-form h3{font-size:29px}
+  .form-field input,.form-field textarea,.custom-select{font-size:16px!important;min-height:52px}
+  .form-field textarea{min-height:130px}
+  .contact-form .btn{width:100%;min-height:52px}
+
+  /* FAQ */
+  .faq-item{border-radius:17px!important}
+  .faq-item summary{padding:18px 17px;font-size:16px;line-height:1.3}
+  .faq-item .content{padding:0 17px 19px;font-size:13px;line-height:1.65}
+
+  /* Lightbox: image-first, clean sheet */
+  dialog#artModal{width:calc(100vw - 12px)!important;max-width:none!important;max-height:96svh!important;border-radius:27px!important}
+  dialog#artModal .modal-grid{max-height:96svh!important}
+  dialog#artModal .modal-image-col{padding:13px!important;max-height:59svh!important;background:var(--bg-deep)}
+  dialog#artModal .modal-image-col img{max-height:55svh!important}
+  dialog#artModal .modal-content-col{padding:23px 20px 24px!important;max-height:37svh!important}
+  dialog#artModal .modal-content-col h2{font-size:32px!important;line-height:.98}
+  dialog#artModal .modal-content-col #modalDesc{font-size:13px!important}
+  .modal-close-btn{width:42px!important;height:42px!important;top:9px!important;right:9px!important}
+
+  /* Footer / floating conversion */
+  footer.editorial-footer{padding:72px 0 34px!important;border-radius:30px 30px 0 0}
+  .footer-cta-row{display:flex!important;flex-direction:column;align-items:stretch!important;gap:10px!important}
+  .footer-cta-row .btn{width:100%;min-height:52px}
+
+  /* Admin: genuine mobile application, not squeezed desktop CMS */
+  .admin-overlay{padding:6px!important}
+  .admin-shell{width:100%!important;height:calc(100svh - 12px)!important;max-height:none!important;border-radius:22px!important;overflow:hidden!important}
+  .admin-topbar{padding:12px!important;min-height:62px;gap:10px}
+  .admin-brand-mark{width:34px;height:34px}
+  .admin-topbar h3{font-size:15px!important}
+  .admin-topbar small{font-size:7px!important}
+  .admin-top-actions{gap:5px!important}
+  .admin-top-actions .btn{font-size:8px!important;padding:10px 9px!important;min-height:38px}
+  #adminPreviewBtn{display:none}
+  .admin-main{display:flex!important;flex-direction:column;height:calc(100% - 62px)!important;min-height:0}
+  .admin-sidebar{flex:0 0 auto;border:0!important;border-bottom:1px solid var(--line)!important;padding:7px!important;background:var(--glass-bg)!important}
+  .admin-nav{display:flex!important;gap:6px!important;overflow-x:auto!important;scrollbar-width:none;padding:1px}
+  .admin-nav button{flex:0 0 auto!important;min-height:40px;width:auto!important;padding:9px 12px!important;border-radius:11px!important;font-size:8px!important}
+  .admin-content{flex:1 1 auto;min-height:0;overflow:auto;padding:13px!important;-webkit-overflow-scrolling:touch}
+  .admin-view-head h2{font-size:32px!important}
+  .admin-view-head p{font-size:12px!important}
+  .admin-stats{grid-template-columns:1fr 1fr!important;gap:8px!important}
+  .admin-stat{padding:14px!important}
+  .admin-stat strong{font-size:22px!important}
+  .admin-grid,.admin-row,.admin-row.three{grid-template-columns:1fr!important}
+  .admin-gallery-grid{grid-template-columns:1fr!important}
+  .admin-price-grid{grid-template-columns:1fr 1fr!important}
+  .admin-card{padding:16px!important;border-radius:18px!important}
+  .admin-image-editor{grid-template-columns:1fr!important}
+  .admin-image-preview{min-height:220px!important}
+  .admin-upload{min-height:94px!important}
+  .admin-actions{gap:7px!important}
+  .admin-actions .btn{flex:1 1 100%;min-height:45px}
+}
+
+@media (min-width:681px) and (max-width:960px){
+  .w{padding-inline:28px}
+  section{padding:100px 0}
+  nav.glass-nav{width:calc(100% - 32px)}
+  .hero-atelier{padding-top:145px}
+  .hero-modular-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .hero-canvas-frame{width:min(390px,42vw);height:500px}
+  h1{font-size:clamp(54px,8vw,82px)}
+  .section-header-atelier h2{font-size:52px}
+  .brick-gallery-grid{--cols:2;--gallery-gap:20px}
+  .drafting-grid-inner{grid-template-columns:1fr 1fr}
+}
+
+@media (max-width:380px){
+  nav.glass-nav{width:calc(100% - 14px)}
+  .hero-atelier{padding-inline:14px}
+  .w{padding-inline:14px}
+  h1{font-size:42px}
+  .hero-copy-plane{padding:21px 18px}
+  .size-pill{flex-basis:calc(50% - 7px)}
+  .art-meta-title{font-size:16px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-canvas-frame,.art-card,.process-sheet{transition:none!important}
+}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>window.STJARTS_CONFIG={SUPABASE_URL:'https://owdavspbotgprcdmbeqp.supabase.co',SUPABASE_PUBLISHABLE_KEY:'sb_publishable_HRypGqIe-mwAIJMDoF5T4Q_A_bL73i5',BUCKET:"artworks"};</script>
+
+<style id="mobile-production-ui">
+/* Mobile production layer: designed for 320–767px widths, touch input, and safe-area devices. */
+:root{--mobile-gutter:clamp(16px,5vw,24px);--tap:44px}
+html{overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:84px}
+body{min-width:320px;overflow-x:hidden}
+button,a,input,select,textarea,summary{touch-action:manipulation}
+button,.btn,.filter-chip,.size-pill,.segment-btn,.theme-btn,.mobile-toggle,.admin-mini,.admin-tab{min-height:var(--tap)}
+img,svg,video,canvas{max-width:100%}
+
+@media(max-width:960px){
+  nav.glass-nav{width:calc(100% - 20px);max-width:none;top:max(10px,env(safe-area-inset-top));left:10px;transform:none;padding:8px 9px 8px 14px;border-radius:22px;gap:8px}
+  nav.glass-nav.scrolled{top:max(8px,env(safe-area-inset-top));background:var(--glass-bg-card)}
+  nav.glass-nav .brand-mark{min-width:0;gap:8px;font-size:11px;letter-spacing:.11em;white-space:nowrap}
+  nav.glass-nav .brand-mark .dot{width:7px;height:7px;flex:0 0 7px}
+  .nav-actions{gap:7px;flex:0 0 auto}
+  .theme-btn,.mobile-toggle{width:42px;height:42px;flex:0 0 42px}
+  .nav-links{z-index:20;max-height:calc(100svh - 92px);overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .nav-links a{min-height:48px;display:flex;align-items:center}
+}
+
+@media(max-width:767px){
+  .w{padding-inline:var(--mobile-gutter)}
+  section{padding:72px 0}
+  .hero-atelier{min-height:auto;padding:104px var(--mobile-gutter) 58px}
+  .hero-stack h1{font-size:clamp(38px,12.5vw,58px);line-height:.93;max-width:12ch}
+  .hero-modular-grid{display:flex;flex-direction:column;gap:30px;margin-top:24px}
+  .hero-copy-plane{width:100%;padding:22px;border-radius:24px}
+  .hero-artist-intro h3{font-size:clamp(24px,8vw,34px);line-height:1.04}
+  .hero-sub{font-size:14px;line-height:1.65;margin-bottom:0}
+  .hero-cta-row{display:flex!important;flex-direction:column;align-items:stretch;width:100%;gap:10px;margin-top:20px!important}
+  .hero-cta-row .atelier-badge-rotated{order:-1;align-self:flex-start;width:auto;max-width:100%;overflow:hidden}
+  .hero-cta-row .hero-commission-btn,.hero-cta-row>.btn-neu{width:100%;justify-self:stretch}
+  .hero-showcase{width:100%;padding:0 5px 30px}
+  .hero-canvas-frame{width:min(100%,340px);height:auto;aspect-ratio:4/5;margin:auto;border-radius:24px;padding:11px}
+  .hero-drawing-board{border-radius:18px;padding:20px}
+  .floating-glass-badge{left:2px;bottom:0;max-width:calc(100% - 4px);padding:11px 14px;border-radius:18px}
+  .floating-glass-badge strong{font-size:12px}.floating-glass-badge span{font-size:9px}
+  .hero-meter-dock{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:24px;padding:9px}
+  .meter-cell{min-width:0;padding:10px 7px;text-align:center}.meter-cell h4{font-size:16px}.meter-cell span{font-size:7px;letter-spacing:.08em}
+
+  .section-header-atelier{display:block;margin-bottom:28px}
+  .section-header-atelier h2{margin-bottom:14px}
+  .section-header-atelier p{font-size:14px;line-height:1.65}
+  .filter-bar{margin-bottom:28px}
+  .brick-gallery-grid{column-count:1!important;display:block;padding-bottom:20px}
+  .art-card{display:block;width:100%;margin-bottom:18px;padding:9px;border-radius:20px}
+  .art-meta-row{padding:13px 5px 4px;gap:10px}.art-meta-title{font-size:16px}.art-meta-subtitle{font-size:9px}
+  .art-tag{font-size:8px;max-width:44%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .process-deconstructed-wrap,.drafting-grid-inner,.contact-section-grid{display:flex;flex-direction:column;gap:24px}
+  .sticky-column{position:static}
+  .process-cascade{gap:14px}
+  .process-sheet{grid-template-columns:46px minmax(0,1fr);gap:14px;padding:20px;border-radius:20px}
+  .step-number-stamp{font-size:27px;padding-right:10px}.process-sheet h3{font-size:20px}.process-sheet p{font-size:13px}
+
+  .drafting-desk-outer{padding:10px!important;border-radius:24px!important}
+  .drafting-controls-well,.drafting-ticket-well{padding:18px!important;border-radius:20px!important}
+  .segment-control{width:100%;display:flex}.segment-btn{flex:1;min-width:0;padding:11px 8px;font-size:9px}
+  .pill-group{gap:7px;margin:10px 0 24px}.size-pill{flex:1;min-width:58px;padding:11px 8px;font-size:9px}
+  .toggle-row{padding:13px 14px;gap:12px}.toggle-row label{font-size:13px}
+  .price-display-box{padding:18px!important}.price-figure{font-size:clamp(40px,14vw,62px)!important}
+  #startCommissionBtn{width:100%;min-height:48px;white-space:normal;line-height:1.3}
+
+  .faq-item summary{padding:18px 16px;font-size:16px;line-height:1.35}.faq-item .content{padding:0 16px 18px;font-size:13px}
+  .contact-section-grid>*{min-width:0}.contact-form,.contact-card{padding:20px!important;border-radius:22px!important}
+  .form-row{grid-template-columns:1fr!important}.form-field input,.form-field textarea,.form-field select{width:100%;font-size:16px;min-height:48px}
+  .form-field textarea{min-height:140px}.contact-form .btn{width:100%}
+  .testimonial-pennant,.materials-slate,.diagonal-artist-card{transform:none!important}
+  .testimonial-pennant{padding:22px!important}.testimonial-pennant p{font-size:19px}
+  .artist-monogram{font-size:clamp(86px,24vw,130px)}
+
+  dialog#artModal{margin:auto;width:calc(100vw - 16px);max-width:none;max-height:calc(100svh - 16px);padding:0;border-radius:22px}
+  dialog#artModal .modal-grid{display:flex;flex-direction:column;max-height:calc(100svh - 16px);overflow:hidden}
+  dialog#artModal .modal-image-col{flex:0 1 54svh;max-height:54svh;min-height:220px;padding:14px}
+  dialog#artModal .modal-image-col img{width:100%;height:100%;max-height:51svh;object-fit:contain}
+  dialog#artModal .modal-content-col{flex:1;min-height:0;max-height:42svh;overflow:auto;padding:20px 18px 24px;-webkit-overflow-scrolling:touch}
+  dialog#artModal .modal-content-col h2{font-size:30px!important;line-height:1!important}
+  .modal-close-btn{top:10px!important;right:10px!important;width:42px!important;height:42px!important;z-index:5}
+
+  footer.editorial-footer{padding:64px 0 32px!important;border-radius:28px 28px 0 0}
+  .footer-cta-row{display:flex!important;flex-direction:column;align-items:stretch;gap:10px}.footer-cta-row .btn{width:100%}
+}
+
+@media(max-width:390px){
+  .hero-atelier{padding-top:98px}
+  .hero-stack h1{font-size:38px}
+  .hero-copy-plane{padding:18px}.hero-meter-dock{grid-template-columns:1fr 1fr}.meter-cell:last-child{grid-column:1/-1}
+  .hero-canvas-frame{width:100%;max-width:300px}
+  .art-meta-row{align-items:flex-start}.art-tag{display:none}
+  .drafting-controls-well,.drafting-ticket-well{padding:15px!important}
+  .size-pill{min-width:0}.toggle-row{padding:12px}
+}
+
+@media(orientation:landscape) and (max-width:767px){
+  .hero-atelier{padding-top:88px;padding-bottom:36px}.hero-modular-grid{flex-direction:row;align-items:center}.hero-copy-plane{flex:1}.hero-showcase{flex:0 0 42%}.hero-canvas-frame{max-height:72svh;width:auto;height:72svh}
+}
+
+@media(prefers-reduced-motion:reduce){.hero-canvas-frame,.art-card,.neu-card,.process-sheet{transform:none!important}.nav-links{transition:none!important}}
+
+/* Touch devices should never depend on hover for information or actions. */
+@media(hover:none){.btn-primary:hover,.btn-neu:hover,.art-card:hover,.neu-card:hover,.process-sheet:hover{transform:none;box-shadow:inherit}}
+
+/* Admin on phones: keep controls usable without horizontal page overflow. */
+@media(max-width:767px){
+  .admin-overlay{padding:0!important;align-items:stretch!important}
+  .admin-shell{width:100%!important;height:100svh!important;max-height:none!important;border-radius:0!important;display:flex!important;flex-direction:column}
+  .admin-topbar{position:sticky;top:0;z-index:10;flex:0 0 auto;padding:12px!important;gap:10px}
+  .admin-topbar h3{font-size:16px!important}.admin-topbar small{display:block;max-width:42vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .admin-top-actions{display:flex;gap:6px}.admin-top-actions .btn{min-height:40px;padding:8px 10px;font-size:9px}
+  .admin-main{min-height:0;flex:1;display:flex!important;flex-direction:column;overflow:hidden}
+  .admin-sidebar{flex:0 0 auto;overflow-x:auto!important;overflow-y:hidden;white-space:nowrap;border-right:0!important;border-bottom:1px solid var(--line);padding:7px!important}
+  .admin-nav{display:flex!important;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}.admin-nav button{flex:0 0 auto;min-height:42px}
+  .admin-content{min-height:0;overflow:auto!important;padding:12px!important;-webkit-overflow-scrolling:touch}
+  .admin-view-head{gap:10px}.admin-toolbar{display:flex;flex-wrap:wrap;gap:8px}.admin-toolbar .btn{flex:1;min-width:120px}
+  .admin-stats,.admin-grid,.admin-row,.admin-row.three,.admin-gallery-grid,.admin-image-editor{grid-template-columns:1fr!important}
+  .admin-price-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .admin-card{padding:16px!important;border-radius:18px!important}.admin-field input,.admin-field textarea,.admin-field select{font-size:16px!important;min-height:46px}
+  .admin-actions{display:grid;grid-template-columns:1fr 1fr}.admin-actions .btn{width:100%}.admin-mini{min-height:42px}
+  .admin-work-actions{display:grid;grid-template-columns:1fr 1fr}.admin-work-actions .admin-mini{width:100%}
+  .admin-upload{min-height:110px}.admin-image-preview{min-height:220px}
+  .admin-json{font-size:10px!important;min-height:220px!important}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#work">Skip to content</a>
+<div class="ambient-glow" id="ambientLight"></div>
+<div class="scroll-indicator-bar" id="scrollProgress"></div>
+<!-- Floating Pill Navigation -->
+<nav aria-label="Main Navigation" class="glass-nav" id="mainNav">
+<a class="brand-mark" href="#top" id="brandLogo">
+<span class="dot"></span>
+<span>S.T.J.A.R.T.S</span>
+</a>
+<div class="nav-links" id="navLinks">
+<a class="active" href="#top">Home</a>
+<a href="#artist-hero">Artist</a>
+<a href="#process">Process</a>
+<a href="#work">Gallery</a>
+<a href="#pricing">Commission</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="nav-actions">
+<button aria-label="Toggle theme" aria-pressed="false" type="button" class="theme-btn" id="themeToggle" title="Toggle light/dark theme">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+</button>
+<button aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks" type="button" class="mobile-toggle" id="mobileMenuBtn">☰</button>
+</div>
+</nav>
+
+<!-- Hidden full studio administrator interface -->
+<div class="admin-overlay" id="adminGate" aria-hidden="true">
+  <div class="admin-login-card" role="dialog" aria-modal="true" aria-labelledby="adminLoginTitle">
+    <div class="admin-kicker">Private Studio / Restricted</div><h2 id="adminLoginTitle">Control room.</h2>
+    <p>Private access to the S.T.J.A.R.T.S. content, portfolio, pricing, links, availability and studio configuration.</p>
+    <form id="adminLoginForm" autocomplete="off">
+      <div class="admin-field"><label for="adminUsername">Administrator email</label><input id="adminUsername" type="email" autocomplete="email" placeholder="studio email" required></div>
+      <div class="admin-field"><label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required></div>
+      <div class="admin-error" id="adminLoginError" role="alert"></div>
+      <button class="btn btn-primary" type="submit" style="width:100%">Open Control Center</button>
+    </form>
+    <div class="admin-lock-note">Cloud CMS · authenticated with Supabase. Shortcut: Ctrl/Cmd + Shift + A, or add #admin to the address. Changes are shared across every device.</div>
+  </div>
+</div>
+<div class="admin-overlay" id="adminPanel" aria-hidden="true">
+  <div class="admin-shell" role="dialog" aria-modal="true" aria-labelledby="adminPanelTitle">
+    <header class="admin-topbar">
+      <div class="admin-brand"><div class="admin-brand-mark">ST</div><div><h3 id="adminPanelTitle">Studio Control Center</h3><small>Private CMS · cloud synced</small></div></div>
+      <div class="admin-top-actions"><button class="btn btn-neu" id="adminPreviewBtn" type="button">View Public Site</button><button class="btn btn-neu" id="adminCloseBtn" type="button">Lock</button><button class="btn btn-primary" id="adminSaveBtn" type="button">Save Changes</button></div>
+    </header>
+    <div class="admin-main">
+      <aside class="admin-sidebar"><nav class="admin-nav" id="adminNav">
+        <button class="active" data-view="dashboard">Dashboard</button><button data-view="portfolio">Portfolio</button><button data-view="hero">Hero Image</button><button data-view="pricing">Pricing</button><button data-view="content">Site Content</button><button data-view="faq">FAQ</button><button data-view="contact">Links & Contact</button><button data-view="backup">Backup</button>
+      </nav><div class="admin-side-note">All controls are scoped to the existing public page. No public navigation item is added.</div></aside>
+      <main class="admin-content">
+        <section class="admin-view active" data-view="dashboard"><div class="admin-view-head"><div><div class="admin-kicker">Overview</div><h2>Studio at a glance.</h2><p>Manage the parts of the public site that change most often without touching its core visual design.</p></div></div>
+          <div class="admin-stats"><div class="admin-stat"><strong id="statWorks">0</strong><span>Portfolio pieces</span></div><div class="admin-stat"><strong id="statImages">0</strong><span>Images installed</span></div><div class="admin-stat"><strong id="statSlots">0</strong><span>Open slots</span></div><div class="admin-stat"><strong id="statA4">₹0</strong><span>Classic A4</span></div></div>
+          <div class="admin-grid"><div class="admin-card"><h4>Portfolio status</h4><p>Add, reorder, hide or replace your real artwork.</p><button class="btn btn-primary" data-jump="portfolio">Manage Portfolio</button></div><div class="admin-card"><h4>Site presentation</h4><p>Swap the hero artwork and control the public studio messaging.</p><button class="btn btn-neu" data-jump="hero">Manage Hero</button></div><div class="admin-card full"><h4>Quick save</h4><p>Changes are saved to the cloud. The public site reads the same data on every device.</p><div class="admin-status" id="adminStatus" aria-live="polite">Ready</div></div></div>
+        </section>
+
+        <section class="admin-view" data-view="portfolio"><div class="admin-view-head"><div><div class="admin-kicker">Media library</div><h2>Your artwork.</h2><p>Each portfolio item can have its own image, title, category, size, type, description and visibility. Existing generated mock artwork is no longer used.</p></div><div class="admin-toolbar"><button class="btn btn-primary" id="newWorkBtn" type="button">+ New Artwork</button></div></div>
+          <div class="admin-card full" style="margin-bottom:16px"><div class="admin-tabs" id="portfolioFilters"><button class="admin-tab active" data-filter="All">All</button><button class="admin-tab" data-filter="Portraits">Portraits</button><button class="admin-tab" data-filter="Couples">Couples</button><button class="admin-tab" data-filter="Pets">Pets</button><button class="admin-tab" data-filter="Cinema">Cinema</button></div><div class="admin-gallery-grid" id="adminWorkGrid"></div></div>
+          <div class="admin-card full" id="workEditor" style="display:none"><h4 id="workEditorTitle">Add artwork</h4><p>Upload a real portfolio image and edit its public metadata.</p><div class="admin-image-editor"><div><div class="admin-image-preview" id="workPreview"><span>No artwork image selected.</span></div><label class="admin-upload"><input id="workImage" type="file" accept="image/*"><div><strong>Choose artwork image</strong><small>JPG, PNG, WEBP · stored securely in cloud storage</small></div></label></div><div><div class="admin-row"><div class="admin-field"><label>Title</label><input id="workTitle"></div><div class="admin-field"><label>Category</label><select id="workCat"><option>Portraits</option><option>Couples</option><option>Pets</option><option>Cinema</option></select></div></div><div class="admin-row"><div class="admin-field"><label>Archival size</label><select id="workSize"><option>A6</option><option>A5</option><option>A4</option><option>A3</option><option>A2</option></select></div><div class="admin-field"><label>Work type</label><input id="workKind"></div></div><div class="admin-field"><label>Description</label><textarea id="workDesc"></textarea></div><div class="admin-field"><label>Visibility</label><select id="workPublished"><option value="yes">Published — visible on the public site</option><option value="no">Hidden — only you can see it</option></select></div><div class="admin-actions"><button class="btn btn-primary" id="saveWorkBtn" type="button">Save Artwork</button><button class="btn btn-neu" id="cancelWorkBtn" type="button">Cancel</button></div></div></div></div>
+        </section>
+
+        <section class="admin-view" data-view="hero"><div class="admin-view-head"><div><div class="admin-kicker">Lead image</div><h2>Hero artwork.</h2><p>Replace the public hero’s generated sketch with your own real artwork image. The existing hero frame, typography and layout stay intact.</p></div></div><div class="admin-card full"><div class="admin-image-editor"><div class="admin-image-preview" id="heroPreview"><span>No custom hero image. The public site is using its built-in artwork treatment.</span></div><div><label class="admin-upload"><input id="heroImage" type="file" accept="image/*"><div><strong>Upload hero artwork</strong><small>Recommended: portrait-oriented JPG/PNG/WEBP</small></div></label><div class="admin-actions"><button class="btn btn-primary" id="saveHeroBtn" type="button">Use This Hero Image</button><button class="btn btn-neu" id="removeHeroBtn" type="button">Remove Hero Image</button></div><div class="admin-status" id="heroStatus"></div></div></div></div></section>
+
+        <section class="admin-view" data-view="pricing"><div class="admin-view-head"><div><div class="admin-kicker">Commerce</div><h2>Pricing engine.</h2><p>Every number used by the public commission calculator is editable here.</p></div></div><div class="admin-grid"><div class="admin-card full"><h4>Classic Portrait</h4><div class="admin-price-grid"><div class="admin-field"><label>A6</label><input id="priceA6" type="number" min="0"></div><div class="admin-field"><label>A5</label><input id="priceA5" type="number" min="0"></div><div class="admin-field"><label>A4</label><input id="priceA4" type="number" min="0"></div><div class="admin-field"><label>A3</label><input id="priceA3" type="number" min="0"></div><div class="admin-field"><label>A2</label><input id="priceA2" type="number" min="0"></div></div></div><div class="admin-card full"><h4>Signature Fine Realism</h4><div class="admin-price-grid"><div class="admin-field"><label>A6</label><input id="sigA6" type="number" min="0"></div><div class="admin-field"><label>A5</label><input id="sigA5" type="number" min="0"></div><div class="admin-field"><label>A4</label><input id="sigA4" type="number" min="0"></div><div class="admin-field"><label>A3</label><input id="sigA3" type="number" min="0"></div><div class="admin-field"><label>A2</label><input id="sigA2" type="number" min="0"></div></div></div><div class="admin-card"><h4>Add-ons</h4><div class="admin-field"><label>Wooden frame</label><input id="adminFramePrice" type="number" min="0"></div><div class="admin-field"><label>Additional face</label><input id="adminExtraFacePrice" type="number" min="0"></div></div><div class="admin-card"><h4>Availability</h4><div class="admin-row"><div class="admin-field"><label>Open slots</label><input id="adminSlots" type="number" min="0" max="99"></div><div class="admin-field"><label>Month</label><input id="adminMonth" maxlength="24"></div></div></div></div></section>
+
+        <section class="admin-view" data-view="content"><div class="admin-view-head"><div><div class="admin-kicker">Editorial controls</div><h2>Site content.</h2><p>Change the small operational copy without rebuilding the public page.</p></div></div><div class="admin-grid"><div class="admin-card full"><h4>Availability banner</h4><div class="admin-field"><label>Public banner text</label><input id="adminSlotsText" maxlength="100"></div></div><div class="admin-card full"><h4>Footer</h4><div class="admin-field"><label>Copyright / footer line</label><input id="adminCopyright" maxlength="220"></div></div></div></section>
+
+        <section class="admin-view" data-view="faq"><div class="admin-view-head"><div><div class="admin-kicker">Support content</div><h2>FAQ manager.</h2><p>Edit, add or remove the questions displayed in the public FAQ accordion.</p></div><button class="btn btn-primary" id="newFaqBtn" type="button">+ New Question</button></div><div class="admin-card full" id="faqEditor" style="display:none;margin-bottom:16px"><h4 id="faqEditorTitle">New question</h4><div class="admin-field"><label for="faqQuestion">Question</label><input id="faqQuestion"></div><div class="admin-field"><label for="faqAnswer">Answer</label><textarea id="faqAnswer" rows="4"></textarea></div><div class="admin-actions"><button class="btn btn-primary" id="saveFaqBtn" type="button">Save Question</button><button class="btn btn-neu" id="cancelFaqBtn" type="button">Cancel</button></div></div><div class="admin-card full"><div id="adminFaqList"></div></div></section>
+
+        <section class="admin-view" data-view="contact"><div class="admin-view-head"><div><div class="admin-kicker">Routing</div><h2>Links & contact.</h2><p>Control the destinations used by the public WhatsApp, Instagram and email actions.</p></div></div><div class="admin-grid"><div class="admin-card"><h4>WhatsApp</h4><div class="admin-field"><label>Number</label><input id="adminWa" inputmode="numeric"></div></div><div class="admin-card"><h4>Instagram</h4><div class="admin-field"><label>Handle</label><input id="adminIg"></div></div><div class="admin-card full"><h4>Email</h4><div class="admin-field"><label>Address</label><input id="adminEmail" type="email"></div></div></div></section>
+
+        <section class="admin-view" data-view="backup"><div class="admin-view-head"><div><div class="admin-kicker">Data</div><h2>Backup & restore.</h2><p>Export the complete editable studio configuration and image references, or restore a previous JSON backup. Image files themselves remain in cloud storage.</p></div></div><div class="admin-card full"><div class="admin-field"><label>Studio JSON</label><textarea class="admin-json" id="adminJson" spellcheck="false"></textarea></div><div class="admin-actions"><button class="btn btn-primary" id="adminExportBtn" type="button">Prepare Full Backup</button><button class="btn btn-neu" id="adminDownloadBtn" type="button">Download JSON</button><button class="btn btn-neu" id="adminImportBtn" type="button">Restore From JSON</button></div></div></section>
+      </main>
+    </div>
+  </div>
+</div>
+
+<div id="app">
+<!-- RADICAL HERO: Kinetic Typographic Stack & Deconstructed Collage -->
+<header class="hero-atelier w" id="top">
+<!-- Rotated Stamped Banner -->
+<div class="hero-availability-stack">
+<div class="atelier-badge-rotated">
+<span class="pulse-orb"></span>
+<span class="mono-tag" id="slotsText">2 Commission Slots Open for March</span>
+</div>
+<a class="btn btn-primary hero-commission-btn" href="#pricing">Commission a Portrait <span>↘</span></a>
+</div>
+<!-- Kinetic Staggered Typographic Title -->
+<div class="hero-stack scroll-reveal">
+<div class="eyebrow">Handcrafted Fine Pencil Portraits</div>
+<h1>
+<span class="hero-title-line stagger-1">Captured in <em>graphite.</em></span>
+<span class="hero-title-line stagger-2">Felt for generations.</span>
+</h1>
+</div>
+<!-- Modular Overlapping Content Grid -->
+<div class="hero-modular-grid">
+<div class="hero-copy-plane hero-artist-intro scroll-reveal" data-delay="1" id="artist-hero">
+<div class="eyebrow">The Artist</div>
+<h3>Surya Teja <em>&amp; the Graphite Craft.</em></h3>
+<p class="hero-sub">
+          A photograph is taken in a fraction of a second; a graphite portrait is built across hundreds of deliberate pencil strokes. In that quiet time, warmth, character, and love are woven into the paper.
+        </p>
+<p class="hero-artist-note">Based in India, Surya creates commissioned heirloom drawings for families, partners, and collectors worldwide, transforming treasured memories into permanent art.</p>
+<div class="hero-artist-signature">
+<span class="mono-tag">Artist / Surya Teja</span>
+<span class="hero-artist-rule"></span>
+<span class="mono-tag">Graphite · Charcoal · Archival</span>
+</div>
+<div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-top:28px;">
+<a class="btn btn-neu" href="#work">Explore Collection</a>
+</div>
+</div>
+<!-- Overlapping Layered Art Canvas Frame -->
+<div class="hero-showcase scroll-reveal" data-delay="2">
+<div class="parchment-backing-plane"></div>
+<div class="hero-canvas-frame" id="heroFrame">
+<div class="hero-drawing-board">
+<div style="display:flex; justify-content:space-between; align-items:flex-start;">
+<span class="mono-tag" style="color:var(--mut);">Original Study #084</span>
+<span style="font-family:var(--font-serif); font-size:18px; font-style:italic; color:var(--mut);">Surya Teja</span>
+</div>
+<!-- Stylized Charcoal & Graphite Portrait Vector Art -->
+<svg class="pencil-sketch" style="display:none" fill="none" viewbox="0 0 340 380" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.9" stroke="var(--ink)" stroke-linecap="round" stroke-width="1.2">
+<path d="M120 70 C140 40, 200 40, 220 70 C240 100, 245 150, 230 190 C210 240, 185 270, 170 280 C155 270, 130 240, 110 190 C95 150, 100 100, 120 70 Z" stroke-dasharray="2 3"></path>
+<path d="M110 90 Q150 40 210 75 Q245 110 235 150 M120 80 Q170 50 225 90 M100 115 Q140 70 200 85" opacity="0.6" stroke-width="1.6"></path>
+<path d="M140 145 C150 140, 160 140, 165 146 M185 146 C190 140, 200 140, 210 145" stroke-width="2"></path>
+<ellipse cx="152" cy="152" fill="var(--ink)" opacity="0.8" rx="6" ry="4"></ellipse>
+<ellipse cx="198" cy="152" fill="var(--ink)" opacity="0.8" rx="6" ry="4"></ellipse>
+<path d="M174 150 L172 185 L180 188" stroke-width="1.5"></path>
+<path d="M158 210 C168 218, 182 218, 192 210" stroke-width="2"></path>
+<path d="M162 218 Q175 224 188 218" opacity="0.5"></path>
+<line opacity="0.4" stroke-width="0.8" x1="125" x2="145" y1="170" y2="200"></line>
+<line opacity="0.4" stroke-width="0.8" x1="128" x2="148" y1="165" y2="195"></line>
+<line opacity="0.4" stroke-width="0.8" x1="205" x2="225" y1="170" y2="200"></line>
+<line opacity="0.4" stroke-width="0.8" x1="202" x2="222" y1="165" y2="195"></line>
+</g>
+</svg>
+<div style="display:flex; justify-content:space-between; align-items:flex-end;">
+<div>
+<span style="font-family:var(--font-serif); font-size:22px; display:block;">Capturing Soul</span>
+<span class="mono-tag" style="color:var(--mut);">Graphite on 300gsm Bristol</span>
+</div>
+<span class="mono-tag" style="padding:4px 8px; border-radius:6px; background:rgba(0,0,0,0.06);">2025</span>
+</div>
+</div>
+<div class="floating-glass-badge">
+<i aria-hidden="true">✏️</i>
+<div>
+<strong>100% Hand-Crafted</strong>
+<span>Preserving authentic warmth</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- RADICAL GALLERY: Offset 3-Column Irregular Brick Layout with Loupe Tiles -->
+<section id="work">
+<div class="w">
+<div class="section-header-atelier scroll-reveal">
+<div>
+<div class="eyebrow">Curated Folio</div>
+<h2>Artwork that breathes,<br/><em>moments that linger.</em></h2>
+</div>
+<p>
+          Every commissioned piece is built meticulously layer by layer in graphite and deep charcoal, capturing nuance, skin texture, and expressive depth that digital prints never touch.
+        </p>
+</div>
+<div class="filter-bar scroll-reveal" id="categoryFilters">
+<button class="filter-chip active" data-cat="All">All Curations</button>
+<button class="filter-chip" data-cat="Portraits">Classic Portraits</button>
+<button class="filter-chip" data-cat="Couples">Couples &amp; Memorials</button>
+<button class="filter-chip" data-cat="Pets">Beloved Companions</button>
+<button class="filter-chip" data-cat="Cinema">Cinema &amp; Legends</button>
+</div>
+<!-- Offset Brick Columns Container -->
+<div class="brick-gallery-grid" id="brickGridContainer">
+<!-- Rendered via JS -->
+</div>
+</div>
+</section>
+<!-- DECONSTRUCTED PROCESS JOURNEY -->
+<section id="process">
+<div class="w process-deconstructed-wrap">
+<div class="sticky-column scroll-reveal">
+<div class="eyebrow">The Experience</div>
+<h2>From photograph<br/>to <em>timeless art.</em></h2>
+<p style="color:var(--mut); margin:24px 0 36px; max-width:400px; font-size:16px;">
+          A transparent, reassuring commission journey tailored around your comfort. You share the story; the graphite renders its soul.
+        </p>
+<a class="btn btn-primary" href="#pricing">Begin Your Commission <span>↘</span></a>
+</div>
+<div class="process-cascade">
+<div class="process-sheet scroll-reveal">
+<div class="step-number-stamp">01</div>
+<div>
+<h3>Share Your Photograph</h3>
+<p>Send your cherished pictures via WhatsApp. Even older, faded, or slightly blurred photos are carefully restored and aligned before any pencil touches paper.</p>
+</div>
+</div>
+<div class="process-sheet scroll-reveal" data-delay="1">
+<div class="step-number-stamp">02</div>
+<div>
+<h3>Composition Proof</h3>
+<p>A tonal proportion layout and sample preview are shared with you. You approve the angle, crop, and expressive lighting prior to final shading.</p>
+</div>
+</div>
+<div class="process-sheet scroll-reveal" data-delay="2">
+<div class="step-number-stamp">03</div>
+<div>
+<h3>Handmade Creation</h3>
+<p>Layer upon layer of graphite, blending stump, and charcoal powder are developed by hand. Typically 2 days per face of continuous, patient craft.</p>
+</div>
+</div>
+<div class="process-sheet scroll-reveal" data-delay="3">
+<div class="step-number-stamp">04</div>
+<div>
+<h3>Archival Framing &amp; Ship</h3>
+<p>Once you inspect and wholeheartedly approve the final portrait, the artwork is sealed with archival fixative, custom framed, and insured for nationwide transit.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DRAFTING TABLE COMMISSION CALCULATOR -->
+<section id="pricing">
+<div class="w">
+<div class="section-header-atelier scroll-reveal">
+<div>
+<div class="eyebrow">Commission Studio</div>
+<h2>Your custom portrait.<br/><em>Curated your way.</em></h2>
+</div>
+<p>
+          Select your desired finish, archival dimensions, and number of subjects. See exact transparent pricing dynamically calculate prior to initiating your WhatsApp consultation.
+        </p>
+</div>
+<!-- Inset Tactile Drafting Table Desk Layout -->
+<div class="drafting-desk-outer scroll-reveal">
+<div class="drafting-grid-inner">
+<!-- Drafting Controls Well -->
+<div class="drafting-controls-well">
+<div class="mono-tag" style="color:var(--mut); margin-bottom:14px; font-weight:700;">1. Choose Finish Style</div>
+<div class="segment-control">
+<button class="segment-btn active" data-style="Classic" id="styleClassic">Classic Portrait</button>
+<button class="segment-btn" data-style="Signature" id="styleSignature">Signature Fine Realism</button>
+</div>
+<div class="mono-tag" style="color:var(--mut); margin-bottom:14px; font-weight:700;">2. Select Archival Dimension</div>
+<div class="pill-group" id="sizeSelector">
+<button class="size-pill" data-size="A6">A6 (Desk)</button>
+<button class="size-pill" data-size="A5">A5 (Compact)</button>
+<button class="size-pill active" data-size="A4">A4 (Standard)</button>
+<button class="size-pill" data-size="A3">A3 (Statement)</button>
+<button class="size-pill" data-size="A2">A2 (Gallery Grand)</button>
+</div>
+<div class="calc-toggles">
+<div class="toggle-row">
+<label>
+<input id="frameToggle" type="checkbox"/>
+<span>Add Handcrafted Wooden Frame &amp; Glass</span>
+</label>
+<strong class="mono-tag" id="frameCostLabel" style="font-size:12px;">+₹400</strong>
+</div>
+<div class="toggle-row">
+<label>
+<span>Subjects / Faces Included</span>
+</label>
+<div style="display:flex; align-items:center; gap:12px;">
+<select class="custom-select" id="facesCount">
+<option selected="" value="1">1 Subject (Solo)</option>
+<option value="2">2 Subjects (Duo / Couple)</option>
+<option value="3">3 Subjects (Family / Trio)</option>
+<option value="4">4 Subjects (Family Group)</option>
+<option value="5">5 Subjects (Grand Gathering)</option>
+</select>
+<span class="mono-tag" id="extraFaceCost" style="color:var(--mut);">+₹500/extra</span>
+</div>
+</div>
+</div>
+<!-- Stamped Dynamic Price Calculation Box -->
+<div class="price-display-box">
+<div class="mono-tag" style="color:var(--mut); font-weight:700;">Total Commission Investment</div>
+<div class="price-figure" id="totalPriceDisplay" aria-live="polite">₹1,799 <span>INR</span></div>
+<p style="font-size:12px; color:var(--mut); margin:0;">
+                50% advance via UPI to schedule · Free insured transit across India · 1 Revision round included
+              </p>
+</div>
+<div style="margin-top:28px;">
+<a class="btn btn-primary" href="#" id="startCommissionBtn" rel="noopener" target="_blank">
+                Send Commission Spec to Surya on WhatsApp ↗
+              </a>
+</div>
+</div>
+<!-- Stamped Calculation Ticket Well -->
+<div class="drafting-ticket-well">
+<div>
+<div class="eyebrow" id="styleBadge">Classic Finish</div>
+<h3 id="styleHeading">Subtle, expressive, authentic.</h3>
+<p id="styleDesc" style="color:var(--mut); font-size:14px; margin-top:14px;">
+                A balanced graphite study emphasizing natural eye expression, contour precision, and clean negative space. Ideal for timeless gifts and family keepsakes.
+              </p>
+<ul class="feature-check-list">
+<li>100% Artist-grade graphite &amp; charcoal</li>
+<li>Heavyweight 300gsm acid-free Bristol board</li>
+<li>Free damaged/low-res photo enhancement</li>
+<li>Safe protective packaging in wooden reinforced cases</li>
+<li>Insured doorstep delivery across India (5–7 days)</li>
+</ul>
+</div>
+<div style="padding-top:24px; border-top:1px dashed var(--line-strong); margin-top:30px;">
+<div style="display:flex; align-items:center; gap:14px;">
+<span style="font-size:26px;">🛡️</span>
+<div>
+<strong style="font-size:13px; display:block; font-family:var(--font-display);">Surya's Guarantee</strong>
+<span style="font-size:11px; color:var(--mut);">No piece is framed or dispatched until you are completely in love with the preview.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ ACCORDION -->
+<section id="faq">
+<div class="w faq-wrap">
+<div class="scroll-reveal" style="text-align:center; margin-bottom:50px;">
+<div class="eyebrow" style="justify-content:center;">Common Inquiries</div>
+<h2>Everything you need to know.</h2>
+</div>
+<div class="scroll-reveal" id="faqList">
+<!-- Rendered via JS -->
+</div>
+</div>
+</section>
+<!-- DIRECT COMMISSION CONTACT -->
+<section id="contact">
+<div class="w contact-section-grid">
+<div class="scroll-reveal">
+<div class="eyebrow">Initiate Contact</div>
+<h2>Bring a cherished memory<br/><em>to life on paper.</em></h2>
+<p style="color:var(--mut); font-size:16px; line-height:1.7; margin-top:20px; max-width:440px;">
+          Have a unique idea, combining multiple photos into one drawing, or wondering if an older photo can be drawn? Drop Surya a note directly on WhatsApp.
+        </p>
+<div style="margin-top:36px; display:flex; flex-direction:column; gap:16px;">
+<div style="display:flex; align-items:center; gap:14px;">
+<div style="width:42px; height:42px; border-radius:50%; background:var(--glass-bg); border:var(--glass-border); box-shadow:var(--neu-subtle); display:grid; place-items:center;">📍</div>
+<div>
+<strong style="font-size:13px; font-family:var(--font-display);">Studio Location</strong>
+<span class="mono-tag" style="display:block; font-size:11px; color:var(--mut);">Hyderabad &amp; Nationwide Delivery across India</span>
+</div>
+</div>
+<div style="display:flex; align-items:center; gap:14px;">
+<div style="width:42px; height:42px; border-radius:50%; background:var(--glass-bg); border:var(--glass-border); box-shadow:var(--neu-subtle); display:grid; place-items:center;">⚡</div>
+<div>
+<strong style="font-size:13px; font-family:var(--font-display);">Quick WhatsApp Response</strong>
+<span class="mono-tag" style="display:block; font-size:11px; color:var(--mut);">Usually replies within 1–2 hours</span>
+</div>
+</div>
+</div>
+</div>
+<form class="neu-card contact-form scroll-reveal" data-delay="1" id="commissionForm">
+<div class="form-field">
+<label for="formName">Your Full Name</label>
+<input id="formName" name="name" autocomplete="name" placeholder="e.g. Meera Sharma" required="" type="text"/>
+</div>
+<div class="form-field">
+<label for="formPhone">Your Mobile / WhatsApp Number</label>
+<input id="formPhone" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. +91 98765 43210" type="tel"/>
+</div>
+<div class="form-field">
+<label for="formIdea">Your Portrait Vision</label>
+<textarea id="formIdea" name="message" placeholder="Tell Surya about the photograph, subjects, occasion (anniversary, gift, memorial), and any custom requests..." required="" rows="4"></textarea>
+</div>
+<button class="btn btn-primary" style="width:100%;" type="submit">
+          Chat with Surya on WhatsApp ↗
+        </button>
+<div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+</form>
+</div>
+</section>
+<!-- ARCHITECTURAL FOOTER -->
+<footer class="editorial-footer">
+<div class="w" style="text-align:center;">
+<div class="eyebrow" style="justify-content:center; color:#9c9990;">S.T.J.A.R.T.S</div>
+<h2>Let’s create something<br/><em>unforgettable.</em></h2>
+<div class="footer-cta-row">
+<a class="btn btn-primary" href="https://wa.me/918978854205" rel="noopener" style="background:#f4f2ec; color:#11110f;" target="_blank">WhatsApp Studio ↗</a>
+<a class="btn btn-neu" href="https://instagram.com/s.t.j.a.r.t.s" rel="noopener" style="color:#f4f2ec; border-color:rgba(255,255,255,0.15);" target="_blank">Instagram Folio ↗</a>
+<a class="btn btn-neu" href="mailto:jogusuryateja567@gmail.com" style="color:#f4f2ec; border-color:rgba(255,255,255,0.15);">Email Surya ↗</a>
+</div>
+<p class="mono-tag" style="font-size:11px; color:#78756e; margin-top:20px;">
+        © 2026 S.T.J.A.R.T.S. All drawings hand-crafted by Surya Teja. Designed with tactile neumorphism and frosted glassmorphism.
+      </p>
+</div>
+</footer>
+</div>
+<!-- ARTWORK DETAIL LIGHTBOX MODAL -->
+<dialog id="artModal">
+<div class="modal-grid">
+<div class="modal-image-col" id="modalArtMedia">
+<!-- Media inserted dynamically -->
+</div>
+<div class="modal-content-col">
+<button aria-label="Close Preview" class="modal-close-btn" id="modalCloseBtn">✕</button>
+<div class="eyebrow" id="modalTag">Artwork Study</div>
+<h2 id="modalTitle" style="font-size:36px; margin-bottom:12px;">Portrait Study</h2>
+<p id="modalDesc" style="color:var(--mut); font-size:15px; line-height:1.6; margin-bottom:24px;">
+        Commissioned portrait study crafted with artist-grade graphite pencils on 300gsm acid-free paper.
+      </p>
+<div class="mono-tag" id="modalSpecs" style="font-size:12px; color:var(--mut); margin-bottom:28px;">
+        Standard A4 · Custom Teak Wood Frame
+      </div>
+<a class="btn btn-primary" href="#" id="modalOrderBtn" rel="noopener" target="_blank">
+        Commission Similar Artwork ↗
+      </a>
+</div>
+</div>
+</dialog>
+<script>
+/* STUDIO DATA ENGINE (100% Data & Link Integrity Preserved) */
+const STUDIO_DATA = {
+  wa: "918978854205",
+  ig: "s.t.j.a.r.t.s",
+  email: "jogusuryateja567@gmail.com",
+  slots: 2,
+  framePrice: 400,
+  extraFacePrice: 500,
+  prices: {
+    Classic: { A6: 799, A5: 1199, A4: 1799, A3: 2699, A2: 4499 },
+    Signature: { A6: 1299, A5: 1899, A4: 2799, A3: 4199, A2: 6999 }
+  },
+  works: [
+    {
+      id: 1,
+      title: "Soulful Elder Portrait",
+      cat: "Portraits",
+      size: "A3",
+      kind: "Commission",
+      tall: true,
+      desc: "Detailed study in aged skin texture, capturing character lines, wisdom, and warm expressive lighting."
+    },
+    {
+      id: 2,
+      title: "Golden Hour Couple",
+      cat: "Couples",
+      size: "A4",
+      kind: "Anniversary Keepsake",
+      tall: false,
+      desc: "Merged from two separate family smartphone snapshots into a harmonious couple portrait with natural softness."
+    },
+    {
+      id: 3,
+      title: "The Faithful Retriever",
+      cat: "Pets",
+      size: "A4",
+      kind: "Memorial",
+      tall: true,
+      desc: "Delicate individual hair rendering and warm wet-nose highlights created for a cherished companion."
+    },
+    {
+      id: 4,
+      title: "Cinema Icon Study",
+      cat: "Cinema",
+      size: "A2",
+      kind: "Studio Piece",
+      tall: false,
+      desc: "Dramatic chiaroscuro high-contrast charcoal homage with heavy velvet blacks and luminous paper highlights."
+    },
+    {
+      id: 5,
+      title: "Childhood Innocence",
+      cat: "Portraits",
+      size: "A5",
+      kind: "Birthday Gift",
+      tall: false,
+      desc: "Feathery soft graphite treatment preserving baby-fine curls and joyful, spontaneous expression."
+    },
+    {
+      id: 6,
+      title: "Heritage Grandparents Tribute",
+      cat: "Couples",
+      size: "A3",
+      kind: "Heritage Commission",
+      tall: true,
+      desc: "Careful digital restoration of a 1970s faded analog black-and-white print, transferred by hand to archival cotton."
+    }
+  ],
+  faqs: [
+    {
+      q: "What is the difference between Classic and Signature Realism?",
+      a: "Classic focuses on precise facial proportions, essential likeness, and gentle tonal pencil gradients. Signature Realism is an intensive, hyper-detailed rendering that captures micro-textures like skin pores, individual eyelash strands, and fabric weaves."
+    },
+    {
+      q: "How long does a portrait commission take?",
+      a: "Drawing time is approximately 2 days per face once scheduled. With final client review, archival UV sealing, framing, and insured courier delivery, your piece typically arrives within 5 to 7 business days across India."
+    },
+    {
+      q: "Can you combine people from different photographs into one drawing?",
+      a: "Yes, this is one of Surya's most requested specialties. People from separate individual photos can be naturally merged into one unified composition with balanced lighting."
+    },
+    {
+      q: "Can you work from old, blurry, or damaged photos?",
+      a: "Yes. Basic facial features (eyes, nose, smile structure) are restored and enhanced in the initial proof before drawing commences on paper."
+    },
+    {
+      q: "Are the portraits framed before dispatch?",
+      a: "Framing is optional and highly recommended. Each frame is custom handcrafted in dark wood or matte teak with glass and ready-to-hang hardware."
+    }
+  ]
+};
+
+let currentStyle = 'Classic';
+let currentSize = 'A4';
+let isFramed = false;
+let subjectCount = 1;
+let activeCategory = 'All';
+
+const formatInr = n => '₹' + Number(n).toLocaleString('en-IN');
+const makeWhatsAppUrl = msg => `https://wa.me/${STUDIO_DATA.wa}?text=${encodeURIComponent(msg)}`;
+
+function getCalculatedTotal() {
+  const base = STUDIO_DATA.prices[currentStyle]?.[currentSize] || 1799;
+  const frameAdd = isFramed ? STUDIO_DATA.framePrice : 0;
+  const extraFaces = (subjectCount - 1) * STUDIO_DATA.extraFacePrice;
+  return base + frameAdd + extraFaces;
+}
+
+function updatePricingView() {
+  const total = getCalculatedTotal();
+  const fl = document.getElementById('frameCostLabel'); if (fl) fl.textContent = '+' + formatInr(STUDIO_DATA.framePrice);
+  const ef = document.getElementById('extraFaceCost'); if (ef) ef.textContent = '+' + formatInr(STUDIO_DATA.extraFacePrice) + '/extra';
+  document.getElementById('styleClassic')?.setAttribute('aria-pressed', currentStyle === 'Classic');
+  document.getElementById('styleSignature')?.setAttribute('aria-pressed', currentStyle === 'Signature');
+  document.querySelectorAll('#sizeSelector .size-pill').forEach(b => b.setAttribute('aria-pressed', b.dataset.size === currentSize));
+  const priceDisplay = document.getElementById('totalPriceDisplay');
+  if (priceDisplay) {
+    priceDisplay.innerHTML = `${formatInr(total)} <span>INR</span>`;
+  }
+
+  const waBtn = document.getElementById('startCommissionBtn');
+  if (waBtn) {
+    const isWaitlist = Number(STUDIO_DATA.slots) <= 0;
+    const message = `Hi Surya! I would like to ${isWaitlist ? 'join the commission waitlist for' : 'commission'} a ${currentStyle} pencil portrait:
+• Size: ${currentSize}
+• Faces/Subjects: ${subjectCount}
+• Framing: ${isFramed ? 'Yes (Handcrafted Wood Frame)' : 'Artwork Only (Safely Rolled)'}
+• ${isWaitlist ? 'Current estimate if a slot opens' : 'Estimated Total'}: ${formatInr(total)}
+
+Could we discuss photo references?`;
+    waBtn.href = makeWhatsAppUrl(message);
+    waBtn.textContent = isWaitlist ? 'Join Commission Waitlist on WhatsApp ↗' : 'Send Commission Spec to Surya on WhatsApp ↗';
+    waBtn.setAttribute('aria-label', isWaitlist ? 'Join the commission waitlist on WhatsApp' : 'Send commission specifications to Surya on WhatsApp');
+  }
+
+  const badge = document.getElementById('styleBadge');
+  const heading = document.getElementById('styleHeading');
+  const desc = document.getElementById('styleDesc');
+  if (badge && heading && desc) {
+    if (currentStyle === 'Classic') {
+      badge.textContent = 'Classic Style';
+      heading.textContent = 'Subtle, expressive, authentic likeness.';
+      desc.textContent = 'A balanced graphite study capturing genuine emotion, natural light, and clean contrast. Ideal for personal gifts, birthdays, and anniversaries.';
+    } else {
+      badge.textContent = 'Signature Realism';
+      heading.textContent = 'Museum-grade hyper-detail & depth.';
+      desc.textContent = 'Intensive multi-pass graphite & velvety charcoal powder craft. Features micro-textures, specular highlights, and deep tonal richness for heirloom wall displays.';
+    }
+  }
+}
+
+/* Pinterest-style masonry: CSS columns preserve the source order and natural image heights. */
+function renderBrickGallery() {
+  const container = document.getElementById('brickGridContainer');
+  if (!container) return;
+
+  const filtered = STUDIO_DATA.works.filter(w => activeCategory === 'All' || w.cat === activeCategory);
+  const n = getColCount();
+
+  container.style.setProperty('--cols', n);
+  container.dataset.cols = n;
+
+  if (!filtered.length) {
+    container.innerHTML = '<div class="hp-empty">No pieces in this category yet.</div>';
+    return;
+  }
+
+  container.innerHTML = filtered.map(work => `
+    <div class="art-card scroll-reveal" data-work-id="${work.id}" role="button" tabindex="0" aria-label="View ${escapeHtml(work.title)}">
+      <div class="art-preview-wrap">
+        <span class="inspection-glass-tile">Archival ${escapeHtml(work.size)}</span>
+        ${work.image
+          ? `<img src="${escapeHtml(work.image)}" alt="${escapeHtml(work.title)}" loading="lazy" decoding="async">`
+          : `<div class="art-placeholder-vector" style="font-family:var(--font-mono);font-size:10px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.12em">Portrait study<br>coming soon</div>`
+        }
+      </div>
+      <div class="art-meta-row">
+        <div>
+          <div class="art-meta-title">${escapeHtml(work.title)}</div>
+          <div class="art-meta-subtitle">${escapeHtml(work.kind)} · ${escapeHtml(work.size)} Archival</div>
+        </div>
+        <span class="art-tag">${escapeHtml(work.cat)}</span>
+      </div>
+    </div>
+  `).join('');
+
+  container.querySelectorAll('.art-card').forEach(card => {
+    const fn = () => openArtworkModal(card.dataset.workId);
+    card.addEventListener('click', fn);
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        fn();
+      }
+    });
+  });
+
+  observeScrollReveals();
+}
+function escapeHtml(v){return String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+
+function openArtworkModal(id) {
+  const work = STUDIO_DATA.works.find(w => w.id == id);
+  if (!work) return;
+
+  const modal = document.getElementById('artModal');
+  const title = document.getElementById('modalTitle');
+  const desc = document.getElementById('modalDesc');
+  const specs = document.getElementById('modalSpecs');
+  const tag = document.getElementById('modalTag');
+  const orderBtn = document.getElementById('modalOrderBtn');
+  const mediaCol = document.getElementById('modalArtMedia');
+
+  if (title) title.textContent = work.title;
+  if (desc) desc.textContent = work.desc;
+  if (specs) specs.textContent = `${work.kind} · Hand-drawn on ${work.size} Strathmore Bristol Board`;
+  if (tag) tag.textContent = work.cat;
+  
+  if (orderBtn) {
+    orderBtn.href = makeWhatsAppUrl(`Hi Surya! I loved your portrait "${work.title}" on your website. I'd love to commission something with similar style and emotion!`);
+  }
+
+  if (mediaCol) {
+    mediaCol.innerHTML = work.image
+      ? `<img src="${escapeHtml(work.image)}" alt="${escapeHtml(work.title)}" decoding="async">`
+      : `<div style="padding:40px;text-align:center;color:var(--mut);font-family:var(--font-mono);font-size:10px;text-transform:uppercase">Image for this piece is coming soon.</div>`;
+  }
+
+  if (modal && typeof modal.showModal === 'function') {
+    modal.showModal();
+  }
+}
+
+function renderFaqs() {
+  const container = document.getElementById('faqList');
+  if (!container) return;
+
+  container.innerHTML = STUDIO_DATA.faqs.map(item => `
+    <details class="faq-item">
+      <summary>
+        <span>${escapeHtml(item.q)}</span>
+        <span class="icon">+</span>
+      </summary>
+      <div class="content">
+        <p>${escapeHtml(item.a)}</p>
+      </div>
+    </details>
+  `).join('');
+}
+
+let revealObserver = null;
+function observeScrollReveals() {
+  if (revealObserver) revealObserver.disconnect();
+
+  const targets = document.querySelectorAll('.scroll-reveal:not(.is-visible)');
+  if ('IntersectionObserver' in window) {
+    revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');const t=entry.target;setTimeout(()=>t.classList.add('settled'),1300);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+    targets.forEach(el => revealObserver.observe(el));
+  } else {
+    targets.forEach(el => el.classList.add('is-visible'));
+  }
+}
+
+function initAmbientMotion() {
+  const ambient = document.getElementById('ambientLight');
+  const heroFrame = document.getElementById('heroFrame');
+
+  window.addEventListener('pointermove', (e) => {
+    if (ambient) {
+      ambient.style.left = `${e.clientX}px`;
+      ambient.style.top = `${e.clientY}px`;
+    }
+
+    if (heroFrame && e.pointerType === 'mouse' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const rect = heroFrame.getBoundingClientRect();
+      const frameCenterX = rect.left + rect.width / 2;
+      const frameCenterY = rect.top + rect.height / 2;
+      const deltaX = (e.clientX - frameCenterX) / 35;
+      const deltaY = (e.clientY - frameCenterY) / 35;
+      heroFrame.style.transform = `rotate3d(${-deltaY * 0.1}, ${deltaX * 0.1}, 0, 5deg) translate3d(${deltaX * 0.3}px, ${deltaY * 0.3}px, 0)`;
+    }
+  }, { passive: true });
+
+  let lastY = 0;
+  const nav = document.getElementById('mainNav');
+  const progress = document.getElementById('scrollProgress');
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    
+    if (progress && max > 0) {
+      progress.style.transform = `scaleX(${y / max})`;
+    }
+
+    if (nav) {
+      if (y > 40) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+
+      if (y > 180 && y - lastY > 8 && !nav.classList.contains('menu-open') && !nav.contains(document.activeElement)) {
+        nav.classList.add('nav-hidden');
+      } else if (lastY - y > 8 || y < 100) {
+        nav.classList.remove('nav-hidden');
+      }
+    }
+    lastY = y;
+  }, { passive: true });
+}
+
+function setupEventListeners() {
+  document.getElementById('styleClassic')?.addEventListener('click', () => {
+    currentStyle = 'Classic';
+    document.getElementById('styleClassic').classList.add('active');
+    document.getElementById('styleSignature').classList.remove('active');
+    updatePricingView();
+  });
+
+  document.getElementById('styleSignature')?.addEventListener('click', () => {
+    currentStyle = 'Signature';
+    document.getElementById('styleSignature').classList.add('active');
+    document.getElementById('styleClassic').classList.remove('active');
+    updatePricingView();
+  });
+
+  document.querySelectorAll('#sizeSelector .size-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#sizeSelector .size-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentSize = btn.dataset.size;
+      updatePricingView();
+    });
+  });
+
+  document.getElementById('frameToggle')?.addEventListener('change', (e) => {
+    isFramed = e.target.checked;
+    updatePricingView();
+  });
+
+  document.getElementById('facesCount')?.addEventListener('change', (e) => {
+    subjectCount = Number(e.target.value);
+    updatePricingView();
+  });
+
+  document.querySelectorAll('#categoryFilters .filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('#categoryFilters .filter-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      activeCategory = chip.dataset.cat;
+      renderBrickGallery();
+    });
+  });
+
+  document.getElementById('modalCloseBtn')?.addEventListener('click', () => {
+    document.getElementById('artModal')?.close();
+  });
+  document.getElementById('artModal')?.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) e.currentTarget.close();
+  });
+
+  document.getElementById('themeToggle')?.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  });
+
+  document.getElementById('commissionForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nameEl = document.getElementById('formName'), phoneEl = document.getElementById('formPhone'), msgEl = document.getElementById('formIdea'), st = document.getElementById('formStatus');
+    const name = nameEl.value.trim(), phone = phoneEl.value.trim(), msg = msgEl.value.trim();
+    [nameEl, phoneEl, msgEl].forEach(x => x.classList.remove('bad'));
+    const fail = (el, m) => { el.classList.add('bad'); el.focus(); if (st) { st.textContent = m; st.className = 'form-status err'; } };
+    if (!name) return fail(nameEl, 'Please enter your name.');
+    if (phone && !/^\+?[\d\s()-]{7,}$/.test(phone)) return fail(phoneEl, 'Please enter a valid phone number, or leave it blank.');
+    if (!msg) return fail(msgEl, 'Please describe your portrait idea.');
+    const text = `Hi Surya! I'm ${name}${phone ? ` (${phone})` : ''}.\n\nCommission Idea: ${msg}\n\nSelected: ${currentStyle} | ${currentSize} | Faces: ${subjectCount} | Frame: ${isFramed ? 'Yes' : 'No'} | Estimate: ${formatInr(getCalculatedTotal())}`;
+    const url = makeWhatsAppUrl(text);
+    const w = window.open(url, '_blank');
+    if (w) { w.opener = null; if (st) { st.textContent = 'Opening WhatsApp with your message…'; st.className = 'form-status'; } }
+    else { location.href = url; }
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || !href.startsWith('#')) return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderBrickGallery();
+  renderFaqs();
+  updatePricingView();
+  setupEventListeners();
+  initAmbientMotion();
+  observeScrollReveals();
+  bootstrapProductionCMS();
+});
+
+/* PRODUCTION CLOUD CMS — Supabase Auth + Postgres + Storage */
+const STJARTS_CONFIG = window.STJARTS_CONFIG || { SUPABASE_URL: '', SUPABASE_PUBLISHABLE_KEY: '', BUCKET: 'artworks' };
+let adminMonthLabel = 'March', editingWorkId = null, editingFaqId = null, portfolioFilter = 'All', currentHeroImage = '';
+let supabaseClient = null, adminBusy = false;
+STUDIO_DATA.allWorks = STUDIO_DATA.works.map(w => ({ ...w, image: w.image || '', published: true, sort_order: w.id }));
+STUDIO_DATA.allFaqs = STUDIO_DATA.faqs.map((f, i) => ({ ...f, id: 'local' + i, published: true, sort_order: i + 1 }));
+
+const clone = v => JSON.parse(JSON.stringify(v));
+const mapWork = w => ({ id: w.id, title: w.title, cat: w.cat, size: w.size, kind: w.kind, tall: !!w.tall, desc: w.description || '', image: w.image_url || '', published: w.published !== false, sort_order: Number(w.sort_order || 0) });
+const mapFaq = f => ({ id: f.id, q: f.question, a: f.answer, published: f.published !== false, sort_order: Number(f.sort_order || 0) });
+
+function adminSnapshot() {
+  return {
+    version: 5, wa: STUDIO_DATA.wa, ig: STUDIO_DATA.ig, email: STUDIO_DATA.email,
+    slots: STUDIO_DATA.slots, month: adminMonthLabel, framePrice: STUDIO_DATA.framePrice,
+    extraFacePrice: STUDIO_DATA.extraFacePrice, prices: clone(STUDIO_DATA.prices),
+    works: clone(STUDIO_DATA.allWorks), faqs: clone(STUDIO_DATA.allFaqs),
+    slotsText: document.getElementById('slotsText')?.textContent || '',
+    copyright: document.querySelector('.editorial-footer p.mono-tag')?.textContent || '',
+    heroImage: currentHeroImage || ''
+  };
+}
+function setAdminStatus(message, error = false) {
+  ['adminStatus', 'heroStatus'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.textContent = message; el.style.color = error ? '#a33a2a' : ''; }
+  });
+}
+function hasCloudConfig() { return !!(STJARTS_CONFIG.SUPABASE_URL && STJARTS_CONFIG.SUPABASE_PUBLISHABLE_KEY && window.supabase?.createClient); }
+function cloudPublicUrl(path) {
+  if (!path) return '';
+  if (/^https?:\/\//i.test(path)) return path;
+  return `${STJARTS_CONFIG.SUPABASE_URL}/storage/v1/object/public/${STJARTS_CONFIG.BUCKET}/${path}`;
+}
+/* RLS silently blocks writes (0 rows, no error). Turn that into a visible error. */
+function assertWritten(res, what) {
+  if (res.error) throw res.error;
+  if (!res.data || !res.data.length) throw new Error(`${what} was not saved. Check that supabase.sql was run and this account is in admin_users.`);
+  return res.data;
+}
+
+function setHeroImage(src) {
+  currentHeroImage = src || '';
+  const board = document.querySelector('.hero-drawing-board');
+  if (!board) return;
+  let img = document.getElementById('heroArtworkImage');
+  if (!img) {
+    img = document.createElement('img');
+    img.id = 'heroArtworkImage';
+    img.alt = 'Featured S.T.J.A.R.T.S artwork';
+    img.decoding = 'async';
+    img.style.cssText = 'position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:86%;height:78%;object-fit:contain;border-radius:18px;z-index:2;display:none;';
+    board.appendChild(img);
+  }
+  board.classList.toggle('has-image', !!src);
+  if (src) { img.src = src; img.style.display = 'block'; }
+  else { img.removeAttribute('src'); img.style.display = 'none'; }
+}
+
+async function bootstrapProductionCMS() {
+  if (!hasCloudConfig()) {
+    setAdminStatus('Cloud CMS not configured · add Supabase settings to the config block', true);
+    return;
+  }
+  try {
+    supabaseClient = window.supabase.createClient(
+      STJARTS_CONFIG.SUPABASE_URL,
+      STJARTS_CONFIG.SUPABASE_PUBLISHABLE_KEY,
+      { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false } }
+    );
+    await loadRemotePublicData();
+    supabaseClient.auth.onAuthStateChange(event => {
+      if (event === 'SIGNED_OUT') closeAdminAll();
+    });
+  } catch (err) {
+    supabaseClient = null;
+    console.error('Supabase bootstrap failed', err);
+    setAdminStatus(`Cloud CMS unavailable · ${err.message || 'check the Supabase configuration'}`, true);
+  }
+}
+
+async function loadRemotePublicData() {
+  if (!supabaseClient) return;
+  try {
+    /* RLS returns only published rows to visitors and every row to the signed-in administrator. */
+    const [s, w, f] = await Promise.all([
+      supabaseClient.from('site_settings').select('*').eq('id', 1).maybeSingle(),
+      supabaseClient.from('portfolio_works').select('*').order('sort_order', { ascending: true }).order('id', { ascending: true }),
+      supabaseClient.from('faqs').select('*').order('sort_order', { ascending: true }).order('id', { ascending: true })
+    ]);
+    if (s.error) throw s.error;
+    if (w.error) throw w.error;
+    if (f.error) throw f.error;
+    if (s.data) {
+      const x = s.data;
+      STUDIO_DATA.wa = x.wa || STUDIO_DATA.wa; STUDIO_DATA.ig = x.ig || STUDIO_DATA.ig; STUDIO_DATA.email = x.email || STUDIO_DATA.email;
+      STUDIO_DATA.slots = Number(x.slots ?? STUDIO_DATA.slots); adminMonthLabel = x.month || adminMonthLabel;
+      STUDIO_DATA.framePrice = Number(x.frame_price ?? STUDIO_DATA.framePrice); STUDIO_DATA.extraFacePrice = Number(x.extra_face_price ?? STUDIO_DATA.extraFacePrice);
+      STUDIO_DATA.prices = { Classic: x.classic_prices || STUDIO_DATA.prices.Classic, Signature: x.signature_prices || STUDIO_DATA.prices.Signature };
+      if (x.copyright) { const c = document.querySelector('.editorial-footer p.mono-tag'); if (c) c.textContent = x.copyright; }
+      const st = document.getElementById('slotsText');
+      if (st) st.textContent = x.slots_text || slotLabel(STUDIO_DATA.slots, adminMonthLabel);
+      setHeroImage(x.hero_image_url || '');
+    }
+    STUDIO_DATA.allWorks = (w.data || []).map(mapWork);
+    STUDIO_DATA.works = STUDIO_DATA.allWorks.filter(x => x.published);
+    STUDIO_DATA.allFaqs = (f.data || []).map(mapFaq);
+    STUDIO_DATA.faqs = STUDIO_DATA.allFaqs.filter(x => x.published);
+    applyPublicContactLinks(); updatePricingView(); renderBrickGallery(); renderFaqs(); refreshAdminStats();
+  } catch (err) {
+    console.error('Remote CMS load failed', err);
+    setAdminStatus(`Cloud CMS error · ${err.message || 'check configuration'}`, true);
+  }
+}
+function applyPublicContactLinks() {
+  const wa = STUDIO_DATA.wa, ig = STUDIO_DATA.ig, email = STUDIO_DATA.email;
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(a => { const h = a.getAttribute('href') || ''; const q = h.includes('?') ? h.slice(h.indexOf('?')) : ''; a.setAttribute('href', `https://wa.me/${wa}${q}`); });
+  document.querySelectorAll('a[href*="instagram.com/"]').forEach(a => a.setAttribute('href', `https://instagram.com/${ig}`));
+  document.querySelectorAll('a[href^="mailto:"]').forEach(a => a.setAttribute('href', `mailto:${email}`));
+}
+
+async function requireAdmin() {
+  if (!supabaseClient) throw new Error('Cloud CMS is not configured.');
+  const { data: { user } } = await supabaseClient.auth.getUser();
+  if (!user) throw new Error('Please sign in as the studio administrator.');
+  const { data, error } = await supabaseClient.from('admin_users').select('user_id').eq('user_id', user.id).maybeSingle();
+  if (error) throw error;
+  if (!data) throw new Error('This account is not authorized for the studio CMS.');
+  return user;
+}
+async function signOutAdmin() {
+  if (supabaseClient) await supabaseClient.auth.signOut();
+  closeAdminAll();
+  await loadRemotePublicData();
+}
+async function openAdminGate() {
+  if (supabaseClient) {
+    const { data: { session } } = await supabaseClient.auth.getSession();
+    if (session && await openAdminPanel(true)) return;
+  }
+  const gate = document.getElementById('adminGate');
+  gate?.classList.add('admin-visible'); gate?.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('admin-open');
+  setTimeout(() => document.getElementById('adminUsername')?.focus(), 50);
+}
+function closeAdminAll() {
+  document.querySelectorAll('#adminGate,#adminPanel').forEach(e => { e.classList.remove('admin-visible'); e.setAttribute('aria-hidden', 'true'); });
+  document.body.classList.remove('admin-open');
+}
+async function openAdminPanel(silent = false) {
+  try {
+    await requireAdmin();
+    await loadRemotePublicData();
+    document.getElementById('adminGate')?.classList.remove('admin-visible');
+    const panel = document.getElementById('adminPanel');
+    panel?.classList.add('admin-visible'); panel?.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('admin-open');
+    populateAdmin();
+    return true;
+  } catch (err) {
+    if (!silent) { const e = document.getElementById('adminLoginError'); if (e) e.textContent = err.message || 'Access denied.'; }
+    setAdminStatus(err.message || 'Access denied.', true);
+    return false;
+  }
+}
+
+/* ---------- Images ---------- */
+function compressImage(file) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      const max = 2200, scale = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+      const w = Math.max(1, Math.round(img.naturalWidth * scale)), h = Math.max(1, Math.round(img.naturalHeight * scale));
+      const c = document.createElement('canvas'); c.width = w; c.height = h;
+      const ctx = c.getContext('2d');
+      if (!ctx) return reject(new Error('Your browser could not prepare the image.'));
+      ctx.drawImage(img, 0, 0, w, h);
+      c.toBlob(b => b ? resolve(b) : reject(new Error('Image conversion failed')), 'image/webp', 0.88);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('Image could not be read.')); };
+    img.src = url;
+  });
+}
+async function uploadImage(file, folder) {
+  if (!file || !file.type.startsWith('image/')) throw new Error('Please choose an image file (JPG, PNG or WEBP).');
+  if (file.size > 25 * 1024 * 1024) throw new Error('Image is larger than 25 MB. Please choose a smaller file.');
+  const blob = await compressImage(file);
+  if (blob.size > 12 * 1024 * 1024) throw new Error('Image is still larger than 12 MB after compression.');
+  const ext = blob.type === 'image/webp' ? 'webp' : blob.type === 'image/png' ? 'png' : 'jpg';
+  const path = `${folder}/${crypto.randomUUID()}.${ext}`;
+  const { data, error } = await supabaseClient.storage.from(STJARTS_CONFIG.BUCKET).upload(path, blob, { cacheControl: '31536000', upsert: false, contentType: blob.type });
+  if (error) throw error;
+  return { path: data.path, url: cloudPublicUrl(data.path) };
+}
+async function deleteStoragePath(path) {
+  if (!path || /^https?:\/\//i.test(path)) return;
+  try { await supabaseClient.storage.from(STJARTS_CONFIG.BUCKET).remove([path]); } catch (e) { console.warn('Old image cleanup failed', e); }
+}
+function pathFromUrl(url) {
+  if (!url) return '';
+  const marker = `/storage/v1/object/public/${STJARTS_CONFIG.BUCKET}/`;
+  const i = url.indexOf(marker);
+  if (i < 0) return '';
+  try { return decodeURIComponent(url.slice(i + marker.length).split('?')[0]); }
+  catch { return ''; }
+}
+
+/* ---------- Admin rendering ---------- */
+function populateAdmin() {
+  const set = (id, v) => { const e = document.getElementById(id); if (e) e.value = v ?? ''; };
+  set('adminSlots', STUDIO_DATA.slots); set('adminMonth', adminMonthLabel); set('adminWa', STUDIO_DATA.wa); set('adminIg', STUDIO_DATA.ig); set('adminEmail', STUDIO_DATA.email);
+  set('adminFramePrice', STUDIO_DATA.framePrice); set('adminExtraFacePrice', STUDIO_DATA.extraFacePrice);
+  set('adminSlotsText', document.getElementById('slotsText')?.textContent || '');
+  set('adminCopyright', document.querySelector('.editorial-footer p.mono-tag')?.textContent || '');
+  ['A6', 'A5', 'A4', 'A3', 'A2'].forEach(k => { set('price' + k, STUDIO_DATA.prices.Classic[k]); set('sig' + k, STUDIO_DATA.prices.Signature[k]); });
+  set('adminJson', JSON.stringify(adminSnapshot(), null, 2));
+  renderAdminWorks(); renderAdminFaqs(); refreshAdminStats();
+  const hp = document.getElementById('heroPreview');
+  if (hp) hp.innerHTML = currentHeroImage ? `<img src="${escapeHtml(currentHeroImage)}" alt="Current hero artwork">` : '<span>No custom hero image. The built-in hero treatment remains active.</span>';
+}
+function refreshAdminStats() {
+  const a = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+  a('statWorks', STUDIO_DATA.allWorks.length); a('statImages', STUDIO_DATA.allWorks.filter(w => w.image).length);
+  a('statSlots', STUDIO_DATA.slots); a('statA4', formatInr(STUDIO_DATA.prices.Classic.A4));
+}
+function renderAdminWorks() {
+  const box = document.getElementById('adminWorkGrid'); if (!box) return;
+  const arr = STUDIO_DATA.allWorks.filter(w => portfolioFilter === 'All' || w.cat === portfolioFilter);
+  const canMove = portfolioFilter === 'All';
+  box.innerHTML = arr.map((w, i) => `<article class="admin-work-card${w.published ? '' : ' is-hidden'}"><div class="admin-work-media">${w.image ? `<img src="${escapeHtml(w.image)}" alt="${escapeHtml(w.title)}" loading="lazy">` : '<div class="admin-empty-media">No image uploaded</div>'}</div><div class="admin-work-info"><strong>${escapeHtml(w.title)}</strong><span>${escapeHtml(w.cat)} · ${escapeHtml(w.size)} · ${w.image ? 'Image installed' : 'Needs image'}${w.published ? '' : ' · Hidden'}</span><div class="admin-work-actions"><button class="admin-mini" data-edit-work="${w.id}">Edit</button><button class="admin-mini" data-image-work="${w.id}">Replace Image</button><button class="admin-mini" data-toggle-work="${w.id}">${w.published ? 'Hide' : 'Show'}</button>${canMove ? `<button class="admin-mini" data-move-work="${w.id}" data-dir="-1" aria-label="Move earlier"${i === 0 ? ' disabled' : ''}>↑</button><button class="admin-mini" data-move-work="${w.id}" data-dir="1" aria-label="Move later"${i === arr.length - 1 ? ' disabled' : ''}>↓</button>` : ''}<button class="admin-mini danger" data-delete-work="${w.id}">Delete</button></div></div></article>`).join('') || '<div class="admin-empty-media">No portfolio pieces in this filter.</div>';
+  box.querySelectorAll('[data-edit-work]').forEach(b => b.onclick = () => openWorkEditor(b.dataset.editWork));
+  box.querySelectorAll('[data-image-work]').forEach(b => b.onclick = () => { openWorkEditor(b.dataset.imageWork); setTimeout(() => document.getElementById('workImage')?.click(), 50); });
+  box.querySelectorAll('[data-toggle-work]').forEach(b => b.onclick = () => toggleWork(b.dataset.toggleWork));
+  box.querySelectorAll('[data-move-work]').forEach(b => b.onclick = () => moveRow('portfolio_works', STUDIO_DATA.allWorks, b.dataset.moveWork, Number(b.dataset.dir)));
+  box.querySelectorAll('[data-delete-work]').forEach(b => b.onclick = () => deleteWork(b.dataset.deleteWork));
+}
+function findWork(id) { return STUDIO_DATA.allWorks.find(x => String(x.id) === String(id)); }
+function openWorkEditor(id = null) {
+  editingWorkId = id;
+  const w = id ? findWork(id) : { title: '', cat: 'Portraits', size: 'A4', kind: 'Commission', desc: '', tall: false, image: '', published: true };
+  const $ = i => document.getElementById(i);
+  $('workEditor').style.display = 'block';
+  $('workEditorTitle').textContent = id ? 'Edit artwork' : 'Add artwork';
+  $('workTitle').value = w.title || ''; $('workCat').value = w.cat || 'Portraits'; $('workSize').value = w.size || 'A4';
+  $('workKind').value = w.kind || 'Commission'; $('workDesc').value = w.desc || ''; $('workPublished').value = w.published === false ? 'no' : 'yes';
+  $('workImage').value = '';
+  $('workPreview').innerHTML = w.image ? `<img src="${escapeHtml(w.image)}" alt="">` : '<span>No artwork image selected.</span>';
+  $('workEditor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+async function saveWork() {
+  if (adminBusy) return; adminBusy = true;
+  const btn = document.getElementById('saveWorkBtn'); if (btn) btn.disabled = true;
+  let uploadedPath = '';
+  try {
+    await requireAdmin();
+    const title = document.getElementById('workTitle').value.trim();
+    if (!title) throw new Error('Artwork title is required.');
+    const existing = editingWorkId ? findWork(editingWorkId) : null;
+    let imageUrl = existing?.image || '', imagePath = pathFromUrl(imageUrl);
+    const oldImagePath = imagePath;
+    const file = document.getElementById('workImage')?.files?.[0];
+    if (file) {
+      setAdminStatus('Uploading artwork…');
+      const up = await uploadImage(file, 'portfolio');
+      uploadedPath = up.path;
+      imageUrl = up.url;
+      imagePath = up.path;
+    }
+    const payload = {
+      title, cat: document.getElementById('workCat').value, size: document.getElementById('workSize').value,
+      kind: document.getElementById('workKind').value.trim() || 'Commission', description: document.getElementById('workDesc').value.trim(),
+      tall: existing ? !!existing.tall : STUDIO_DATA.allWorks.length % 2 === 0, image_url: imageUrl, image_path: imagePath,
+      published: document.getElementById('workPublished').value !== 'no'
+    };
+    let res;
+    if (existing) res = await supabaseClient.from('portfolio_works').update(payload).eq('id', existing.id).select('id');
+    else {
+      payload.sort_order = STUDIO_DATA.allWorks.reduce((m, w) => Math.max(m, w.sort_order || 0), 0) + 1;
+      res = await supabaseClient.from('portfolio_works').insert(payload).select('id');
+    }
+    assertWritten(res, 'Artwork');
+    uploadedPath = '';
+    if (file && existing && oldImagePath && oldImagePath !== imagePath) await deleteStoragePath(oldImagePath);
+    await loadRemotePublicData();
+    document.getElementById('workEditor').style.display = 'none'; document.getElementById('workImage').value = '';
+    renderAdminWorks();
+    setAdminStatus('Artwork saved to cloud · all devices updated');
+  } catch (err) {
+    if (uploadedPath) await deleteStoragePath(uploadedPath);
+    console.error(err);
+    setAdminStatus(err.message || 'Artwork save failed', true);
+  } finally { adminBusy = false; if (btn) btn.disabled = false; }
+}
+async function toggleWork(id) {
+  try {
+    await requireAdmin(); const w = findWork(id); if (!w) return;
+    assertWritten(await supabaseClient.from('portfolio_works').update({ published: !w.published }).eq('id', w.id).select('id'), 'Visibility change');
+    await loadRemotePublicData(); renderAdminWorks(); setAdminStatus(w.published ? 'Artwork hidden from the public site' : 'Artwork is now public');
+  } catch (err) { setAdminStatus(err.message || 'Update failed', true); }
+}
+async function deleteWork(id) {
+  if (!confirm('Delete this portfolio item permanently?')) return;
+  try {
+    await requireAdmin(); const w = findWork(id);
+    assertWritten(await supabaseClient.from('portfolio_works').delete().eq('id', id).select('id'), 'Deletion');
+    if (w?.image) await deleteStoragePath(pathFromUrl(w.image));
+    await loadRemotePublicData(); renderAdminWorks(); setAdminStatus('Artwork deleted from cloud');
+  } catch (err) { setAdminStatus(err.message || 'Delete failed', true); }
+}
+/* Swap a row with its neighbour and renumber sort_order so ties can never break ordering. */
+async function moveRow(table, list, id, dir) {
+  if (adminBusy) return; adminBusy = true;
+  try {
+    await requireAdmin();
+    const arr = [...list], i = arr.findIndex(x => String(x.id) === String(id)), j = i + dir;
+    if (i < 0 || j < 0 || j >= arr.length) return;
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+    const changes = arr.map((x, k) => ({ id: x.id, order: k + 1, old: x.sort_order })).filter(x => x.order !== x.old);
+    const results = await Promise.all(changes.map(c => supabaseClient.from(table).update({ sort_order: c.order }).eq('id', c.id).select('id')));
+    results.forEach(r => assertWritten(r, 'Reorder'));
+    await loadRemotePublicData(); renderAdminWorks(); renderAdminFaqs(); setAdminStatus('Order saved');
+  } catch (err) { setAdminStatus(err.message || 'Reorder failed', true); }
+  finally { adminBusy = false; }
+}
+
+/* ---------- Hero ---------- */
+async function saveHeroCloud() {
+  if (adminBusy) return; adminBusy = true;
+  try {
+    await requireAdmin();
+    const file = document.getElementById('heroImage')?.files?.[0];
+    if (!file) throw new Error('Choose a hero image first.');
+    setAdminStatus('Uploading hero artwork…');
+    const up = await uploadImage(file, 'hero'); const oldPath = pathFromUrl(currentHeroImage);
+    const res = await supabaseClient.from('site_settings').update({ hero_image_url: up.url, hero_image_path: up.path }).eq('id', 1).select('id');
+    try { assertWritten(res, 'Hero image'); } catch (e) { await deleteStoragePath(up.path); throw e; }
+    if (oldPath) await deleteStoragePath(oldPath);
+    setHeroImage(up.url); document.getElementById('heroImage').value = ''; populateAdmin();
+    setAdminStatus('Hero image saved to cloud · all devices updated');
+  } catch (err) { setAdminStatus(err.message || 'Hero upload failed', true); }
+  finally { adminBusy = false; }
+}
+async function removeHeroCloud() {
+  try {
+    await requireAdmin(); const old = pathFromUrl(currentHeroImage);
+    assertWritten(await supabaseClient.from('site_settings').update({ hero_image_url: '', hero_image_path: '' }).eq('id', 1).select('id'), 'Hero removal');
+    if (old) await deleteStoragePath(old);
+    setHeroImage(''); populateAdmin(); setAdminStatus('Hero image removed from cloud');
+  } catch (err) { setAdminStatus(err.message || 'Hero removal failed', true); }
+}
+
+/* ---------- Settings ---------- */
+function collectAdminFields() {
+  const x = adminSnapshot(), $ = id => document.getElementById(id);
+  x.wa = $('adminWa').value.trim().replace(/\D/g, '');
+  x.ig = $('adminIg').value.trim().replace(/^@/, '').replace(/^https?:\/\/(www\.)?instagram\.com\//i, '').replace(/\/.*$/, '');
+  x.email = $('adminEmail').value.trim();
+  x.slots = Math.max(0, Math.floor(Number($('adminSlots').value) || 0));
+  x.month = $('adminMonth').value.trim() || 'March';
+  x.framePrice = Math.max(0, Number($('adminFramePrice').value) || 0);
+  x.extraFacePrice = Math.max(0, Number($('adminExtraFacePrice').value) || 0);
+  const typed = $('adminSlotsText').value.trim(), current = $('slotsText')?.textContent?.trim() || '';
+  const auto = slotLabel(x.slots, x.month);
+  x.slotsText = (!typed || typed === current || /^\d+\s+Commission Slots?\s+Open for /i.test(typed) || /^Books Full/i.test(typed)) ? auto : typed;
+  x.copyright = $('adminCopyright').value.trim();
+  ['A6', 'A5', 'A4', 'A3', 'A2'].forEach(k => {
+    x.prices.Classic[k] = Math.max(0, Number($('price' + k).value) || 0);
+    x.prices.Signature[k] = Math.max(0, Number($('sig' + k).value) || 0);
+  });
+  return x;
+}
+async function saveAllAdmin() {
+  if (adminBusy) return; adminBusy = true;
+  const btn = document.getElementById('adminSaveBtn'); if (btn) btn.disabled = true;
+  try {
+    await requireAdmin();
+    const x = collectAdminFields();
+    if (x.wa.length < 8) throw new Error('Enter the WhatsApp number with country code, digits only (e.g. 918978854205).');
+    if (!/^\S+@\S+\.\S+$/.test(x.email)) throw new Error('Enter a valid email address.');
+    if (!x.ig) throw new Error('Enter the Instagram handle.');
+    const res = await supabaseClient.from('site_settings').update({
+      wa: x.wa, ig: x.ig, email: x.email, slots: x.slots, month: x.month, frame_price: x.framePrice, extra_face_price: x.extraFacePrice,
+      classic_prices: x.prices.Classic, signature_prices: x.prices.Signature, slots_text: x.slotsText, copyright: x.copyright
+    }).eq('id', 1).select('id');
+    assertWritten(res, 'Site settings');
+    await loadRemotePublicData(); populateAdmin();
+    setAdminStatus('All site settings saved to cloud · all devices updated');
+  } catch (err) { setAdminStatus(err.message || 'Save failed', true); }
+  finally { adminBusy = false; if (btn) btn.disabled = false; }
+}
+
+/* ---------- FAQ ---------- */
+function renderAdminFaqs() {
+  const box = document.getElementById('adminFaqList'); if (!box) return;
+  const arr = STUDIO_DATA.allFaqs;
+  box.innerHTML = arr.map((f, i) => `<div class="admin-card${f.published ? '' : ' is-hidden'}" style="margin-bottom:10px"><div class="admin-row"><div><strong>${escapeHtml(f.q)}</strong>${f.published ? '' : ' <em style="color:var(--mut)">(hidden)</em>'}<p style="margin:6px 0;color:var(--mut);font-size:12px">${escapeHtml(f.a)}</p></div><div class="admin-actions" style="justify-content:flex-end;margin-top:0"><button class="admin-mini" data-edit-faq="${f.id}">Edit</button><button class="admin-mini" data-toggle-faq="${f.id}">${f.published ? 'Hide' : 'Show'}</button><button class="admin-mini" data-move-faq="${f.id}" data-dir="-1" aria-label="Move up"${i === 0 ? ' disabled' : ''}>↑</button><button class="admin-mini" data-move-faq="${f.id}" data-dir="1" aria-label="Move down"${i === arr.length - 1 ? ' disabled' : ''}>↓</button><button class="admin-mini danger" data-delete-faq="${f.id}">Delete</button></div></div></div>`).join('') || '<div class="admin-empty-media">No questions yet. Add one with “+ New Question”.</div>';
+  box.querySelectorAll('[data-edit-faq]').forEach(b => b.onclick = () => openFaqEditor(b.dataset.editFaq));
+  box.querySelectorAll('[data-toggle-faq]').forEach(b => b.onclick = () => toggleFaq(b.dataset.toggleFaq));
+  box.querySelectorAll('[data-move-faq]').forEach(b => b.onclick = () => moveRow('faqs', STUDIO_DATA.allFaqs, b.dataset.moveFaq, Number(b.dataset.dir)));
+  box.querySelectorAll('[data-delete-faq]').forEach(b => b.onclick = () => deleteFaq(b.dataset.deleteFaq));
+}
+const findFaq = id => STUDIO_DATA.allFaqs.find(x => String(x.id) === String(id));
+function openFaqEditor(id = null) {
+  editingFaqId = id; const f = id ? findFaq(id) : null;
+  document.getElementById('faqEditor').style.display = 'block';
+  document.getElementById('faqEditorTitle').textContent = f ? 'Edit question' : 'New question';
+  document.getElementById('faqQuestion').value = f?.q || ''; document.getElementById('faqAnswer').value = f?.a || '';
+  document.getElementById('faqEditor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.getElementById('faqQuestion').focus({ preventScroll: true });
+}
+async function saveFaq() {
+  if (adminBusy) return; adminBusy = true;
+  try {
+    await requireAdmin();
+    const question = document.getElementById('faqQuestion').value.trim(), answer = document.getElementById('faqAnswer').value.trim();
+    if (!question || !answer) throw new Error('Both a question and an answer are required.');
+    const existing = editingFaqId ? findFaq(editingFaqId) : null; let res;
+    if (existing) res = await supabaseClient.from('faqs').update({ question, answer }).eq('id', existing.id).select('id');
+    else res = await supabaseClient.from('faqs').insert({ question, answer, published: true, sort_order: STUDIO_DATA.allFaqs.reduce((m, f) => Math.max(m, f.sort_order || 0), 0) + 1 }).select('id');
+    assertWritten(res, 'FAQ');
+    document.getElementById('faqEditor').style.display = 'none'; editingFaqId = null;
+    await loadRemotePublicData(); renderAdminFaqs(); setAdminStatus('FAQ saved to cloud');
+  } catch (err) { setAdminStatus(err.message || 'FAQ save failed', true); }
+  finally { adminBusy = false; }
+}
+async function toggleFaq(id) {
+  try {
+    await requireAdmin(); const f = findFaq(id); if (!f) return;
+    assertWritten(await supabaseClient.from('faqs').update({ published: !f.published }).eq('id', f.id).select('id'), 'FAQ visibility');
+    await loadRemotePublicData(); renderAdminFaqs(); setAdminStatus(f.published ? 'FAQ hidden' : 'FAQ is now public');
+  } catch (err) { setAdminStatus(err.message || 'Update failed', true); }
+}
+async function deleteFaq(id) {
+  if (!confirm('Delete this FAQ permanently?')) return;
+  try {
+    await requireAdmin();
+    assertWritten(await supabaseClient.from('faqs').delete().eq('id', id).select('id'), 'Deletion');
+    await loadRemotePublicData(); renderAdminFaqs(); setAdminStatus('FAQ deleted from cloud');
+  } catch (err) { setAdminStatus(err.message || 'FAQ delete failed', true); }
+}
+
+/* ---------- Backup ---------- */
+function downloadBackup() {
+  const json = JSON.stringify(adminSnapshot(), null, 2);
+  document.getElementById('adminJson').value = json;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
+  a.download = `stjarts-backup-${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  setAdminStatus('Backup downloaded');
+}
+async function importBackup() {
+  if (adminBusy) return;
+  let data;
+  try { data = JSON.parse(document.getElementById('adminJson').value); } catch { setAdminStatus('The backup JSON is not valid.', true); return; }
+  if (!data || typeof data !== 'object' || !data.prices?.Classic || !Array.isArray(data.works) || !Array.isArray(data.faqs)) { setAdminStatus('This does not look like an S.T.J.A.R.T.S backup.', true); return; }
+  if (!confirm('Restore this backup? Settings are overwritten and portfolio/FAQ entries in the backup are restored or updated. Image URLs are restored as references; image files are not copied. Entries not in the backup are kept.')) return;
+  adminBusy = true;
+  try {
+    await requireAdmin();
+    assertWritten(await supabaseClient.from('site_settings').update({
+      wa: String(data.wa || STUDIO_DATA.wa), ig: String(data.ig || STUDIO_DATA.ig), email: String(data.email || STUDIO_DATA.email),
+      slots: Number(data.slots) || 0, month: String(data.month || 'March'), frame_price: Number(data.framePrice) || 0, extra_face_price: Number(data.extraFacePrice) || 0,
+      classic_prices: data.prices.Classic, signature_prices: data.prices.Signature || STUDIO_DATA.prices.Signature,
+      slots_text: String(data.slotsText || ''), copyright: String(data.copyright || ''),
+      hero_image_url: String(data.heroImage || ''), hero_image_path: pathFromUrl(String(data.heroImage || ''))
+    }).eq('id', 1).select('id'), 'Settings');
+    if (data.works.length) assertWritten(await supabaseClient.from('portfolio_works').upsert(data.works.map(w => ({
+      id: w.id, title: String(w.title || 'Untitled'), cat: String(w.cat || 'Portraits'), size: String(w.size || 'A4'), kind: String(w.kind || 'Commission'),
+      description: String(w.desc || ''), tall: !!w.tall, image_url: String(w.image || ''), image_path: pathFromUrl(String(w.image || '')),
+      published: w.published !== false, sort_order: Number(w.sort_order) || 0
+    })), { onConflict: 'id' }).select('id'), 'Portfolio');
+    if (data.faqs.length) assertWritten(await supabaseClient.from('faqs').upsert(data.faqs.filter(f => typeof f.id === 'number').map(f => ({
+      id: f.id, question: String(f.q || ''), answer: String(f.a || ''), published: f.published !== false, sort_order: Number(f.sort_order) || 0
+    })), { onConflict: 'id' }).select('id'), 'FAQs');
+    await loadRemotePublicData(); populateAdmin(); setAdminStatus('Backup restored to cloud');
+  } catch (err) { setAdminStatus(err.message || 'Restore failed', true); }
+  finally { adminBusy = false; }
+}
+
+/* ---------- Wiring ---------- */
+function setupAdmin() {
+  const $ = id => document.getElementById(id);
+  $('adminLoginForm')?.addEventListener('submit', async e => {
+    e.preventDefault();
+    const err = $('adminLoginError');
+    if (!supabaseClient) { err.textContent = 'Cloud CMS is not configured.'; return; }
+    const btn = e.target.querySelector('button[type=submit]'); btn.disabled = true;
+    try {
+      err.textContent = 'Signing in…';
+      const { error } = await supabaseClient.auth.signInWithPassword({ email: $('adminUsername').value.trim(), password: $('adminPassword').value });
+      if (error) throw error;
+      if (await openAdminPanel()) { err.textContent = ''; $('adminPassword').value = ''; }
+      else await supabaseClient.auth.signOut();
+    } catch (x) { err.textContent = x.message || 'Sign-in failed.'; }
+    finally { btn.disabled = false; }
+  });
+  $('adminCloseBtn')?.addEventListener('click', signOutAdmin);
+  $('adminSaveBtn')?.addEventListener('click', saveAllAdmin);
+  $('adminPreviewBtn')?.addEventListener('click', closeAdminAll);
+  $('adminNav')?.addEventListener('click', e => {
+    const b = e.target.closest('button[data-view]'); if (!b) return;
+    document.querySelectorAll('.admin-nav button').forEach(x => x.classList.toggle('active', x === b));
+    document.querySelectorAll('.admin-view').forEach(x => x.classList.toggle('active', x.dataset.view === b.dataset.view));
+  });
+  document.querySelectorAll('[data-jump]').forEach(b => b.onclick = () => document.querySelector(`.admin-nav button[data-view="${b.dataset.jump}"]`)?.click());
+  $('newWorkBtn')?.addEventListener('click', () => openWorkEditor());
+  $('cancelWorkBtn')?.addEventListener('click', () => $('workEditor').style.display = 'none');
+  $('saveWorkBtn')?.addEventListener('click', saveWork);
+  $('saveHeroBtn')?.addEventListener('click', saveHeroCloud);
+  $('removeHeroBtn')?.addEventListener('click', removeHeroCloud);
+  $('portfolioFilters')?.addEventListener('click', e => {
+    const b = e.target.closest('[data-filter]'); if (!b) return;
+    portfolioFilter = b.dataset.filter;
+    document.querySelectorAll('#portfolioFilters .admin-tab').forEach(x => x.classList.toggle('active', x === b));
+    renderAdminWorks();
+  });
+  $('newFaqBtn')?.addEventListener('click', () => openFaqEditor());
+  $('saveFaqBtn')?.addEventListener('click', saveFaq);
+  $('cancelFaqBtn')?.addEventListener('click', () => $('faqEditor').style.display = 'none');
+  $('adminExportBtn')?.addEventListener('click', () => { $('adminJson').value = JSON.stringify(adminSnapshot(), null, 2); setAdminStatus('Cloud snapshot prepared.'); });
+  $('adminDownloadBtn')?.addEventListener('click', downloadBackup);
+  $('adminImportBtn')?.addEventListener('click', importBackup);
+  $('workImage')?.addEventListener('change', e => {
+    const f = e.target.files?.[0]; if (!f) return;
+    const url = URL.createObjectURL(f);
+    $('workPreview').innerHTML = `<img src="${url}" alt="Selected artwork preview">`;
+    setAdminStatus('Image selected · press Save Artwork');
+  });
+  $('heroImage')?.addEventListener('change', e => {
+    const f = e.target.files?.[0]; if (!f) return;
+    const url = URL.createObjectURL(f);
+    $('heroPreview').innerHTML = `<img src="${url}" alt="Selected hero preview">`;
+    setAdminStatus('Hero image selected · press Use This Hero Image');
+  });
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'a') { e.preventDefault(); openAdminGate(); return; }
+    if (e.key === 'Escape' && document.querySelector('.admin-overlay.admin-visible') && !document.getElementById('artModal')?.open) closeAdminAll();
+  });
+  window.addEventListener('hashchange', () => { if (location.hash === '#admin') { openAdminGate(); history.replaceState(null, '', location.pathname + location.search); } });
+}
+window.bootstrapProductionCMS = bootstrapProductionCMS;
+setupAdmin();
+
+</script>
+
+<script>
+/* v2 enhancements: nav, scrollspy, magnetic buttons, theme, faq, admin access */
+window.getColCount=()=>matchMedia('(max-width:560px)').matches?1:matchMedia('(max-width:1100px)').matches?2:3;
+window.slotLabel=(n,m)=>n>0?`${n} Commission Slot${n===1?'':'s'} Open for ${m}`:'Books Full · Join the Waitlist';
+document.addEventListener('DOMContentLoaded',()=>{
+  const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root=document.documentElement,tb=$('#themeToggle');
+  const sync=()=>{const d=root.getAttribute('data-theme')==='dark';tb&&tb.setAttribute('aria-pressed',d);$('meta[name=theme-color]')?.setAttribute('content',d?'#121211':'#e6e3dc')};
+  tb?.addEventListener('click',()=>{try{localStorage.setItem('stjarts_theme',root.getAttribute('data-theme')==='dark'?'dark':'light')}catch(e){}sync()});sync();
+  const nav=$('#mainNav'),mb=$('#mobileMenuBtn');
+  const setMenu=o=>{nav.classList.toggle('menu-open',o);mb.setAttribute('aria-expanded',o);mb.textContent=o?'✕':'☰';mb.setAttribute('aria-label',o?'Close navigation menu':'Open navigation menu')};
+  mb?.addEventListener('click',e=>{e.stopPropagation();setMenu(!nav.classList.contains('menu-open'))});
+  $$('#navLinks a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+  document.addEventListener('click',e=>{if(!nav.contains(e.target))setMenu(false)});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('menu-open')){setMenu(false);mb.focus()}});
+  matchMedia('(min-width:961px)').addEventListener('change',()=>setMenu(false));
+  const links=$$('#navLinks a'),map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+  const setActive=id=>links.forEach(a=>{const on=a===map.get(id);a.classList.toggle('active',on);on?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current')});
+  setActive('');
+  const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setActive(e.target.id)}),{rootMargin:'-40% 0px -55% 0px'});
+  ['top','artist-hero','work','process','pricing','faq','contact'].forEach(id=>{const el=document.getElementById(id);el&&spy.observe(el)});
+  if(fine&&!reduce)$$('.btn-primary').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.translate=`${(e.clientX-r.left-r.width/2)*.18}px ${(e.clientY-r.top-r.height/2)*.28}px`});b.addEventListener('pointerleave',()=>b.style.translate='')});
+  $('#faqList')?.addEventListener('toggle',e=>{if(e.target.open)$$('#faqList details').forEach(d=>d!==e.target&&(d.open=false))},true);
+  ['(max-width:560px)','(max-width:1100px)'].forEach(q=>matchMedia(q).addEventListener('change',()=>renderBrickGallery()));
+  /* admin access: Ctrl/Cmd+Shift+A, 5 quick taps on footer brand (touch), or #admin */
+  let taps=0,tt;$('.editorial-footer .eyebrow')?.addEventListener('click',()=>{taps++;clearTimeout(tt);tt=setTimeout(()=>taps=0,1800);if(taps>=5){taps=0;openAdminGate()}});
+  if(location.hash==='#admin'){openAdminGate();history.replaceState(null,'',location.pathname+location.search)}
+  document.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const ov=$('.admin-overlay.admin-visible');if(!ov)return;const f=$$('button,input,select,textarea,a[href],[tabindex]:not([tabindex="-1"])',ov).filter(x=>!x.disabled&&x.offsetParent!==null);if(!f.length)return;const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}});
+});
+</script>
+<script>
+(function(){
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var root=document.documentElement,vh=innerHeight,cl=function(v,a,b){return v<a?a:v>b?b:v};
+/* split text into words, keeping inline <em>/<br> intact */
+function split(el,cls){var n=0;(function walk(node){Array.prototype.slice.call(node.childNodes).forEach(function(c){
+ if(c.nodeType===3){var f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(function(t){
+  if(!t)return;if(/^\s+$/.test(t)){f.appendChild(document.createTextNode(' '));return}
+  var s=document.createElement('span');s.className=cls;
+  if(cls==='hero-word'){var i=document.createElement('span');i.textContent=t;s.appendChild(i);s.style.setProperty('--i',n)}else s.textContent=t;
+  n++;f.appendChild(s)});c.parentNode.replaceChild(f,c)}
+ else if(c.nodeType===1&&c.tagName!=='BR')walk(c)})})(el);return n}
+var av=document.querySelector('.hero-availability-stack'),row=document.querySelector('.hero-artist-intro > div:last-child');
+if(av&&row){row.classList.add('hero-cta-row');row.style.marginTop='';row.insertBefore(av,row.firstChild)}
+/* one orchestrated moment: hero headline rises word by word */
+document.querySelectorAll('.hero-title-line').forEach(function(l){l.style.animation='none';l.style.opacity=1;l.style.transform='none'});
+var h1=document.querySelector('.hero-stack h1');if(h1)split(h1,'hero-word');
+/* scrubbed reading: words light up as the block crosses the viewport */
+var scrubs=[];document.querySelectorAll('h2,.section-header-atelier p,.sticky-column>p').forEach(function(el){
+ if(el.closest('.admin-overlay'))return;split(el,'sw');scrubs.push({el:el,w:el.querySelectorAll('.sw')})});
+root.classList.add('js-motion');
+var cols=[],cards=[],sheets=[],gal=document.getElementById('brickGridContainer');
+function refresh(){cols=[].slice.call(document.querySelectorAll('.brick-gallery-col'));cards=[].slice.call(document.querySelectorAll('.art-card'));sheets=[].slice.call(document.querySelectorAll('.process-sheet'))}
+refresh();if(gal)new MutationObserver(refresh).observe(gal,{childList:true,subtree:true});
+var speeds=[-46,58,-22],hero=document.getElementById('top'),heroFrame=document.querySelector('.hero-showcase'),ticking=false;
+function frame(){ticking=false;vh=innerHeight;var y=scrollY;
+ if(hero&&h1&&y<vh*1.3){var p=cl(y/(vh*.8),0,1);h1.style.translate='0 '+(-p*60)+'px';h1.style.opacity=1-p*.85;
+  if(heroFrame)heroFrame.style.setProperty('--hy',-p*90)}
+ scrubs.forEach(function(s){var r=s.el.getBoundingClientRect();if(r.bottom<-50||r.top>vh)return;
+  var p=cl((vh*.92-r.top)/(vh*.55+r.height*.4),0,1),n=s.w.length;
+  for(var i=0;i<n;i++){s.w[i].style.opacity=(.14+.86*cl((p*1.25-i/n*.85)/.22,0,1)).toFixed(3)}});
+ if(gal&&innerWidth>680){var g=gal.getBoundingClientRect();if(g.bottom>-200&&g.top<vh+200){
+  var d=((g.top+g.height/2)-vh/2)/vh;cols.forEach(function(c,i){c.style.setProperty('--py',(d*speeds[i%3]).toFixed(1))})}}
+ cards.forEach(function(c){var r=c.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;
+  c.style.setProperty('--p',cl((vh-r.top)/(vh*.5),0,1).toFixed(3))});
+ sheets.forEach(function(c){var r=c.getBoundingClientRect();if(r.bottom<-100||r.top>vh+100)return;
+  c.style.setProperty('--a',cl(1-Math.abs((r.top+r.height/2)-vh*.52)/(vh*.55),0,1).toFixed(3))});
+}
+function req(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+addEventListener('scroll',req,{passive:true});addEventListener('resize',req);frame();
+})();
+</script>
+</body></html>
