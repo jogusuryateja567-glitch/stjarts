@@ -2086,6 +2086,33 @@ dialog#artModal .modal-close-btn{position:fixed!important;top:calc(10px + env(sa
 dialog#artModal .btn{width:100%;min-height:52px}
 }
 </style>
+
+<style id="stjarts-adv">
+.orders-closed .pulse-orb{background:#c0503d;animation:none;box-shadow:0 0 0 5px rgba(192,80,61,.18)}
+.orders-notice{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;margin:0 0 20px;padding:22px 26px;border-radius:24px;background:var(--paper);border:1px solid var(--line-strong);box-shadow:var(--neu-flat)}
+.orders-notice h3{font-size:20px;margin:0 0 6px}.orders-notice p{margin:0 0 6px;color:var(--mut);font-size:14px}
+.on-ico{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--bg-deep);box-shadow:var(--neu-pressed);font-size:18px}
+.form-note{margin:0 0 18px;padding:12px 14px;border-radius:14px;background:var(--bg-deep);font:700 11px/1.55 var(--font-mono);color:var(--mut);letter-spacing:.03em}
+.announce{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;margin-bottom:18px;padding:9px 16px;border-radius:999px;background:var(--ink);color:var(--bg);font:700 11px/1.4 var(--font-mono);letter-spacing:.04em}
+dialog#orderAck{border:var(--glass-border);border-radius:28px;background:var(--paper);color:var(--ink);padding:30px;width:min(92vw,460px);box-shadow:0 40px 100px rgba(0,0,0,.45);text-align:left}
+dialog#orderAck::backdrop{background:rgba(8,8,7,.7);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+dialog#orderAck h3{font-size:24px;margin:14px 0 8px}dialog#orderAck p{color:var(--mut);font-size:14px;margin:0 0 10px}
+dialog#orderAck .btn{width:100%;margin-top:10px}
+@media(max-width:767px){
+ .orders-notice{grid-template-columns:1fr;padding:20px;border-radius:20px}.orders-notice .btn{width:100%}
+ dialog#orderAck{margin:auto 0 0;width:100%;max-width:none;border-radius:26px 26px 0 0;padding:26px 22px calc(24px + env(safe-area-inset-bottom,0px))}
+}
+.adv-switch{position:relative;flex:none;width:56px;height:32px;-webkit-appearance:none;appearance:none;border-radius:999px;background:var(--bg-deep);box-shadow:var(--neu-pressed);cursor:pointer;transition:background .25s}
+.adv-switch::after{content:"";position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:50%;background:var(--paper);box-shadow:var(--neu-pill);transition:transform .25s}
+.adv-switch:checked{background:#178a48}.adv-switch:checked::after{transform:translateX(24px)}
+.adv-row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.adv-row strong{display:block;font-size:16px}.adv-row span{color:var(--mut);font:11px/1.5 var(--font-mono)}
+.adv-hint{color:var(--mut);font:11px/1.6 var(--font-mono);margin:0 0 14px}
+details.admin-card{margin-bottom:12px}details.admin-card>summary{cursor:pointer;font:700 15px var(--font-display);list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.admin-card>summary::-webkit-details-marker{display:none}details.admin-card>summary small{color:var(--mut);font:10px var(--font-mono)}
+details.admin-card[open]>summary{margin-bottom:14px}
+.adv-pane{display:none}.adv-pane.active{display:block}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#work">Skip to content</a>
@@ -3021,7 +3048,7 @@ async function loadRemotePublicData() {
     if (w.error) throw w.error;
     if (f.error) throw f.error;
     if (s.data) {
-      const x = s.data;
+      const x = s.data; window.STJ_ROW = x;
       STUDIO_DATA.wa = x.wa || STUDIO_DATA.wa; STUDIO_DATA.ig = x.ig || STUDIO_DATA.ig; STUDIO_DATA.email = x.email || STUDIO_DATA.email;
       STUDIO_DATA.slots = Number(x.slots ?? STUDIO_DATA.slots); adminMonthLabel = x.month || adminMonthLabel;
       STUDIO_DATA.framePrice = Number(x.frame_price ?? STUDIO_DATA.framePrice); STUDIO_DATA.extraFacePrice = Number(x.extra_face_price ?? STUDIO_DATA.extraFacePrice);
@@ -3682,6 +3709,148 @@ img.addEventListener('touchstart',e=>{if(e.touches.length===1){y0=e.touches[0].c
 img.addEventListener('touchmove',e=>{if(y0===null)return;dy=Math.max(0,e.touches[0].clientY-y0);dlg.style.transform=`translateY(${dy}px)`;dlg.style.opacity=String(1-Math.min(.5,dy/500))},{passive:true});
 img.addEventListener('touchend',()=>{if(y0===null)return;y0=null;dlg.style.transition='transform .25s,opacity .25s';
 if(dy>110)dlg.close();dlg.style.transform='';dlg.style.opacity='';dy=0})}
+})();
+</script>
+
+<script id="stjarts-adv-js">
+(function(){
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)],root=document.documentElement;
+const esc=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const q=(sel,i=0)=>()=>$$(sel)[i]||null;
+const REG=[
+['hero_eyebrow','Eyebrow',q('.hero-stack .eyebrow'),'Hero'],
+['hero_line1','Headline · line 1',q('.hero-title-line.stagger-1'),'Hero'],
+['hero_line2','Headline · line 2',q('.hero-title-line.stagger-2'),'Hero'],
+['hero_artist_eyebrow','Artist label',q('.hero-artist-intro .eyebrow'),'Hero'],
+['hero_name','Artist heading',q('.hero-artist-intro h3'),'Hero'],
+['hero_sub','Intro paragraph',q('.hero-sub'),'Hero',1],
+['hero_note','Second paragraph',q('.hero-artist-note'),'Hero',1],
+['hero_explore','Explore button',q('.hero-artist-intro .btn-neu'),'Hero'],
+['work_eyebrow','Eyebrow',q('#work .eyebrow'),'Gallery'],
+['work_title','Heading',q('#work h2'),'Gallery'],
+['work_text','Paragraph',q('#work .section-header-atelier p'),'Gallery',1],
+['chip_all','Filter · All',q('#categoryFilters .filter-chip',0),'Gallery'],
+['chip_portraits','Filter · Portraits',q('#categoryFilters .filter-chip',1),'Gallery'],
+['chip_couples','Filter · Couples',q('#categoryFilters .filter-chip',2),'Gallery'],
+['chip_pets','Filter · Pets',q('#categoryFilters .filter-chip',3),'Gallery'],
+['chip_cinema','Filter · Cinema',q('#categoryFilters .filter-chip',4),'Gallery'],
+['process_eyebrow','Eyebrow',q('#process .eyebrow'),'Process'],
+['process_title','Heading',q('#process h2'),'Process'],
+['process_text','Paragraph',q('#process .sticky-column > p'),'Process',1],
+...[0,1,2,3].flatMap(i=>[['step'+(i+1)+'_title','Step '+(i+1)+' · title',q('.process-sheet h3',i),'Process'],['step'+(i+1)+'_text','Step '+(i+1)+' · text',q('.process-sheet p',i),'Process',1]]),
+['pricing_eyebrow','Eyebrow',q('#pricing .eyebrow'),'Commission'],
+['pricing_title','Heading',q('#pricing h2'),'Commission'],
+['pricing_text','Paragraph',q('#pricing .section-header-atelier p'),'Commission',1],
+['pricing_note','Terms under the price',q('.price-display-box p'),'Commission',1],
+['faq_eyebrow','Eyebrow',q('#faq .eyebrow'),'FAQ'],
+['faq_title','Heading',q('#faq h2'),'FAQ'],
+['contact_eyebrow','Eyebrow',q('#contact .eyebrow'),'Contact'],
+['contact_title','Heading',q('#contact h2'),'Contact'],
+['contact_text','Paragraph',q('#contact .contact-section-grid > div > p'),'Contact',1],
+['contact_loc','Location line',q('#contact .contact-section-grid > div:first-child .mono-tag',0),'Contact'],
+['contact_reply','Response-time line',q('#contact .contact-section-grid > div:first-child .mono-tag',1),'Contact'],
+['footer_eyebrow','Footer label',q('.editorial-footer .eyebrow'),'Footer'],
+['footer_title','Footer heading',q('.editorial-footer h2'),'Footer']
+];
+function toMarkup(n){let o='';n.childNodes.forEach(c=>{if(c.nodeType===3)o+=c.textContent;else if(c.nodeType===1){if(c.tagName==='BR')o+='\n';else if(c.tagName==='EM')o+='*'+toMarkup(c)+'*';else o+=toMarkup(c)}});return o.replace(/[ \t]+/g,' ').replace(/ ?\n ?/g,'\n').trim()}
+const mk=v=>esc(v).replace(/\*([^*\n]+)\*/g,'<em>$1</em>').replace(/\n/g,'<br>');
+const DEF={},DEFH={},CUR={};
+REG.forEach(r=>{const el=r[2]();if(el){DEF[r[0]]=toMarkup(el);DEFH[r[0]]=el.innerHTML}CUR[r[0]]=''});
+const T0='Commissions are currently paused',M0="Surya is fully booked and isn't taking new portrait orders right now. Join the waitlist and you'll be the first to hear when a slot opens.";
+const ADV=window.STJ_ADV={open:true,title:'',message:'',reopen:'',content:{}};
+function readRow(){const r=window.STJ_ROW;if(!r)return;ADV.open=r.orders_open!==false;ADV.title=r.orders_title||'';ADV.message=r.orders_message||'';ADV.reopen=r.orders_reopen||'';ADV.content=(r.content&&typeof r.content==='object')?r.content:{}}
+const T=()=>ADV.title||T0,M=()=>ADV.message||M0;
+
+/* ---------- waitlist / acknowledgement ---------- */
+function calcUrl(extra){return makeWhatsAppUrl(`Hi Surya! I see commissions are paused right now - please add me to the waitlist.\n\nI'd like: ${currentStyle} portrait, ${currentSize}, ${subjectCount} subject(s), ${isFramed?'with frame':'artwork only'} (estimate ${formatInr(getCalculatedTotal())}).${extra||''}`)}
+function openAck(url){
+  let d=$('#orderAck');
+  if(!d){d=document.createElement('dialog');d.id='orderAck';
+    d.innerHTML='<div class="on-ico">⏸</div><h3 id="ackT"></h3><p id="ackM"></p><div class="mono-tag" id="ackR" style="color:var(--mut);margin-bottom:10px"></div><p>Join the waitlist and Surya will message you as soon as a slot opens. No payment is needed now.</p><a class="btn btn-primary" id="ackGo" target="_blank" rel="noopener">Join Waitlist on WhatsApp ↗</a><button class="btn btn-neu" type="button" id="ackNo">Maybe later</button>';
+    document.body.appendChild(d);
+    d.addEventListener('close',()=>{if(!$('#artModal')?.open)root.classList.remove('modal-open')});
+    d.addEventListener('click',e=>{if(e.target===d)d.close()});
+    $('#ackNo',d).onclick=()=>d.close();$('#ackGo',d).onclick=()=>setTimeout(()=>d.close(),50)}
+  $('#ackT',d).textContent=T();$('#ackM',d).textContent=M();$('#ackR',d).textContent=ADV.reopen?'Expected to reopen · '+ADV.reopen:'';
+  $('#ackGo',d).href=url;root.classList.add('modal-open');d.showModal()}
+document.addEventListener('click',e=>{if(ADV.open)return;const a=e.target.closest&&e.target.closest('#startCommissionBtn,#mPriceBtn,#modalOrderBtn');if(!a)return;
+  e.preventDefault();e.stopImmediatePropagation();
+  openAck(a.id==='modalOrderBtn'?calcUrl(`\nI loved "${$('#modalTitle')?.textContent||'a piece'}" in your gallery and would like something similar.`):calcUrl())},true);
+document.addEventListener('submit',e=>{if(ADV.open||e.target.id!=='commissionForm')return;e.preventDefault();e.stopImmediatePropagation();
+  const n=$('#formName').value.trim(),p=$('#formPhone').value.trim(),m=$('#formIdea').value.trim();
+  openAck(calcUrl(`\n\nName: ${n}${p?' ('+p+')':''}\nIdea: ${m}`))},true);
+
+/* ---------- apply everything to the public page ---------- */
+let formBtnOrig=null;
+function applyAdvanced(){
+  const C=ADV.content||{};
+  REG.forEach(r=>{const k=r[0],el=r[2]();if(!el)return;const v=String(C[k]||'').trim();if(v===CUR[k])return;CUR[k]=v;el.innerHTML=v?mk(v):DEFH[k]});
+  root.classList.toggle('orders-closed',!ADV.open);
+  const slots=$('#slotsText'),row=window.STJ_ROW||{};
+  if(slots)slots.textContent=!ADV.open?('Orders paused'+(ADV.reopen?' · back '+ADV.reopen:'')):(row.slots_text||slotLabel(STUDIO_DATA.slots,adminMonthLabel));
+  let n=$('#ordersNotice');
+  if(!ADV.open){
+    if(!n){n=document.createElement('div');n.id='ordersNotice';n.className='orders-notice scroll-reveal is-visible settled';$('#pricing .w').insertBefore(n,$('#pricing .drafting-desk-outer'))}
+    n.innerHTML=`<div class="on-ico">⏸</div><div><h3>${esc(T())}</h3><p>${esc(M())}</p>${ADV.reopen?`<div class="mono-tag" style="color:var(--mut)">Expected to reopen · ${esc(ADV.reopen)}</div>`:''}</div><button class="btn btn-primary" type="button" id="noticeJoin">Join the waitlist</button>`;
+    $('#noticeJoin').onclick=()=>openAck(calcUrl());
+  }else if(n)n.remove();
+  const f=$('#commissionForm'),sb=f&&$('button[type=submit]',f);
+  if(sb){if(formBtnOrig===null)formBtnOrig=sb.innerHTML;sb.innerHTML=ADV.open?formBtnOrig:'Join the Waitlist on WhatsApp ↗'}
+  let fn=$('#formNote');
+  if(!ADV.open&&f){if(!fn){fn=document.createElement('div');fn.id='formNote';fn.className='form-note';f.prepend(fn)}fn.textContent='Orders are paused. You can still send your idea and Surya will add you to the waitlist.'}else if(fn)fn.remove();
+  const mo=$('#modalOrderBtn');if(mo)mo.textContent=ADV.open?'Commission Similar Artwork ↗':'Join Waitlist for Similar Artwork ↗';
+  let an=$('#announce');const on=C._banner_on&&C._banner_text;
+  if(on){if(!an){an=document.createElement('div');an.id='announce';an.className='announce';an.setAttribute('role','status');$('#top').prepend(an)}an.textContent=C._banner_text}else if(an)an.remove();
+  if(typeof updatePricingView==='function')updatePricingView();
+}
+const up=window.updatePricingView;
+window.updatePricingView=function(){up.apply(this,arguments);if(!ADV.open){const b=$('#startCommissionBtn');if(b)b.textContent='Join the Waitlist on WhatsApp ↗'}};
+const lo=window.loadRemotePublicData;
+window.loadRemotePublicData=async function(){const r=await lo.apply(this,arguments);try{readRow();applyAdvanced();syncAdmin()}catch(e){console.warn(e)}return r};
+
+/* ---------- admin: Advanced tab + dashboard switch ---------- */
+const nav=$('#adminNav'),content=$('.admin-content'),dg=$('.admin-view[data-view="dashboard"] .admin-grid');
+if(nav&&content){
+  const b=document.createElement('button');b.dataset.view='advanced';b.textContent='Advanced';nav.insertBefore(b,nav.lastElementChild);
+  const groups=[];REG.forEach(r=>{let g=groups.find(x=>x.n===r[3]);if(!g)groups.push(g={n:r[3],items:[]});g.items.push(r)});
+  const fields=groups.map((g,i)=>`<details class="admin-card"${i===0?' open':''}><summary>${g.n}<small>${g.items.length} fields</small></summary>${g.items.map(r=>`<div class="admin-field"><label>${esc(r[1])}</label><textarea data-ckey="${r[0]}" rows="${r[4]?3:1}" style="min-height:${r[4]?84:44}px"></textarea></div>`).join('')}</details>`).join('');
+  const s=document.createElement('section');s.className='admin-view';s.dataset.view='advanced';
+  s.innerHTML=`<div class="admin-view-head"><div><div class="admin-kicker">Power tools</div><h2>Advanced settings.</h2><p>Control whether you take orders, post an announcement, and rewrite the text of every section.</p></div><div class="admin-toolbar"><button class="btn btn-primary" id="advSaveBtn" type="button">Save Advanced Settings</button></div></div>
+  <div class="admin-tabs" id="advTabs"><button class="admin-tab active" data-pane="orders" type="button">Orders</button><button class="admin-tab" data-pane="banner" type="button">Announcement</button><button class="admin-tab" data-pane="text" type="button">Page text</button></div>
+  <div class="adv-pane active" data-pane="orders"><div class="admin-card full"><div class="adv-row"><div><strong>Accepting new orders</strong><span>Turn off to pause. Visitors see a notice, the calculator becomes a waitlist, and every order button explains why.</span></div><input class="adv-switch" id="advOpen" type="checkbox" aria-label="Accepting new orders"></div></div>
+  <div class="admin-card full" style="margin-top:14px"><h4>What visitors see when paused</h4><p>Leave blank to use the friendly default.</p><div class="admin-field"><label for="advTitle">Notice title</label><input id="advTitle" maxlength="90"></div><div class="admin-field"><label for="advMsg">Message</label><textarea id="advMsg" maxlength="400"></textarea></div><div class="admin-field"><label for="advReopen">Expected reopening (optional)</label><input id="advReopen" maxlength="40" placeholder="e.g. 15 April"></div></div></div>
+  <div class="adv-pane" data-pane="banner"><div class="admin-card full"><div class="adv-row"><div><strong>Show announcement pill</strong><span>Appears at the top of the home page (e.g. festive offer, holiday delay).</span></div><input class="adv-switch" id="advBannerOn" type="checkbox" aria-label="Show announcement"></div><div class="admin-field"><label for="advBannerText">Announcement text</label><input id="advBannerText" maxlength="140"></div></div></div>
+  <div class="adv-pane" data-pane="text"><p class="adv-hint">Edit any text below. Leave a field empty to keep the original. Use *asterisks* for italic words and Enter for a new line.</p>${fields}</div>`;
+  content.appendChild(s);
+  $('#advTabs').addEventListener('click',e=>{const t=e.target.closest('[data-pane]');if(!t)return;$$('#advTabs .admin-tab').forEach(x=>x.classList.toggle('active',x===t));$$('.adv-pane').forEach(p=>p.classList.toggle('active',p.dataset.pane===t.dataset.pane))});
+  $('#advSaveBtn').onclick=saveAdvanced;
+}
+if(dg){const c=document.createElement('div');c.className='admin-card full';
+  c.innerHTML='<div class="adv-row"><div><strong>Taking orders: <span id="ordersState">ON</span></strong><span>Quick switch. Saves instantly and updates the public site everywhere.</span></div><input class="adv-switch" id="quickOrders" type="checkbox" aria-label="Taking orders"></div>';
+  dg.insertBefore(c,dg.firstChild);
+  $('#quickOrders').addEventListener('change',async e=>{const want=e.target.checked;
+    try{await requireAdmin();assertWritten(await supabaseClient.from('site_settings').update({orders_open:want}).eq('id',1).select('id'),'Order switch');
+      window.STJ_ROW=Object.assign(window.STJ_ROW||{},{orders_open:want});readRow();applyAdvanced();syncAdmin();setAdminStatus(want?'Orders are now OPEN · saved to cloud':'Orders are now PAUSED · saved to cloud')}
+    catch(err){e.target.checked=!want;const m=err.message||'';setAdminStatus(/column|schema/i.test(m)?'Run supabase-update.sql in the Supabase SQL Editor first.':m||'Failed',true)}})}
+function syncAdmin(){
+  const set=(id,v)=>{const e=$('#'+id);if(e)e.value=v||''};
+  const qo=$('#quickOrders');if(qo)qo.checked=ADV.open;const ao=$('#advOpen');if(ao)ao.checked=ADV.open;const os=$('#ordersState');if(os)os.textContent=ADV.open?'ON':'PAUSED';
+  set('advTitle',ADV.title);set('advMsg',ADV.message);set('advReopen',ADV.reopen);
+  const bo=$('#advBannerOn');if(bo)bo.checked=!!ADV.content._banner_on;set('advBannerText',ADV.content._banner_text);
+  $$('[data-ckey]').forEach(t=>{t.value=ADV.content[t.dataset.ckey]||'';t.placeholder=DEF[t.dataset.ckey]||''})}
+async function saveAdvanced(){
+  const b=$('#advSaveBtn');b.disabled=true;
+  try{await requireAdmin();
+    const c={};$$('[data-ckey]').forEach(t=>{const v=t.value.trim();if(v)c[t.dataset.ckey]=v});
+    const bt=$('#advBannerText').value.trim();if($('#advBannerOn').checked&&bt){c._banner_on=true;c._banner_text=bt}
+    const patch={orders_open:$('#advOpen').checked,orders_title:$('#advTitle').value.trim(),orders_message:$('#advMsg').value.trim(),orders_reopen:$('#advReopen').value.trim(),content:c};
+    assertWritten(await supabaseClient.from('site_settings').update(patch).eq('id',1).select('id'),'Advanced settings');
+    window.STJ_ROW=Object.assign(window.STJ_ROW||{},patch);readRow();applyAdvanced();syncAdmin();
+    setAdminStatus('Advanced settings saved to cloud · all devices updated')}
+  catch(err){const m=err.message||'';setAdminStatus(/column|schema/i.test(m)?'Run supabase-update.sql in the Supabase SQL Editor first, then try again.':m||'Save failed',true)}
+  finally{b.disabled=false}}
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'&&$('#adminPanel.admin-visible')&&$('.admin-view[data-view="advanced"].active')){e.preventDefault();e.stopImmediatePropagation();saveAdvanced()}},true);
+const po=window.populateAdmin;if(typeof po==='function')window.populateAdmin=function(){po.apply(this,arguments);syncAdmin()};
 })();
 </script>
 </body></html>
