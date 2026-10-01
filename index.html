@@ -10,228 +10,7 @@
 <meta property="og:type" content="website"/>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2311110f'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='900' font-size='26' text-anchor='middle' fill='%23f4f2ec'%3EST%3C/text%3E%3C/svg%3E"/>
 <script>try{var t=localStorage.getItem("stjarts_theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<noscript><style>.scroll-reveal{opacity:1!important;transform:none!important}
-/* ======================================================================
-   COMMISSION STUDIO — EDITORIAL CONVERSION LAYOUT
-   Keeps all existing calculator IDs/logic intact; changes only composition.
-   ====================================================================== */
-#pricing{
-  position:relative;
-  overflow:hidden;
-}
-#pricing::before{
-  content:"COMMISSION / 01";
-  position:absolute;
-  top:110px;
-  right:-42px;
-  font-family:var(--font-mono);
-  font-size:9px;
-  letter-spacing:.22em;
-  color:var(--mut);
-  opacity:.55;
-  transform:rotate(90deg);
-}
-#pricing .section-header-atelier{
-  align-items:end;
-  grid-template-columns:minmax(0,1fr) minmax(280px,.62fr);
-  margin-bottom:34px;
-}
-#pricing .section-header-atelier h2{
-  max-width:760px;
-  font-size:clamp(42px,5.2vw,76px);
-  line-height:.94;
-  letter-spacing:-.045em;
-}
-#pricing .section-header-atelier>p{
-  max-width:390px;
-  padding-bottom:5px;
-  border-left:1px solid var(--line-strong);
-  padding-left:22px;
-}
-#pricing .drafting-desk-outer{
-  padding:16px;
-  border-radius:34px;
-  background:linear-gradient(135deg,rgba(255,255,255,.74),rgba(232,229,220,.8));
-  box-shadow:0 28px 70px rgba(22,22,20,.12),inset 0 1px 0 rgba(255,255,255,.85);
-}
-#pricing .drafting-desk-outer::before{
-  top:8px;
-  left:34px;
-  right:34px;
-  opacity:.22;
-}
-#pricing .drafting-grid-inner{
-  grid-template-columns:minmax(280px,.82fr) minmax(420px,1.18fr);
-  gap:16px;
-  align-items:stretch;
-}
-#pricing .drafting-ticket-well{
-  grid-column:1;
-  grid-row:1;
-  min-height:590px;
-  padding:42px;
-  border-radius:27px;
-  background:linear-gradient(155deg,rgba(250,249,245,.94),rgba(239,236,228,.82));
-  border:1px solid rgba(36,36,32,.09);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 18px 45px rgba(30,28,22,.08);
-  justify-content:space-between;
-}
-#pricing .drafting-ticket-well::before{
-  content:"THE BRIEF";
-  display:block;
-  position:absolute;
-  top:25px;
-  right:28px;
-  font-family:var(--font-mono);
-  font-size:8px;
-  letter-spacing:.2em;
-  color:var(--mut);
-  opacity:.7;
-}
-#pricing .drafting-ticket-well .eyebrow{
-  margin-bottom:12px;
-}
-#pricing .drafting-ticket-well h3{
-  font-size:clamp(28px,3vw,44px);
-  line-height:1;
-  letter-spacing:-.035em;
-  max-width:430px;
-}
-#pricing .drafting-ticket-well p{
-  max-width:430px;
-  font-size:14px!important;
-  line-height:1.75;
-}
-#pricing .feature-check-list{
-  display:grid;
-  gap:12px;
-  margin-top:28px;
-}
-#pricing .feature-check-list li{
-  padding:12px 0 12px 26px;
-  border-bottom:1px solid rgba(30,30,25,.09);
-  font-size:11px;
-}
-#pricing .drafting-controls-well{
-  grid-column:2;
-  grid-row:1;
-  padding:38px;
-  border-radius:27px;
-  background:var(--paper);
-  box-shadow:0 20px 48px rgba(25,24,20,.09),inset 0 1px 0 rgba(255,255,255,.85);
-  border:1px solid rgba(35,35,30,.08);
-}
-#pricing .drafting-controls-well>.mono-tag{
-  margin-top:3px;
-  font-size:9px!important;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-}
-#pricing .segment-control{
-  width:100%;
-  margin-bottom:30px;
-}
-#pricing .segment-btn{
-  flex:1;
-  min-height:52px;
-}
-#pricing .pill-group{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:7px;
-  margin-bottom:24px;
-}
-#pricing .size-pill{
-  min-width:0;
-  min-height:46px;
-  padding:10px 5px;
-  white-space:nowrap;
-}
-#pricing .calc-toggles{
-  border-top:1px solid var(--line-strong);
-  padding-top:7px;
-}
-#pricing .toggle-row{
-  min-height:62px;
-  border-bottom:1px solid rgba(30,30,25,.08);
-}
-#pricing .price-display-box{
-  margin-top:24px;
-  padding:24px 26px;
-  border-radius:20px;
-  background:var(--ink);
-  color:var(--paper);
-  box-shadow:0 18px 34px rgba(25,24,20,.18);
-}
-#pricing .price-display-box .mono-tag{
-  color:rgba(247,244,236,.62)!important;
-}
-#pricing .price-figure{
-  margin:7px 0 8px;
-  font-size:clamp(48px,5vw,72px);
-  letter-spacing:-.055em;
-  color:var(--paper);
-}
-#pricing .price-figure span{
-  color:rgba(247,244,236,.52);
-}
-#pricing .price-display-box p{
-  color:rgba(247,244,236,.58)!important;
-}
-#pricing #startCommissionBtn{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:100%;
-  min-height:58px;
-  margin-top:16px!important;
-  border-radius:16px;
-  letter-spacing:.02em;
-}
-#pricing .drafting-ticket-well>div:last-child{
-  padding-top:20px!important;
-  margin-top:28px!important;
-}
-#pricing .drafting-ticket-well>div:last-child span:first-child{
-  width:38px;
-  height:38px;
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  background:var(--paper);
-  box-shadow:var(--neu-subtle);
-  font-size:0;
-}
-#pricing .drafting-ticket-well>div:last-child span:first-child::after{
-  content:"✓";
-  font-family:var(--font-mono);
-  font-size:13px;
-}
-@media(max-width:960px){
-  #pricing .section-header-atelier{grid-template-columns:1fr .8fr}
-  #pricing .drafting-grid-inner{grid-template-columns:1fr 1.08fr}
-  #pricing .drafting-ticket-well,#pricing .drafting-controls-well{padding:30px}
-  #pricing .pill-group{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:680px){
-  #pricing::before{display:none}
-  #pricing .section-header-atelier{display:block;margin-bottom:24px}
-  #pricing .section-header-atelier h2{font-size:clamp(39px,12vw,58px);line-height:.92}
-  #pricing .section-header-atelier>p{margin-top:18px;padding:14px 0 0;border-left:0;border-top:1px solid var(--line-strong);max-width:none}
-  #pricing .drafting-desk-outer{padding:10px!important;border-radius:28px!important}
-  #pricing .drafting-grid-inner{display:flex!important;flex-direction:column!important;gap:10px!important}
-  #pricing .drafting-ticket-well{order:-1;min-height:0;padding:25px!important;border-radius:22px!important}
-  #pricing .drafting-controls-well{padding:22px!important;border-radius:22px!important}
-  #pricing .drafting-ticket-well h3{font-size:31px}
-  #pricing .drafting-ticket-well::before{top:20px;right:20px}
-  #pricing .pill-group{grid-template-columns:repeat(2,1fr);gap:7px}
-  #pricing .size-pill{min-height:44px}
-  #pricing .price-display-box{padding:20px;margin-top:18px}
-  #pricing .price-figure{font-size:clamp(46px,15vw,66px)}
-  #pricing #startCommissionBtn{min-height:56px}
-}
-
-</style></noscript>
+<noscript><style>.scroll-reveal{opacity:1!important;transform:none!important}.hero-word>span{transform:none!important;animation:none!important}.js-motion .sw{opacity:1!important}</style></noscript>
 <title>S.T.J.A.R.T.S — Handcrafted Fine Pencil Portraits</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -2015,7 +1794,8 @@ nav.glass-nav{top:16px;width:min(calc(100% - 40px),1080px);padding:7px 10px 7px 
 }
 
 </style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="preconnect" href="https://owdavspbotgprcdmbeqp.supabase.co" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>window.STJARTS_CONFIG={SUPABASE_URL:'https://owdavspbotgprcdmbeqp.supabase.co',SUPABASE_PUBLISHABLE_KEY:'sb_publishable_HRypGqIe-mwAIJMDoF5T4Q_A_bL73i5',BUCKET:"artworks"};</script>
 
 <style id="mobile-production-ui">
@@ -2139,6 +1919,53 @@ img,svg,video,canvas{max-width:100%}
   .admin-work-actions{display:grid;grid-template-columns:1fr 1fr}.admin-work-actions .admin-mini{width:100%}
   .admin-upload{min-height:110px}.admin-image-preview{min-height:220px}
   .admin-json{font-size:10px!important;min-height:220px!important}
+}
+</style>
+
+<style id="stjarts-polish">
+:root{color-scheme:light}[data-theme=dark]{color-scheme:dark}
+/* BUG FIX: overflow-x:hidden on BOTH html and body turned body into a scroll container and silently broke position:sticky (Process column). clip does not. */
+html,body{overflow-x:clip}
+@supports not (overflow:clip){html{overflow-x:hidden}body{overflow-x:visible}}
+html{-webkit-tap-highlight-color:transparent}
+html.modal-open{overflow:hidden}
+dialog#artModal{overscroll-behavior:contain}
+.ambient-glow{left:0!important;top:0!important;will-change:transform;transition:none!important}
+footer.editorial-footer{padding-bottom:calc(50px + env(safe-area-inset-bottom,0px))}
+.art-preview-wrap img{background:transparent}
+/* skeleton while cloud data loads (no flash of fake "coming soon" cards) */
+html:not(.cms-ready) .art-placeholder-vector{font-size:0!important;color:transparent!important;background-image:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);background-size:200% 100%;animation:stSk 1.4s linear infinite}
+@keyframes stSk{from{background-position:200% 0}to{background-position:-100% 0}}
+@media(max-width:960px){
+  /* BUG FIX: hidden nav used translate(-50%,..) while mobile nav is left-anchored -> it slid diagonally */
+  nav.glass-nav.nav-hidden{transform:translateY(-160%)}
+  .mobile-toggle{position:relative;display:grid;place-items:center}
+}
+@media(max-width:680px){
+  /* BUG FIX: close-icon second bar had no anchor point */
+  nav.glass-nav.menu-open .mobile-toggle::before{transform:rotate(45deg)}
+  nav.glass-nav.menu-open .mobile-toggle::after{top:50%;left:50%;margin:-1px 0 0 -9px;transform:rotate(-45deg)}
+}
+/* PERFORMANCE: stacked backdrop-filters are the #1 cause of scroll jank on phones */
+@media(max-width:767px),(hover:none){
+  .neu-card,.art-card,.process-sheet,.hero-copy-plane,.faq-item,.drafting-ticket-well,.diagonal-artist-card,.floating-glass-badge,.filter-chip,.btn-neu,.materials-slate,.modal-content-col{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+  .neu-card,.art-card,.process-sheet,.hero-copy-plane,.faq-item,.drafting-ticket-well,.floating-glass-badge{background:var(--paper)}
+  .scroll-reveal{transition-duration:.55s}
+}
+/* Admin extras */
+.toast-wrap{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:9000;display:grid;gap:8px;width:min(92vw,420px);pointer-events:none}
+.toast{padding:12px 16px;border-radius:14px;background:var(--ink);color:var(--bg);font:700 11px/1.5 var(--font-mono);letter-spacing:.04em;box-shadow:0 14px 34px rgba(0,0,0,.28);animation:stToast .35s cubic-bezier(.16,1,.3,1)}
+.toast.err{background:#a33a2a;color:#fff}
+@keyframes stToast{from{opacity:0;transform:translateY(12px)}}
+.admin-upload.drag{border-color:var(--ink);background:rgba(255,255,255,.4)}
+#healthList{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+#healthList li{padding:10px 14px;border-radius:12px;background:var(--bg);font:12px/1.5 var(--font-mono);border-left:3px solid var(--mut)}
+#healthList .h-warn{border-left-color:#c0503d}#healthList .h-ok{border-left-color:#178a48}
+.admin-shell{padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(max-width:767px){
+  #adminPreviewBtn{display:inline-flex!important}
+  .admin-brand small{display:none}
+  .admin-top-actions{flex-wrap:nowrap}
 }
 </style>
 </head>
@@ -2315,11 +2142,11 @@ img,svg,video,canvas{max-width:100%}
         </p>
 </div>
 <div class="filter-bar scroll-reveal" id="categoryFilters">
-<button class="filter-chip active" data-cat="All">All Curations</button>
-<button class="filter-chip" data-cat="Portraits">Classic Portraits</button>
-<button class="filter-chip" data-cat="Couples">Couples &amp; Memorials</button>
-<button class="filter-chip" data-cat="Pets">Beloved Companions</button>
-<button class="filter-chip" data-cat="Cinema">Cinema &amp; Legends</button>
+<button type="button" class="filter-chip active" data-cat="All">All Curations</button>
+<button type="button" class="filter-chip" data-cat="Portraits">Classic Portraits</button>
+<button type="button" class="filter-chip" data-cat="Couples">Couples &amp; Memorials</button>
+<button type="button" class="filter-chip" data-cat="Pets">Beloved Companions</button>
+<button type="button" class="filter-chip" data-cat="Cinema">Cinema &amp; Legends</button>
 </div>
 <!-- Offset Brick Columns Container -->
 <div class="brick-gallery-grid" id="brickGridContainer">
@@ -2389,16 +2216,16 @@ img,svg,video,canvas{max-width:100%}
 <div class="drafting-controls-well">
 <div class="mono-tag" style="color:var(--mut); margin-bottom:14px; font-weight:700;">1. Choose Finish Style</div>
 <div class="segment-control">
-<button class="segment-btn active" data-style="Classic" id="styleClassic">Classic Portrait</button>
-<button class="segment-btn" data-style="Signature" id="styleSignature">Signature Fine Realism</button>
+<button type="button" class="segment-btn active" data-style="Classic" id="styleClassic">Classic Portrait</button>
+<button type="button" class="segment-btn" data-style="Signature" id="styleSignature">Signature Fine Realism</button>
 </div>
 <div class="mono-tag" style="color:var(--mut); margin-bottom:14px; font-weight:700;">2. Select Archival Dimension</div>
 <div class="pill-group" id="sizeSelector">
-<button class="size-pill" data-size="A6">A6 (Desk)</button>
-<button class="size-pill" data-size="A5">A5 (Compact)</button>
-<button class="size-pill active" data-size="A4">A4 (Standard)</button>
-<button class="size-pill" data-size="A3">A3 (Statement)</button>
-<button class="size-pill" data-size="A2">A2 (Gallery Grand)</button>
+<button type="button" class="size-pill" data-size="A6">A6 (Desk)</button>
+<button type="button" class="size-pill" data-size="A5">A5 (Compact)</button>
+<button type="button" class="size-pill active" data-size="A4">A4 (Standard)</button>
+<button type="button" class="size-pill" data-size="A3">A3 (Statement)</button>
+<button type="button" class="size-pill" data-size="A2">A2 (Gallery Grand)</button>
 </div>
 <div class="calc-toggles">
 <div class="toggle-row">
@@ -2537,7 +2364,7 @@ img,svg,video,canvas{max-width:100%}
 <a class="btn btn-neu" href="mailto:jogusuryateja567@gmail.com" style="color:#f4f2ec; border-color:rgba(255,255,255,0.15);">Email Surya ↗</a>
 </div>
 <p class="mono-tag" style="font-size:11px; color:#78756e; margin-top:20px;">
-        © 2026 S.T.J.A.R.T.S. All drawings hand-crafted by Surya Teja. Designed with tactile neumorphism and frosted glassmorphism.
+        © 2026 S.T.J.A.R.T.S. All drawings hand-crafted by Surya Teja.
       </p>
 </div>
 </footer>
@@ -2549,7 +2376,7 @@ img,svg,video,canvas{max-width:100%}
 <!-- Media inserted dynamically -->
 </div>
 <div class="modal-content-col">
-<button aria-label="Close Preview" class="modal-close-btn" id="modalCloseBtn">✕</button>
+<button type="button" aria-label="Close Preview" class="modal-close-btn" id="modalCloseBtn">✕</button>
 <div class="eyebrow" id="modalTag">Artwork Study</div>
 <h2 id="modalTitle" style="font-size:36px; margin-bottom:12px;">Portrait Study</h2>
 <p id="modalDesc" style="color:var(--mut); font-size:15px; line-height:1.6; margin-bottom:24px;">
@@ -2839,54 +2666,51 @@ function observeScrollReveals() {
 }
 
 function initAmbientMotion() {
-  const ambient = document.getElementById('ambientLight');
-  const heroFrame = document.getElementById('heroFrame');
-
-  window.addEventListener('pointermove', (e) => {
-    if (ambient) {
-      ambient.style.left = `${e.clientX}px`;
-      ambient.style.top = `${e.clientY}px`;
-    }
-
-    if (heroFrame && e.pointerType === 'mouse' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      const rect = heroFrame.getBoundingClientRect();
-      const frameCenterX = rect.left + rect.width / 2;
-      const frameCenterY = rect.top + rect.height / 2;
-      const deltaX = (e.clientX - frameCenterX) / 35;
-      const deltaY = (e.clientY - frameCenterY) / 35;
-      heroFrame.style.transform = `rotate3d(${-deltaY * 0.1}, ${deltaX * 0.1}, 0, 5deg) translate3d(${deltaX * 0.3}px, ${deltaY * 0.3}px, 0)`;
-    }
-  }, { passive: true });
-
-  let lastY = 0;
-  const nav = document.getElementById('mainNav');
-  const progress = document.getElementById('scrollProgress');
-
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    
-    if (progress && max > 0) {
-      progress.style.transform = `scaleX(${y / max})`;
-    }
-
-    if (nav) {
-      if (y > 40) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-
-      if (y > 180 && y - lastY > 8 && !nav.classList.contains('menu-open') && !nav.contains(document.activeElement)) {
-        nav.classList.add('nav-hidden');
-      } else if (lastY - y > 8 || y < 100) {
-        nav.classList.remove('nav-hidden');
+  const ambient = document.getElementById('ambientLight'), heroFrame = document.getElementById('heroFrame'),
+        nav = document.getElementById('mainNav'), progress = document.getElementById('scrollProgress');
+  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches,
+        reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let px = innerWidth / 2, py = innerHeight * .3, pending = false, sp = false, lastY = scrollY, max = 1;
+  const calcMax = () => { max = Math.max(1, document.documentElement.scrollHeight - innerHeight); };
+  const paint = () => {
+    pending = false;
+    if (ambient) ambient.style.transform = `translate3d(${px}px,${py}px,0) translate(-50%,-50%)`;
+    if (fine && !reduce && heroFrame && heroFrame.parentElement) {
+      const h = heroFrame.parentElement.getBoundingClientRect();
+      if (h.bottom > 0 && h.top < innerHeight) {
+        const dx = (px - (h.left + h.width / 2)) / 35, dy = (py - (h.top + h.height / 2)) / 35;
+        heroFrame.style.transform = `rotate3d(${-dy * .1}, ${dx * .1}, 0, 5deg) translate3d(${dx * .3}px, ${dy * .3}px, 0)`;
       }
     }
-    lastY = y;
-  }, { passive: true });
+  };
+  if (fine) {
+    addEventListener('pointermove', e => {
+      if (e.pointerType !== 'mouse') return;
+      px = e.clientX; py = e.clientY;
+      if (!pending) { pending = true; requestAnimationFrame(paint); }
+    }, { passive: true });
+  } else if (ambient) ambient.style.display = 'none';
+
+  const onScroll = () => {
+    if (sp) return; sp = true;
+    requestAnimationFrame(() => {
+      sp = false;
+      const y = scrollY;
+      if (progress) progress.style.transform = `scaleX(${Math.min(1, y / max)})`;
+      if (nav) {
+        nav.classList.toggle('scrolled', y > 40);
+        if (y > 180 && y - lastY > 8 && !nav.classList.contains('menu-open') && !nav.contains(document.activeElement)) nav.classList.add('nav-hidden');
+        else if (lastY - y > 8 || y < 100) nav.classList.remove('nav-hidden');
+      }
+      lastY = y;
+    });
+  };
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', calcMax, { passive: true });
+  addEventListener('load', calcMax);
+  if ('ResizeObserver' in window) new ResizeObserver(calcMax).observe(document.body);
+  calcMax(); onScroll();
 }
-
 function setupEventListeners() {
   document.getElementById('styleClassic')?.addEventListener('click', () => {
     currentStyle = 'Classic';
@@ -3582,7 +3406,7 @@ if(av&&row){row.classList.add('hero-cta-row');row.style.marginTop='';row.insertB
 document.querySelectorAll('.hero-title-line').forEach(function(l){l.style.animation='none';l.style.opacity=1;l.style.transform='none'});
 var h1=document.querySelector('.hero-stack h1');if(h1)split(h1,'hero-word');
 /* scrubbed reading: words light up as the block crosses the viewport */
-var scrubs=[];document.querySelectorAll('h2,.section-header-atelier p,.sticky-column>p').forEach(function(el){
+var scrubs=[];document.querySelectorAll('h2:not(#modalTitle)').forEach(function(el){
  if(el.closest('.admin-overlay'))return;split(el,'sw');scrubs.push({el:el,w:el.querySelectorAll('.sw')})});
 root.classList.add('js-motion');
 var cols=[],cards=[],sheets=[],gal=document.getElementById('brickGridContainer');
@@ -3604,6 +3428,107 @@ function frame(){ticking=false;vh=innerHeight;var y=scrollY;
 }
 function req(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
 addEventListener('scroll',req,{passive:true});addEventListener('resize',req);frame();
+})();
+</script>
+
+<script id="stjarts-polish-js">
+(function(){
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)],root=document.documentElement;
+
+/* cloud-ready flag (drives skeleton), with a safety timeout */
+try{const o=window.loadRemotePublicData;if(typeof o==='function')window.loadRemotePublicData=async function(){try{return await o.apply(this,arguments)}finally{root.classList.add('cms-ready')}}}catch(e){}
+setTimeout(()=>root.classList.add('cms-ready'),4000);
+
+/* BUG FIX: with prefers-reduced-motion the hero badge/CTA were never re-parented, leaving them absolutely positioned over the headline */
+(function(){const av=$('.hero-availability-stack'),row=$('.hero-artist-intro > div:last-child');
+if(av&&row&&!row.classList.contains('hero-cta-row')){row.classList.add('hero-cta-row');row.style.marginTop='';row.insertBefore(av,row.firstChild)}})();
+
+/* lightbox: lock page scroll, restore focus */
+const dlg=$('#artModal');
+if(dlg){let last=null;const sm=dlg.showModal.bind(dlg);
+dlg.showModal=()=>{last=document.activeElement;root.classList.add('modal-open');sm()};
+dlg.addEventListener('close',()=>{root.classList.remove('modal-open');last&&last.focus&&last.focus({preventScroll:true})})}
+
+/* broken image -> graceful placeholder */
+document.addEventListener('error',e=>{const t=e.target;
+if(t&&t.tagName==='IMG'&&t.closest&&t.closest('.art-preview-wrap')){const d=document.createElement('div');d.className='art-placeholder-vector';
+d.style.cssText='font-family:var(--font-mono);font-size:10px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.12em';
+d.textContent='Image unavailable';t.replaceWith(d)}},true);
+
+/* ================= ADMIN ================= */
+const tc=document.createElement('div');tc.className='toast-wrap';tc.setAttribute('aria-live','polite');document.body.appendChild(tc);
+function toast(msg,err){const t=document.createElement('div');t.className='toast'+(err?' err':'');t.textContent=msg;tc.appendChild(t);
+while(tc.children.length>3)tc.firstChild.remove();setTimeout(()=>t.remove(),3400)}
+
+let dirty=false;const sb=$('#adminSaveBtn');
+const setDirty=v=>{dirty=v;if(sb)sb.textContent=v?'Save Changes •':'Save Changes'};
+['pricing','content','contact'].forEach(v=>$(`.admin-view[data-view="${v}"]`)?.addEventListener('input',()=>setDirty(true)));
+addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
+$('#adminCloseBtn')?.addEventListener('click',e=>{if(dirty&&!confirm('You have unsaved changes. Lock and discard them?')){e.stopImmediatePropagation();return}setDirty(false)},true);
+
+/* status line -> toasts */
+let lastMsg='';
+const st=$('#adminStatus');
+if(st)new MutationObserver(()=>{const m=st.textContent.trim();if(!m||m==='Ready'||m===lastMsg)return;lastMsg=m;setTimeout(()=>lastMsg='',1500);
+const err=/rgb\(163/.test(st.style.color)||st.style.color==='#a33a2a';toast(m,err);if(!err&&/saved to cloud|restored/i.test(m))setDirty(false)}).observe(st,{childList:true,characterData:true,subtree:true});
+
+/* Ctrl/Cmd+S saves */
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'&&$('#adminPanel.admin-visible')){e.preventDefault();typeof saveAllAdmin==='function'&&saveAllAdmin()}});
+
+/* portfolio search */
+const wg=$('#adminWorkGrid');
+if(wg){const box=document.createElement('div');box.className='admin-field';
+box.innerHTML='<label for="workSearch">Search portfolio</label><input id="workSearch" type="search" placeholder="Title, category, size…" autocomplete="off">';
+wg.parentNode.insertBefore(box,wg);
+const apply=()=>{const q=$('#workSearch').value.trim().toLowerCase();$$('.admin-work-card',wg).forEach(c=>c.hidden=!!q&&!c.textContent.toLowerCase().includes(q))};
+$('#workSearch').addEventListener('input',apply);
+const orig=window.renderAdminWorks;if(typeof orig==='function')window.renderAdminWorks=function(){orig.apply(this,arguments);apply()}}
+
+/* drag & drop image upload */
+$$('.admin-upload').forEach(l=>{const inp=$('input[type=file]',l);
+['dragenter','dragover'].forEach(t=>l.addEventListener(t,e=>{e.preventDefault();l.classList.add('drag')}));
+['dragleave','drop'].forEach(t=>l.addEventListener(t,e=>{e.preventDefault();l.classList.remove('drag')}));
+l.addEventListener('drop',e=>{const f=e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0];if(!f||!inp)return;
+const dt=new DataTransfer();dt.items.add(f);inp.files=dt.files;inp.dispatchEvent(new Event('change',{bubbles:true}))})});
+
+/* site health card (dashboard) */
+const dg=$('.admin-view[data-view="dashboard"] .admin-grid');
+if(dg){const c=document.createElement('div');c.className='admin-card full';c.innerHTML='<h4>Site health</h4><p>Things worth fixing before visitors notice.</p><ul id="healthList"></ul>';dg.appendChild(c)}
+function health(){const ul=$('#healthList');if(!ul||typeof STUDIO_DATA==='undefined')return;const d=STUDIO_DATA,l=[];
+const miss=d.allWorks.filter(w=>!w.image).length,hid=d.allWorks.filter(w=>!w.published).length;
+if(miss)l.push(['warn',`${miss} portfolio piece${miss>1?'s':''} still need an image`]);
+if(hid)l.push(['info',`${hid} piece${hid>1?'s are':' is'} hidden from the public site`]);
+if(!currentHeroImage)l.push(['warn','No hero image set — the placeholder frame is showing']);
+if(d.slots<=0)l.push(['info','Books are full — visitors see the waitlist button']);
+if(!d.allFaqs.length)l.push(['warn','No FAQ entries yet']);
+if(!l.length)l.push(['ok','Everything looks good.']);
+ul.innerHTML=l.map(x=>`<li class="h-${x[0]}">${x[1]}</li>`).join('')}
+const rs=window.refreshAdminStats;if(typeof rs==='function')window.refreshAdminStats=function(){rs.apply(this,arguments);health()};
+
+/* security view: change password, lock, global sign-out */
+const nav=$('#adminNav'),content=$('.admin-content');
+if(nav&&content){
+const b=document.createElement('button');b.dataset.view='security';b.textContent='Security';nav.appendChild(b);
+const s=document.createElement('section');s.className='admin-view';s.dataset.view='security';
+s.innerHTML='<div class="admin-view-head"><div><div class="admin-kicker">Account</div><h2>Security.</h2><p>Signed in as <strong id="secEmail">—</strong>. Change your password or end sessions.</p></div></div><div class="admin-grid"><div class="admin-card"><h4>Change password</h4><div class="admin-field"><label for="newPass">New password</label><input id="newPass" type="password" autocomplete="new-password"></div><div class="admin-field"><label for="newPass2">Confirm password</label><input id="newPass2" type="password" autocomplete="new-password"></div><div class="admin-actions"><button class="btn btn-primary" id="changePassBtn" type="button">Update Password</button></div><div class="admin-status" id="secStatus" aria-live="polite"></div></div><div class="admin-card"><h4>Session</h4><p>The control center locks itself after 20 minutes of inactivity.</p><div class="admin-actions"><button class="btn btn-neu" id="secLockBtn" type="button">Lock Now</button><button class="btn btn-neu" id="signOutAllBtn" type="button">Sign Out Everywhere</button></div></div></div>';
+content.appendChild(s);
+const ss=m=>{const e=$('#secStatus');if(e)e.textContent=m};
+$('#changePassBtn').onclick=async()=>{const a=$('#newPass').value,c=$('#newPass2').value;
+if(a.length<8)return ss('Use at least 8 characters.');if(a!==c)return ss('Passwords do not match.');
+try{ss('Updating…');const r=await supabaseClient.auth.updateUser({password:a});if(r.error)throw r.error;
+$('#newPass').value=$('#newPass2').value='';ss('Password updated.');toast('Password updated')}catch(x){ss(x.message||'Update failed.');toast(x.message||'Password update failed',true)}};
+$('#secLockBtn').onclick=()=>$('#adminCloseBtn').click();
+$('#signOutAllBtn').onclick=async()=>{if(!confirm('Sign out of every device?'))return;
+try{await supabaseClient.auth.signOut({scope:'global'});closeAdminAll();await loadRemotePublicData()}catch(x){toast(x.message||'Failed',true)}}}
+
+/* idle auto-lock */
+let idle;const reset=()=>{clearTimeout(idle);if(!$('#adminPanel.admin-visible'))return;
+idle=setTimeout(()=>{if(typeof signOutAdmin==='function')signOutAdmin();toast('Locked after 20 minutes of inactivity')},1200000)};
+['pointerdown','keydown','scroll'].forEach(t=>addEventListener(t,reset,{passive:true,capture:true}));
+
+const po=window.populateAdmin;
+if(typeof po==='function')window.populateAdmin=function(){po.apply(this,arguments);setDirty(false);reset();
+try{supabaseClient&&supabaseClient.auth.getUser().then(r=>{const e=$('#secEmail');if(e)e.textContent=(r.data&&r.data.user&&r.data.user.email)||'—'})}catch(e){}};
 })();
 </script>
 </body></html>
