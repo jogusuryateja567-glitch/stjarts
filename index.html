@@ -1968,6 +1968,124 @@ html:not(.cms-ready) .art-placeholder-vector{font-size:0!important;color:transpa
   .admin-top-actions{flex-wrap:nowrap}
 }
 </style>
+
+<style id="stjarts-mobile">
+.m-tabbar,.m-pricebar{display:none}
+@media (max-width:767px){
+:root{--m-pad:16px;--m-tab:62px}
+html{scroll-padding-top:72px}
+body{font-size:15px;padding-bottom:0}
+body::after,.ambient-glow{display:none!important}
+.js-motion .sw{opacity:1!important}
+.js-motion .hero-stack h1{translate:none!important;opacity:1!important}
+.js-motion .hero-showcase{translate:none!important}
+.w{padding-inline:var(--m-pad)!important}
+body section{padding:56px 0!important;min-height:0!important;display:block!important}
+body .hero-atelier{padding:calc(76px + env(safe-area-inset-top,0px)) var(--m-pad) 36px!important;display:block!important}
+
+/* top bar: slim, always visible; navigation lives in the bottom tab bar */
+body nav.glass-nav{top:0!important;left:0!important;width:100%!important;max-width:none!important;border-radius:0!important;border:0!important;min-height:54px;transform:none!important;padding:calc(8px + env(safe-area-inset-top,0px)) 14px 8px 16px!important;background:var(--paper)!important;background:color-mix(in srgb,var(--paper) 88%,transparent)!important;-webkit-backdrop-filter:blur(18px)!important;backdrop-filter:blur(18px)!important;box-shadow:0 1px 0 var(--line)!important}
+body .nav-links,body .mobile-toggle{display:none!important}
+body .brand-mark{font-size:12px}
+
+/* bottom tab bar */
+.m-tabbar{display:flex;position:fixed;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom,0px));height:var(--m-tab);z-index:4000;padding:6px;gap:4px;border-radius:24px;background:var(--paper);background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:var(--glass-border);box-shadow:0 12px 40px rgba(17,17,15,.22);transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.m-tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-radius:18px;text-decoration:none;color:var(--mut);font:700 8.5px/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;transition:background .25s,color .25s}
+.m-tabbar svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.m-tabbar a.active{color:var(--ink);background:var(--bg-deep)}
+.m-tabbar a.cta{background:var(--ink);color:var(--bg)}
+body.admin-open .m-tabbar,html.modal-open .m-tabbar,body.admin-open .m-pricebar,html.modal-open .m-pricebar{transform:translateY(180%)!important}
+
+/* sticky price bar (shown only while the commission section is on screen) */
+.m-pricebar{display:flex;align-items:center;gap:12px;position:fixed;left:10px;right:10px;bottom:calc(var(--m-tab) + 16px + env(safe-area-inset-bottom,0px));z-index:3900;padding:10px 10px 10px 18px;border-radius:20px;background:var(--ink);color:var(--paper);box-shadow:0 14px 34px rgba(0,0,0,.3);transform:translateY(160%);opacity:0;pointer-events:none;transition:transform .4s cubic-bezier(.16,1,.3,1),opacity .3s}
+.m-pricebar.show{transform:none;opacity:1;pointer-events:auto}
+.m-pricebar small{display:block;font:700 8px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+.m-pricebar strong{font:700 20px/1.15 var(--font-mono)}
+.m-pricebar a{margin-left:auto;padding:14px 18px;border-radius:14px;background:var(--paper);color:var(--ink);font:700 11px var(--font-mono);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+html.m-bar #pricing #startCommissionBtn{display:none}
+
+/* hero: headline -> full-width artwork -> story */
+body .hero-stack h1{font-size:clamp(40px,12.6vw,56px)!important;line-height:.95!important;letter-spacing:-.05em!important;max-width:none!important}
+body .hero-stack .eyebrow{margin-bottom:12px}
+body .hero-modular-grid{display:flex;flex-direction:column;gap:22px;margin-top:22px}
+body .hero-showcase{order:1;padding:0!important}
+body .parchment-backing-plane{display:none}
+body .hero-canvas-frame{width:100%!important;max-width:none!important;height:auto!important;aspect-ratio:4/5;border-radius:26px;padding:8px;transform:none!important;box-shadow:0 18px 44px rgba(17,17,15,.16)}
+body .hero-drawing-board{border-radius:19px;padding:18px}
+body .floating-glass-badge{left:12px;bottom:12px;padding:9px 13px;border-radius:14px}
+body .hero-copy-plane{order:2;padding:0!important;background:none!important;box-shadow:none!important;border:0!important}
+body .hero-artist-intro h3{font-size:clamp(27px,8vw,34px)}
+body .hero-sub{font-size:15px;margin:14px 0 10px}
+body .hero-artist-signature{display:none}
+body .hero-cta-row{display:flex!important;flex-direction:column;gap:10px;margin-top:20px!important}
+body .hero-cta-row .atelier-badge-rotated{padding:8px 12px;border-radius:999px;border-style:solid;align-self:flex-start}
+body .hero-cta-row .btn{width:100%;min-height:52px}
+
+/* section headers */
+body .section-header-atelier{display:block;margin-bottom:20px}
+body h2{font-size:clamp(31px,9.4vw,42px)!important;line-height:.98!important;letter-spacing:-.05em!important}
+body .section-header-atelier p{font-size:14px;margin:14px 0 0}
+
+/* gallery: sticky chips + 2-column masonry */
+body .filter-bar{position:sticky;top:calc(54px + env(safe-area-inset-top,0px));z-index:30;margin:0 calc(-1*var(--m-pad)) 14px!important;padding:10px var(--m-pad)!important;background:var(--bg);flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line)}
+body .filter-bar::-webkit-scrollbar{display:none}
+body .filter-chip{flex:none;min-height:40px;padding:10px 16px}
+body .brick-gallery-grid{display:block;column-count:2!important;column-gap:10px!important;padding-bottom:4px}
+body .art-card{padding:6px;margin-bottom:10px;border-radius:16px;box-shadow:0 6px 18px rgba(17,17,15,.1)}
+body .art-preview-wrap{border-radius:11px;box-shadow:none}
+body .art-placeholder-vector{min-height:150px;padding:12px}
+body .inspection-glass-tile,body .art-tag{display:none!important}
+body .art-meta-row{display:block;padding:9px 4px 3px}
+body .art-meta-title{font-size:13px;line-height:1.2}
+body .art-meta-subtitle{font-size:8.5px;margin-top:3px}
+.js-motion .art-preview-wrap{clip-path:none!important}
+.js-motion .art-preview-wrap img{scale:none!important}
+
+/* process: swipeable story cards */
+body .process-deconstructed-wrap{display:block}
+body .sticky-column{position:static;margin-bottom:22px}
+body .sticky-column .btn{width:100%}
+body .process-cascade{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1*var(--m-pad));padding:4px var(--m-pad) 14px;scrollbar-width:none}
+body .process-cascade::-webkit-scrollbar{display:none}
+body .process-sheet{flex:0 0 82%;scroll-snap-align:center;grid-template-columns:1fr;gap:10px;padding:22px;border-radius:22px;align-items:start;transform:none!important}
+.js-motion .process-sheet.is-visible.settled{opacity:1!important;scale:1!important}
+body .step-number-stamp{border:0;padding:0;font-size:34px}
+
+/* commission calculator: single column, thumb-friendly */
+body .drafting-desk-outer{padding:0!important;background:none!important;box-shadow:none!important;border:0!important}
+body .drafting-desk-outer::before{display:none}
+body .drafting-grid-inner{display:flex!important;flex-direction:column;gap:12px!important}
+body .drafting-controls-well{order:1;padding:18px!important;border-radius:22px!important}
+body .drafting-ticket-well{order:2;padding:20px!important;border-radius:22px!important;min-height:0}
+body .segment-control{display:grid!important;grid-template-columns:1fr 1fr;width:100%}
+body .segment-btn{min-height:56px;line-height:1.25;white-space:normal}
+body .pill-group{display:flex!important;flex-wrap:nowrap;overflow-x:auto;gap:8px;margin:8px calc(-1*18px) 16px;padding:4px 18px 8px;scroll-snap-type:x proximity;scrollbar-width:none}
+body .pill-group::-webkit-scrollbar{display:none}
+body .size-pill{flex:0 0 auto!important;min-width:0;white-space:nowrap;padding:12px 16px;scroll-snap-align:start}
+body .calc-toggles .toggle-row:nth-child(2){flex-direction:column;align-items:stretch;gap:10px}
+body .calc-toggles .toggle-row:nth-child(2)>div{flex-direction:column;align-items:stretch!important}
+#pricing #facesCount{width:100%;max-width:none!important;min-height:48px}
+body .price-display-box{padding:16px 18px!important}
+body .price-figure{font-size:clamp(40px,13vw,54px)!important}
+
+/* faq / contact / footer */
+body .faq-item summary{padding:16px;font-size:15px}
+body .contact-form{padding:20px!important}
+body .form-field input,body .form-field textarea{font-size:16px;min-height:50px}
+body footer.editorial-footer{padding:52px 0 calc(var(--m-tab) + 40px + env(safe-area-inset-bottom,0px))!important;border-radius:28px 28px 0 0}
+
+/* artwork viewer: full-screen image + bottom sheet */
+body dialog#artModal{inset:0;margin:0!important;width:100vw!important;max-width:none!important;height:100svh!important;max-height:100svh!important;border:0!important;border-radius:0!important;background:#0c0c0b}
+dialog#artModal .modal-grid{display:flex!important;flex-direction:column;height:100svh!important;max-height:100svh!important;min-height:0}
+dialog#artModal .modal-image-col{flex:1 1 auto;min-height:0!important;max-height:none!important;padding:calc(56px + env(safe-area-inset-top,0px)) 12px 28px!important;background:#0c0c0b!important}
+dialog#artModal .modal-image-col img{width:100%!important;height:100%!important;max-height:100%!important;object-fit:contain;box-shadow:none;border-radius:6px}
+dialog#artModal .modal-content-col{flex:0 0 auto;max-height:44svh!important;overflow:auto;margin-top:-20px;border-radius:24px 24px 0 0;padding:12px 20px calc(20px + env(safe-area-inset-bottom,0px))!important;background:var(--paper)!important;box-shadow:0 -12px 40px rgba(0,0,0,.35);justify-content:flex-start}
+dialog#artModal .modal-content-col::before{content:"";display:block;width:40px;height:4px;border-radius:4px;background:var(--line-strong);margin:0 auto 14px}
+dialog#artModal .modal-content-col h2{font-size:28px!important;max-width:none}
+dialog#artModal .modal-close-btn{position:fixed!important;top:calc(10px + env(safe-area-inset-top,0px))!important;right:12px!important;background:rgba(20,20,19,.7);color:#fff;border-color:rgba(255,255,255,.2)}
+dialog#artModal .btn{width:100%;min-height:52px}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#work">Skip to content</a>
@@ -3529,6 +3647,41 @@ idle=setTimeout(()=>{if(typeof signOutAdmin==='function')signOutAdmin();toast('L
 const po=window.populateAdmin;
 if(typeof po==='function')window.populateAdmin=function(){po.apply(this,arguments);setDirty(false);reset();
 try{supabaseClient&&supabaseClient.auth.getUser().then(r=>{const e=$('#secEmail');if(e)e.textContent=(r.data&&r.data.user&&r.data.user.email)||'—'})}catch(e){}};
+})();
+</script>
+
+<script id="stjarts-mobile-js">
+(function(){
+const $=(s,r=document)=>r.querySelector(s),root=document.documentElement;
+const ic={home:'<path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',grid:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',steps:'<path d="M4 6h16M4 12h10M4 18h6"/>',pencil:'<path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',chat:'<path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z"/>'};
+const tabs=[['top','Home','home'],['work','Gallery','grid'],['process','Process','steps'],['pricing','Commission','pencil','cta'],['contact','Contact','chat']];
+const tb=document.createElement('nav');tb.className='m-tabbar';tb.setAttribute('aria-label','Quick navigation');
+tb.innerHTML=tabs.map(t=>`<a href="#${t[0]}"${t[3]?' class="cta"':''}><svg viewBox="0 0 24 24" aria-hidden="true">${ic[t[2]]}</svg><span>${t[1]}</span></a>`).join('');
+document.body.appendChild(tb);
+const links=[...tb.querySelectorAll('a')];
+const setActive=id=>links.forEach(a=>{const on=a.getAttribute('href')==='#'+id;a.classList.toggle('active',on&&!a.classList.contains('cta'));on?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current')});
+setActive('top');
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setActive(e.target.id)}),{rootMargin:'-45% 0px -50% 0px'});
+['top','work','process','pricing','faq','contact'].forEach(id=>{const el=document.getElementById(id);el&&spy.observe(el)});
+
+/* sticky price bar */
+const disp=$('#totalPriceDisplay'),btn=$('#startCommissionBtn'),pricing=$('#pricing');
+if(disp&&btn&&pricing){
+const pb=document.createElement('div');pb.className='m-pricebar';
+pb.innerHTML='<div><small>Your estimate</small><strong id="mPrice">—</strong></div><a id="mPriceBtn" href="#pricing" target="_blank" rel="noopener">Book on WhatsApp</a>';
+document.body.appendChild(pb);root.classList.add('m-bar');
+const sync=()=>{const p=$('#mPrice'),b=$('#mPriceBtn');p.textContent=(disp.firstChild?disp.firstChild.textContent:disp.textContent).replace('INR','').trim();b.href=btn.href;b.textContent=/waitlist/i.test(btn.textContent)?'Join waitlist':'Book on WhatsApp'};
+new MutationObserver(sync).observe(disp,{childList:true,characterData:true,subtree:true});
+new MutationObserver(sync).observe(btn,{attributes:true,childList:true,characterData:true,subtree:true});sync();
+new IntersectionObserver(es=>es.forEach(e=>pb.classList.toggle('show',e.isIntersecting)),{rootMargin:'-20% 0px -20% 0px'}).observe(pricing)}
+
+/* swipe down to close the artwork viewer */
+const dlg=$('#artModal'),img=dlg&&$('.modal-image-col',dlg);
+if(dlg&&img){let y0=null,dy=0;
+img.addEventListener('touchstart',e=>{if(e.touches.length===1){y0=e.touches[0].clientY;dy=0;dlg.style.transition='none'}},{passive:true});
+img.addEventListener('touchmove',e=>{if(y0===null)return;dy=Math.max(0,e.touches[0].clientY-y0);dlg.style.transform=`translateY(${dy}px)`;dlg.style.opacity=String(1-Math.min(.5,dy/500))},{passive:true});
+img.addEventListener('touchend',()=>{if(y0===null)return;y0=null;dlg.style.transition='transform .25s,opacity .25s';
+if(dy>110)dlg.close();dlg.style.transform='';dlg.style.opacity='';dy=0})}
 })();
 </script>
 </body></html>
