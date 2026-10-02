@@ -5,12 +5,8 @@
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <meta content="S.T.J.A.R.T.S — Bespoke graphite &amp; charcoal portraits hand-drawn by Surya Teja. Tactile realism, timeless emotion, and archival craftsmanship." name="description"/>
 <meta name="theme-color" content="#e6e3dc"/>
-<meta property="og:title" content="S.T.J.A.R.T.S — Handcrafted Fine Pencil Portraits"/>
-<meta property="og:description" content="Bespoke graphite &amp; charcoal portraits hand-drawn by Surya Teja."/>
-<meta property="og:type" content="website"/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2311110f'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='900' font-size='26' text-anchor='middle' fill='%23f4f2ec'%3EST%3C/text%3E%3C/svg%3E"/>
 <script>try{var t=localStorage.getItem("stjarts_theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<noscript><style>.scroll-reveal{opacity:1!important;transform:none!important}.hero-word>span{transform:none!important;animation:none!important}.js-motion .sw{opacity:1!important}</style></noscript>
+<noscript><style>.scroll-reveal{opacity:1!important;transform:none!important}</style></noscript>
 <title>S.T.J.A.R.T.S — Handcrafted Fine Pencil Portraits</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -1591,527 +1587,259 @@ nav.glass-nav{top:16px;width:min(calc(100% - 40px),1080px);padding:7px 10px 7px 
 @keyframes hw{to{transform:none}}
 @media(max-width:680px){.js-motion .brick-gallery-col{translate:none}h1{font-size:clamp(34px,10.5vw,52px)}}
 @media(prefers-reduced-motion:reduce){.hero-word>span{animation:none;transform:none}}
-.admin-work-card.is-hidden,.admin-card.is-hidden{opacity:.55}
-.admin-mini:disabled{opacity:.35;cursor:not-allowed}
-.admin-image-preview img{max-width:100%;max-height:100%;object-fit:contain}
+</style>
 
+<style id="mobile-first-redesign">
 /* =====================================================================
-   MOBILE ART-DIRECTION SYSTEM — premium first-class mobile experience
+   MOBILE-FIRST ART DIRECTION
+   The phone layout is intentionally composed as a separate experience.
+   Desktop rules remain untouched.
    ===================================================================== */
 @media (max-width: 680px){
-  :root{--mobile-pad:18px;--mobile-radius:26px;--mobile-shadow:0 18px 50px rgba(17,17,15,.12)}
-  html{scroll-padding-top:82px}
-  body{font-size:15px;line-height:1.65;background-image:radial-gradient(circle 520px at 0 0,rgba(255,255,255,.72),transparent 58%),radial-gradient(circle 420px at 100% 28%,rgba(218,214,205,.42),transparent 62%)}
-  body::after{background-size:48px 48px;opacity:.16}
-  .w{padding-inline:var(--mobile-pad);width:100%;max-width:none}
-  section{padding:92px 0}
+  :root{
+    --m-pad:16px;
+    --m-radius:22px;
+    --m-gap:12px;
+  }
+  html{scroll-padding-top:76px;overflow-x:hidden}
+  body{min-width:0;overflow-x:hidden;font-size:15px;line-height:1.58}
+  body::after{opacity:.10;background-size:40px 40px}
+  .ambient-glow{display:none}
+  .w{width:100%;padding-left:var(--m-pad);padding-right:var(--m-pad)}
+  section{padding:76px 0}
 
-  /* Navigation: compact luxury bar + large touch-first sheet */
-  nav.glass-nav{top:10px;width:calc(100% - 20px);padding:7px 8px 7px 14px;border-radius:20px;min-height:56px;z-index:5000}
-  nav.glass-nav.scrolled{top:8px;background:color-mix(in srgb,var(--paper) 88%,transparent);}
-  .brand-mark{font-size:11px;letter-spacing:.12em;gap:9px;min-width:0}
-  .brand-mark span:last-child{white-space:nowrap}
-  .brand-mark .dot{width:7px;height:7px}
-  .nav-actions{gap:7px}
-  .theme-btn,.mobile-toggle{width:40px;height:40px}
-  .mobile-toggle{font-size:0}
-  .mobile-toggle::before{content:"";width:18px;height:12px;border-top:2px solid currentColor;border-bottom:2px solid currentColor;box-shadow:0 5px 0 -3px currentColor;display:block}
-  nav.glass-nav.menu-open .mobile-toggle::before{height:2px;border:0;box-shadow:none;background:currentColor;transform:rotate(45deg)}
-  nav.glass-nav.menu-open .mobile-toggle::after{content:"";position:absolute;width:18px;height:2px;background:currentColor;transform:rotate(-45deg)}
-  .nav-links{top:calc(100% + 8px);padding:10px;border-radius:24px;gap:4px;background:color-mix(in srgb,var(--paper) 92%,transparent);border:var(--glass-border);box-shadow:0 26px 70px rgba(0,0,0,.18);max-height:calc(100svh - 86px);overflow:auto}
-  .nav-links a{min-height:50px;display:flex;align-items:center;justify-content:space-between;padding:13px 15px;font-size:11px;border-radius:15px}
-  .nav-links a::after{content:"↗";font-size:13px;opacity:.35}
-  .nav-links a.active{background:var(--bg-deep)}
+  /* Header: one compact control bar. The menu becomes a simple sheet. */
+  nav.glass-nav{
+    top:max(8px,env(safe-area-inset-top));
+    left:10px;right:10px;width:auto;transform:none;
+    min-height:54px;padding:6px 7px 6px 14px;border-radius:18px;
+    gap:8px;box-shadow:0 14px 38px rgba(0,0,0,.10),var(--neu-pill);
+  }
+  nav.glass-nav.scrolled{top:max(6px,env(safe-area-inset-top));}
+  .brand-mark{font-size:10px;letter-spacing:.12em;gap:8px}
+  .brand-mark .dot{width:7px;height:7px;flex-basis:7px}
+  .nav-actions{gap:6px}
+  .theme-btn,.mobile-toggle{width:40px;height:40px;flex-basis:40px}
+  .nav-links{
+    top:calc(100% + 8px);left:0;right:0;padding:8px;
+    border-radius:20px;gap:3px;
+    background:color-mix(in srgb,var(--paper) 94%,transparent);
+    box-shadow:0 22px 60px rgba(0,0,0,.16);
+  }
+  .nav-links a{min-height:48px;padding:13px 15px;font-size:11px}
 
-  /* Hero: dramatic stacked editorial composition */
-  .hero-atelier{min-height:auto;padding-top:104px;padding-bottom:58px;display:block}
-  .hero-availability-stack{position:static;display:flex;align-items:stretch;gap:10px;margin:0 0 24px}
-  .hero-availability-stack .atelier-badge-rotated{display:flex;width:100%;justify-content:flex-start;padding:10px 13px;border-radius:13px;transform:none;margin:0;background:color-mix(in srgb,var(--paper) 78%,transparent);box-shadow:var(--neu-subtle)}
-  .hero-availability-stack .mono-tag{font-size:8px;letter-spacing:.12em;line-height:1.4}
-  .hero-commission-btn{width:100%;min-height:52px;font-size:10px}
-  .hero-stack{margin-top:10px}
-  .hero-stack .eyebrow{margin-bottom:17px}
-  h1{font-size:clamp(45px,13.2vw,70px);line-height:.91;letter-spacing:-.065em}
-  .hero-title-line{display:block}
+  /* Hero: title -> artwork -> short proof -> actions. No desktop collage behavior. */
+  .hero-atelier{
+    min-height:auto;display:block;padding-top:94px;padding-bottom:46px;padding-left:var(--m-pad);padding-right:var(--m-pad)
+  }
+  .hero-stack{margin-bottom:22px}
+  .hero-stack .eyebrow{margin-bottom:12px;font-size:9px;letter-spacing:.16em}
+  .hero-stack h1{font-size:clamp(38px,11.7vw,54px);line-height:.94;letter-spacing:-.05em;max-width:11ch}
   .hero-title-line.stagger-1,.hero-title-line.stagger-2{transform:none;margin:0}
-  .hero-title-line em{display:inline;font-size:.92em}
-  .hero-modular-grid{display:flex;flex-direction:column;gap:20px;margin-top:26px}
-  .hero-copy-plane{order:2;padding:24px 21px;border-radius:var(--mobile-radius);box-shadow:var(--mobile-shadow)}
-  .hero-artist-intro .eyebrow{margin-bottom:12px}
-  .hero-artist-intro h3{font-size:clamp(29px,8.4vw,40px);line-height:1;letter-spacing:-.055em}
-  .hero-artist-intro h3 em{margin-top:5px}
-  .hero-sub{font-size:15px;line-height:1.62;margin:19px 0 13px;max-width:none}
-  .hero-artist-note{font-size:13px;line-height:1.65}
-  .hero-artist-signature{margin-top:21px;gap:9px}
-  .hero-artist-signature .mono-tag{font-size:8px;letter-spacing:.1em}
+  .hero-title-line + .hero-title-line{margin-top:2px}
+
+  .hero-modular-grid{display:flex;flex-direction:column;gap:18px;margin:0}
+  .hero-showcase{order:1;width:100%;padding:0 5px}
+  .hero-copy-plane{order:2;width:100%;padding:20px;border-radius:22px;box-shadow:var(--neu-subtle)}
+  .hero-canvas-frame{
+    width:min(100%,330px);height:auto;aspect-ratio:4/5;padding:10px;border-radius:24px;
+    transform:none!important;box-shadow:0 22px 45px rgba(17,17,15,.16),var(--neu-subtle)
+  }
+  .parchment-backing-plane{width:88%;height:92%;border-radius:24px;transform:rotate(-4deg) translate(-8px,5px)}
+  .hero-drawing-board{border-radius:18px;padding:20px}
+  .hero-drawing-board svg.pencil-sketch{width:86%}
+  .floating-glass-badge{left:8px;bottom:-12px;padding:10px 13px;border-radius:16px;gap:9px}
+  .floating-glass-badge strong{font-size:11px}.floating-glass-badge span{font-size:9px}
+  .hero-artist-intro h3{font-size:clamp(24px,7.5vw,31px);line-height:1.03;margin:0}
+  .hero-artist-intro h3 em{display:inline}
+  .hero-sub{font-size:14px;line-height:1.55;margin:12px 0 0;max-width:none}
+  .hero-artist-note{font-size:12px;line-height:1.55;margin-top:10px}
+  .hero-artist-signature{margin-top:14px;gap:8px}
+  .hero-artist-signature .mono-tag{font-size:8px}
   .hero-artist-rule{width:28px}
-  .hero-artist-intro > div:last-child{margin-top:22px!important}
-  .hero-artist-intro > div:last-child .btn{width:100%}
-  .hero-showcase{order:1;width:100%;min-height:0;padding:6px 8px 30px}
-  .parchment-backing-plane{width:88%;height:92%;border-radius:27px;transform:rotate(-4deg) translate(-9px,8px)}
-  .hero-canvas-frame{width:min(100%,350px);height:auto;aspect-ratio:4/5;margin:auto;border-radius:29px;padding:11px;transform:none;box-shadow:0 24px 55px rgba(17,17,15,.18)}
-  .hero-canvas-frame:hover{transform:none}
-  .hero-drawing-board{border-radius:21px;padding:22px;min-height:100%}
-  .hero-drawing-board > div:first-child{font-size:10px!important}
-  .hero-drawing-board > div:last-child span:first-child{font-size:19px!important}
-  .floating-glass-badge{left:4px;bottom:0;padding:11px 14px;border-radius:16px;gap:9px;box-shadow:0 15px 35px rgba(0,0,0,.14)}
-  .floating-glass-badge i{font-size:16px}
-  .floating-glass-badge strong{font-size:11px}.floating-glass-badge span{font-size:8px}
+  .hero-copy-plane > div[style*="display:flex"]{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:9px!important;margin-top:18px!important}
+  .hero-copy-plane > div[style*="display:flex"] .btn{width:100%;min-height:48px}
+  .hero-availability-stack{
+    position:static;display:flex;flex-direction:row;align-items:center;justify-content:space-between;
+    gap:8px;margin:0 0 18px;transform:none
+  }
+  .hero-availability-stack .atelier-badge-rotated{order:1;margin:0;padding:7px 10px;border-radius:999px;transform:none;box-shadow:none;background:transparent}
+  .hero-availability-stack .mono-tag{font-size:8px;letter-spacing:.08em}
+  .hero-availability-stack .pulse-orb{width:6px;height:6px;flex-basis:6px}
+  .hero-commission-btn{order:2;padding:11px 14px;font-size:9px;min-height:42px;white-space:nowrap}
 
-  /* Section headers become poster-like */
-  .section-header-atelier{display:block;margin-bottom:28px}
-  .section-header-atelier h2{font-size:clamp(38px,10.8vw,54px);line-height:.94;letter-spacing:-.06em}
-  .section-header-atelier p{margin:18px 0 0;font-size:14px;line-height:1.65}
-  .filter-bar{margin:0 -18px 25px;padding:4px 18px 13px;gap:8px;overflow-x:auto;scroll-snap-type:x proximity}
-  .filter-chip{min-height:42px;padding:11px 15px;font-size:9px;scroll-snap-align:start}
+  /* Work: visual browsing first, metadata second. */
+  #work{padding-top:58px}
+  .section-header-atelier{display:block;margin-bottom:20px}
+  .section-header-atelier .eyebrow{margin-bottom:10px}
+  .section-header-atelier h2{font-size:clamp(34px,10vw,46px);line-height:.96}
+  .section-header-atelier p{font-size:13px;line-height:1.55;margin:12px 0 0;max-width:38ch}
+  .filter-bar{gap:7px;flex-wrap:nowrap;overflow-x:auto;margin:0 -16px 22px;padding:4px 16px 10px;scrollbar-width:none;-ms-overflow-style:none}
+  .filter-bar::-webkit-scrollbar{display:none}
+  .filter-chip{min-height:40px;padding:10px 14px;font-size:9px;flex:none;box-shadow:none}
+  .brick-gallery-grid{--gallery-gap:10px;column-count:2;column-gap:10px;padding-bottom:26px}
+  .art-card{padding:6px;border-radius:16px;margin-bottom:10px;box-shadow:var(--neu-subtle);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .art-preview-wrap{border-radius:11px;box-shadow:none}
+  .inspection-glass-tile{top:7px;right:7px;padding:4px 7px;font-size:7px}
+  .art-meta-row{padding:10px 3px 3px;gap:5px}
+  .art-meta-title{font-size:12px;line-height:1.1}
+  .art-meta-subtitle{font-size:8px;margin-top:3px}
+  .art-tag{display:none}
 
-  /* Gallery: generous cards, not compressed desktop columns */
-  .brick-gallery-grid{column-count:1;--gallery-gap:18px;padding-bottom:24px}
-  .art-card{padding:10px;margin-bottom:18px;border-radius:24px;box-shadow:var(--mobile-shadow)}
-  .art-card:hover{transform:none}
-  .art-preview-wrap{border-radius:17px}
-  .inspection-glass-tile{top:10px;right:10px;font-size:8px;padding:5px 9px}
-  .art-meta-row{padding:15px 4px 4px;gap:10px}
-  .art-meta-title{font-size:18px;line-height:1.1}
-  .art-meta-subtitle{font-size:9px;margin-top:5px}
-  .art-tag{font-size:8px;padding:6px 8px;white-space:nowrap}
-
-  /* Process: numbered editorial cards */
-  .process-deconstructed-wrap{display:flex;flex-direction:column;gap:34px}
-  .sticky-column{position:static}
-  .sticky-column h2{font-size:clamp(40px,11vw,54px);line-height:.94}
-  .sticky-column p{font-size:14px!important;line-height:1.65!important;margin:19px 0 24px!important}
-  .sticky-column .btn{width:100%}
-  .process-cascade{gap:12px}
-  .process-sheet{grid-template-columns:50px 1fr;padding:23px 19px;gap:15px;border-radius:21px;box-shadow:var(--mobile-shadow)}
+  /* Process: cards become a readable vertical timeline, not four large panels. */
+  #process{padding-top:74px}
+  .process-deconstructed-wrap{display:block}
+  .sticky-column{position:static;margin-bottom:24px}
+  .sticky-column .eyebrow{margin-bottom:10px}
+  .sticky-column h2{font-size:clamp(34px,10vw,46px)}
+  .sticky-column p{font-size:13px!important;line-height:1.55!important;margin:12px 0 18px!important}
+  .sticky-column .btn{width:100%;min-height:50px}
+  .process-cascade{gap:8px}
+  .process-sheet{grid-template-columns:38px 1fr;gap:12px;padding:17px 14px;border-radius:18px;box-shadow:none;border:1px solid var(--line);background:color-mix(in srgb,var(--paper) 74%,transparent)}
   .process-sheet:hover{transform:none}
-  .step-number-stamp{font-size:25px;padding-right:11px}
-  .process-sheet h3{font-size:21px;line-height:1.05}
-  .process-sheet p{font-size:13px;line-height:1.6}
+  .step-number-stamp{font-size:22px;padding-right:10px}
+  .process-sheet h3{font-size:17px;margin-bottom:4px;line-height:1.08}
+  .process-sheet p{font-size:12px;line-height:1.5}
 
-  /* Commission/pricing: make this the mobile conversion centerpiece */
-  .drafting-desk-outer{padding:11px!important;border-radius:30px!important}
-  .drafting-grid-inner{display:flex!important;flex-direction:column;gap:11px!important}
-  .drafting-controls-well,.drafting-ticket-well{padding:23px!important;border-radius:23px!important}
-  .drafting-ticket-well{order:-1}
-  .segment-control{width:100%;margin-bottom:21px;display:grid!important;grid-template-columns:1fr 1fr}
-  .segment-btn{padding:13px 8px;font-size:9px}
-  .pill-group{gap:7px;margin:10px 0 24px}
-  .size-pill{flex:1 1 calc(33.333% - 7px);padding:12px 7px;text-align:center;font-size:9px;min-height:44px}
-  .calc-toggles{gap:9px;margin:20px 0 24px}
-  .toggle-row{padding:13px 14px;border-radius:15px}
-  .toggle-row label{font-size:13px;line-height:1.35}
-  .price-display-box{padding:22px!important;border-radius:20px!important}
-  .price-figure{font-size:clamp(48px,15vw,70px)!important;letter-spacing:-.07em;line-height:.9}
-  .price-figure span{font-size:13px!important}
-  #pricing #startCommissionBtn{min-height:54px;margin-top:12px}
+  /* Pricing: one-column decision flow: style -> size -> add-ons -> price -> CTA. */
+  #pricing{padding-top:78px}
+  #pricing .section-header-atelier{margin-bottom:22px}
+  #pricing .section-header-atelier h2{font-size:clamp(33px,9.5vw,44px)}
+  #pricing .section-header-atelier p{font-size:13px}
+  .drafting-desk-outer{padding:8px!important;border-radius:24px!important;box-shadow:var(--neu-groove)!important}
+  .drafting-grid-inner{display:flex;flex-direction:column;gap:8px}
+  .drafting-controls-well,.drafting-ticket-well{padding:18px!important;border-radius:19px!important}
+  .drafting-controls-well{box-shadow:none}
+  .drafting-ticket-well{order:2;min-height:0}
+  .segment-control{width:100%;display:grid;grid-template-columns:1fr 1fr;margin-bottom:22px;padding:4px}
+  .segment-btn{min-height:46px;padding:9px 6px;font-size:8px;line-height:1.2}
+  .pill-group{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:10px 0 22px}
+  .size-pill{min-height:42px;padding:8px 4px;font-size:9px;box-shadow:none}
+  .calc-toggles{gap:8px;margin:20px 0}
+  .toggle-row{min-height:54px;padding:11px 12px;border-radius:14px;gap:8px}
+  .toggle-row label{font-size:12px;line-height:1.35}
+  .toggle-row label span{min-width:0}
+  .toggle-row > div{min-width:0;gap:7px!important}
+  .custom-select{max-width:108px;min-height:42px;font-size:12px}
+  #extraFaceCost{display:none}
+  .price-display-box{padding:16px!important;margin-top:14px!important;border-radius:16px}
+  .price-figure{font-size:clamp(40px,12vw,54px)!important;line-height:1;margin:7px 0!important;white-space:nowrap}
+  .price-figure span{font-size:11px!important}
+  #startCommissionBtn{width:100%;min-height:52px;margin-top:2px;padding:13px 14px!important;line-height:1.2}
+  .drafting-ticket-well .eyebrow{margin-bottom:9px}
+  .drafting-ticket-well h3{font-size:20px}
+  .drafting-ticket-well p{font-size:12px!important;line-height:1.55}
+  .feature-check-list{margin-top:16px;padding-left:17px;font-size:12px}
+  .drafting-ticket-well > div:last-child{padding-top:16px!important;margin-top:18px!important}
 
-  /* Contact: large, direct, conversion-oriented */
-  .contact-section-grid{display:flex;flex-direction:column;gap:22px}
-  .contact-section-grid > *{min-width:0}
-  .contact-form,.diagonal-artist-card,.testimonial-pennant,.materials-slate{padding:24px!important;border-radius:24px!important}
-  .contact-form h3{font-size:29px}
-  .form-field input,.form-field textarea,.custom-select{font-size:16px!important;min-height:52px}
-  .form-field textarea{min-height:130px}
-  .contact-form .btn{width:100%;min-height:52px}
+  /* FAQ: compact accordion with generous touch targets. */
+  #faq{padding-top:72px}
+  #faq .scroll-reveal[style*="text-align:center"]{margin-bottom:24px!important}
+  #faq .eyebrow{margin-bottom:10px}
+  #faq h2{font-size:clamp(34px,10vw,46px)}
+  .faq-item{border-radius:16px!important;margin-bottom:7px!important}
+  .faq-item summary{min-height:56px;padding:17px 15px!important;font-size:15px!important;line-height:1.25}
+  .faq-item .content{padding:0 15px 16px!important;font-size:12px;line-height:1.55}
 
-  /* FAQ */
-  .faq-item{border-radius:17px!important}
-  .faq-item summary{padding:18px 17px;font-size:16px;line-height:1.3}
-  .faq-item .content{padding:0 17px 19px;font-size:13px;line-height:1.65}
+  /* Contact: information first, form second, both easy to scan and fill. */
+  #contact{padding-top:74px;padding-bottom:48px}
+  .contact-section-grid{display:flex;flex-direction:column;gap:24px}
+  .contact-section-grid > .scroll-reveal:first-child h2{font-size:clamp(36px,10.5vw,48px);line-height:.95}
+  .contact-section-grid > .scroll-reveal:first-child p{font-size:13px!important;line-height:1.55!important;margin-top:14px!important}
+  .contact-section-grid > .scroll-reveal:first-child > div[style*="margin-top:36px"]{margin-top:20px!important;gap:10px!important}
+  .contact-section-grid > .scroll-reveal:first-child > div[style*="margin-top:36px"] > div{gap:10px!important}
+  .contact-section-grid > .scroll-reveal:first-child > div[style*="margin-top:36px"] > div > div:first-child{width:36px!important;height:36px!important;flex:0 0 36px}
+  .contact-section-grid > .scroll-reveal:first-child strong{font-size:12px!important}
+  .contact-section-grid > .scroll-reveal:first-child .mono-tag{font-size:8px!important;letter-spacing:.05em}
+  .contact-form{padding:18px!important;border-radius:20px!important}
+  .form-field{margin-bottom:13px!important}
+  .form-field label{font-size:10px!important;margin-bottom:6px!important}
+  .form-field input,.form-field textarea{font-size:16px!important;min-height:48px!important;border-radius:13px!important}
+  .contact-form textarea{min-height:118px!important}
+  .contact-form .btn{min-height:52px}
 
-  /* Lightbox: image-first, clean sheet */
-  dialog#artModal{width:calc(100vw - 12px)!important;max-width:none!important;max-height:96svh!important;border-radius:27px!important}
-  dialog#artModal .modal-grid{max-height:96svh!important}
-  dialog#artModal .modal-image-col{padding:13px!important;max-height:59svh!important;background:var(--bg-deep)}
-  dialog#artModal .modal-image-col img{max-height:55svh!important}
-  dialog#artModal .modal-content-col{padding:23px 20px 24px!important;max-height:37svh!important}
-  dialog#artModal .modal-content-col h2{font-size:32px!important;line-height:.98}
-  dialog#artModal .modal-content-col #modalDesc{font-size:13px!important}
-  .modal-close-btn{width:42px!important;height:42px!important;top:9px!important;right:9px!important}
+  /* Footer and dialogs: finish the journey without a giant desktop footer. */
+  footer.editorial-footer{padding:58px 0 28px!important;border-radius:24px 24px 0 0}
+  .footer-cta-row{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:8px!important}
+  .footer-cta-row .btn{width:100%;min-height:50px}
 
-  /* Footer / floating conversion */
-  footer.editorial-footer{padding:72px 0 34px!important;border-radius:30px 30px 0 0}
-  .footer-cta-row{display:flex!important;flex-direction:column;align-items:stretch!important;gap:10px!important}
-  .footer-cta-row .btn{width:100%;min-height:52px}
+  dialog#artModal{width:100vw!important;max-width:none!important;height:100svh!important;max-height:none!important;margin:0!important;border-radius:0!important}
+  dialog#artModal .modal-grid{height:100svh!important;max-height:none!important;display:flex!important;flex-direction:column!important}
+  dialog#artModal .modal-image-col{flex:0 0 56svh;max-height:56svh;padding:14px!important;background:var(--bg-deep)}
+  dialog#artModal .modal-image-col img{max-width:100%;max-height:52svh}
+  dialog#artModal .modal-content-col{flex:1;max-height:none!important;overflow:auto;padding:22px 18px calc(26px + env(safe-area-inset-bottom))!important}
+  dialog#artModal .modal-content-col h2{font-size:28px!important}
+  dialog#artModal .modal-content-col .btn{min-height:52px;width:100%}
+  dialog#artModal .modal-close-btn{top:calc(10px + env(safe-area-inset-top))!important;right:10px!important;width:42px!important;height:42px!important}
 
-  /* Admin: genuine mobile application, not squeezed desktop CMS */
-  .admin-overlay{padding:6px!important}
-  .admin-shell{width:100%!important;height:calc(100svh - 12px)!important;max-height:none!important;border-radius:22px!important;overflow:hidden!important}
-  .admin-topbar{padding:12px!important;min-height:62px;gap:10px}
-  .admin-brand-mark{width:34px;height:34px}
-  .admin-topbar h3{font-size:15px!important}
-  .admin-topbar small{font-size:7px!important}
-  .admin-top-actions{gap:5px!important}
-  .admin-top-actions .btn{font-size:8px!important;padding:10px 9px!important;min-height:38px}
-  #adminPreviewBtn{display:none}
-  .admin-main{display:flex!important;flex-direction:column;height:calc(100% - 62px)!important;min-height:0}
-  .admin-sidebar{flex:0 0 auto;border:0!important;border-bottom:1px solid var(--line)!important;padding:7px!important;background:var(--glass-bg)!important}
-  .admin-nav{display:flex!important;gap:6px!important;overflow-x:auto!important;scrollbar-width:none;padding:1px}
-  .admin-nav button{flex:0 0 auto!important;min-height:40px;width:auto!important;padding:9px 12px!important;border-radius:11px!important;font-size:8px!important}
-  .admin-content{flex:1 1 auto;min-height:0;overflow:auto;padding:13px!important;-webkit-overflow-scrolling:touch}
-  .admin-view-head h2{font-size:32px!important}
-  .admin-view-head p{font-size:12px!important}
-  .admin-stats{grid-template-columns:1fr 1fr!important;gap:8px!important}
-  .admin-stat{padding:14px!important}
-  .admin-stat strong{font-size:22px!important}
-  .admin-grid,.admin-row,.admin-row.three{grid-template-columns:1fr!important}
-  .admin-gallery-grid{grid-template-columns:1fr!important}
-  .admin-price-grid{grid-template-columns:1fr 1fr!important}
-  .admin-card{padding:16px!important;border-radius:18px!important}
-  .admin-image-editor{grid-template-columns:1fr!important}
-  .admin-image-preview{min-height:220px!important}
-  .admin-upload{min-height:94px!important}
-  .admin-actions{gap:7px!important}
-  .admin-actions .btn{flex:1 1 100%;min-height:45px}
-}
-
-@media (min-width:681px) and (max-width:960px){
-  .w{padding-inline:28px}
-  section{padding:100px 0}
-  nav.glass-nav{width:calc(100% - 32px)}
-  .hero-atelier{padding-top:145px}
-  .hero-modular-grid{grid-template-columns:1fr 1fr;gap:28px}
-  .hero-canvas-frame{width:min(390px,42vw);height:500px}
-  h1{font-size:clamp(54px,8vw,82px)}
-  .section-header-atelier h2{font-size:52px}
-  .brick-gallery-grid{--cols:2;--gallery-gap:20px}
-  .drafting-grid-inner{grid-template-columns:1fr 1fr}
+  /* Never let decorative motion create horizontal overflow on touch devices. */
+  .hero-canvas-frame,.art-card,.neu-card,.process-sheet{will-change:auto}
+  .scroll-reveal{transform:none!important}
 }
 
 @media (max-width:380px){
-  nav.glass-nav{width:calc(100% - 14px)}
-  .hero-atelier{padding-inline:14px}
-  .w{padding-inline:14px}
-  h1{font-size:42px}
-  .hero-copy-plane{padding:21px 18px}
-  .size-pill{flex-basis:calc(50% - 7px)}
-  .art-meta-title{font-size:16px}
-}
-
-@media (prefers-reduced-motion:reduce){
-  .hero-canvas-frame,.art-card,.process-sheet{transition:none!important}
-}
-
-</style>
-<link rel="preconnect" href="https://owdavspbotgprcdmbeqp.supabase.co" crossorigin>
-<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>window.STJARTS_CONFIG={SUPABASE_URL:'https://owdavspbotgprcdmbeqp.supabase.co',SUPABASE_PUBLISHABLE_KEY:'sb_publishable_HRypGqIe-mwAIJMDoF5T4Q_A_bL73i5',BUCKET:"artworks"};</script>
-
-<style id="mobile-production-ui">
-/* Mobile production layer: designed for 320–767px widths, touch input, and safe-area devices. */
-:root{--mobile-gutter:clamp(16px,5vw,24px);--tap:44px}
-html{overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:84px}
-body{min-width:320px;overflow-x:hidden}
-button,a,input,select,textarea,summary{touch-action:manipulation}
-button,.btn,.filter-chip,.size-pill,.segment-btn,.theme-btn,.mobile-toggle,.admin-mini,.admin-tab{min-height:var(--tap)}
-img,svg,video,canvas{max-width:100%}
-
-@media(max-width:960px){
-  nav.glass-nav{width:calc(100% - 20px);max-width:none;top:max(10px,env(safe-area-inset-top));left:10px;transform:none;padding:8px 9px 8px 14px;border-radius:22px;gap:8px}
-  nav.glass-nav.scrolled{top:max(8px,env(safe-area-inset-top));background:var(--glass-bg-card)}
-  nav.glass-nav .brand-mark{min-width:0;gap:8px;font-size:11px;letter-spacing:.11em;white-space:nowrap}
-  nav.glass-nav .brand-mark .dot{width:7px;height:7px;flex:0 0 7px}
-  .nav-actions{gap:7px;flex:0 0 auto}
-  .theme-btn,.mobile-toggle{width:42px;height:42px;flex:0 0 42px}
-  .nav-links{z-index:20;max-height:calc(100svh - 92px);overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
-  .nav-links a{min-height:48px;display:flex;align-items:center}
-}
-
-@media(max-width:767px){
-  .w{padding-inline:var(--mobile-gutter)}
-  section{padding:72px 0}
-  .hero-atelier{min-height:auto;padding:104px var(--mobile-gutter) 58px}
-  .hero-stack h1{font-size:clamp(38px,12.5vw,58px);line-height:.93;max-width:12ch}
-  .hero-modular-grid{display:flex;flex-direction:column;gap:30px;margin-top:24px}
-  .hero-copy-plane{width:100%;padding:22px;border-radius:24px}
-  .hero-artist-intro h3{font-size:clamp(24px,8vw,34px);line-height:1.04}
-  .hero-sub{font-size:14px;line-height:1.65;margin-bottom:0}
-  .hero-cta-row{display:flex!important;flex-direction:column;align-items:stretch;width:100%;gap:10px;margin-top:20px!important}
-  .hero-cta-row .atelier-badge-rotated{order:-1;align-self:flex-start;width:auto;max-width:100%;overflow:hidden}
-  .hero-cta-row .hero-commission-btn,.hero-cta-row>.btn-neu{width:100%;justify-self:stretch}
-  .hero-showcase{width:100%;padding:0 5px 30px}
-  .hero-canvas-frame{width:min(100%,340px);height:auto;aspect-ratio:4/5;margin:auto;border-radius:24px;padding:11px}
-  .hero-drawing-board{border-radius:18px;padding:20px}
-  .floating-glass-badge{left:2px;bottom:0;max-width:calc(100% - 4px);padding:11px 14px;border-radius:18px}
-  .floating-glass-badge strong{font-size:12px}.floating-glass-badge span{font-size:9px}
-  .hero-meter-dock{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:24px;padding:9px}
-  .meter-cell{min-width:0;padding:10px 7px;text-align:center}.meter-cell h4{font-size:16px}.meter-cell span{font-size:7px;letter-spacing:.08em}
-
-  .section-header-atelier{display:block;margin-bottom:28px}
-  .section-header-atelier h2{margin-bottom:14px}
-  .section-header-atelier p{font-size:14px;line-height:1.65}
-  .filter-bar{margin-bottom:28px}
-  .brick-gallery-grid{column-count:1!important;display:block;padding-bottom:20px}
-  .art-card{display:block;width:100%;margin-bottom:18px;padding:9px;border-radius:20px}
-  .art-meta-row{padding:13px 5px 4px;gap:10px}.art-meta-title{font-size:16px}.art-meta-subtitle{font-size:9px}
-  .art-tag{font-size:8px;max-width:44%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-
-  .process-deconstructed-wrap,.drafting-grid-inner,.contact-section-grid{display:flex;flex-direction:column;gap:24px}
-  .sticky-column{position:static}
-  .process-cascade{gap:14px}
-  .process-sheet{grid-template-columns:46px minmax(0,1fr);gap:14px;padding:20px;border-radius:20px}
-  .step-number-stamp{font-size:27px;padding-right:10px}.process-sheet h3{font-size:20px}.process-sheet p{font-size:13px}
-
-  .drafting-desk-outer{padding:10px!important;border-radius:24px!important}
-  .drafting-controls-well,.drafting-ticket-well{padding:18px!important;border-radius:20px!important}
-  .segment-control{width:100%;display:flex}.segment-btn{flex:1;min-width:0;padding:11px 8px;font-size:9px}
-  .pill-group{gap:7px;margin:10px 0 24px}.size-pill{flex:1;min-width:58px;padding:11px 8px;font-size:9px}
-  .toggle-row{padding:13px 14px;gap:12px}.toggle-row label{font-size:13px}
-  .price-display-box{padding:18px!important}.price-figure{font-size:clamp(40px,14vw,62px)!important}
-  #startCommissionBtn{width:100%;min-height:48px;white-space:normal;line-height:1.3}
-
-  .faq-item summary{padding:18px 16px;font-size:16px;line-height:1.35}.faq-item .content{padding:0 16px 18px;font-size:13px}
-  .contact-section-grid>*{min-width:0}.contact-form,.contact-card{padding:20px!important;border-radius:22px!important}
-  .form-row{grid-template-columns:1fr!important}.form-field input,.form-field textarea,.form-field select{width:100%;font-size:16px;min-height:48px}
-  .form-field textarea{min-height:140px}.contact-form .btn{width:100%}
-  .testimonial-pennant,.materials-slate,.diagonal-artist-card{transform:none!important}
-  .testimonial-pennant{padding:22px!important}.testimonial-pennant p{font-size:19px}
-  .artist-monogram{font-size:clamp(86px,24vw,130px)}
-
-  dialog#artModal{margin:auto;width:calc(100vw - 16px);max-width:none;max-height:calc(100svh - 16px);padding:0;border-radius:22px}
-  dialog#artModal .modal-grid{display:flex;flex-direction:column;max-height:calc(100svh - 16px);overflow:hidden}
-  dialog#artModal .modal-image-col{flex:0 1 54svh;max-height:54svh;min-height:220px;padding:14px}
-  dialog#artModal .modal-image-col img{width:100%;height:100%;max-height:51svh;object-fit:contain}
-  dialog#artModal .modal-content-col{flex:1;min-height:0;max-height:42svh;overflow:auto;padding:20px 18px 24px;-webkit-overflow-scrolling:touch}
-  dialog#artModal .modal-content-col h2{font-size:30px!important;line-height:1!important}
-  .modal-close-btn{top:10px!important;right:10px!important;width:42px!important;height:42px!important;z-index:5}
-
-  footer.editorial-footer{padding:64px 0 32px!important;border-radius:28px 28px 0 0}
-  .footer-cta-row{display:flex!important;flex-direction:column;align-items:stretch;gap:10px}.footer-cta-row .btn{width:100%}
-}
-
-@media(max-width:390px){
-  .hero-atelier{padding-top:98px}
-  .hero-stack h1{font-size:38px}
-  .hero-copy-plane{padding:18px}.hero-meter-dock{grid-template-columns:1fr 1fr}.meter-cell:last-child{grid-column:1/-1}
-  .hero-canvas-frame{width:100%;max-width:300px}
-  .art-meta-row{align-items:flex-start}.art-tag{display:none}
+  :root{--m-pad:14px}
+  .hero-stack h1{font-size:37px}
+  .hero-copy-plane{padding:18px}
+  .pill-group{gap:5px}.size-pill{font-size:8px}
   .drafting-controls-well,.drafting-ticket-well{padding:15px!important}
-  .size-pill{min-width:0}.toggle-row{padding:12px}
+  .brand-mark{font-size:9px}
 }
 
-@media(orientation:landscape) and (max-width:767px){
-  .hero-atelier{padding-top:88px;padding-bottom:36px}.hero-modular-grid{flex-direction:row;align-items:center}.hero-copy-plane{flex:1}.hero-showcase{flex:0 0 42%}.hero-canvas-frame{max-height:72svh;width:auto;height:72svh}
-}
-
-@media(prefers-reduced-motion:reduce){.hero-canvas-frame,.art-card,.neu-card,.process-sheet{transform:none!important}.nav-links{transition:none!important}}
-
-/* Touch devices should never depend on hover for information or actions. */
-@media(hover:none){.btn-primary:hover,.btn-neu:hover,.art-card:hover,.neu-card:hover,.process-sheet:hover{transform:none;box-shadow:inherit}}
-
-/* Admin on phones: keep controls usable without horizontal page overflow. */
-@media(max-width:767px){
-  .admin-overlay{padding:0!important;align-items:stretch!important}
-  .admin-shell{width:100%!important;height:100svh!important;max-height:none!important;border-radius:0!important;display:flex!important;flex-direction:column}
-  .admin-topbar{position:sticky;top:0;z-index:10;flex:0 0 auto;padding:12px!important;gap:10px}
-  .admin-topbar h3{font-size:16px!important}.admin-topbar small{display:block;max-width:42vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .admin-top-actions{display:flex;gap:6px}.admin-top-actions .btn{min-height:40px;padding:8px 10px;font-size:9px}
-  .admin-main{min-height:0;flex:1;display:flex!important;flex-direction:column;overflow:hidden}
-  .admin-sidebar{flex:0 0 auto;overflow-x:auto!important;overflow-y:hidden;white-space:nowrap;border-right:0!important;border-bottom:1px solid var(--line);padding:7px!important}
-  .admin-nav{display:flex!important;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}.admin-nav button{flex:0 0 auto;min-height:42px}
-  .admin-content{min-height:0;overflow:auto!important;padding:12px!important;-webkit-overflow-scrolling:touch}
-  .admin-view-head{gap:10px}.admin-toolbar{display:flex;flex-wrap:wrap;gap:8px}.admin-toolbar .btn{flex:1;min-width:120px}
-  .admin-stats,.admin-grid,.admin-row,.admin-row.three,.admin-gallery-grid,.admin-image-editor{grid-template-columns:1fr!important}
-  .admin-price-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-  .admin-card{padding:16px!important;border-radius:18px!important}.admin-field input,.admin-field textarea,.admin-field select{font-size:16px!important;min-height:46px}
-  .admin-actions{display:grid;grid-template-columns:1fr 1fr}.admin-actions .btn{width:100%}.admin-mini{min-height:42px}
-  .admin-work-actions{display:grid;grid-template-columns:1fr 1fr}.admin-work-actions .admin-mini{width:100%}
-  .admin-upload{min-height:110px}.admin-image-preview{min-height:220px}
-  .admin-json{font-size:10px!important;min-height:220px!important}
+@media (orientation:landscape) and (max-width:767px){
+  .hero-atelier{padding-top:82px}
+  .hero-modular-grid{display:grid;grid-template-columns:1fr .72fr;gap:18px;align-items:center}
+  .hero-showcase{order:2}.hero-copy-plane{order:1}
+  .hero-canvas-frame{max-width:260px}
 }
 </style>
 
-<style id="stjarts-polish">
-:root{color-scheme:light}[data-theme=dark]{color-scheme:dark}
-/* BUG FIX: overflow-x:hidden on BOTH html and body turned body into a scroll container and silently broke position:sticky (Process column). clip does not. */
-html,body{overflow-x:clip}
-@supports not (overflow:clip){html{overflow-x:hidden}body{overflow-x:visible}}
-html{-webkit-tap-highlight-color:transparent}
-html.modal-open{overflow:hidden}
-dialog#artModal{overscroll-behavior:contain}
-.ambient-glow{left:0!important;top:0!important;will-change:transform;transition:none!important}
-footer.editorial-footer{padding-bottom:calc(50px + env(safe-area-inset-bottom,0px))}
-.art-preview-wrap img{background:transparent}
-/* skeleton while cloud data loads (no flash of fake "coming soon" cards) */
-html:not(.cms-ready) .art-placeholder-vector{font-size:0!important;color:transparent!important;background-image:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);background-size:200% 100%;animation:stSk 1.4s linear infinite}
-@keyframes stSk{from{background-position:200% 0}to{background-position:-100% 0}}
-@media(max-width:960px){
-  /* BUG FIX: hidden nav used translate(-50%,..) while mobile nav is left-anchored -> it slid diagonally */
-  nav.glass-nav.nav-hidden{transform:translateY(-160%)}
-  .mobile-toggle{position:relative;display:grid;place-items:center}
+
+<style id="admin-studio-redesign">
+/* Full-screen studio workspace: admin is an application, not a floating dialog. */
+html.admin-open,body.admin-open{overflow:hidden!important}
+#adminPanel.admin-visible{display:block!important}
+#adminPanel.admin-visible.admin-overlay{display:block!important}
+.admin-overlay{position:fixed!important;inset:0!important;padding:0!important;display:none;align-items:stretch!important;justify-content:stretch!important;background:var(--bg)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;z-index:6000!important}
+.admin-shell{width:100%!important;height:100dvh!important;max-height:none!important;border-radius:0!important;border:0!important;box-shadow:none!important;background:var(--bg)!important;display:grid!important;grid-template-rows:72px minmax(0,1fr)!important;overflow:hidden!important}
+.admin-topbar{height:72px!important;padding:0 26px!important;border-bottom:1px solid var(--line-strong)!important;background:color-mix(in srgb,var(--paper) 88%,transparent)!important;backdrop-filter:blur(24px)!important;-webkit-backdrop-filter:blur(24px)!important}
+.admin-brand{gap:12px!important}.admin-brand-mark{width:38px!important;height:38px!important;border-radius:11px!important;font-size:11px!important}.admin-topbar h3{font-size:16px!important;letter-spacing:-.025em!important}.admin-topbar small{font-size:9px!important;letter-spacing:.1em!important}
+.admin-top-actions{gap:8px!important}.admin-top-actions .btn{min-height:40px!important;padding:11px 16px!important;font-size:10px!important}
+.admin-main{display:grid!important;grid-template-columns:248px minmax(0,1fr)!important;min-height:0!important}
+.admin-sidebar{padding:22px 14px!important;border-right:1px solid var(--line-strong)!important;background:var(--paper)!important;overflow:auto!important}
+.admin-nav{gap:3px!important}.admin-nav button{position:relative!important;min-height:46px!important;padding:0 14px 0 17px!important;border-radius:10px!important;font-size:10px!important;letter-spacing:.08em!important;color:var(--mut)!important;transition:background .2s,color .2s,transform .2s!important}
+.admin-nav button::before{content:"";position:absolute;left:0;top:11px;bottom:11px;width:3px;border-radius:3px;background:transparent;transition:background .2s!important}
+.admin-nav button:hover{background:var(--bg)!important;color:var(--ink)!important;transform:none!important}.admin-nav button.active{background:var(--ink)!important;color:var(--bg)!important;box-shadow:none!important}.admin-nav button.active::before{background:var(--bg)!important}
+.admin-side-note{margin:26px 7px 0!important;padding:14px 12px!important;border-radius:12px!important;background:var(--bg)!important;box-shadow:none!important;border:1px solid var(--line)!important;font-size:9px!important}
+.admin-content{padding:34px 42px 70px!important;overflow:auto!important;min-width:0!important;background:var(--bg)!important}
+.admin-content::-webkit-scrollbar,.admin-sidebar::-webkit-scrollbar{width:8px}.admin-content::-webkit-scrollbar-thumb,.admin-sidebar::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:99px}
+.admin-view{max-width:1220px!important;margin:0 auto!important}.admin-view-head{align-items:flex-end!important;margin-bottom:28px!important;padding-bottom:20px!important;border-bottom:1px solid var(--line)!important}.admin-view-head h2{font-size:clamp(34px,4vw,54px)!important;letter-spacing:-.05em!important}.admin-view-head p{max-width:680px!important;font-size:13px!important;line-height:1.65!important}
+.admin-kicker{font-size:9px!important;letter-spacing:.18em!important}
+.admin-stats{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important}.admin-stat{padding:20px!important;border-radius:14px!important;background:var(--paper)!important;border:1px solid var(--line)!important;box-shadow:none!important}.admin-stat strong{font-size:27px!important}.admin-stat span{font-size:9px!important}
+.admin-grid{gap:12px!important}.admin-card{padding:22px!important;border-radius:14px!important;background:var(--paper)!important;border:1px solid var(--line)!important;box-shadow:none!important}.admin-card h4{font-size:16px!important}.admin-card>p{line-height:1.6!important}
+.admin-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}.admin-work-card{border-radius:14px!important;background:var(--paper)!important;border:1px solid var(--line)!important;box-shadow:none!important}.admin-work-media{aspect-ratio:1/1!important}.admin-work-info{padding:13px!important}.admin-work-actions{flex-wrap:wrap!important}.admin-mini{min-height:38px!important;border-radius:9px!important;background:var(--bg)!important;box-shadow:none!important}
+.admin-tabs{margin-bottom:16px!important}.admin-tab{min-height:38px!important;padding:9px 13px!important;background:var(--bg)!important}.admin-tab.active{background:var(--ink)!important}
+.admin-image-editor{grid-template-columns:360px minmax(0,1fr)!important;gap:22px!important}.admin-image-preview{min-height:360px!important;border-radius:14px!important;background:var(--bg-deep)!important;box-shadow:none!important}.admin-upload{min-height:112px!important;border-radius:12px!important;background:var(--bg)!important}
+.admin-field input,.admin-field textarea,.admin-field select{min-height:44px!important;border-radius:10px!important;box-shadow:none!important;background:var(--bg)!important}.admin-field textarea{min-height:110px!important}
+.admin-actions{gap:8px!important}.admin-status{padding:10px 12px!important;border-radius:9px!important;background:var(--bg)!important}
+/* Login becomes a clean studio gate instead of a floating modal. */
+#adminGate.admin-visible{display:grid!important;place-items:center!important;background:var(--bg)!important}
+.admin-login-card{width:min(520px,calc(100% - 40px))!important;max-width:none!important;padding:44px!important;border-radius:18px!important;background:var(--paper)!important;border:1px solid var(--line-strong)!important;box-shadow:none!important}
+.admin-login-card h2{font-size:clamp(42px,7vw,68px)!important}.admin-login-card .btn{width:100%;min-height:50px}
+@media(max-width:1050px){.admin-main{grid-template-columns:210px minmax(0,1fr)!important}.admin-content{padding:28px!important}.admin-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.admin-image-editor{grid-template-columns:1fr!important}}
+@media(max-width:760px){
+  .admin-shell{grid-template-rows:auto minmax(0,1fr)!important}
+  .admin-topbar{height:auto!important;min-height:64px!important;padding:9px 12px!important;gap:8px!important}
+  .admin-brand-mark{width:34px!important;height:34px!important}.admin-topbar h3{font-size:14px!important}.admin-topbar small{display:none!important}
+  .admin-top-actions .btn{font-size:8px!important;padding:9px 10px!important;min-height:38px!important}.admin-top-actions #adminSaveBtn{padding-inline:12px!important}
+  .admin-main{grid-template-columns:1fr!important;grid-template-rows:auto minmax(0,1fr)!important}
+  .admin-sidebar{padding:7px 10px!important;border-right:0!important;border-bottom:1px solid var(--line-strong)!important;overflow-x:auto!important;overflow-y:hidden!important}
+  .admin-nav{display:flex!important;gap:4px!important;min-width:max-content!important}.admin-nav button{min-height:40px!important;width:auto!important;padding:0 13px!important;border-radius:9px!important}.admin-nav button::before{display:none!important}.admin-nav button.active{background:var(--ink)!important}
+  .admin-side-note{display:none!important}.admin-content{padding:22px 16px 60px!important}.admin-view-head{display:block!important;padding-bottom:18px!important}.admin-view-head h2{font-size:38px!important}.admin-view-head p{font-size:12px!important}.admin-toolbar{margin-top:14px!important}
+  .admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))!important}.admin-grid,.admin-row,.admin-row.three{grid-template-columns:1fr!important}.admin-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.admin-card{padding:16px!important}.admin-price-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .admin-image-editor{grid-template-columns:1fr!important}.admin-image-preview{min-height:280px!important}.admin-actions .btn{flex:1 1 100%!important}
 }
-@media(max-width:680px){
-  /* BUG FIX: close-icon second bar had no anchor point */
-  nav.glass-nav.menu-open .mobile-toggle::before{transform:rotate(45deg)}
-  nav.glass-nav.menu-open .mobile-toggle::after{top:50%;left:50%;margin:-1px 0 0 -9px;transform:rotate(-45deg)}
-}
-/* PERFORMANCE: stacked backdrop-filters are the #1 cause of scroll jank on phones */
-@media(max-width:767px),(hover:none){
-  .neu-card,.art-card,.process-sheet,.hero-copy-plane,.faq-item,.drafting-ticket-well,.diagonal-artist-card,.floating-glass-badge,.filter-chip,.btn-neu,.materials-slate,.modal-content-col{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
-  .neu-card,.art-card,.process-sheet,.hero-copy-plane,.faq-item,.drafting-ticket-well,.floating-glass-badge{background:var(--paper)}
-  .scroll-reveal{transition-duration:.55s}
-}
-/* Admin extras */
-.toast-wrap{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:9000;display:grid;gap:8px;width:min(92vw,420px);pointer-events:none}
-.toast{padding:12px 16px;border-radius:14px;background:var(--ink);color:var(--bg);font:700 11px/1.5 var(--font-mono);letter-spacing:.04em;box-shadow:0 14px 34px rgba(0,0,0,.28);animation:stToast .35s cubic-bezier(.16,1,.3,1)}
-.toast.err{background:#a33a2a;color:#fff}
-@keyframes stToast{from{opacity:0;transform:translateY(12px)}}
-.admin-upload.drag{border-color:var(--ink);background:rgba(255,255,255,.4)}
-#healthList{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-#healthList li{padding:10px 14px;border-radius:12px;background:var(--bg);font:12px/1.5 var(--font-mono);border-left:3px solid var(--mut)}
-#healthList .h-warn{border-left-color:#c0503d}#healthList .h-ok{border-left-color:#178a48}
-.admin-shell{padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(max-width:767px){
-  #adminPreviewBtn{display:inline-flex!important}
-  .admin-brand small{display:none}
-  .admin-top-actions{flex-wrap:nowrap}
-}
-</style>
-
-<style id="stjarts-mobile">
-.m-tabbar,.m-pricebar{display:none}
-@media (max-width:767px){
-:root{--m-pad:16px;--m-tab:62px}
-html{scroll-padding-top:72px}
-body{font-size:15px;padding-bottom:0}
-body::after,.ambient-glow{display:none!important}
-.js-motion .sw{opacity:1!important}
-.js-motion .hero-stack h1{translate:none!important;opacity:1!important}
-.js-motion .hero-showcase{translate:none!important}
-.w{padding-inline:var(--m-pad)!important}
-body section{padding:56px 0!important;min-height:0!important;display:block!important}
-body .hero-atelier{padding:calc(76px + env(safe-area-inset-top,0px)) var(--m-pad) 36px!important;display:block!important}
-
-/* top bar: slim, always visible; navigation lives in the bottom tab bar */
-body nav.glass-nav{top:0!important;left:0!important;width:100%!important;max-width:none!important;border-radius:0!important;border:0!important;min-height:54px;transform:none!important;padding:calc(8px + env(safe-area-inset-top,0px)) 14px 8px 16px!important;background:var(--paper)!important;background:color-mix(in srgb,var(--paper) 88%,transparent)!important;-webkit-backdrop-filter:blur(18px)!important;backdrop-filter:blur(18px)!important;box-shadow:0 1px 0 var(--line)!important}
-body .nav-links,body .mobile-toggle{display:none!important}
-body .brand-mark{font-size:12px}
-
-/* bottom tab bar */
-.m-tabbar{display:flex;position:fixed;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom,0px));height:var(--m-tab);z-index:4000;padding:6px;gap:4px;border-radius:24px;background:var(--paper);background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:var(--glass-border);box-shadow:0 12px 40px rgba(17,17,15,.22);transition:transform .35s cubic-bezier(.16,1,.3,1)}
-.m-tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-radius:18px;text-decoration:none;color:var(--mut);font:700 8.5px/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;transition:background .25s,color .25s}
-.m-tabbar svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.m-tabbar a.active{color:var(--ink);background:var(--bg-deep)}
-.m-tabbar a.cta{background:var(--ink);color:var(--bg)}
-body.admin-open .m-tabbar,html.modal-open .m-tabbar,body.admin-open .m-pricebar,html.modal-open .m-pricebar{transform:translateY(180%)!important}
-
-/* sticky price bar (shown only while the commission section is on screen) */
-.m-pricebar{display:flex;align-items:center;gap:12px;position:fixed;left:10px;right:10px;bottom:calc(var(--m-tab) + 16px + env(safe-area-inset-bottom,0px));z-index:3900;padding:10px 10px 10px 18px;border-radius:20px;background:var(--ink);color:var(--paper);box-shadow:0 14px 34px rgba(0,0,0,.3);transform:translateY(160%);opacity:0;pointer-events:none;transition:transform .4s cubic-bezier(.16,1,.3,1),opacity .3s}
-.m-pricebar.show{transform:none;opacity:1;pointer-events:auto}
-.m-pricebar small{display:block;font:700 8px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;opacity:.6}
-.m-pricebar strong{font:700 20px/1.15 var(--font-mono)}
-.m-pricebar a{margin-left:auto;padding:14px 18px;border-radius:14px;background:var(--paper);color:var(--ink);font:700 11px var(--font-mono);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
-html.m-bar #pricing #startCommissionBtn{display:none}
-
-/* hero: headline -> full-width artwork -> story */
-body .hero-stack h1{font-size:clamp(40px,12.6vw,56px)!important;line-height:.95!important;letter-spacing:-.05em!important;max-width:none!important}
-body .hero-stack .eyebrow{margin-bottom:12px}
-body .hero-modular-grid{display:flex;flex-direction:column;gap:22px;margin-top:22px}
-body .hero-showcase{order:1;padding:0!important}
-body .parchment-backing-plane{display:none}
-body .hero-canvas-frame{width:100%!important;max-width:none!important;height:auto!important;aspect-ratio:4/5;border-radius:26px;padding:8px;transform:none!important;box-shadow:0 18px 44px rgba(17,17,15,.16)}
-body .hero-drawing-board{border-radius:19px;padding:18px}
-body .floating-glass-badge{left:12px;bottom:12px;padding:9px 13px;border-radius:14px}
-body .hero-copy-plane{order:2;padding:0!important;background:none!important;box-shadow:none!important;border:0!important}
-body .hero-artist-intro h3{font-size:clamp(27px,8vw,34px)}
-body .hero-sub{font-size:15px;margin:14px 0 10px}
-body .hero-artist-signature{display:none}
-body .hero-cta-row{display:flex!important;flex-direction:column;gap:10px;margin-top:20px!important}
-body .hero-cta-row .atelier-badge-rotated{padding:8px 12px;border-radius:999px;border-style:solid;align-self:flex-start}
-body .hero-cta-row .btn{width:100%;min-height:52px}
-
-/* section headers */
-body .section-header-atelier{display:block;margin-bottom:20px}
-body h2{font-size:clamp(31px,9.4vw,42px)!important;line-height:.98!important;letter-spacing:-.05em!important}
-body .section-header-atelier p{font-size:14px;margin:14px 0 0}
-
-/* gallery: sticky chips + 2-column masonry */
-body .filter-bar{position:sticky;top:calc(54px + env(safe-area-inset-top,0px));z-index:30;margin:0 calc(-1*var(--m-pad)) 14px!important;padding:10px var(--m-pad)!important;background:var(--bg);flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line)}
-body .filter-bar::-webkit-scrollbar{display:none}
-body .filter-chip{flex:none;min-height:40px;padding:10px 16px}
-body .brick-gallery-grid{display:block;column-count:2!important;column-gap:10px!important;padding-bottom:4px}
-body .art-card{padding:6px;margin-bottom:10px;border-radius:16px;box-shadow:0 6px 18px rgba(17,17,15,.1)}
-body .art-preview-wrap{border-radius:11px;box-shadow:none}
-body .art-placeholder-vector{min-height:150px;padding:12px}
-body .inspection-glass-tile,body .art-tag{display:none!important}
-body .art-meta-row{display:block;padding:9px 4px 3px}
-body .art-meta-title{font-size:13px;line-height:1.2}
-body .art-meta-subtitle{font-size:8.5px;margin-top:3px}
-.js-motion .art-preview-wrap{clip-path:none!important}
-.js-motion .art-preview-wrap img{scale:none!important}
-
-/* process: swipeable story cards */
-body .process-deconstructed-wrap{display:block}
-body .sticky-column{position:static;margin-bottom:22px}
-body .sticky-column .btn{width:100%}
-body .process-cascade{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1*var(--m-pad));padding:4px var(--m-pad) 14px;scrollbar-width:none}
-body .process-cascade::-webkit-scrollbar{display:none}
-body .process-sheet{flex:0 0 82%;scroll-snap-align:center;grid-template-columns:1fr;gap:10px;padding:22px;border-radius:22px;align-items:start;transform:none!important}
-.js-motion .process-sheet.is-visible.settled{opacity:1!important;scale:1!important}
-body .step-number-stamp{border:0;padding:0;font-size:34px}
-
-/* commission calculator: single column, thumb-friendly */
-body .drafting-desk-outer{padding:0!important;background:none!important;box-shadow:none!important;border:0!important}
-body .drafting-desk-outer::before{display:none}
-body .drafting-grid-inner{display:flex!important;flex-direction:column;gap:12px!important}
-body .drafting-controls-well{order:1;padding:18px!important;border-radius:22px!important}
-body .drafting-ticket-well{order:2;padding:20px!important;border-radius:22px!important;min-height:0}
-body .segment-control{display:grid!important;grid-template-columns:1fr 1fr;width:100%}
-body .segment-btn{min-height:56px;line-height:1.25;white-space:normal}
-body .pill-group{display:flex!important;flex-wrap:nowrap;overflow-x:auto;gap:8px;margin:8px calc(-1*18px) 16px;padding:4px 18px 8px;scroll-snap-type:x proximity;scrollbar-width:none}
-body .pill-group::-webkit-scrollbar{display:none}
-body .size-pill{flex:0 0 auto!important;min-width:0;white-space:nowrap;padding:12px 16px;scroll-snap-align:start}
-body .calc-toggles .toggle-row:nth-child(2){flex-direction:column;align-items:stretch;gap:10px}
-body .calc-toggles .toggle-row:nth-child(2)>div{flex-direction:column;align-items:stretch!important}
-#pricing #facesCount{width:100%;max-width:none!important;min-height:48px}
-body .price-display-box{padding:16px 18px!important}
-body .price-figure{font-size:clamp(40px,13vw,54px)!important}
-
-/* faq / contact / footer */
-body .faq-item summary{padding:16px;font-size:15px}
-body .contact-form{padding:20px!important}
-body .form-field input,body .form-field textarea{font-size:16px;min-height:50px}
-body footer.editorial-footer{padding:52px 0 calc(var(--m-tab) + 40px + env(safe-area-inset-bottom,0px))!important;border-radius:28px 28px 0 0}
-
-/* artwork viewer: full-screen image + bottom sheet */
-body dialog#artModal{inset:0;margin:0!important;width:100vw!important;max-width:none!important;height:100svh!important;max-height:100svh!important;border:0!important;border-radius:0!important;background:#0c0c0b}
-dialog#artModal .modal-grid{display:flex!important;flex-direction:column;height:100svh!important;max-height:100svh!important;min-height:0}
-dialog#artModal .modal-image-col{flex:1 1 auto;min-height:0!important;max-height:none!important;padding:calc(56px + env(safe-area-inset-top,0px)) 12px 28px!important;background:#0c0c0b!important}
-dialog#artModal .modal-image-col img{width:100%!important;height:100%!important;max-height:100%!important;object-fit:contain;box-shadow:none;border-radius:6px}
-dialog#artModal .modal-content-col{flex:0 0 auto;max-height:44svh!important;overflow:auto;margin-top:-20px;border-radius:24px 24px 0 0;padding:12px 20px calc(20px + env(safe-area-inset-bottom,0px))!important;background:var(--paper)!important;box-shadow:0 -12px 40px rgba(0,0,0,.35);justify-content:flex-start}
-dialog#artModal .modal-content-col::before{content:"";display:block;width:40px;height:4px;border-radius:4px;background:var(--line-strong);margin:0 auto 14px}
-dialog#artModal .modal-content-col h2{font-size:28px!important;max-width:none}
-dialog#artModal .modal-close-btn{position:fixed!important;top:calc(10px + env(safe-area-inset-top,0px))!important;right:12px!important;background:rgba(20,20,19,.7);color:#fff;border-color:rgba(255,255,255,.2)}
-dialog#artModal .btn{width:100%;min-height:52px}
-}
-</style>
-
-<style id="stjarts-adv">
-.orders-closed .pulse-orb{background:#c0503d;animation:none;box-shadow:0 0 0 5px rgba(192,80,61,.18)}
-.orders-notice{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;margin:0 0 20px;padding:22px 26px;border-radius:24px;background:var(--paper);border:1px solid var(--line-strong);box-shadow:var(--neu-flat)}
-.orders-notice h3{font-size:20px;margin:0 0 6px}.orders-notice p{margin:0 0 6px;color:var(--mut);font-size:14px}
-.on-ico{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--bg-deep);box-shadow:var(--neu-pressed);font-size:18px}
-.form-note{margin:0 0 18px;padding:12px 14px;border-radius:14px;background:var(--bg-deep);font:700 11px/1.55 var(--font-mono);color:var(--mut);letter-spacing:.03em}
-.announce{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;margin-bottom:18px;padding:9px 16px;border-radius:999px;background:var(--ink);color:var(--bg);font:700 11px/1.4 var(--font-mono);letter-spacing:.04em}
-dialog#orderAck{border:var(--glass-border);border-radius:28px;background:var(--paper);color:var(--ink);padding:30px;width:min(92vw,460px);box-shadow:0 40px 100px rgba(0,0,0,.45);text-align:left}
-dialog#orderAck::backdrop{background:rgba(8,8,7,.7);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-dialog#orderAck h3{font-size:24px;margin:14px 0 8px}dialog#orderAck p{color:var(--mut);font-size:14px;margin:0 0 10px}
-dialog#orderAck .btn{width:100%;margin-top:10px}
-@media(max-width:767px){
- .orders-notice{grid-template-columns:1fr;padding:20px;border-radius:20px}.orders-notice .btn{width:100%}
- dialog#orderAck{margin:auto 0 0;width:100%;max-width:none;border-radius:26px 26px 0 0;padding:26px 22px calc(24px + env(safe-area-inset-bottom,0px))}
-}
-.adv-switch{position:relative;flex:none;width:56px;height:32px;-webkit-appearance:none;appearance:none;border-radius:999px;background:var(--bg-deep);box-shadow:var(--neu-pressed);cursor:pointer;transition:background .25s}
-.adv-switch::after{content:"";position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:50%;background:var(--paper);box-shadow:var(--neu-pill);transition:transform .25s}
-.adv-switch:checked{background:#178a48}.adv-switch:checked::after{transform:translateX(24px)}
-.adv-row{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.adv-row strong{display:block;font-size:16px}.adv-row span{color:var(--mut);font:11px/1.5 var(--font-mono)}
-.adv-hint{color:var(--mut);font:11px/1.6 var(--font-mono);margin:0 0 14px}
-details.admin-card{margin-bottom:12px}details.admin-card>summary{cursor:pointer;font:700 15px var(--font-display);list-style:none;display:flex;justify-content:space-between;align-items:center}
-details.admin-card>summary::-webkit-details-marker{display:none}details.admin-card>summary small{color:var(--mut);font:10px var(--font-mono)}
-details.admin-card[open]>summary{margin-bottom:14px}
-.adv-pane{display:none}.adv-pane.active{display:block}
+@media(max-width:380px){.admin-content{padding-inline:12px!important}.admin-gallery-grid{gap:8px!important}.admin-work-info{padding:10px!important}.admin-work-actions{display:grid!important;grid-template-columns:1fr!important}.admin-top-actions .btn{font-size:7px!important;padding-inline:8px!important}}
 </style>
 </head>
 <body>
@@ -2145,48 +1873,48 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <div class="admin-overlay" id="adminGate" aria-hidden="true">
   <div class="admin-login-card" role="dialog" aria-modal="true" aria-labelledby="adminLoginTitle">
     <div class="admin-kicker">Private Studio / Restricted</div><h2 id="adminLoginTitle">Control room.</h2>
-    <p>Private access to the S.T.J.A.R.T.S. content, portfolio, pricing, links, availability and studio configuration.</p>
+    <p>Private editor for the S.T.J.A.R.T.S. portfolio, pricing, availability and contact details.</p>
     <form id="adminLoginForm" autocomplete="off">
-      <div class="admin-field"><label for="adminUsername">Administrator email</label><input id="adminUsername" type="email" autocomplete="email" placeholder="studio email" required></div>
+      <div class="admin-field"><label for="adminUsername">Username</label><input id="adminUsername" autocomplete="username" required></div>
       <div class="admin-field"><label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required></div>
       <div class="admin-error" id="adminLoginError" role="alert"></div>
       <button class="btn btn-primary" type="submit" style="width:100%">Open Control Center</button>
     </form>
-    <div class="admin-lock-note">Cloud CMS · authenticated with Supabase. Shortcut: Ctrl/Cmd + Shift + A, or add #admin to the address. Changes are shared across every device.</div>
+    <div class="admin-lock-note">Hidden shortcut: Ctrl/Cmd + Shift + A. Changes are stored in this browser.</div>
   </div>
 </div>
 <div class="admin-overlay" id="adminPanel" aria-hidden="true">
   <div class="admin-shell" role="dialog" aria-modal="true" aria-labelledby="adminPanelTitle">
     <header class="admin-topbar">
-      <div class="admin-brand"><div class="admin-brand-mark">ST</div><div><h3 id="adminPanelTitle">Studio Control Center</h3><small>Private CMS · cloud synced</small></div></div>
+      <div class="admin-brand"><div class="admin-brand-mark">ST</div><div><h3 id="adminPanelTitle">Studio Admin</h3><small>Private workspace · saved in this browser</small></div></div>
       <div class="admin-top-actions"><button class="btn btn-neu" id="adminPreviewBtn" type="button">View Public Site</button><button class="btn btn-neu" id="adminCloseBtn" type="button">Lock</button><button class="btn btn-primary" id="adminSaveBtn" type="button">Save Changes</button></div>
     </header>
     <div class="admin-main">
       <aside class="admin-sidebar"><nav class="admin-nav" id="adminNav">
-        <button class="active" data-view="dashboard">Dashboard</button><button data-view="portfolio">Portfolio</button><button data-view="hero">Hero Image</button><button data-view="pricing">Pricing</button><button data-view="content">Site Content</button><button data-view="faq">FAQ</button><button data-view="contact">Links & Contact</button><button data-view="backup">Backup</button>
+        <button class="active" data-view="dashboard">Overview</button><button data-view="portfolio">Work</button><button data-view="hero">Hero</button><button data-view="pricing">Pricing</button><button data-view="content">Content</button><button data-view="faq">FAQ</button><button data-view="contact">Contact</button><button data-view="backup">Data</button>
       </nav><div class="admin-side-note">All controls are scoped to the existing public page. No public navigation item is added.</div></aside>
       <main class="admin-content">
         <section class="admin-view active" data-view="dashboard"><div class="admin-view-head"><div><div class="admin-kicker">Overview</div><h2>Studio at a glance.</h2><p>Manage the parts of the public site that change most often without touching its core visual design.</p></div></div>
           <div class="admin-stats"><div class="admin-stat"><strong id="statWorks">0</strong><span>Portfolio pieces</span></div><div class="admin-stat"><strong id="statImages">0</strong><span>Images installed</span></div><div class="admin-stat"><strong id="statSlots">0</strong><span>Open slots</span></div><div class="admin-stat"><strong id="statA4">₹0</strong><span>Classic A4</span></div></div>
-          <div class="admin-grid"><div class="admin-card"><h4>Portfolio status</h4><p>Add, reorder, hide or replace your real artwork.</p><button class="btn btn-primary" data-jump="portfolio">Manage Portfolio</button></div><div class="admin-card"><h4>Site presentation</h4><p>Swap the hero artwork and control the public studio messaging.</p><button class="btn btn-neu" data-jump="hero">Manage Hero</button></div><div class="admin-card full"><h4>Quick save</h4><p>Changes are saved to the cloud. The public site reads the same data on every device.</p><div class="admin-status" id="adminStatus" aria-live="polite">Ready</div></div></div>
+          <div class="admin-grid"><div class="admin-card"><h4>Portfolio status</h4><p>Replace the current mock artwork cards with your real work.</p><button class="btn btn-primary" data-jump="portfolio">Manage Portfolio</button></div><div class="admin-card"><h4>Site presentation</h4><p>Swap the hero artwork and control the public studio messaging.</p><button class="btn btn-neu" data-jump="hero">Manage Hero</button></div><div class="admin-card full"><h4>Quick save</h4><p>All changes are staged in the control center until you press Save Changes. Changes are retained in this browser.</p><div class="admin-status" id="adminStatus" aria-live="polite">Ready</div></div></div>
         </section>
 
-        <section class="admin-view" data-view="portfolio"><div class="admin-view-head"><div><div class="admin-kicker">Media library</div><h2>Your artwork.</h2><p>Each portfolio item can have its own image, title, category, size, type, description and visibility. Existing generated mock artwork is no longer used.</p></div><div class="admin-toolbar"><button class="btn btn-primary" id="newWorkBtn" type="button">+ New Artwork</button></div></div>
+        <section class="admin-view" data-view="portfolio"><div class="admin-view-head"><div><div class="admin-kicker">Media library</div><h2>Your artwork.</h2><p>Each portfolio item can have its own image, title, category, size, type, description and visibility. Add and manage the artwork shown in the gallery.</p></div><div class="admin-toolbar"><button class="btn btn-primary" id="newWorkBtn" type="button">+ New Artwork</button></div></div>
           <div class="admin-card full" style="margin-bottom:16px"><div class="admin-tabs" id="portfolioFilters"><button class="admin-tab active" data-filter="All">All</button><button class="admin-tab" data-filter="Portraits">Portraits</button><button class="admin-tab" data-filter="Couples">Couples</button><button class="admin-tab" data-filter="Pets">Pets</button><button class="admin-tab" data-filter="Cinema">Cinema</button></div><div class="admin-gallery-grid" id="adminWorkGrid"></div></div>
-          <div class="admin-card full" id="workEditor" style="display:none"><h4 id="workEditorTitle">Add artwork</h4><p>Upload a real portfolio image and edit its public metadata.</p><div class="admin-image-editor"><div><div class="admin-image-preview" id="workPreview"><span>No artwork image selected.</span></div><label class="admin-upload"><input id="workImage" type="file" accept="image/*"><div><strong>Choose artwork image</strong><small>JPG, PNG, WEBP · stored securely in cloud storage</small></div></label></div><div><div class="admin-row"><div class="admin-field"><label>Title</label><input id="workTitle"></div><div class="admin-field"><label>Category</label><select id="workCat"><option>Portraits</option><option>Couples</option><option>Pets</option><option>Cinema</option></select></div></div><div class="admin-row"><div class="admin-field"><label>Archival size</label><select id="workSize"><option>A6</option><option>A5</option><option>A4</option><option>A3</option><option>A2</option></select></div><div class="admin-field"><label>Work type</label><input id="workKind"></div></div><div class="admin-field"><label>Description</label><textarea id="workDesc"></textarea></div><div class="admin-field"><label>Visibility</label><select id="workPublished"><option value="yes">Published — visible on the public site</option><option value="no">Hidden — only you can see it</option></select></div><div class="admin-actions"><button class="btn btn-primary" id="saveWorkBtn" type="button">Save Artwork</button><button class="btn btn-neu" id="cancelWorkBtn" type="button">Cancel</button></div></div></div></div>
+          <div class="admin-card full" id="workEditor" style="display:none"><h4 id="workEditorTitle">Add artwork</h4><p>Upload a real portfolio image and edit its public metadata.</p><div class="admin-image-editor"><div><div class="admin-image-preview" id="workPreview"><span>No artwork image selected.</span></div><label class="admin-upload"><input id="workImage" type="file" accept="image/*"><div><strong>Choose artwork image</strong><small>JPG, PNG or WEBP · stored in this browser</small></div></label></div><div><div class="admin-row"><div class="admin-field"><label>Title</label><input id="workTitle"></div><div class="admin-field"><label>Category</label><select id="workCat"><option>Portraits</option><option>Couples</option><option>Pets</option><option>Cinema</option></select></div></div><div class="admin-row"><div class="admin-field"><label>Archival size</label><select id="workSize"><option>A6</option><option>A5</option><option>A4</option><option>A3</option><option>A2</option></select></div><div class="admin-field"><label>Work type</label><input id="workKind"></div></div><div class="admin-field"><label>Description</label><textarea id="workDesc"></textarea></div><div class="admin-actions"><button class="btn btn-primary" id="saveWorkBtn" type="button">Save Artwork</button><button class="btn btn-neu" id="cancelWorkBtn" type="button">Cancel</button></div></div></div></div>
         </section>
 
-        <section class="admin-view" data-view="hero"><div class="admin-view-head"><div><div class="admin-kicker">Lead image</div><h2>Hero artwork.</h2><p>Replace the public hero’s generated sketch with your own real artwork image. The existing hero frame, typography and layout stay intact.</p></div></div><div class="admin-card full"><div class="admin-image-editor"><div class="admin-image-preview" id="heroPreview"><span>No custom hero image. The public site is using its built-in artwork treatment.</span></div><div><label class="admin-upload"><input id="heroImage" type="file" accept="image/*"><div><strong>Upload hero artwork</strong><small>Recommended: portrait-oriented JPG/PNG/WEBP</small></div></label><div class="admin-actions"><button class="btn btn-primary" id="saveHeroBtn" type="button">Use This Hero Image</button><button class="btn btn-neu" id="removeHeroBtn" type="button">Remove Hero Image</button></div><div class="admin-status" id="heroStatus"></div></div></div></div></section>
+        <section class="admin-view" data-view="hero"><div class="admin-view-head"><div><div class="admin-kicker">Lead image</div><h2>Hero artwork.</h2><p>Replace the hero artwork while keeping the existing frame, typography and layout.</p></div></div><div class="admin-card full"><div class="admin-image-editor"><div class="admin-image-preview" id="heroPreview"><span>No custom hero image is currently set.</span></div><div><label class="admin-upload"><input id="heroImage" type="file" accept="image/*"><div><strong>Upload hero artwork</strong><small>Recommended: portrait-oriented JPG/PNG/WEBP</small></div></label><div class="admin-actions"><button class="btn btn-primary" id="saveHeroBtn" type="button">Use This Hero Image</button><button class="btn btn-neu" id="removeHeroBtn" type="button">Remove Hero Image</button></div><div class="admin-status" id="heroStatus"></div></div></div></div></section>
 
         <section class="admin-view" data-view="pricing"><div class="admin-view-head"><div><div class="admin-kicker">Commerce</div><h2>Pricing engine.</h2><p>Every number used by the public commission calculator is editable here.</p></div></div><div class="admin-grid"><div class="admin-card full"><h4>Classic Portrait</h4><div class="admin-price-grid"><div class="admin-field"><label>A6</label><input id="priceA6" type="number" min="0"></div><div class="admin-field"><label>A5</label><input id="priceA5" type="number" min="0"></div><div class="admin-field"><label>A4</label><input id="priceA4" type="number" min="0"></div><div class="admin-field"><label>A3</label><input id="priceA3" type="number" min="0"></div><div class="admin-field"><label>A2</label><input id="priceA2" type="number" min="0"></div></div></div><div class="admin-card full"><h4>Signature Fine Realism</h4><div class="admin-price-grid"><div class="admin-field"><label>A6</label><input id="sigA6" type="number" min="0"></div><div class="admin-field"><label>A5</label><input id="sigA5" type="number" min="0"></div><div class="admin-field"><label>A4</label><input id="sigA4" type="number" min="0"></div><div class="admin-field"><label>A3</label><input id="sigA3" type="number" min="0"></div><div class="admin-field"><label>A2</label><input id="sigA2" type="number" min="0"></div></div></div><div class="admin-card"><h4>Add-ons</h4><div class="admin-field"><label>Wooden frame</label><input id="adminFramePrice" type="number" min="0"></div><div class="admin-field"><label>Additional face</label><input id="adminExtraFacePrice" type="number" min="0"></div></div><div class="admin-card"><h4>Availability</h4><div class="admin-row"><div class="admin-field"><label>Open slots</label><input id="adminSlots" type="number" min="0" max="99"></div><div class="admin-field"><label>Month</label><input id="adminMonth" maxlength="24"></div></div></div></div></section>
 
         <section class="admin-view" data-view="content"><div class="admin-view-head"><div><div class="admin-kicker">Editorial controls</div><h2>Site content.</h2><p>Change the small operational copy without rebuilding the public page.</p></div></div><div class="admin-grid"><div class="admin-card full"><h4>Availability banner</h4><div class="admin-field"><label>Public banner text</label><input id="adminSlotsText" maxlength="100"></div></div><div class="admin-card full"><h4>Footer</h4><div class="admin-field"><label>Copyright / footer line</label><input id="adminCopyright" maxlength="220"></div></div></div></section>
 
-        <section class="admin-view" data-view="faq"><div class="admin-view-head"><div><div class="admin-kicker">Support content</div><h2>FAQ manager.</h2><p>Edit, add or remove the questions displayed in the public FAQ accordion.</p></div><button class="btn btn-primary" id="newFaqBtn" type="button">+ New Question</button></div><div class="admin-card full" id="faqEditor" style="display:none;margin-bottom:16px"><h4 id="faqEditorTitle">New question</h4><div class="admin-field"><label for="faqQuestion">Question</label><input id="faqQuestion"></div><div class="admin-field"><label for="faqAnswer">Answer</label><textarea id="faqAnswer" rows="4"></textarea></div><div class="admin-actions"><button class="btn btn-primary" id="saveFaqBtn" type="button">Save Question</button><button class="btn btn-neu" id="cancelFaqBtn" type="button">Cancel</button></div></div><div class="admin-card full"><div id="adminFaqList"></div></div></section>
+        <section class="admin-view" data-view="faq"><div class="admin-view-head"><div><div class="admin-kicker">Support content</div><h2>FAQ manager.</h2><p>Edit, add or remove the questions displayed in the public FAQ accordion.</p></div><button class="btn btn-primary" id="newFaqBtn" type="button">+ New Question</button></div><div class="admin-card full"><div id="adminFaqList"></div></div></section>
 
         <section class="admin-view" data-view="contact"><div class="admin-view-head"><div><div class="admin-kicker">Routing</div><h2>Links & contact.</h2><p>Control the destinations used by the public WhatsApp, Instagram and email actions.</p></div></div><div class="admin-grid"><div class="admin-card"><h4>WhatsApp</h4><div class="admin-field"><label>Number</label><input id="adminWa" inputmode="numeric"></div></div><div class="admin-card"><h4>Instagram</h4><div class="admin-field"><label>Handle</label><input id="adminIg"></div></div><div class="admin-card full"><h4>Email</h4><div class="admin-field"><label>Address</label><input id="adminEmail" type="email"></div></div></div></section>
 
-        <section class="admin-view" data-view="backup"><div class="admin-view-head"><div><div class="admin-kicker">Data</div><h2>Backup & restore.</h2><p>Export the complete editable studio configuration and image references, or restore a previous JSON backup. Image files themselves remain in cloud storage.</p></div></div><div class="admin-card full"><div class="admin-field"><label>Studio JSON</label><textarea class="admin-json" id="adminJson" spellcheck="false"></textarea></div><div class="admin-actions"><button class="btn btn-primary" id="adminExportBtn" type="button">Prepare Full Backup</button><button class="btn btn-neu" id="adminDownloadBtn" type="button">Download JSON</button><button class="btn btn-neu" id="adminImportBtn" type="button">Restore From JSON</button></div></div></section>
+        <section class="admin-view" data-view="backup"><div class="admin-view-head"><div><div class="admin-kicker">Data</div><h2>Backup & restore.</h2><p>Export the complete editable studio configuration, including portfolio images, or restore a previous JSON backup.</p></div></div><div class="admin-card full"><div class="admin-field"><label>Studio JSON</label><textarea class="admin-json" id="adminJson" spellcheck="false"></textarea></div><div class="admin-actions"><button class="btn btn-primary" id="adminExportBtn" type="button">Prepare Full Backup</button><button class="btn btn-neu" id="adminImportBtn" type="button">Import Backup</button><button class="btn btn-neu" id="adminResetBtn" type="button">Reset All Saved Changes</button></div></div></section>
       </main>
     </div>
   </div>
@@ -2214,16 +1942,16 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <!-- Modular Overlapping Content Grid -->
 <div class="hero-modular-grid">
 <div class="hero-copy-plane hero-artist-intro scroll-reveal" data-delay="1" id="artist-hero">
-<div class="eyebrow">The Artist</div>
+
 <h3>Surya Teja <em>&amp; the Graphite Craft.</em></h3>
 <p class="hero-sub">
-          A photograph is taken in a fraction of a second; a graphite portrait is built across hundreds of deliberate pencil strokes. In that quiet time, warmth, character, and love are woven into the paper.
+          A portrait begins with a photograph. Hundreds of deliberate pencil strokes turn it into something made to last.
         </p>
-<p class="hero-artist-note">Based in India, Surya creates commissioned heirloom drawings for families, partners, and collectors worldwide, transforming treasured memories into permanent art.</p>
+<p class="hero-artist-note">Based in India, Surya creates commissioned graphite and charcoal portraits from photographs, shaped into artwork made to last.</p>
 <div class="hero-artist-signature">
 <span class="mono-tag">Artist / Surya Teja</span>
 <span class="hero-artist-rule"></span>
-<span class="mono-tag">Graphite · Charcoal · Archival</span>
+<span class="mono-tag">Graphite · Charcoal</span>
 </div>
 <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-top:28px;">
 <a class="btn btn-neu" href="#work">Explore Collection</a>
@@ -2235,7 +1963,7 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <div class="hero-canvas-frame" id="heroFrame">
 <div class="hero-drawing-board">
 <div style="display:flex; justify-content:space-between; align-items:flex-start;">
-<span class="mono-tag" style="color:var(--mut);">Original Study #084</span>
+<span class="mono-tag" style="color:var(--mut);"></span>
 <span style="font-family:var(--font-serif); font-size:18px; font-style:italic; color:var(--mut);">Surya Teja</span>
 </div>
 <!-- Stylized Charcoal & Graphite Portrait Vector Art -->
@@ -2258,16 +1986,16 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <div style="display:flex; justify-content:space-between; align-items:flex-end;">
 <div>
 <span style="font-family:var(--font-serif); font-size:22px; display:block;"></span>
-<span class="mono-tag" style="color:var(--mut);"></span>
+<span class="mono-tag" style="color:var(--mut);">Graphite on 300gsm Bristol</span>
 </div>
-<span class="mono-tag" style="padding:4px 8px; border-radius:6px; background:rgba(0,0,0,0.06);">2026</span>
+<span class="mono-tag" style="padding:4px 8px; border-radius:6px; background:rgba(0,0,0,0.06);"></span>
 </div>
 </div>
 <div class="floating-glass-badge">
-<i aria-hidden="true">✏️</i>
+<i aria-hidden="true"></i>
 <div>
-<strong>100% Hand-Crafted</strong>
-<span>Preserving authentic warmth</span>
+<strong>Hand-drawn in graphite</strong>
+<span>Made from your photograph</span>
 </div>
 </div>
 </div>
@@ -2279,19 +2007,19 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <div class="w">
 <div class="section-header-atelier scroll-reveal">
 <div>
-<div class="eyebrow">Curated Folio</div>
-<h2>Artwork that breathes,<br/><em>moments that linger.</em></h2>
+<div class="eyebrow">Selected Work</div>
+<h2>Selected <em>portraits.</em></h2>
 </div>
 <p>
-          Every commissioned piece is built meticulously layer by layer in graphite and deep charcoal, capturing nuance, skin texture, and expressive depth that digital prints never touch.
+          Layered by hand in graphite and charcoal, each piece focuses on likeness, texture, and expression.
         </p>
 </div>
 <div class="filter-bar scroll-reveal" id="categoryFilters">
-<button type="button" class="filter-chip active" data-cat="All">All Curations</button>
-<button type="button" class="filter-chip" data-cat="Portraits">Classic Portraits</button>
-<button type="button" class="filter-chip" data-cat="Couples">Couples &amp; Memorials</button>
-<button type="button" class="filter-chip" data-cat="Pets">Beloved Companions</button>
-<button type="button" class="filter-chip" data-cat="Cinema">Cinema &amp; Legends</button>
+<button class="filter-chip active" data-cat="All">All</button>
+<button class="filter-chip" data-cat="Portraits">Portraits</button>
+<button class="filter-chip" data-cat="Couples">Couples</button>
+<button class="filter-chip" data-cat="Pets">Pets</button>
+<button class="filter-chip" data-cat="Cinema">Cinema</button>
 </div>
 <!-- Offset Brick Columns Container -->
 <div class="brick-gallery-grid" id="brickGridContainer">
@@ -2303,40 +2031,40 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <section id="process">
 <div class="w process-deconstructed-wrap">
 <div class="sticky-column scroll-reveal">
-<div class="eyebrow">The Experience</div>
-<h2>From photograph<br/>to <em>timeless art.</em></h2>
+<div class="eyebrow">The Process</div>
+<h2>From photo<br/>to <em>portrait.</em></h2>
 <p style="color:var(--mut); margin:24px 0 36px; max-width:400px; font-size:16px;">
-          A transparent, reassuring commission journey tailored around your comfort. You share the story; the graphite renders its soul.
+          A simple four-step process, from your photograph to the finished artwork.
         </p>
-<a class="btn btn-primary" href="#pricing">Begin Your Commission <span>↘</span></a>
+<a class="btn btn-primary" href="#pricing">Start a Commission <span>↘</span></a>
 </div>
 <div class="process-cascade">
 <div class="process-sheet scroll-reveal">
 <div class="step-number-stamp">01</div>
 <div>
-<h3>Share Your Photograph</h3>
-<p>Send your cherished pictures via WhatsApp. Even older, faded, or slightly blurred photos are carefully restored and aligned before any pencil touches paper.</p>
+<h3>Send Your Photo</h3>
+<p>Send your photographs via WhatsApp. Older or imperfect images can be restored and prepared before drawing begins.</p>
 </div>
 </div>
 <div class="process-sheet scroll-reveal" data-delay="1">
 <div class="step-number-stamp">02</div>
 <div>
-<h3>Composition Proof</h3>
-<p>A tonal proportion layout and sample preview are shared with you. You approve the angle, crop, and expressive lighting prior to final shading.</p>
+<h3>Approve the Composition</h3>
+<p>A composition preview is shared with you for approval before final shading begins.</p>
 </div>
 </div>
 <div class="process-sheet scroll-reveal" data-delay="2">
 <div class="step-number-stamp">03</div>
 <div>
-<h3>Handmade Creation</h3>
-<p>Layer upon layer of graphite, blending stump, and charcoal powder are developed by hand. Typically 2 days per face of continuous, patient craft.</p>
+<h3>Portrait is Drawn</h3>
+<p>The portrait is drawn by hand in layered graphite and charcoal, typically taking about 2 days per face.</p>
 </div>
 </div>
 <div class="process-sheet scroll-reveal" data-delay="3">
 <div class="step-number-stamp">04</div>
 <div>
-<h3>Archival Framing &amp; Ship</h3>
-<p>Once you inspect and wholeheartedly approve the final portrait, the artwork is sealed with archival fixative, custom framed, and insured for nationwide transit.</p>
+<h3>Archival Finish &amp; Delivery</h3>
+<p>After your approval, the portrait is sealed, custom framed when selected, and insured for delivery across India.</p>
 </div>
 </div>
 </div>
@@ -2347,11 +2075,11 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <div class="w">
 <div class="section-header-atelier scroll-reveal">
 <div>
-<div class="eyebrow">Commission Studio</div>
-<h2>Your custom portrait.<br/><em>Curated your way.</em></h2>
+<div class="eyebrow">Commission</div>
+<h2>Your custom portrait.<br/><em>Choose what fits.</em></h2>
 </div>
 <p>
-          Select your desired finish, archival dimensions, and number of subjects. See exact transparent pricing dynamically calculate prior to initiating your WhatsApp consultation.
+          Choose a finish, size, and number of subjects. Your price updates instantly before you contact Surya.
         </p>
 </div>
 <!-- Inset Tactile Drafting Table Desk Layout -->
@@ -2359,38 +2087,38 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <div class="drafting-grid-inner">
 <!-- Drafting Controls Well -->
 <div class="drafting-controls-well">
-<div class="mono-tag" style="color:var(--mut); margin-bottom:14px; font-weight:700;">1. Choose Finish Style</div>
+<div class="mono-tag" style="color:var(--mut); margin-bottom:14px; font-weight:700;">1. Choose Style</div>
 <div class="segment-control">
-<button type="button" class="segment-btn active" data-style="Classic" id="styleClassic">Classic Portrait</button>
-<button type="button" class="segment-btn" data-style="Signature" id="styleSignature">Signature Fine Realism</button>
+<button class="segment-btn active" data-style="Classic" id="styleClassic">Classic Portrait</button>
+<button class="segment-btn" data-style="Signature" id="styleSignature">Signature Fine Realism</button>
 </div>
-<div class="mono-tag" style="color:var(--mut); margin-bottom:14px; font-weight:700;">2. Select Archival Dimension</div>
+<div class="mono-tag" style="color:var(--mut); margin-bottom:14px; font-weight:700;">2. Select Size</div>
 <div class="pill-group" id="sizeSelector">
-<button type="button" class="size-pill" data-size="A6">A6 (Desk)</button>
-<button type="button" class="size-pill" data-size="A5">A5 (Compact)</button>
-<button type="button" class="size-pill active" data-size="A4">A4 (Standard)</button>
-<button type="button" class="size-pill" data-size="A3">A3 (Statement)</button>
-<button type="button" class="size-pill" data-size="A2">A2 (Gallery Grand)</button>
+<button class="size-pill" data-size="A6">A6</button>
+<button class="size-pill" data-size="A5">A5</button>
+<button class="size-pill active" data-size="A4">A4</button>
+<button class="size-pill" data-size="A3">A3</button>
+<button class="size-pill" data-size="A2">A2</button>
 </div>
 <div class="calc-toggles">
 <div class="toggle-row">
 <label>
 <input id="frameToggle" type="checkbox"/>
-<span>Add Handcrafted Wooden Frame &amp; Glass</span>
+<span>Add Wooden Frame &amp; Glass</span>
 </label>
 <strong class="mono-tag" id="frameCostLabel" style="font-size:12px;">+₹400</strong>
 </div>
 <div class="toggle-row">
 <label>
-<span>Subjects / Faces Included</span>
+<span>Subjects</span>
 </label>
 <div style="display:flex; align-items:center; gap:12px;">
 <select class="custom-select" id="facesCount">
-<option selected="" value="1">1 Subject (Solo)</option>
-<option value="2">2 Subjects (Duo / Couple)</option>
-<option value="3">3 Subjects (Family / Trio)</option>
-<option value="4">4 Subjects (Family Group)</option>
-<option value="5">5 Subjects (Grand Gathering)</option>
+<option selected="" value="1">1 Subject</option>
+<option value="2">2 Subjects</option>
+<option value="3">3 Subjects</option>
+<option value="4">4 Subjects</option>
+<option value="5">5 Subjects</option>
 </select>
 <span class="mono-tag" id="extraFaceCost" style="color:var(--mut);">+₹500/extra</span>
 </div>
@@ -2398,40 +2126,40 @@ details.admin-card[open]>summary{margin-bottom:14px}
 </div>
 <!-- Stamped Dynamic Price Calculation Box -->
 <div class="price-display-box">
-<div class="mono-tag" style="color:var(--mut); font-weight:700;">Total Commission Investment</div>
+<div class="mono-tag" style="color:var(--mut); font-weight:700;">Estimated Total</div>
 <div class="price-figure" id="totalPriceDisplay" aria-live="polite">₹1,799 <span>INR</span></div>
 <p style="font-size:12px; color:var(--mut); margin:0;">
-                50% advance via UPI to schedule · Free insured transit across India · 1 Revision round included
+                50% advance · Delivery across India · 1 revision
               </p>
 </div>
 <div style="margin-top:28px;">
 <a class="btn btn-primary" href="#" id="startCommissionBtn" rel="noopener" target="_blank">
-                Send Commission Spec to Surya on WhatsApp ↗
+                Continue on WhatsApp ↗
               </a>
 </div>
 </div>
 <!-- Stamped Calculation Ticket Well -->
 <div class="drafting-ticket-well">
 <div>
-<div class="eyebrow" id="styleBadge">Classic Finish</div>
-<h3 id="styleHeading">Subtle, expressive, authentic.</h3>
+<div class="eyebrow" id="styleBadge">Classic</div>
+<h3 id="styleHeading">Natural, detailed, personal.</h3>
 <p id="styleDesc" style="color:var(--mut); font-size:14px; margin-top:14px;">
-                A balanced graphite study emphasizing natural eye expression, contour precision, and clean negative space. Ideal for timeless gifts and family keepsakes.
+                A balanced graphite portrait focused on natural expression, clean detail, and a timeless finish.
               </p>
 <ul class="feature-check-list">
-<li>100% Artist-grade graphite &amp; charcoal</li>
-<li>Heavyweight 300gsm acid-free Bristol board</li>
-<li>Free damaged/low-res photo enhancement</li>
-<li>Safe protective packaging in wooden reinforced cases</li>
-<li>Insured doorstep delivery across India (5–7 days)</li>
+<li>Artist-grade graphite &amp; charcoal</li>
+<li>300gsm acid-free Bristol board</li>
+<li>Photo enhancement for low-quality images</li>
+<li>Protective packaging</li>
+<li>Insured delivery across India</li>
 </ul>
 </div>
 <div style="padding-top:24px; border-top:1px dashed var(--line-strong); margin-top:30px;">
 <div style="display:flex; align-items:center; gap:14px;">
-<span style="font-size:26px;">🛡️</span>
+<span style="font-size:26px;"></span>
 <div>
-<strong style="font-size:13px; display:block; font-family:var(--font-display);">Surya's Guarantee</strong>
-<span style="font-size:11px; color:var(--mut);">No piece is framed or dispatched until you are completely in love with the preview.</span>
+<strong style="font-size:13px; display:block; font-family:var(--font-display);">Preview Approval</strong>
+<span style="font-size:11px; color:var(--mut);">Framing and dispatch begin only after you approve the final preview.</span>
 </div>
 </div>
 </div>
@@ -2445,7 +2173,7 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <div class="w faq-wrap">
 <div class="scroll-reveal" style="text-align:center; margin-bottom:50px;">
 <div class="eyebrow" style="justify-content:center;">Common Inquiries</div>
-<h2>Everything you need to know.</h2>
+<h2>Questions, answered.</h2>
 </div>
 <div class="scroll-reveal" id="faqList">
 <!-- Rendered via JS -->
@@ -2456,43 +2184,43 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <section id="contact">
 <div class="w contact-section-grid">
 <div class="scroll-reveal">
-<div class="eyebrow">Initiate Contact</div>
-<h2>Bring a cherished memory<br/><em>to life on paper.</em></h2>
+<div class="eyebrow">Contact</div>
+<h2>Have a portrait<br/><em>in mind?</em></h2>
 <p style="color:var(--mut); font-size:16px; line-height:1.7; margin-top:20px; max-width:440px;">
-          Have a unique idea, combining multiple photos into one drawing, or wondering if an older photo can be drawn? Drop Surya a note directly on WhatsApp.
+          Have a custom idea or an older photograph you would like drawn? Tell Surya about it on WhatsApp.
         </p>
 <div style="margin-top:36px; display:flex; flex-direction:column; gap:16px;">
 <div style="display:flex; align-items:center; gap:14px;">
-<div style="width:42px; height:42px; border-radius:50%; background:var(--glass-bg); border:var(--glass-border); box-shadow:var(--neu-subtle); display:grid; place-items:center;">📍</div>
+<div style="width:42px; height:42px; border-radius:50%; background:var(--glass-bg); border:var(--glass-border); box-shadow:var(--neu-subtle); display:grid; place-items:center;"></div>
 <div>
 <strong style="font-size:13px; font-family:var(--font-display);">Studio Location</strong>
 <span class="mono-tag" style="display:block; font-size:11px; color:var(--mut);">Hyderabad &amp; Nationwide Delivery across India</span>
 </div>
 </div>
 <div style="display:flex; align-items:center; gap:14px;">
-<div style="width:42px; height:42px; border-radius:50%; background:var(--glass-bg); border:var(--glass-border); box-shadow:var(--neu-subtle); display:grid; place-items:center;">⚡</div>
+<div style="width:42px; height:42px; border-radius:50%; background:var(--glass-bg); border:var(--glass-border); box-shadow:var(--neu-subtle); display:grid; place-items:center;"></div>
 <div>
-<strong style="font-size:13px; font-family:var(--font-display);">Quick WhatsApp Response</strong>
-<span class="mono-tag" style="display:block; font-size:11px; color:var(--mut);">Usually replies within 1–2 hours</span>
+<strong style="font-size:13px; font-family:var(--font-display);">WhatsApp · Direct contact</strong>
+<span class="mono-tag" style="display:block; font-size:11px; color:var(--mut);">Message Surya directly</span>
 </div>
 </div>
 </div>
 </div>
 <form class="neu-card contact-form scroll-reveal" data-delay="1" id="commissionForm">
 <div class="form-field">
-<label for="formName">Your Full Name</label>
+<label for="formName">Name</label>
 <input id="formName" name="name" autocomplete="name" placeholder="e.g. Meera Sharma" required="" type="text"/>
 </div>
 <div class="form-field">
-<label for="formPhone">Your Mobile / WhatsApp Number</label>
+<label for="formPhone">WhatsApp number</label>
 <input id="formPhone" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. +91 98765 43210" type="tel"/>
 </div>
 <div class="form-field">
-<label for="formIdea">Your Portrait Vision</label>
+<label for="formIdea">Portrait details</label>
 <textarea id="formIdea" name="message" placeholder="Tell Surya about the photograph, subjects, occasion (anniversary, gift, memorial), and any custom requests..." required="" rows="4"></textarea>
 </div>
 <button class="btn btn-primary" style="width:100%;" type="submit">
-          Chat with Surya on WhatsApp ↗
+          WhatsApp Surya ↗
         </button>
 <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
 </form>
@@ -2502,14 +2230,14 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <footer class="editorial-footer">
 <div class="w" style="text-align:center;">
 <div class="eyebrow" style="justify-content:center; color:#9c9990;">S.T.J.A.R.T.S</div>
-<h2>Let’s create something<br/><em>unforgettable.</em></h2>
+<h2>Let’s create something<br/><em>worth keeping.</em></h2>
 <div class="footer-cta-row">
-<a class="btn btn-primary" href="https://wa.me/918978854205" rel="noopener" style="background:#f4f2ec; color:#11110f;" target="_blank">WhatsApp Studio ↗</a>
-<a class="btn btn-neu" href="https://instagram.com/s.t.j.a.r.t.s" rel="noopener" style="color:#f4f2ec; border-color:rgba(255,255,255,0.15);" target="_blank">Instagram Folio ↗</a>
+<a class="btn btn-primary" href="https://wa.me/918978854205" rel="noopener" style="background:#f4f2ec; color:#11110f;" target="_blank">WhatsApp Surya ↗</a>
+<a class="btn btn-neu" href="https://instagram.com/s.t.j.a.r.t.s" rel="noopener" style="color:#f4f2ec; border-color:rgba(255,255,255,0.15);" target="_blank">Instagram ↗</a>
 <a class="btn btn-neu" href="mailto:jogusuryateja567@gmail.com" style="color:#f4f2ec; border-color:rgba(255,255,255,0.15);">Email Surya ↗</a>
 </div>
 <p class="mono-tag" style="font-size:11px; color:#78756e; margin-top:20px;">
-        © 2026 S.T.J.A.R.T.S. All drawings hand-crafted by Surya Teja.
+        © 2026 S.T.J.A.R.T.S. Hand-drawn portraits by Surya Teja.
       </p>
 </div>
 </footer>
@@ -2521,17 +2249,17 @@ details.admin-card[open]>summary{margin-bottom:14px}
 <!-- Media inserted dynamically -->
 </div>
 <div class="modal-content-col">
-<button type="button" aria-label="Close Preview" class="modal-close-btn" id="modalCloseBtn">✕</button>
-<div class="eyebrow" id="modalTag">Artwork Study</div>
+<button aria-label="Close Preview" class="modal-close-btn" id="modalCloseBtn">✕</button>
+<div class="eyebrow" id="modalTag">Portrait</div>
 <h2 id="modalTitle" style="font-size:36px; margin-bottom:12px;">Portrait Study</h2>
 <p id="modalDesc" style="color:var(--mut); font-size:15px; line-height:1.6; margin-bottom:24px;">
-        Commissioned portrait study crafted with artist-grade graphite pencils on 300gsm acid-free paper.
+        Hand-drawn in graphite and charcoal on 300gsm acid-free paper.
       </p>
 <div class="mono-tag" id="modalSpecs" style="font-size:12px; color:var(--mut); margin-bottom:28px;">
-        Standard A4 · Custom Teak Wood Frame
+        A4 · Custom frame
       </div>
 <a class="btn btn-primary" href="#" id="modalOrderBtn" rel="noopener" target="_blank">
-        Commission Similar Artwork ↗
+        Commission a Similar Portrait ↗
       </a>
 </div>
 </div>
@@ -2659,17 +2387,14 @@ function updatePricingView() {
 
   const waBtn = document.getElementById('startCommissionBtn');
   if (waBtn) {
-    const isWaitlist = Number(STUDIO_DATA.slots) <= 0;
-    const message = `Hi Surya! I would like to ${isWaitlist ? 'join the commission waitlist for' : 'commission'} a ${currentStyle} pencil portrait:
+    const message = `Hi Surya! I would like to commission a ${currentStyle} pencil portrait:
 • Size: ${currentSize}
 • Faces/Subjects: ${subjectCount}
-• Framing: ${isFramed ? 'Yes (Handcrafted Wood Frame)' : 'Artwork Only (Safely Rolled)'}
-• ${isWaitlist ? 'Current estimate if a slot opens' : 'Estimated Total'}: ${formatInr(total)}
+• Framing: ${isFramed ? 'Yes' : 'No'}
+• Estimated Total: ${formatInr(total)}
 
 Could we discuss photo references?`;
     waBtn.href = makeWhatsAppUrl(message);
-    waBtn.textContent = isWaitlist ? 'Join Commission Waitlist on WhatsApp ↗' : 'Send Commission Spec to Surya on WhatsApp ↗';
-    waBtn.setAttribute('aria-label', isWaitlist ? 'Join the commission waitlist on WhatsApp' : 'Send commission specifications to Surya on WhatsApp');
   }
 
   const badge = document.getElementById('styleBadge');
@@ -2677,13 +2402,13 @@ Could we discuss photo references?`;
   const desc = document.getElementById('styleDesc');
   if (badge && heading && desc) {
     if (currentStyle === 'Classic') {
-      badge.textContent = 'Classic Style';
-      heading.textContent = 'Subtle, expressive, authentic likeness.';
+      badge.textContent = 'Classic';
+      heading.textContent = 'Natural, detailed, personal.';
       desc.textContent = 'A balanced graphite study capturing genuine emotion, natural light, and clean contrast. Ideal for personal gifts, birthdays, and anniversaries.';
     } else {
-      badge.textContent = 'Signature Realism';
-      heading.textContent = 'Museum-grade hyper-detail & depth.';
-      desc.textContent = 'Intensive multi-pass graphite & velvety charcoal powder craft. Features micro-textures, specular highlights, and deep tonal richness for heirloom wall displays.';
+      badge.textContent = 'Signature';
+      heading.textContent = 'More detail. More tonal depth.';
+      desc.textContent = 'Fine skin, hair, and fabric detail with deeper contrast and a more realistic finish.';
     }
   }
 }
@@ -2709,7 +2434,7 @@ function renderBrickGallery() {
       <div class="art-preview-wrap">
         <span class="inspection-glass-tile">Archival ${escapeHtml(work.size)}</span>
         ${work.image
-          ? `<img src="${escapeHtml(work.image)}" alt="${escapeHtml(work.title)}" loading="lazy" decoding="async">`
+          ? `<img src="${work.image}" alt="${escapeHtml(work.title)}" loading="lazy" decoding="async">`
           : `<div class="art-placeholder-vector" style="font-family:var(--font-mono);font-size:10px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.12em">Portrait study<br>coming soon</div>`
         }
       </div>
@@ -2761,7 +2486,7 @@ function openArtworkModal(id) {
 
   if (mediaCol) {
     mediaCol.innerHTML = work.image
-      ? `<img src="${escapeHtml(work.image)}" alt="${escapeHtml(work.title)}" decoding="async">`
+      ? `<img src="${work.image}" alt="${escapeHtml(work.title)}" decoding="async">`
       : `<div style="padding:40px;text-align:center;color:var(--mut);font-family:var(--font-mono);font-size:10px;text-transform:uppercase">Image for this piece is coming soon.</div>`;
   }
 
@@ -2811,51 +2536,54 @@ function observeScrollReveals() {
 }
 
 function initAmbientMotion() {
-  const ambient = document.getElementById('ambientLight'), heroFrame = document.getElementById('heroFrame'),
-        nav = document.getElementById('mainNav'), progress = document.getElementById('scrollProgress');
-  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches,
-        reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let px = innerWidth / 2, py = innerHeight * .3, pending = false, sp = false, lastY = scrollY, max = 1;
-  const calcMax = () => { max = Math.max(1, document.documentElement.scrollHeight - innerHeight); };
-  const paint = () => {
-    pending = false;
-    if (ambient) ambient.style.transform = `translate3d(${px}px,${py}px,0) translate(-50%,-50%)`;
-    if (fine && !reduce && heroFrame && heroFrame.parentElement) {
-      const h = heroFrame.parentElement.getBoundingClientRect();
-      if (h.bottom > 0 && h.top < innerHeight) {
-        const dx = (px - (h.left + h.width / 2)) / 35, dy = (py - (h.top + h.height / 2)) / 35;
-        heroFrame.style.transform = `rotate3d(${-dy * .1}, ${dx * .1}, 0, 5deg) translate3d(${dx * .3}px, ${dy * .3}px, 0)`;
+  const ambient = document.getElementById('ambientLight');
+  const heroFrame = document.getElementById('heroFrame');
+
+  window.addEventListener('pointermove', (e) => {
+    if (ambient) {
+      ambient.style.left = `${e.clientX}px`;
+      ambient.style.top = `${e.clientY}px`;
+    }
+
+    if (heroFrame && e.pointerType === 'mouse' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const rect = heroFrame.getBoundingClientRect();
+      const frameCenterX = rect.left + rect.width / 2;
+      const frameCenterY = rect.top + rect.height / 2;
+      const deltaX = (e.clientX - frameCenterX) / 35;
+      const deltaY = (e.clientY - frameCenterY) / 35;
+      heroFrame.style.transform = `rotate3d(${-deltaY * 0.1}, ${deltaX * 0.1}, 0, 5deg) translate3d(${deltaX * 0.3}px, ${deltaY * 0.3}px, 0)`;
+    }
+  }, { passive: true });
+
+  let lastY = 0;
+  const nav = document.getElementById('mainNav');
+  const progress = document.getElementById('scrollProgress');
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    
+    if (progress && max > 0) {
+      progress.style.transform = `scaleX(${y / max})`;
+    }
+
+    if (nav) {
+      if (y > 40) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+
+      if (y > 180 && y - lastY > 8 && !nav.classList.contains('menu-open') && !nav.contains(document.activeElement)) {
+        nav.classList.add('nav-hidden');
+      } else if (lastY - y > 8 || y < 100) {
+        nav.classList.remove('nav-hidden');
       }
     }
-  };
-  if (fine) {
-    addEventListener('pointermove', e => {
-      if (e.pointerType !== 'mouse') return;
-      px = e.clientX; py = e.clientY;
-      if (!pending) { pending = true; requestAnimationFrame(paint); }
-    }, { passive: true });
-  } else if (ambient) ambient.style.display = 'none';
-
-  const onScroll = () => {
-    if (sp) return; sp = true;
-    requestAnimationFrame(() => {
-      sp = false;
-      const y = scrollY;
-      if (progress) progress.style.transform = `scaleX(${Math.min(1, y / max)})`;
-      if (nav) {
-        nav.classList.toggle('scrolled', y > 40);
-        if (y > 180 && y - lastY > 8 && !nav.classList.contains('menu-open') && !nav.contains(document.activeElement)) nav.classList.add('nav-hidden');
-        else if (lastY - y > 8 || y < 100) nav.classList.remove('nav-hidden');
-      }
-      lastY = y;
-    });
-  };
-  addEventListener('scroll', onScroll, { passive: true });
-  addEventListener('resize', calcMax, { passive: true });
-  addEventListener('load', calcMax);
-  if ('ResizeObserver' in window) new ResizeObserver(calcMax).observe(document.body);
-  calcMax(); onScroll();
+    lastY = y;
+  }, { passive: true });
 }
+
 function setupEventListeners() {
   document.getElementById('styleClassic')?.addEventListener('click', () => {
     currentStyle = 'Classic';
@@ -2924,11 +2652,11 @@ function setupEventListeners() {
     if (!name) return fail(nameEl, 'Please enter your name.');
     if (phone && !/^\+?[\d\s()-]{7,}$/.test(phone)) return fail(phoneEl, 'Please enter a valid phone number, or leave it blank.');
     if (!msg) return fail(msgEl, 'Please describe your portrait idea.');
-    const text = `Hi Surya! I'm ${name}${phone ? ` (${phone})` : ''}.\n\nCommission Idea: ${msg}\n\nSelected: ${currentStyle} | ${currentSize} | Faces: ${subjectCount} | Frame: ${isFramed ? 'Yes' : 'No'} | Estimate: ${formatInr(getCalculatedTotal())}`;
-    const url = makeWhatsAppUrl(text);
-    const w = window.open(url, '_blank');
-    if (w) { w.opener = null; if (st) { st.textContent = 'Opening WhatsApp with your message…'; st.className = 'form-status'; } }
-    else { location.href = url; }
+    const text = `Hi Surya! I'm ${name} ${phone ? `(${phone})` : ''}.\n\nCommission Idea: ${msg}\n\nSelected Style: ${currentStyle} | ${currentSize} | Faces: ${subjectCount}`;
+    const w = window.open(makeWhatsAppUrl(text), '_blank', 'noopener');
+    const st2 = document.getElementById('formStatus');
+    if (!w) { location.href = makeWhatsAppUrl(text); }
+    else if (st2) { st2.textContent = 'Opening WhatsApp with your message…'; st2.className = 'form-status'; }
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2945,560 +2673,222 @@ function setupEventListeners() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  loadAdminSettings();
+  setupAdmin();
   renderBrickGallery();
   renderFaqs();
   updatePricingView();
   setupEventListeners();
   initAmbientMotion();
   observeScrollReveals();
-  bootstrapProductionCMS();
 });
 
-/* PRODUCTION CLOUD CMS — Supabase Auth + Postgres + Storage */
-const STJARTS_CONFIG = window.STJARTS_CONFIG || { SUPABASE_URL: '', SUPABASE_PUBLISHABLE_KEY: '', BUCKET: 'artworks' };
-let adminMonthLabel = 'March', editingWorkId = null, editingFaqId = null, portfolioFilter = 'All', currentHeroImage = '';
-let supabaseClient = null, adminBusy = false;
-STUDIO_DATA.allWorks = STUDIO_DATA.works.map(w => ({ ...w, image: w.image || '', published: true, sort_order: w.id }));
-STUDIO_DATA.allFaqs = STUDIO_DATA.faqs.map((f, i) => ({ ...f, id: 'local' + i, published: true, sort_order: i + 1 }));
-
-const clone = v => JSON.parse(JSON.stringify(v));
-const mapWork = w => ({ id: w.id, title: w.title, cat: w.cat, size: w.size, kind: w.kind, tall: !!w.tall, desc: w.description || '', image: w.image_url || '', published: w.published !== false, sort_order: Number(w.sort_order || 0) });
-const mapFaq = f => ({ id: f.id, q: f.question, a: f.answer, published: f.published !== false, sort_order: Number(f.sort_order || 0) });
-
-function adminSnapshot() {
+/* PRIVATE FULL STUDIO CMS */
+const ADMIN_CREDENTIALS={username:'surya',password:'stjarts5678'};
+const ADMIN_STORAGE_KEY='stjarts_admin_cms_v2';
+let adminMonthLabel='March',editingWorkId=null,editingFaqId=null,pendingWorkImage='',pendingHeroImage='',portfolioFilter='All',currentHeroImage='';
+function clone(v){return JSON.parse(JSON.stringify(v));}
+function adminSnapshot(){
   return {
-    version: 5, wa: STUDIO_DATA.wa, ig: STUDIO_DATA.ig, email: STUDIO_DATA.email,
-    slots: STUDIO_DATA.slots, month: adminMonthLabel, framePrice: STUDIO_DATA.framePrice,
-    extraFacePrice: STUDIO_DATA.extraFacePrice, prices: clone(STUDIO_DATA.prices),
-    works: clone(STUDIO_DATA.allWorks), faqs: clone(STUDIO_DATA.allFaqs),
+    version: 3,
+    wa: STUDIO_DATA.wa,
+    ig: STUDIO_DATA.ig,
+    email: STUDIO_DATA.email,
+    slots: STUDIO_DATA.slots,
+    month: adminMonthLabel,
+    framePrice: STUDIO_DATA.framePrice,
+    extraFacePrice: STUDIO_DATA.extraFacePrice,
+    prices: clone(STUDIO_DATA.prices),
+    works: clone(STUDIO_DATA.works),
+    faqs: clone(STUDIO_DATA.faqs),
     slotsText: document.getElementById('slotsText')?.textContent || '',
-    copyright: document.querySelector('.editorial-footer p.mono-tag')?.textContent || '',
+    copyright: document.querySelector('.editorial-footer .mono-tag')?.textContent || '',
     heroImage: currentHeroImage || ''
   };
 }
-function setAdminStatus(message, error = false) {
-  ['adminStatus', 'heroStatus'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) { el.textContent = message; el.style.color = error ? '#a33a2a' : ''; }
-  });
+function setAdminStatus(message, error=false){
+  const el=document.getElementById('adminStatus');
+  if(el){el.textContent=message;el.style.color=error?'#a33a2a':'';}
 }
-function hasCloudConfig() { return !!(STJARTS_CONFIG.SUPABASE_URL && STJARTS_CONFIG.SUPABASE_PUBLISHABLE_KEY && window.supabase?.createClient); }
-function cloudPublicUrl(path) {
-  if (!path) return '';
-  if (/^https?:\/\//i.test(path)) return path;
-  return `${STJARTS_CONFIG.SUPABASE_URL}/storage/v1/object/public/${STJARTS_CONFIG.BUCKET}/${path}`;
-}
-/* RLS silently blocks writes (0 rows, no error). Turn that into a visible error. */
-function assertWritten(res, what) {
-  if (res.error) throw res.error;
-  if (!res.data || !res.data.length) throw new Error(`${what} was not saved. Check that supabase.sql was run and this account is in admin_users.`);
-  return res.data;
-}
-
-function setHeroImage(src) {
-  currentHeroImage = src || '';
-  const board = document.querySelector('.hero-drawing-board');
-  if (!board) return;
-  let img = document.getElementById('heroArtworkImage');
-  if (!img) {
-    img = document.createElement('img');
-    img.id = 'heroArtworkImage';
-    img.alt = 'Featured S.T.J.A.R.T.S artwork';
-    img.decoding = 'async';
-    img.style.cssText = 'position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:86%;height:78%;object-fit:contain;border-radius:18px;z-index:2;display:none;';
-    board.appendChild(img);
-  }
-  board.classList.toggle('has-image', !!src);
-  if (src) { img.src = src; img.style.display = 'block'; }
-  else { img.removeAttribute('src'); img.style.display = 'none'; }
-}
-
-async function bootstrapProductionCMS() {
-  if (!hasCloudConfig()) {
-    setAdminStatus('Cloud CMS not configured · add Supabase settings to the config block', true);
-    return;
-  }
-  try {
-    supabaseClient = window.supabase.createClient(
-      STJARTS_CONFIG.SUPABASE_URL,
-      STJARTS_CONFIG.SUPABASE_PUBLISHABLE_KEY,
-      { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false } }
-    );
-    await loadRemotePublicData();
-    supabaseClient.auth.onAuthStateChange(event => {
-      if (event === 'SIGNED_OUT') closeAdminAll();
-    });
-  } catch (err) {
-    supabaseClient = null;
-    console.error('Supabase bootstrap failed', err);
-    setAdminStatus(`Cloud CMS unavailable · ${err.message || 'check the Supabase configuration'}`, true);
-  }
-}
-
-async function loadRemotePublicData() {
-  if (!supabaseClient) return;
-  try {
-    /* RLS returns only published rows to visitors and every row to the signed-in administrator. */
-    const [s, w, f] = await Promise.all([
-      supabaseClient.from('site_settings').select('*').eq('id', 1).maybeSingle(),
-      supabaseClient.from('portfolio_works').select('*').order('sort_order', { ascending: true }).order('id', { ascending: true }),
-      supabaseClient.from('faqs').select('*').order('sort_order', { ascending: true }).order('id', { ascending: true })
-    ]);
-    if (s.error) throw s.error;
-    if (w.error) throw w.error;
-    if (f.error) throw f.error;
-    if (s.data) {
-      const x = s.data; window.STJ_ROW = x;
-      STUDIO_DATA.wa = x.wa || STUDIO_DATA.wa; STUDIO_DATA.ig = x.ig || STUDIO_DATA.ig; STUDIO_DATA.email = x.email || STUDIO_DATA.email;
-      STUDIO_DATA.slots = Number(x.slots ?? STUDIO_DATA.slots); adminMonthLabel = x.month || adminMonthLabel;
-      STUDIO_DATA.framePrice = Number(x.frame_price ?? STUDIO_DATA.framePrice); STUDIO_DATA.extraFacePrice = Number(x.extra_face_price ?? STUDIO_DATA.extraFacePrice);
-      STUDIO_DATA.prices = { Classic: x.classic_prices || STUDIO_DATA.prices.Classic, Signature: x.signature_prices || STUDIO_DATA.prices.Signature };
-      if (x.copyright) { const c = document.querySelector('.editorial-footer p.mono-tag'); if (c) c.textContent = x.copyright; }
-      const st = document.getElementById('slotsText');
-      if (st) st.textContent = x.slots_text || slotLabel(STUDIO_DATA.slots, adminMonthLabel);
-      setHeroImage(x.hero_image_url || '');
-    }
-    STUDIO_DATA.allWorks = (w.data || []).map(mapWork);
-    STUDIO_DATA.works = STUDIO_DATA.allWorks.filter(x => x.published);
-    STUDIO_DATA.allFaqs = (f.data || []).map(mapFaq);
-    STUDIO_DATA.faqs = STUDIO_DATA.allFaqs.filter(x => x.published);
-    applyPublicContactLinks(); updatePricingView(); renderBrickGallery(); renderFaqs(); refreshAdminStats();
-  } catch (err) {
-    console.error('Remote CMS load failed', err);
-    setAdminStatus(`Cloud CMS error · ${err.message || 'check configuration'}`, true);
-  }
-}
-function applyPublicContactLinks() {
-  const wa = STUDIO_DATA.wa, ig = STUDIO_DATA.ig, email = STUDIO_DATA.email;
-  document.querySelectorAll('a[href*="wa.me/"]').forEach(a => { const h = a.getAttribute('href') || ''; const q = h.includes('?') ? h.slice(h.indexOf('?')) : ''; a.setAttribute('href', `https://wa.me/${wa}${q}`); });
-  document.querySelectorAll('a[href*="instagram.com/"]').forEach(a => a.setAttribute('href', `https://instagram.com/${ig}`));
-  document.querySelectorAll('a[href^="mailto:"]').forEach(a => a.setAttribute('href', `mailto:${email}`));
-}
-
-async function requireAdmin() {
-  if (!supabaseClient) throw new Error('Cloud CMS is not configured.');
-  const { data: { user } } = await supabaseClient.auth.getUser();
-  if (!user) throw new Error('Please sign in as the studio administrator.');
-  const { data, error } = await supabaseClient.from('admin_users').select('user_id').eq('user_id', user.id).maybeSingle();
-  if (error) throw error;
-  if (!data) throw new Error('This account is not authorized for the studio CMS.');
-  return user;
-}
-async function signOutAdmin() {
-  if (supabaseClient) await supabaseClient.auth.signOut();
-  closeAdminAll();
-  await loadRemotePublicData();
-}
-async function openAdminGate() {
-  if (supabaseClient) {
-    const { data: { session } } = await supabaseClient.auth.getSession();
-    if (session && await openAdminPanel(true)) return;
-  }
-  const gate = document.getElementById('adminGate');
-  gate?.classList.add('admin-visible'); gate?.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('admin-open');
-  setTimeout(() => document.getElementById('adminUsername')?.focus(), 50);
-}
-function closeAdminAll() {
-  document.querySelectorAll('#adminGate,#adminPanel').forEach(e => { e.classList.remove('admin-visible'); e.setAttribute('aria-hidden', 'true'); });
-  document.body.classList.remove('admin-open');
-}
-async function openAdminPanel(silent = false) {
-  try {
-    await requireAdmin();
-    await loadRemotePublicData();
-    document.getElementById('adminGate')?.classList.remove('admin-visible');
-    const panel = document.getElementById('adminPanel');
-    panel?.classList.add('admin-visible'); panel?.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('admin-open');
-    populateAdmin();
+function persistAdminState(){
+  try{
+    const payload=JSON.stringify(adminSnapshot());
+    localStorage.setItem(ADMIN_STORAGE_KEY,payload);
+    setAdminStatus('Saved · '+new Date().toLocaleTimeString());
     return true;
-  } catch (err) {
-    if (!silent) { const e = document.getElementById('adminLoginError'); if (e) e.textContent = err.message || 'Access denied.'; }
-    setAdminStatus(err.message || 'Access denied.', true);
+  }catch(err){
+    console.error('CMS save failed',err);
+    setAdminStatus('Save failed · browser storage is full or blocked',true);
     return false;
   }
 }
-
-/* ---------- Images ---------- */
-function compressImage(file) {
-  return new Promise((resolve, reject) => {
-    const url = URL.createObjectURL(file);
-    const img = new Image();
-    img.onload = () => {
-      URL.revokeObjectURL(url);
-      const max = 2200, scale = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
-      const w = Math.max(1, Math.round(img.naturalWidth * scale)), h = Math.max(1, Math.round(img.naturalHeight * scale));
-      const c = document.createElement('canvas'); c.width = w; c.height = h;
-      const ctx = c.getContext('2d');
-      if (!ctx) return reject(new Error('Your browser could not prepare the image.'));
-      ctx.drawImage(img, 0, 0, w, h);
-      c.toBlob(b => b ? resolve(b) : reject(new Error('Image conversion failed')), 'image/webp', 0.88);
-    };
-    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('Image could not be read.')); };
-    img.src = url;
+function loadAdminSettings(){
+  try{
+    const raw=localStorage.getItem(ADMIN_STORAGE_KEY);
+    if(!raw)return;
+    const x=JSON.parse(raw);
+    applyAdminSnapshot(x,false);
+  }catch(e){console.warn('CMS load failed',e);}
+}
+function applyAdminSnapshot(x,save=true){
+  if(!x||typeof x!=='object')return;
+  STUDIO_DATA.wa=String(x.wa ?? STUDIO_DATA.wa).replace(/\D/g,'');
+  STUDIO_DATA.ig=String(x.ig ?? STUDIO_DATA.ig).replace(/^@/,'');
+  STUDIO_DATA.email=String(x.email ?? STUDIO_DATA.email);
+  STUDIO_DATA.slots=Math.max(0,Number(x.slots ?? STUDIO_DATA.slots)||0);
+  STUDIO_DATA.framePrice=Math.max(0,Number(x.framePrice ?? STUDIO_DATA.framePrice)||0);
+  STUDIO_DATA.extraFacePrice=Math.max(0,Number(x.extraFacePrice ?? STUDIO_DATA.extraFacePrice)||0);
+  adminMonthLabel=String(x.month||'March');
+  if(x.prices){
+    STUDIO_DATA.prices.Classic={...STUDIO_DATA.prices.Classic,...(x.prices.Classic||{})};
+    STUDIO_DATA.prices.Signature={...STUDIO_DATA.prices.Signature,...(x.prices.Signature||{})};
+  }
+  if(Array.isArray(x.works))STUDIO_DATA.works=x.works.map(w=>({...w,id:Number(w.id)||Date.now()+Math.random(),image:typeof w.image==='string'?w.image:''}));
+  if(Array.isArray(x.faqs))STUDIO_DATA.faqs=x.faqs;
+  const slot=document.getElementById('slotsText');
+  if(slot){slot.textContent=String(x.slotsText || `${STUDIO_DATA.slots} Commission Slots Open for ${adminMonthLabel}`);}
+  const foot=document.querySelector('.editorial-footer .mono-tag');
+  if(foot&&x.copyright)foot.textContent=x.copyright;
+  setHeroImage(x.heroImage||'',false);
+  applyPublicContactLinks();
+  updatePricingView();
+  renderBrickGallery();
+  renderFaqs();
+  if(save)persistAdminState();
+}
+function applyPublicContactLinks(){
+  const wa=STUDIO_DATA.wa;
+  const ig=STUDIO_DATA.ig;
+  const email=STUDIO_DATA.email;
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(a=>{
+    const existing=a.href||'';
+    const q=existing.includes('?')?existing.slice(existing.indexOf('?')):'';
+    a.href=`https://wa.me/${wa}${q}`;
   });
+  document.querySelectorAll('a[href*="instagram.com/"]').forEach(a=>{a.href=`https://instagram.com/${ig}`;});
+  document.querySelectorAll('a[href^="mailto:"]').forEach(a=>{a.href=`mailto:${email}`;});
 }
-async function uploadImage(file, folder) {
-  if (!file || !file.type.startsWith('image/')) throw new Error('Please choose an image file (JPG, PNG or WEBP).');
-  if (file.size > 25 * 1024 * 1024) throw new Error('Image is larger than 25 MB. Please choose a smaller file.');
-  const blob = await compressImage(file);
-  if (blob.size > 12 * 1024 * 1024) throw new Error('Image is still larger than 12 MB after compression.');
-  const ext = blob.type === 'image/webp' ? 'webp' : blob.type === 'image/png' ? 'png' : 'jpg';
-  const path = `${folder}/${crypto.randomUUID()}.${ext}`;
-  const { data, error } = await supabaseClient.storage.from(STJARTS_CONFIG.BUCKET).upload(path, blob, { cacheControl: '31536000', upsert: false, contentType: blob.type });
-  if (error) throw error;
-  return { path: data.path, url: cloudPublicUrl(data.path) };
+function setHeroImage(src,save=true){
+  currentHeroImage=src||'';
+  let img=document.getElementById('heroArtworkImage');
+  const board=document.querySelector('.hero-drawing-board');
+  if(!board)return;
+  if(!img){
+    img=document.createElement('img');
+    img.id='heroArtworkImage';
+    img.alt='Featured S.T.J.A.R.T.S artwork';
+    img.style.cssText='position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:86%;height:78%;object-fit:contain;border-radius:18px;z-index:2;display:none;';
+    board.appendChild(img);
+  }
+  const svg=board.querySelector('svg.pencil-sketch');board.classList.toggle('has-image',!!src);
+  if(src){img.src=src;img.style.display='block';if(svg)svg.style.display='none';}
+  else{img.removeAttribute('src');img.style.display='none';if(svg)svg.style.display='none';}
+  if(save)persistAdminState();
 }
-async function deleteStoragePath(path) {
-  if (!path || /^https?:\/\//i.test(path)) return;
-  try { await supabaseClient.storage.from(STJARTS_CONFIG.BUCKET).remove([path]); } catch (e) { console.warn('Old image cleanup failed', e); }
-}
-function pathFromUrl(url) {
-  if (!url) return '';
-  const marker = `/storage/v1/object/public/${STJARTS_CONFIG.BUCKET}/`;
-  const i = url.indexOf(marker);
-  if (i < 0) return '';
-  try { return decodeURIComponent(url.slice(i + marker.length).split('?')[0]); }
-  catch { return ''; }
-}
-
-/* ---------- Admin rendering ---------- */
-function populateAdmin() {
-  const set = (id, v) => { const e = document.getElementById(id); if (e) e.value = v ?? ''; };
-  set('adminSlots', STUDIO_DATA.slots); set('adminMonth', adminMonthLabel); set('adminWa', STUDIO_DATA.wa); set('adminIg', STUDIO_DATA.ig); set('adminEmail', STUDIO_DATA.email);
-  set('adminFramePrice', STUDIO_DATA.framePrice); set('adminExtraFacePrice', STUDIO_DATA.extraFacePrice);
-  set('adminSlotsText', document.getElementById('slotsText')?.textContent || '');
-  set('adminCopyright', document.querySelector('.editorial-footer p.mono-tag')?.textContent || '');
-  ['A6', 'A5', 'A4', 'A3', 'A2'].forEach(k => { set('price' + k, STUDIO_DATA.prices.Classic[k]); set('sig' + k, STUDIO_DATA.prices.Signature[k]); });
-  set('adminJson', JSON.stringify(adminSnapshot(), null, 2));
-  renderAdminWorks(); renderAdminFaqs(); refreshAdminStats();
-  const hp = document.getElementById('heroPreview');
-  if (hp) hp.innerHTML = currentHeroImage ? `<img src="${escapeHtml(currentHeroImage)}" alt="Current hero artwork">` : '<span>No custom hero image. The built-in hero treatment remains active.</span>';
-}
-function refreshAdminStats() {
-  const a = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
-  a('statWorks', STUDIO_DATA.allWorks.length); a('statImages', STUDIO_DATA.allWorks.filter(w => w.image).length);
-  a('statSlots', STUDIO_DATA.slots); a('statA4', formatInr(STUDIO_DATA.prices.Classic.A4));
-}
-function renderAdminWorks() {
-  const box = document.getElementById('adminWorkGrid'); if (!box) return;
-  const arr = STUDIO_DATA.allWorks.filter(w => portfolioFilter === 'All' || w.cat === portfolioFilter);
-  const canMove = portfolioFilter === 'All';
-  box.innerHTML = arr.map((w, i) => `<article class="admin-work-card${w.published ? '' : ' is-hidden'}"><div class="admin-work-media">${w.image ? `<img src="${escapeHtml(w.image)}" alt="${escapeHtml(w.title)}" loading="lazy">` : '<div class="admin-empty-media">No image uploaded</div>'}</div><div class="admin-work-info"><strong>${escapeHtml(w.title)}</strong><span>${escapeHtml(w.cat)} · ${escapeHtml(w.size)} · ${w.image ? 'Image installed' : 'Needs image'}${w.published ? '' : ' · Hidden'}</span><div class="admin-work-actions"><button class="admin-mini" data-edit-work="${w.id}">Edit</button><button class="admin-mini" data-image-work="${w.id}">Replace Image</button><button class="admin-mini" data-toggle-work="${w.id}">${w.published ? 'Hide' : 'Show'}</button>${canMove ? `<button class="admin-mini" data-move-work="${w.id}" data-dir="-1" aria-label="Move earlier"${i === 0 ? ' disabled' : ''}>↑</button><button class="admin-mini" data-move-work="${w.id}" data-dir="1" aria-label="Move later"${i === arr.length - 1 ? ' disabled' : ''}>↓</button>` : ''}<button class="admin-mini danger" data-delete-work="${w.id}">Delete</button></div></div></article>`).join('') || '<div class="admin-empty-media">No portfolio pieces in this filter.</div>';
-  box.querySelectorAll('[data-edit-work]').forEach(b => b.onclick = () => openWorkEditor(b.dataset.editWork));
-  box.querySelectorAll('[data-image-work]').forEach(b => b.onclick = () => { openWorkEditor(b.dataset.imageWork); setTimeout(() => document.getElementById('workImage')?.click(), 50); });
-  box.querySelectorAll('[data-toggle-work]').forEach(b => b.onclick = () => toggleWork(b.dataset.toggleWork));
-  box.querySelectorAll('[data-move-work]').forEach(b => b.onclick = () => moveRow('portfolio_works', STUDIO_DATA.allWorks, b.dataset.moveWork, Number(b.dataset.dir)));
-  box.querySelectorAll('[data-delete-work]').forEach(b => b.onclick = () => deleteWork(b.dataset.deleteWork));
-}
-function findWork(id) { return STUDIO_DATA.allWorks.find(x => String(x.id) === String(id)); }
-function openWorkEditor(id = null) {
-  editingWorkId = id;
-  const w = id ? findWork(id) : { title: '', cat: 'Portraits', size: 'A4', kind: 'Commission', desc: '', tall: false, image: '', published: true };
-  const $ = i => document.getElementById(i);
-  $('workEditor').style.display = 'block';
-  $('workEditorTitle').textContent = id ? 'Edit artwork' : 'Add artwork';
-  $('workTitle').value = w.title || ''; $('workCat').value = w.cat || 'Portraits'; $('workSize').value = w.size || 'A4';
-  $('workKind').value = w.kind || 'Commission'; $('workDesc').value = w.desc || ''; $('workPublished').value = w.published === false ? 'no' : 'yes';
-  $('workImage').value = '';
-  $('workPreview').innerHTML = w.image ? `<img src="${escapeHtml(w.image)}" alt="">` : '<span>No artwork image selected.</span>';
-  $('workEditor').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-async function saveWork() {
-  if (adminBusy) return; adminBusy = true;
-  const btn = document.getElementById('saveWorkBtn'); if (btn) btn.disabled = true;
-  let uploadedPath = '';
-  try {
-    await requireAdmin();
-    const title = document.getElementById('workTitle').value.trim();
-    if (!title) throw new Error('Artwork title is required.');
-    const existing = editingWorkId ? findWork(editingWorkId) : null;
-    let imageUrl = existing?.image || '', imagePath = pathFromUrl(imageUrl);
-    const oldImagePath = imagePath;
-    const file = document.getElementById('workImage')?.files?.[0];
-    if (file) {
-      setAdminStatus('Uploading artwork…');
-      const up = await uploadImage(file, 'portfolio');
-      uploadedPath = up.path;
-      imageUrl = up.url;
-      imagePath = up.path;
-    }
-    const payload = {
-      title, cat: document.getElementById('workCat').value, size: document.getElementById('workSize').value,
-      kind: document.getElementById('workKind').value.trim() || 'Commission', description: document.getElementById('workDesc').value.trim(),
-      tall: existing ? !!existing.tall : STUDIO_DATA.allWorks.length % 2 === 0, image_url: imageUrl, image_path: imagePath,
-      published: document.getElementById('workPublished').value !== 'no'
+function readImage(file,cb){
+  if(!file)return;
+  if(!file.type.startsWith('image/')){setAdminStatus('Please choose an image file',true);return;}
+  const r=new FileReader();
+  r.onload=()=>{
+    const img=new Image();
+    img.onload=()=>{
+      const max=1400;
+      const scale=Math.min(1,max/Math.max(img.naturalWidth,img.naturalHeight));
+      const w=Math.max(1,Math.round(img.naturalWidth*scale));
+      const h=Math.max(1,Math.round(img.naturalHeight*scale));
+      const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;
+      const ctx=canvas.getContext('2d');ctx.drawImage(img,0,0,w,h);
+      cb(canvas.toDataURL('image/jpeg',0.8));
     };
-    let res;
-    if (existing) res = await supabaseClient.from('portfolio_works').update(payload).eq('id', existing.id).select('id');
-    else {
-      payload.sort_order = STUDIO_DATA.allWorks.reduce((m, w) => Math.max(m, w.sort_order || 0), 0) + 1;
-      res = await supabaseClient.from('portfolio_works').insert(payload).select('id');
-    }
-    assertWritten(res, 'Artwork');
-    uploadedPath = '';
-    if (file && existing && oldImagePath && oldImagePath !== imagePath) await deleteStoragePath(oldImagePath);
-    await loadRemotePublicData();
-    document.getElementById('workEditor').style.display = 'none'; document.getElementById('workImage').value = '';
-    renderAdminWorks();
-    setAdminStatus('Artwork saved to cloud · all devices updated');
-  } catch (err) {
-    if (uploadedPath) await deleteStoragePath(uploadedPath);
-    console.error(err);
-    setAdminStatus(err.message || 'Artwork save failed', true);
-  } finally { adminBusy = false; if (btn) btn.disabled = false; }
+    img.onerror=()=>setAdminStatus('Image could not be processed',true);
+    img.src=String(r.result);
+  };
+  r.onerror=()=>setAdminStatus('Image could not be read',true);
+  r.readAsDataURL(file);
 }
-async function toggleWork(id) {
-  try {
-    await requireAdmin(); const w = findWork(id); if (!w) return;
-    assertWritten(await supabaseClient.from('portfolio_works').update({ published: !w.published }).eq('id', w.id).select('id'), 'Visibility change');
-    await loadRemotePublicData(); renderAdminWorks(); setAdminStatus(w.published ? 'Artwork hidden from the public site' : 'Artwork is now public');
-  } catch (err) { setAdminStatus(err.message || 'Update failed', true); }
+function populateAdmin(){
+  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.value=v??'';};
+  set('adminSlots',STUDIO_DATA.slots);set('adminMonth',adminMonthLabel);set('adminWa',STUDIO_DATA.wa);set('adminIg',STUDIO_DATA.ig);set('adminEmail',STUDIO_DATA.email);
+  set('adminFramePrice',STUDIO_DATA.framePrice);set('adminExtraFacePrice',STUDIO_DATA.extraFacePrice);
+  set('adminSlotsText',document.getElementById('slotsText')?.textContent||'');set('adminCopyright',document.querySelector('.editorial-footer .mono-tag')?.textContent||'');
+  ['A6','A5','A4','A3','A2'].forEach(k=>{set('price'+k,STUDIO_DATA.prices.Classic[k]);set('sig'+k,STUDIO_DATA.prices.Signature[k]);});
+  set('adminJson',JSON.stringify(adminSnapshot(),null,2));
+  renderAdminWorks();renderAdminFaqs();refreshAdminStats();
+  const hp=document.getElementById('heroPreview');
+  if(hp)hp.innerHTML=currentHeroImage?`<img src="${currentHeroImage}" alt="Current hero artwork">`:'<span>No custom hero image. The built-in hero treatment remains hidden until you upload a real image.</span>';
 }
-async function deleteWork(id) {
-  if (!confirm('Delete this portfolio item permanently?')) return;
-  try {
-    await requireAdmin(); const w = findWork(id);
-    assertWritten(await supabaseClient.from('portfolio_works').delete().eq('id', id).select('id'), 'Deletion');
-    if (w?.image) await deleteStoragePath(pathFromUrl(w.image));
-    await loadRemotePublicData(); renderAdminWorks(); setAdminStatus('Artwork deleted from cloud');
-  } catch (err) { setAdminStatus(err.message || 'Delete failed', true); }
+function refreshAdminStats(){
+  const n=STUDIO_DATA.works.length,i=STUDIO_DATA.works.filter(w=>w.image).length;
+  document.getElementById('statWorks').textContent=n;document.getElementById('statImages').textContent=i;document.getElementById('statSlots').textContent=STUDIO_DATA.slots;document.getElementById('statA4').textContent=formatInr(STUDIO_DATA.prices.Classic.A4);
 }
-/* Swap a row with its neighbour and renumber sort_order so ties can never break ordering. */
-async function moveRow(table, list, id, dir) {
-  if (adminBusy) return; adminBusy = true;
-  try {
-    await requireAdmin();
-    const arr = [...list], i = arr.findIndex(x => String(x.id) === String(id)), j = i + dir;
-    if (i < 0 || j < 0 || j >= arr.length) return;
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-    const changes = arr.map((x, k) => ({ id: x.id, order: k + 1, old: x.sort_order })).filter(x => x.order !== x.old);
-    const results = await Promise.all(changes.map(c => supabaseClient.from(table).update({ sort_order: c.order }).eq('id', c.id).select('id')));
-    results.forEach(r => assertWritten(r, 'Reorder'));
-    await loadRemotePublicData(); renderAdminWorks(); renderAdminFaqs(); setAdminStatus('Order saved');
-  } catch (err) { setAdminStatus(err.message || 'Reorder failed', true); }
-  finally { adminBusy = false; }
+function renderAdminWorks(){
+  const box=document.getElementById('adminWorkGrid');if(!box)return;
+  const arr=STUDIO_DATA.works.filter(w=>portfolioFilter==='All'||w.cat===portfolioFilter);
+  box.innerHTML=arr.map(w=>`<article class="admin-work-card"><div class="admin-work-media">${w.image?`<img src="${w.image}" alt="${escapeHtml(w.title)}">`:'<div class="admin-empty-media">No real image uploaded</div>'}</div><div class="admin-work-info"><strong>${escapeHtml(w.title)}</strong><span>${escapeHtml(w.cat)} · ${escapeHtml(w.size)} · ${w.image?'Image installed':'Needs image'}</span><div class="admin-work-actions"><button class="admin-mini" data-edit-work="${w.id}">Edit</button><button class="admin-mini" data-image-work="${w.id}">Replace Image</button><button class="admin-mini danger" data-delete-work="${w.id}">Delete</button></div></div></article>`).join('')||'<div class="admin-empty-media">No portfolio pieces in this filter.</div>';
+  box.querySelectorAll('[data-edit-work]').forEach(b=>b.onclick=()=>openWorkEditor(Number(b.dataset.editWork)));
+  box.querySelectorAll('[data-image-work]').forEach(b=>b.onclick=()=>{openWorkEditor(Number(b.dataset.imageWork));setTimeout(()=>document.getElementById('workImage')?.click(),50);});
+  box.querySelectorAll('[data-delete-work]').forEach(b=>b.onclick=()=>{const id=Number(b.dataset.deleteWork);if(confirm('Delete this portfolio item?')){STUDIO_DATA.works=STUDIO_DATA.works.filter(w=>Number(w.id)!==id);persistAdminState();renderAdminWorks();renderBrickGallery();refreshAdminStats();}});
 }
-
-/* ---------- Hero ---------- */
-async function saveHeroCloud() {
-  if (adminBusy) return; adminBusy = true;
-  try {
-    await requireAdmin();
-    const file = document.getElementById('heroImage')?.files?.[0];
-    if (!file) throw new Error('Choose a hero image first.');
-    setAdminStatus('Uploading hero artwork…');
-    const up = await uploadImage(file, 'hero'); const oldPath = pathFromUrl(currentHeroImage);
-    const res = await supabaseClient.from('site_settings').update({ hero_image_url: up.url, hero_image_path: up.path }).eq('id', 1).select('id');
-    try { assertWritten(res, 'Hero image'); } catch (e) { await deleteStoragePath(up.path); throw e; }
-    if (oldPath) await deleteStoragePath(oldPath);
-    setHeroImage(up.url); document.getElementById('heroImage').value = ''; populateAdmin();
-    setAdminStatus('Hero image saved to cloud · all devices updated');
-  } catch (err) { setAdminStatus(err.message || 'Hero upload failed', true); }
-  finally { adminBusy = false; }
+function openWorkEditor(id=null){
+  editingWorkId=id;
+  pendingWorkImage=id?(STUDIO_DATA.works.find(w=>Number(w.id)===id)?.image||''):'';
+  const w=id?STUDIO_DATA.works.find(x=>Number(x.id)===id):{title:'',cat:'Portraits',size:'A4',kind:'Commission',desc:'',tall:false,image:''};
+  document.getElementById('workEditor').style.display='block';document.getElementById('workEditorTitle').textContent=id?'Edit artwork':'Add artwork';
+  document.getElementById('workTitle').value=w.title||'';document.getElementById('workCat').value=w.cat||'Portraits';document.getElementById('workSize').value=w.size||'A4';document.getElementById('workKind').value=w.kind||'Commission';document.getElementById('workDesc').value=w.desc||'';
+  document.getElementById('workPreview').innerHTML=w.image?`<img src="${w.image}" alt="">`:'<span>No artwork image selected.</span>';
+  document.getElementById('workEditor').scrollIntoView({behavior:'smooth',block:'start'});
 }
-async function removeHeroCloud() {
-  try {
-    await requireAdmin(); const old = pathFromUrl(currentHeroImage);
-    assertWritten(await supabaseClient.from('site_settings').update({ hero_image_url: '', hero_image_path: '' }).eq('id', 1).select('id'), 'Hero removal');
-    if (old) await deleteStoragePath(old);
-    setHeroImage(''); populateAdmin(); setAdminStatus('Hero image removed from cloud');
-  } catch (err) { setAdminStatus(err.message || 'Hero removal failed', true); }
+function saveWork(){
+  const title=document.getElementById('workTitle').value.trim();if(!title){alert('Artwork title is required.');return;}
+  const data={title,cat:document.getElementById('workCat').value,size:document.getElementById('workSize').value,kind:document.getElementById('workKind').value.trim()||'Commission',desc:document.getElementById('workDesc').value.trim(),tall:editingWorkId?!!STUDIO_DATA.works.find(x=>Number(x.id)===Number(editingWorkId))?.tall:STUDIO_DATA.works.length%2===0,image:pendingWorkImage||''};
+  if(editingWorkId){const w=STUDIO_DATA.works.find(x=>Number(x.id)===Number(editingWorkId));if(w)Object.assign(w,data);}else{data.id=Date.now();STUDIO_DATA.works.push(data);}
+  persistAdminState();renderAdminWorks();renderBrickGallery();refreshAdminStats();document.getElementById('workEditor').style.display='none';
 }
-
-/* ---------- Settings ---------- */
-function collectAdminFields() {
-  const x = adminSnapshot(), $ = id => document.getElementById(id);
-  x.wa = $('adminWa').value.trim().replace(/\D/g, '');
-  x.ig = $('adminIg').value.trim().replace(/^@/, '').replace(/^https?:\/\/(www\.)?instagram\.com\//i, '').replace(/\/.*$/, '');
-  x.email = $('adminEmail').value.trim();
-  x.slots = Math.max(0, Math.floor(Number($('adminSlots').value) || 0));
-  x.month = $('adminMonth').value.trim() || 'March';
-  x.framePrice = Math.max(0, Number($('adminFramePrice').value) || 0);
-  x.extraFacePrice = Math.max(0, Number($('adminExtraFacePrice').value) || 0);
-  const typed = $('adminSlotsText').value.trim(), current = $('slotsText')?.textContent?.trim() || '';
-  const auto = slotLabel(x.slots, x.month);
-  x.slotsText = (!typed || typed === current || /^\d+\s+Commission Slots?\s+Open for /i.test(typed) || /^Books Full/i.test(typed)) ? auto : typed;
-  x.copyright = $('adminCopyright').value.trim();
-  ['A6', 'A5', 'A4', 'A3', 'A2'].forEach(k => {
-    x.prices.Classic[k] = Math.max(0, Number($('price' + k).value) || 0);
-    x.prices.Signature[k] = Math.max(0, Number($('sig' + k).value) || 0);
-  });
+function renderAdminFaqs(){
+  const box=document.getElementById('adminFaqList');if(!box)return;
+  box.innerHTML=STUDIO_DATA.faqs.map((f,i)=>`<div class="admin-card" style="margin-bottom:10px"><div class="admin-row"><div><strong>${escapeHtml(f.q)}</strong><p style="margin:6px 0;color:var(--mut);font-size:12px">${escapeHtml(f.a)}</p></div><div class="admin-actions" style="justify-content:flex-end;margin-top:0"><button class="admin-mini" data-edit-faq="${i}">Edit</button><button class="admin-mini danger" data-delete-faq="${i}">Delete</button></div></div></div>`).join('');
+  box.querySelectorAll('[data-edit-faq]').forEach(b=>b.onclick=()=>openFaqEditor(Number(b.dataset.editFaq)));
+  box.querySelectorAll('[data-delete-faq]').forEach(b=>b.onclick=()=>{STUDIO_DATA.faqs.splice(Number(b.dataset.deleteFaq),1);persistAdminState();renderAdminFaqs();renderFaqs();});
+}
+function openFaqEditor(i=null){
+  const q=i==null?prompt('Question:'):STUDIO_DATA.faqs[i]?.q;if(q===null||q===undefined)return;
+  const a=i==null?prompt('Answer:'):STUDIO_DATA.faqs[i]?.a;if(a===null||a===undefined)return;
+  if(i==null)STUDIO_DATA.faqs.push({q,a});else STUDIO_DATA.faqs[i]={q,a};persistAdminState();renderAdminFaqs();renderFaqs();
+}
+function collectAdminFields(){
+  const x=adminSnapshot();
+  x.wa=document.getElementById('adminWa').value.trim().replace(/\D/g,'');x.ig=document.getElementById('adminIg').value.trim().replace(/^@/,'');x.email=document.getElementById('adminEmail').value.trim();
+  x.slots=Math.max(0,Number(document.getElementById('adminSlots').value)||0);x.month=document.getElementById('adminMonth').value.trim()||'March';x.framePrice=Math.max(0,Number(document.getElementById('adminFramePrice').value)||0);x.extraFacePrice=Math.max(0,Number(document.getElementById('adminExtraFacePrice').value)||0);
+  {const typed=document.getElementById('adminSlotsText').value.trim(),shown=document.getElementById('slotsText')?.textContent||'',auto=slotLabel(x.slots,x.month);x.slotsText=(!typed||(typed===shown&&(x.slots!==STUDIO_DATA.slots||x.month!==adminMonthLabel)))?auto:typed;}x.copyright=document.getElementById('adminCopyright').value.trim();
+  ['A6','A5','A4','A3','A2'].forEach(k=>{x.prices.Classic[k]=Math.max(0,Number(document.getElementById('price'+k).value)||0);x.prices.Signature[k]=Math.max(0,Number(document.getElementById('sig'+k).value)||0);});
   return x;
 }
-async function saveAllAdmin() {
-  if (adminBusy) return; adminBusy = true;
-  const btn = document.getElementById('adminSaveBtn'); if (btn) btn.disabled = true;
-  try {
-    await requireAdmin();
-    const x = collectAdminFields();
-    if (x.wa.length < 8) throw new Error('Enter the WhatsApp number with country code, digits only (e.g. 918978854205).');
-    if (!/^\S+@\S+\.\S+$/.test(x.email)) throw new Error('Enter a valid email address.');
-    if (!x.ig) throw new Error('Enter the Instagram handle.');
-    const res = await supabaseClient.from('site_settings').update({
-      wa: x.wa, ig: x.ig, email: x.email, slots: x.slots, month: x.month, frame_price: x.framePrice, extra_face_price: x.extraFacePrice,
-      classic_prices: x.prices.Classic, signature_prices: x.prices.Signature, slots_text: x.slotsText, copyright: x.copyright
-    }).eq('id', 1).select('id');
-    assertWritten(res, 'Site settings');
-    await loadRemotePublicData(); populateAdmin();
-    setAdminStatus('All site settings saved to cloud · all devices updated');
-  } catch (err) { setAdminStatus(err.message || 'Save failed', true); }
-  finally { adminBusy = false; if (btn) btn.disabled = false; }
+function saveAllAdmin(){
+  const x=collectAdminFields();
+  applyAdminSnapshot(x,false);
+  if(persistAdminState()){populateAdmin();setAdminStatus('All changes saved · public site updated');}
+}
+function openAdminGate(){if(sessionStorage.getItem('stjarts_admin_auth')==='1'){document.body.classList.add('admin-open');openAdminPanel();return;}document.getElementById('adminGate').classList.add('admin-visible');document.getElementById('adminGate').setAttribute('aria-hidden','false');document.body.classList.add('admin-open');setTimeout(()=>document.getElementById('adminUsername')?.focus(),50);}
+function closeAdminAll(){document.querySelectorAll('#adminGate,#adminPanel').forEach(e=>{e.classList.remove('admin-visible');e.setAttribute('aria-hidden','true');});document.body.classList.remove('admin-open');}
+function openAdminPanel(){document.getElementById('adminGate').classList.remove('admin-visible');document.getElementById('adminPanel').classList.add('admin-visible');document.getElementById('adminPanel').setAttribute('aria-hidden','false');populateAdmin();}
+function setupAdmin(){
+  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.shiftKey&&e.key.toLowerCase()==='a'){e.preventDefault();openAdminGate();}if(e.key==='Escape'&&(document.getElementById('adminGate').classList.contains('admin-visible')||document.getElementById('adminPanel').classList.contains('admin-visible')))closeAdminAll();});
+  document.getElementById('adminLoginForm')?.addEventListener('submit',e=>{e.preventDefault();const ok=document.getElementById('adminUsername').value.trim()===ADMIN_CREDENTIALS.username&&document.getElementById('adminPassword').value===ADMIN_CREDENTIALS.password;if(ok){sessionStorage.setItem('stjarts_admin_auth','1');document.getElementById('adminLoginError').textContent='';openAdminPanel();}else document.getElementById('adminLoginError').textContent='Invalid administrator credentials.';});
+  document.getElementById('adminCloseBtn')?.addEventListener('click',()=>{sessionStorage.removeItem('stjarts_admin_auth');closeAdminAll();});document.getElementById('adminSaveBtn')?.addEventListener('click',saveAllAdmin);document.getElementById('adminPreviewBtn')?.addEventListener('click',closeAdminAll);
+  document.getElementById('adminNav')?.addEventListener('click',e=>{const b=e.target.closest('button[data-view]');if(!b)return;document.querySelectorAll('.admin-nav button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.admin-view').forEach(x=>x.classList.toggle('active',x.dataset.view===b.dataset.view));});
+  document.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>document.querySelector(`.admin-nav button[data-view="${b.dataset.jump}"]`)?.click());
+  document.getElementById('newWorkBtn')?.addEventListener('click',()=>openWorkEditor());document.getElementById('cancelWorkBtn')?.addEventListener('click',()=>document.getElementById('workEditor').style.display='none');document.getElementById('saveWorkBtn')?.addEventListener('click',saveWork);
+  document.getElementById('workImage')?.addEventListener('change',e=>readImage(e.target.files[0],src=>{pendingWorkImage=src;document.getElementById('workPreview').innerHTML=`<img src="${src}" alt="">`;setAdminStatus('Image staged · press Save Artwork');}));
+  document.getElementById('heroImage')?.addEventListener('change',e=>readImage(e.target.files[0],src=>{pendingHeroImage=src;document.getElementById('heroPreview').innerHTML=`<img src="${src}" alt="">`;setAdminStatus('Hero image staged · press Use This Hero Image');}));
+  document.getElementById('saveHeroBtn')?.addEventListener('click',()=>{if(!pendingHeroImage){setAdminStatus('Choose a hero image first',true);return;}setHeroImage(pendingHeroImage,false);persistAdminState();populateAdmin();});
+  document.getElementById('removeHeroBtn')?.addEventListener('click',()=>{pendingHeroImage='';setHeroImage('',false);persistAdminState();populateAdmin();});
+  document.getElementById('portfolioFilters')?.addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;portfolioFilter=b.dataset.filter;document.querySelectorAll('#portfolioFilters .admin-tab').forEach(x=>x.classList.toggle('active',x===b));renderAdminWorks();});
+  document.getElementById('newFaqBtn')?.addEventListener('click',()=>openFaqEditor());
+  document.getElementById('adminExportBtn')?.addEventListener('click',()=>{document.getElementById('adminJson').value=JSON.stringify(adminSnapshot(),null,2);setAdminStatus('Full backup prepared');});
+  document.getElementById('adminImportBtn')?.addEventListener('click',()=>{try{const x=JSON.parse(document.getElementById('adminJson').value);applyAdminSnapshot(x,true);populateAdmin();setAdminStatus('Backup imported and saved');}catch(e){setAdminStatus('Invalid backup JSON',true);}});
+  document.getElementById('adminResetBtn')?.addEventListener('click',()=>{if(confirm('Reset every saved admin change and restore the original site data?')){localStorage.removeItem(ADMIN_STORAGE_KEY);location.reload();}});
 }
 
-/* ---------- FAQ ---------- */
-function renderAdminFaqs() {
-  const box = document.getElementById('adminFaqList'); if (!box) return;
-  const arr = STUDIO_DATA.allFaqs;
-  box.innerHTML = arr.map((f, i) => `<div class="admin-card${f.published ? '' : ' is-hidden'}" style="margin-bottom:10px"><div class="admin-row"><div><strong>${escapeHtml(f.q)}</strong>${f.published ? '' : ' <em style="color:var(--mut)">(hidden)</em>'}<p style="margin:6px 0;color:var(--mut);font-size:12px">${escapeHtml(f.a)}</p></div><div class="admin-actions" style="justify-content:flex-end;margin-top:0"><button class="admin-mini" data-edit-faq="${f.id}">Edit</button><button class="admin-mini" data-toggle-faq="${f.id}">${f.published ? 'Hide' : 'Show'}</button><button class="admin-mini" data-move-faq="${f.id}" data-dir="-1" aria-label="Move up"${i === 0 ? ' disabled' : ''}>↑</button><button class="admin-mini" data-move-faq="${f.id}" data-dir="1" aria-label="Move down"${i === arr.length - 1 ? ' disabled' : ''}>↓</button><button class="admin-mini danger" data-delete-faq="${f.id}">Delete</button></div></div></div>`).join('') || '<div class="admin-empty-media">No questions yet. Add one with “+ New Question”.</div>';
-  box.querySelectorAll('[data-edit-faq]').forEach(b => b.onclick = () => openFaqEditor(b.dataset.editFaq));
-  box.querySelectorAll('[data-toggle-faq]').forEach(b => b.onclick = () => toggleFaq(b.dataset.toggleFaq));
-  box.querySelectorAll('[data-move-faq]').forEach(b => b.onclick = () => moveRow('faqs', STUDIO_DATA.allFaqs, b.dataset.moveFaq, Number(b.dataset.dir)));
-  box.querySelectorAll('[data-delete-faq]').forEach(b => b.onclick = () => deleteFaq(b.dataset.deleteFaq));
-}
-const findFaq = id => STUDIO_DATA.allFaqs.find(x => String(x.id) === String(id));
-function openFaqEditor(id = null) {
-  editingFaqId = id; const f = id ? findFaq(id) : null;
-  document.getElementById('faqEditor').style.display = 'block';
-  document.getElementById('faqEditorTitle').textContent = f ? 'Edit question' : 'New question';
-  document.getElementById('faqQuestion').value = f?.q || ''; document.getElementById('faqAnswer').value = f?.a || '';
-  document.getElementById('faqEditor').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  document.getElementById('faqQuestion').focus({ preventScroll: true });
-}
-async function saveFaq() {
-  if (adminBusy) return; adminBusy = true;
-  try {
-    await requireAdmin();
-    const question = document.getElementById('faqQuestion').value.trim(), answer = document.getElementById('faqAnswer').value.trim();
-    if (!question || !answer) throw new Error('Both a question and an answer are required.');
-    const existing = editingFaqId ? findFaq(editingFaqId) : null; let res;
-    if (existing) res = await supabaseClient.from('faqs').update({ question, answer }).eq('id', existing.id).select('id');
-    else res = await supabaseClient.from('faqs').insert({ question, answer, published: true, sort_order: STUDIO_DATA.allFaqs.reduce((m, f) => Math.max(m, f.sort_order || 0), 0) + 1 }).select('id');
-    assertWritten(res, 'FAQ');
-    document.getElementById('faqEditor').style.display = 'none'; editingFaqId = null;
-    await loadRemotePublicData(); renderAdminFaqs(); setAdminStatus('FAQ saved to cloud');
-  } catch (err) { setAdminStatus(err.message || 'FAQ save failed', true); }
-  finally { adminBusy = false; }
-}
-async function toggleFaq(id) {
-  try {
-    await requireAdmin(); const f = findFaq(id); if (!f) return;
-    assertWritten(await supabaseClient.from('faqs').update({ published: !f.published }).eq('id', f.id).select('id'), 'FAQ visibility');
-    await loadRemotePublicData(); renderAdminFaqs(); setAdminStatus(f.published ? 'FAQ hidden' : 'FAQ is now public');
-  } catch (err) { setAdminStatus(err.message || 'Update failed', true); }
-}
-async function deleteFaq(id) {
-  if (!confirm('Delete this FAQ permanently?')) return;
-  try {
-    await requireAdmin();
-    assertWritten(await supabaseClient.from('faqs').delete().eq('id', id).select('id'), 'Deletion');
-    await loadRemotePublicData(); renderAdminFaqs(); setAdminStatus('FAQ deleted from cloud');
-  } catch (err) { setAdminStatus(err.message || 'FAQ delete failed', true); }
-}
-
-/* ---------- Backup ---------- */
-function downloadBackup() {
-  const json = JSON.stringify(adminSnapshot(), null, 2);
-  document.getElementById('adminJson').value = json;
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
-  a.download = `stjarts-backup-${new Date().toISOString().slice(0, 10)}.json`;
-  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-  setAdminStatus('Backup downloaded');
-}
-async function importBackup() {
-  if (adminBusy) return;
-  let data;
-  try { data = JSON.parse(document.getElementById('adminJson').value); } catch { setAdminStatus('The backup JSON is not valid.', true); return; }
-  if (!data || typeof data !== 'object' || !data.prices?.Classic || !Array.isArray(data.works) || !Array.isArray(data.faqs)) { setAdminStatus('This does not look like an S.T.J.A.R.T.S backup.', true); return; }
-  if (!confirm('Restore this backup? Settings are overwritten and portfolio/FAQ entries in the backup are restored or updated. Image URLs are restored as references; image files are not copied. Entries not in the backup are kept.')) return;
-  adminBusy = true;
-  try {
-    await requireAdmin();
-    assertWritten(await supabaseClient.from('site_settings').update({
-      wa: String(data.wa || STUDIO_DATA.wa), ig: String(data.ig || STUDIO_DATA.ig), email: String(data.email || STUDIO_DATA.email),
-      slots: Number(data.slots) || 0, month: String(data.month || 'March'), frame_price: Number(data.framePrice) || 0, extra_face_price: Number(data.extraFacePrice) || 0,
-      classic_prices: data.prices.Classic, signature_prices: data.prices.Signature || STUDIO_DATA.prices.Signature,
-      slots_text: String(data.slotsText || ''), copyright: String(data.copyright || ''),
-      hero_image_url: String(data.heroImage || ''), hero_image_path: pathFromUrl(String(data.heroImage || ''))
-    }).eq('id', 1).select('id'), 'Settings');
-    if (data.works.length) assertWritten(await supabaseClient.from('portfolio_works').upsert(data.works.map(w => ({
-      id: w.id, title: String(w.title || 'Untitled'), cat: String(w.cat || 'Portraits'), size: String(w.size || 'A4'), kind: String(w.kind || 'Commission'),
-      description: String(w.desc || ''), tall: !!w.tall, image_url: String(w.image || ''), image_path: pathFromUrl(String(w.image || '')),
-      published: w.published !== false, sort_order: Number(w.sort_order) || 0
-    })), { onConflict: 'id' }).select('id'), 'Portfolio');
-    if (data.faqs.length) assertWritten(await supabaseClient.from('faqs').upsert(data.faqs.filter(f => typeof f.id === 'number').map(f => ({
-      id: f.id, question: String(f.q || ''), answer: String(f.a || ''), published: f.published !== false, sort_order: Number(f.sort_order) || 0
-    })), { onConflict: 'id' }).select('id'), 'FAQs');
-    await loadRemotePublicData(); populateAdmin(); setAdminStatus('Backup restored to cloud');
-  } catch (err) { setAdminStatus(err.message || 'Restore failed', true); }
-  finally { adminBusy = false; }
-}
-
-/* ---------- Wiring ---------- */
-function setupAdmin() {
-  const $ = id => document.getElementById(id);
-  $('adminLoginForm')?.addEventListener('submit', async e => {
-    e.preventDefault();
-    const err = $('adminLoginError');
-    if (!supabaseClient) { err.textContent = 'Cloud CMS is not configured.'; return; }
-    const btn = e.target.querySelector('button[type=submit]'); btn.disabled = true;
-    try {
-      err.textContent = 'Signing in…';
-      const { error } = await supabaseClient.auth.signInWithPassword({ email: $('adminUsername').value.trim(), password: $('adminPassword').value });
-      if (error) throw error;
-      if (await openAdminPanel()) { err.textContent = ''; $('adminPassword').value = ''; }
-      else await supabaseClient.auth.signOut();
-    } catch (x) { err.textContent = x.message || 'Sign-in failed.'; }
-    finally { btn.disabled = false; }
-  });
-  $('adminCloseBtn')?.addEventListener('click', signOutAdmin);
-  $('adminSaveBtn')?.addEventListener('click', saveAllAdmin);
-  $('adminPreviewBtn')?.addEventListener('click', closeAdminAll);
-  $('adminNav')?.addEventListener('click', e => {
-    const b = e.target.closest('button[data-view]'); if (!b) return;
-    document.querySelectorAll('.admin-nav button').forEach(x => x.classList.toggle('active', x === b));
-    document.querySelectorAll('.admin-view').forEach(x => x.classList.toggle('active', x.dataset.view === b.dataset.view));
-  });
-  document.querySelectorAll('[data-jump]').forEach(b => b.onclick = () => document.querySelector(`.admin-nav button[data-view="${b.dataset.jump}"]`)?.click());
-  $('newWorkBtn')?.addEventListener('click', () => openWorkEditor());
-  $('cancelWorkBtn')?.addEventListener('click', () => $('workEditor').style.display = 'none');
-  $('saveWorkBtn')?.addEventListener('click', saveWork);
-  $('saveHeroBtn')?.addEventListener('click', saveHeroCloud);
-  $('removeHeroBtn')?.addEventListener('click', removeHeroCloud);
-  $('portfolioFilters')?.addEventListener('click', e => {
-    const b = e.target.closest('[data-filter]'); if (!b) return;
-    portfolioFilter = b.dataset.filter;
-    document.querySelectorAll('#portfolioFilters .admin-tab').forEach(x => x.classList.toggle('active', x === b));
-    renderAdminWorks();
-  });
-  $('newFaqBtn')?.addEventListener('click', () => openFaqEditor());
-  $('saveFaqBtn')?.addEventListener('click', saveFaq);
-  $('cancelFaqBtn')?.addEventListener('click', () => $('faqEditor').style.display = 'none');
-  $('adminExportBtn')?.addEventListener('click', () => { $('adminJson').value = JSON.stringify(adminSnapshot(), null, 2); setAdminStatus('Cloud snapshot prepared.'); });
-  $('adminDownloadBtn')?.addEventListener('click', downloadBackup);
-  $('adminImportBtn')?.addEventListener('click', importBackup);
-  $('workImage')?.addEventListener('change', e => {
-    const f = e.target.files?.[0]; if (!f) return;
-    const url = URL.createObjectURL(f);
-    $('workPreview').innerHTML = `<img src="${url}" alt="Selected artwork preview">`;
-    setAdminStatus('Image selected · press Save Artwork');
-  });
-  $('heroImage')?.addEventListener('change', e => {
-    const f = e.target.files?.[0]; if (!f) return;
-    const url = URL.createObjectURL(f);
-    $('heroPreview').innerHTML = `<img src="${url}" alt="Selected hero preview">`;
-    setAdminStatus('Hero image selected · press Use This Hero Image');
-  });
-  document.addEventListener('keydown', e => {
-    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'a') { e.preventDefault(); openAdminGate(); return; }
-    if (e.key === 'Escape' && document.querySelector('.admin-overlay.admin-visible') && !document.getElementById('artModal')?.open) closeAdminAll();
-  });
-  window.addEventListener('hashchange', () => { if (location.hash === '#admin') { openAdminGate(); history.replaceState(null, '', location.pathname + location.search); } });
-}
-window.bootstrapProductionCMS = bootstrapProductionCMS;
-setupAdmin();
 
 </script>
 
@@ -3523,7 +2913,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const setActive=id=>links.forEach(a=>{const on=a===map.get(id);a.classList.toggle('active',on);on?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current')});
   setActive('');
   const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setActive(e.target.id)}),{rootMargin:'-40% 0px -55% 0px'});
-  ['top','artist-hero','work','process','pricing','faq','contact'].forEach(id=>{const el=document.getElementById(id);el&&spy.observe(el)});
+  ['top','work','process','pricing','about','faq','contact'].forEach(id=>{const el=document.getElementById(id);el&&spy.observe(el)});
   if(fine&&!reduce)$$('.btn-primary').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.translate=`${(e.clientX-r.left-r.width/2)*.18}px ${(e.clientY-r.top-r.height/2)*.28}px`});b.addEventListener('pointerleave',()=>b.style.translate='')});
   $('#faqList')?.addEventListener('toggle',e=>{if(e.target.open)$$('#faqList details').forEach(d=>d!==e.target&&(d.open=false))},true);
   ['(max-width:560px)','(max-width:1100px)'].forEach(q=>matchMedia(q).addEventListener('change',()=>renderBrickGallery()));
@@ -3551,7 +2941,7 @@ if(av&&row){row.classList.add('hero-cta-row');row.style.marginTop='';row.insertB
 document.querySelectorAll('.hero-title-line').forEach(function(l){l.style.animation='none';l.style.opacity=1;l.style.transform='none'});
 var h1=document.querySelector('.hero-stack h1');if(h1)split(h1,'hero-word');
 /* scrubbed reading: words light up as the block crosses the viewport */
-var scrubs=[];document.querySelectorAll('h2:not(#modalTitle)').forEach(function(el){
+var scrubs=[];document.querySelectorAll('h2,.section-header-atelier p,.sticky-column>p').forEach(function(el){
  if(el.closest('.admin-overlay'))return;split(el,'sw');scrubs.push({el:el,w:el.querySelectorAll('.sw')})});
 root.classList.add('js-motion');
 var cols=[],cards=[],sheets=[],gal=document.getElementById('brickGridContainer');
@@ -3573,284 +2963,6 @@ function frame(){ticking=false;vh=innerHeight;var y=scrollY;
 }
 function req(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
 addEventListener('scroll',req,{passive:true});addEventListener('resize',req);frame();
-})();
-</script>
-
-<script id="stjarts-polish-js">
-(function(){
-const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)],root=document.documentElement;
-
-/* cloud-ready flag (drives skeleton), with a safety timeout */
-try{const o=window.loadRemotePublicData;if(typeof o==='function')window.loadRemotePublicData=async function(){try{return await o.apply(this,arguments)}finally{root.classList.add('cms-ready')}}}catch(e){}
-setTimeout(()=>root.classList.add('cms-ready'),4000);
-
-/* BUG FIX: with prefers-reduced-motion the hero badge/CTA were never re-parented, leaving them absolutely positioned over the headline */
-(function(){const av=$('.hero-availability-stack'),row=$('.hero-artist-intro > div:last-child');
-if(av&&row&&!row.classList.contains('hero-cta-row')){row.classList.add('hero-cta-row');row.style.marginTop='';row.insertBefore(av,row.firstChild)}})();
-
-/* lightbox: lock page scroll, restore focus */
-const dlg=$('#artModal');
-if(dlg){let last=null;const sm=dlg.showModal.bind(dlg);
-dlg.showModal=()=>{last=document.activeElement;root.classList.add('modal-open');sm()};
-dlg.addEventListener('close',()=>{root.classList.remove('modal-open');last&&last.focus&&last.focus({preventScroll:true})})}
-
-/* broken image -> graceful placeholder */
-document.addEventListener('error',e=>{const t=e.target;
-if(t&&t.tagName==='IMG'&&t.closest&&t.closest('.art-preview-wrap')){const d=document.createElement('div');d.className='art-placeholder-vector';
-d.style.cssText='font-family:var(--font-mono);font-size:10px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.12em';
-d.textContent='Image unavailable';t.replaceWith(d)}},true);
-
-/* ================= ADMIN ================= */
-const tc=document.createElement('div');tc.className='toast-wrap';tc.setAttribute('aria-live','polite');document.body.appendChild(tc);
-function toast(msg,err){const t=document.createElement('div');t.className='toast'+(err?' err':'');t.textContent=msg;tc.appendChild(t);
-while(tc.children.length>3)tc.firstChild.remove();setTimeout(()=>t.remove(),3400)}
-
-let dirty=false;const sb=$('#adminSaveBtn');
-const setDirty=v=>{dirty=v;if(sb)sb.textContent=v?'Save Changes •':'Save Changes'};
-['pricing','content','contact'].forEach(v=>$(`.admin-view[data-view="${v}"]`)?.addEventListener('input',()=>setDirty(true)));
-addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
-$('#adminCloseBtn')?.addEventListener('click',e=>{if(dirty&&!confirm('You have unsaved changes. Lock and discard them?')){e.stopImmediatePropagation();return}setDirty(false)},true);
-
-/* status line -> toasts */
-let lastMsg='';
-const st=$('#adminStatus');
-if(st)new MutationObserver(()=>{const m=st.textContent.trim();if(!m||m==='Ready'||m===lastMsg)return;lastMsg=m;setTimeout(()=>lastMsg='',1500);
-const err=/rgb\(163/.test(st.style.color)||st.style.color==='#a33a2a';toast(m,err);if(!err&&/saved to cloud|restored/i.test(m))setDirty(false)}).observe(st,{childList:true,characterData:true,subtree:true});
-
-/* Ctrl/Cmd+S saves */
-document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'&&$('#adminPanel.admin-visible')){e.preventDefault();typeof saveAllAdmin==='function'&&saveAllAdmin()}});
-
-/* portfolio search */
-const wg=$('#adminWorkGrid');
-if(wg){const box=document.createElement('div');box.className='admin-field';
-box.innerHTML='<label for="workSearch">Search portfolio</label><input id="workSearch" type="search" placeholder="Title, category, size…" autocomplete="off">';
-wg.parentNode.insertBefore(box,wg);
-const apply=()=>{const q=$('#workSearch').value.trim().toLowerCase();$$('.admin-work-card',wg).forEach(c=>c.hidden=!!q&&!c.textContent.toLowerCase().includes(q))};
-$('#workSearch').addEventListener('input',apply);
-const orig=window.renderAdminWorks;if(typeof orig==='function')window.renderAdminWorks=function(){orig.apply(this,arguments);apply()}}
-
-/* drag & drop image upload */
-$$('.admin-upload').forEach(l=>{const inp=$('input[type=file]',l);
-['dragenter','dragover'].forEach(t=>l.addEventListener(t,e=>{e.preventDefault();l.classList.add('drag')}));
-['dragleave','drop'].forEach(t=>l.addEventListener(t,e=>{e.preventDefault();l.classList.remove('drag')}));
-l.addEventListener('drop',e=>{const f=e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0];if(!f||!inp)return;
-const dt=new DataTransfer();dt.items.add(f);inp.files=dt.files;inp.dispatchEvent(new Event('change',{bubbles:true}))})});
-
-/* site health card (dashboard) */
-const dg=$('.admin-view[data-view="dashboard"] .admin-grid');
-if(dg){const c=document.createElement('div');c.className='admin-card full';c.innerHTML='<h4>Site health</h4><p>Things worth fixing before visitors notice.</p><ul id="healthList"></ul>';dg.appendChild(c)}
-function health(){const ul=$('#healthList');if(!ul||typeof STUDIO_DATA==='undefined')return;const d=STUDIO_DATA,l=[];
-const miss=d.allWorks.filter(w=>!w.image).length,hid=d.allWorks.filter(w=>!w.published).length;
-if(miss)l.push(['warn',`${miss} portfolio piece${miss>1?'s':''} still need an image`]);
-if(hid)l.push(['info',`${hid} piece${hid>1?'s are':' is'} hidden from the public site`]);
-if(!currentHeroImage)l.push(['warn','No hero image set — the placeholder frame is showing']);
-if(d.slots<=0)l.push(['info','Books are full — visitors see the waitlist button']);
-if(!d.allFaqs.length)l.push(['warn','No FAQ entries yet']);
-if(!l.length)l.push(['ok','Everything looks good.']);
-ul.innerHTML=l.map(x=>`<li class="h-${x[0]}">${x[1]}</li>`).join('')}
-const rs=window.refreshAdminStats;if(typeof rs==='function')window.refreshAdminStats=function(){rs.apply(this,arguments);health()};
-
-/* security view: change password, lock, global sign-out */
-const nav=$('#adminNav'),content=$('.admin-content');
-if(nav&&content){
-const b=document.createElement('button');b.dataset.view='security';b.textContent='Security';nav.appendChild(b);
-const s=document.createElement('section');s.className='admin-view';s.dataset.view='security';
-s.innerHTML='<div class="admin-view-head"><div><div class="admin-kicker">Account</div><h2>Security.</h2><p>Signed in as <strong id="secEmail">—</strong>. Change your password or end sessions.</p></div></div><div class="admin-grid"><div class="admin-card"><h4>Change password</h4><div class="admin-field"><label for="newPass">New password</label><input id="newPass" type="password" autocomplete="new-password"></div><div class="admin-field"><label for="newPass2">Confirm password</label><input id="newPass2" type="password" autocomplete="new-password"></div><div class="admin-actions"><button class="btn btn-primary" id="changePassBtn" type="button">Update Password</button></div><div class="admin-status" id="secStatus" aria-live="polite"></div></div><div class="admin-card"><h4>Session</h4><p>The control center locks itself after 20 minutes of inactivity.</p><div class="admin-actions"><button class="btn btn-neu" id="secLockBtn" type="button">Lock Now</button><button class="btn btn-neu" id="signOutAllBtn" type="button">Sign Out Everywhere</button></div></div></div>';
-content.appendChild(s);
-const ss=m=>{const e=$('#secStatus');if(e)e.textContent=m};
-$('#changePassBtn').onclick=async()=>{const a=$('#newPass').value,c=$('#newPass2').value;
-if(a.length<8)return ss('Use at least 8 characters.');if(a!==c)return ss('Passwords do not match.');
-try{ss('Updating…');const r=await supabaseClient.auth.updateUser({password:a});if(r.error)throw r.error;
-$('#newPass').value=$('#newPass2').value='';ss('Password updated.');toast('Password updated')}catch(x){ss(x.message||'Update failed.');toast(x.message||'Password update failed',true)}};
-$('#secLockBtn').onclick=()=>$('#adminCloseBtn').click();
-$('#signOutAllBtn').onclick=async()=>{if(!confirm('Sign out of every device?'))return;
-try{await supabaseClient.auth.signOut({scope:'global'});closeAdminAll();await loadRemotePublicData()}catch(x){toast(x.message||'Failed',true)}}}
-
-/* idle auto-lock */
-let idle;const reset=()=>{clearTimeout(idle);if(!$('#adminPanel.admin-visible'))return;
-idle=setTimeout(()=>{if(typeof signOutAdmin==='function')signOutAdmin();toast('Locked after 20 minutes of inactivity')},1200000)};
-['pointerdown','keydown','scroll'].forEach(t=>addEventListener(t,reset,{passive:true,capture:true}));
-
-const po=window.populateAdmin;
-if(typeof po==='function')window.populateAdmin=function(){po.apply(this,arguments);setDirty(false);reset();
-try{supabaseClient&&supabaseClient.auth.getUser().then(r=>{const e=$('#secEmail');if(e)e.textContent=(r.data&&r.data.user&&r.data.user.email)||'—'})}catch(e){}};
-})();
-</script>
-
-<script id="stjarts-mobile-js">
-(function(){
-const $=(s,r=document)=>r.querySelector(s),root=document.documentElement;
-const ic={home:'<path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',grid:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',steps:'<path d="M4 6h16M4 12h10M4 18h6"/>',pencil:'<path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',chat:'<path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z"/>'};
-const tabs=[['top','Home','home'],['work','Gallery','grid'],['process','Process','steps'],['pricing','Commission','pencil','cta'],['contact','Contact','chat']];
-const tb=document.createElement('nav');tb.className='m-tabbar';tb.setAttribute('aria-label','Quick navigation');
-tb.innerHTML=tabs.map(t=>`<a href="#${t[0]}"${t[3]?' class="cta"':''}><svg viewBox="0 0 24 24" aria-hidden="true">${ic[t[2]]}</svg><span>${t[1]}</span></a>`).join('');
-document.body.appendChild(tb);
-const links=[...tb.querySelectorAll('a')];
-const setActive=id=>links.forEach(a=>{const on=a.getAttribute('href')==='#'+id;a.classList.toggle('active',on&&!a.classList.contains('cta'));on?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current')});
-setActive('top');
-const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setActive(e.target.id)}),{rootMargin:'-45% 0px -50% 0px'});
-['top','work','process','pricing','faq','contact'].forEach(id=>{const el=document.getElementById(id);el&&spy.observe(el)});
-
-/* sticky price bar */
-const disp=$('#totalPriceDisplay'),btn=$('#startCommissionBtn'),pricing=$('#pricing');
-if(disp&&btn&&pricing){
-const pb=document.createElement('div');pb.className='m-pricebar';
-pb.innerHTML='<div><small>Your estimate</small><strong id="mPrice">—</strong></div><a id="mPriceBtn" href="#pricing" target="_blank" rel="noopener">Book on WhatsApp</a>';
-document.body.appendChild(pb);root.classList.add('m-bar');
-const sync=()=>{const p=$('#mPrice'),b=$('#mPriceBtn');p.textContent=(disp.firstChild?disp.firstChild.textContent:disp.textContent).replace('INR','').trim();b.href=btn.href;b.textContent=/waitlist/i.test(btn.textContent)?'Join waitlist':'Book on WhatsApp'};
-new MutationObserver(sync).observe(disp,{childList:true,characterData:true,subtree:true});
-new MutationObserver(sync).observe(btn,{attributes:true,childList:true,characterData:true,subtree:true});sync();
-new IntersectionObserver(es=>es.forEach(e=>pb.classList.toggle('show',e.isIntersecting)),{rootMargin:'-20% 0px -20% 0px'}).observe(pricing)}
-
-/* swipe down to close the artwork viewer */
-const dlg=$('#artModal'),img=dlg&&$('.modal-image-col',dlg);
-if(dlg&&img){let y0=null,dy=0;
-img.addEventListener('touchstart',e=>{if(e.touches.length===1){y0=e.touches[0].clientY;dy=0;dlg.style.transition='none'}},{passive:true});
-img.addEventListener('touchmove',e=>{if(y0===null)return;dy=Math.max(0,e.touches[0].clientY-y0);dlg.style.transform=`translateY(${dy}px)`;dlg.style.opacity=String(1-Math.min(.5,dy/500))},{passive:true});
-img.addEventListener('touchend',()=>{if(y0===null)return;y0=null;dlg.style.transition='transform .25s,opacity .25s';
-if(dy>110)dlg.close();dlg.style.transform='';dlg.style.opacity='';dy=0})}
-})();
-</script>
-
-<script id="stjarts-adv-js">
-(function(){
-const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)],root=document.documentElement;
-const esc=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const q=(sel,i=0)=>()=>$$(sel)[i]||null;
-const REG=[
-['hero_eyebrow','Eyebrow',q('.hero-stack .eyebrow'),'Hero'],
-['hero_line1','Headline · line 1',q('.hero-title-line.stagger-1'),'Hero'],
-['hero_line2','Headline · line 2',q('.hero-title-line.stagger-2'),'Hero'],
-['hero_artist_eyebrow','Artist label',q('.hero-artist-intro .eyebrow'),'Hero'],
-['hero_name','Artist heading',q('.hero-artist-intro h3'),'Hero'],
-['hero_sub','Intro paragraph',q('.hero-sub'),'Hero',1],
-['hero_note','Second paragraph',q('.hero-artist-note'),'Hero',1],
-['hero_explore','Explore button',q('.hero-artist-intro .btn-neu'),'Hero'],
-['work_eyebrow','Eyebrow',q('#work .eyebrow'),'Gallery'],
-['work_title','Heading',q('#work h2'),'Gallery'],
-['work_text','Paragraph',q('#work .section-header-atelier p'),'Gallery',1],
-['chip_all','Filter · All',q('#categoryFilters .filter-chip',0),'Gallery'],
-['chip_portraits','Filter · Portraits',q('#categoryFilters .filter-chip',1),'Gallery'],
-['chip_couples','Filter · Couples',q('#categoryFilters .filter-chip',2),'Gallery'],
-['chip_pets','Filter · Pets',q('#categoryFilters .filter-chip',3),'Gallery'],
-['chip_cinema','Filter · Cinema',q('#categoryFilters .filter-chip',4),'Gallery'],
-['process_eyebrow','Eyebrow',q('#process .eyebrow'),'Process'],
-['process_title','Heading',q('#process h2'),'Process'],
-['process_text','Paragraph',q('#process .sticky-column > p'),'Process',1],
-...[0,1,2,3].flatMap(i=>[['step'+(i+1)+'_title','Step '+(i+1)+' · title',q('.process-sheet h3',i),'Process'],['step'+(i+1)+'_text','Step '+(i+1)+' · text',q('.process-sheet p',i),'Process',1]]),
-['pricing_eyebrow','Eyebrow',q('#pricing .eyebrow'),'Commission'],
-['pricing_title','Heading',q('#pricing h2'),'Commission'],
-['pricing_text','Paragraph',q('#pricing .section-header-atelier p'),'Commission',1],
-['pricing_note','Terms under the price',q('.price-display-box p'),'Commission',1],
-['faq_eyebrow','Eyebrow',q('#faq .eyebrow'),'FAQ'],
-['faq_title','Heading',q('#faq h2'),'FAQ'],
-['contact_eyebrow','Eyebrow',q('#contact .eyebrow'),'Contact'],
-['contact_title','Heading',q('#contact h2'),'Contact'],
-['contact_text','Paragraph',q('#contact .contact-section-grid > div > p'),'Contact',1],
-['contact_loc','Location line',q('#contact .contact-section-grid > div:first-child .mono-tag',0),'Contact'],
-['contact_reply','Response-time line',q('#contact .contact-section-grid > div:first-child .mono-tag',1),'Contact'],
-['footer_eyebrow','Footer label',q('.editorial-footer .eyebrow'),'Footer'],
-['footer_title','Footer heading',q('.editorial-footer h2'),'Footer']
-];
-function toMarkup(n){let o='';n.childNodes.forEach(c=>{if(c.nodeType===3)o+=c.textContent;else if(c.nodeType===1){if(c.tagName==='BR')o+='\n';else if(c.tagName==='EM')o+='*'+toMarkup(c)+'*';else o+=toMarkup(c)}});return o.replace(/[ \t]+/g,' ').replace(/ ?\n ?/g,'\n').trim()}
-const mk=v=>esc(v).replace(/\*([^*\n]+)\*/g,'<em>$1</em>').replace(/\n/g,'<br>');
-const DEF={},DEFH={},CUR={};
-REG.forEach(r=>{const el=r[2]();if(el){DEF[r[0]]=toMarkup(el);DEFH[r[0]]=el.innerHTML}CUR[r[0]]=''});
-const T0='Commissions are currently paused',M0="Surya is fully booked and isn't taking new portrait orders right now. Join the waitlist and you'll be the first to hear when a slot opens.";
-const ADV=window.STJ_ADV={open:true,title:'',message:'',reopen:'',content:{}};
-function readRow(){const r=window.STJ_ROW;if(!r)return;ADV.open=r.orders_open!==false;ADV.title=r.orders_title||'';ADV.message=r.orders_message||'';ADV.reopen=r.orders_reopen||'';ADV.content=(r.content&&typeof r.content==='object')?r.content:{}}
-const T=()=>ADV.title||T0,M=()=>ADV.message||M0;
-
-/* ---------- waitlist / acknowledgement ---------- */
-function calcUrl(extra){return makeWhatsAppUrl(`Hi Surya! I see commissions are paused right now - please add me to the waitlist.\n\nI'd like: ${currentStyle} portrait, ${currentSize}, ${subjectCount} subject(s), ${isFramed?'with frame':'artwork only'} (estimate ${formatInr(getCalculatedTotal())}).${extra||''}`)}
-function openAck(url){
-  let d=$('#orderAck');
-  if(!d){d=document.createElement('dialog');d.id='orderAck';
-    d.innerHTML='<div class="on-ico">⏸</div><h3 id="ackT"></h3><p id="ackM"></p><div class="mono-tag" id="ackR" style="color:var(--mut);margin-bottom:10px"></div><p>Join the waitlist and Surya will message you as soon as a slot opens. No payment is needed now.</p><a class="btn btn-primary" id="ackGo" target="_blank" rel="noopener">Join Waitlist on WhatsApp ↗</a><button class="btn btn-neu" type="button" id="ackNo">Maybe later</button>';
-    document.body.appendChild(d);
-    d.addEventListener('close',()=>{if(!$('#artModal')?.open)root.classList.remove('modal-open')});
-    d.addEventListener('click',e=>{if(e.target===d)d.close()});
-    $('#ackNo',d).onclick=()=>d.close();$('#ackGo',d).onclick=()=>setTimeout(()=>d.close(),50)}
-  $('#ackT',d).textContent=T();$('#ackM',d).textContent=M();$('#ackR',d).textContent=ADV.reopen?'Expected to reopen · '+ADV.reopen:'';
-  $('#ackGo',d).href=url;root.classList.add('modal-open');d.showModal()}
-document.addEventListener('click',e=>{if(ADV.open)return;const a=e.target.closest&&e.target.closest('#startCommissionBtn,#mPriceBtn,#modalOrderBtn');if(!a)return;
-  e.preventDefault();e.stopImmediatePropagation();
-  openAck(a.id==='modalOrderBtn'?calcUrl(`\nI loved "${$('#modalTitle')?.textContent||'a piece'}" in your gallery and would like something similar.`):calcUrl())},true);
-document.addEventListener('submit',e=>{if(ADV.open||e.target.id!=='commissionForm')return;e.preventDefault();e.stopImmediatePropagation();
-  const n=$('#formName').value.trim(),p=$('#formPhone').value.trim(),m=$('#formIdea').value.trim();
-  openAck(calcUrl(`\n\nName: ${n}${p?' ('+p+')':''}\nIdea: ${m}`))},true);
-
-/* ---------- apply everything to the public page ---------- */
-let formBtnOrig=null;
-function applyAdvanced(){
-  const C=ADV.content||{};
-  REG.forEach(r=>{const k=r[0],el=r[2]();if(!el)return;const v=String(C[k]||'').trim();if(v===CUR[k])return;CUR[k]=v;el.innerHTML=v?mk(v):DEFH[k]});
-  root.classList.toggle('orders-closed',!ADV.open);
-  const slots=$('#slotsText'),row=window.STJ_ROW||{};
-  if(slots)slots.textContent=!ADV.open?('Orders paused'+(ADV.reopen?' · back '+ADV.reopen:'')):(row.slots_text||slotLabel(STUDIO_DATA.slots,adminMonthLabel));
-  let n=$('#ordersNotice');
-  if(!ADV.open){
-    if(!n){n=document.createElement('div');n.id='ordersNotice';n.className='orders-notice scroll-reveal is-visible settled';$('#pricing .w').insertBefore(n,$('#pricing .drafting-desk-outer'))}
-    n.innerHTML=`<div class="on-ico">⏸</div><div><h3>${esc(T())}</h3><p>${esc(M())}</p>${ADV.reopen?`<div class="mono-tag" style="color:var(--mut)">Expected to reopen · ${esc(ADV.reopen)}</div>`:''}</div><button class="btn btn-primary" type="button" id="noticeJoin">Join the waitlist</button>`;
-    $('#noticeJoin').onclick=()=>openAck(calcUrl());
-  }else if(n)n.remove();
-  const f=$('#commissionForm'),sb=f&&$('button[type=submit]',f);
-  if(sb){if(formBtnOrig===null)formBtnOrig=sb.innerHTML;sb.innerHTML=ADV.open?formBtnOrig:'Join the Waitlist on WhatsApp ↗'}
-  let fn=$('#formNote');
-  if(!ADV.open&&f){if(!fn){fn=document.createElement('div');fn.id='formNote';fn.className='form-note';f.prepend(fn)}fn.textContent='Orders are paused. You can still send your idea and Surya will add you to the waitlist.'}else if(fn)fn.remove();
-  const mo=$('#modalOrderBtn');if(mo)mo.textContent=ADV.open?'Commission Similar Artwork ↗':'Join Waitlist for Similar Artwork ↗';
-  let an=$('#announce');const on=C._banner_on&&C._banner_text;
-  if(on){if(!an){an=document.createElement('div');an.id='announce';an.className='announce';an.setAttribute('role','status');$('#top').prepend(an)}an.textContent=C._banner_text}else if(an)an.remove();
-  if(typeof updatePricingView==='function')updatePricingView();
-}
-const up=window.updatePricingView;
-window.updatePricingView=function(){up.apply(this,arguments);if(!ADV.open){const b=$('#startCommissionBtn');if(b)b.textContent='Join the Waitlist on WhatsApp ↗'}};
-const lo=window.loadRemotePublicData;
-window.loadRemotePublicData=async function(){const r=await lo.apply(this,arguments);try{readRow();applyAdvanced();syncAdmin()}catch(e){console.warn(e)}return r};
-
-/* ---------- admin: Advanced tab + dashboard switch ---------- */
-const nav=$('#adminNav'),content=$('.admin-content'),dg=$('.admin-view[data-view="dashboard"] .admin-grid');
-if(nav&&content){
-  const b=document.createElement('button');b.dataset.view='advanced';b.textContent='Advanced';nav.insertBefore(b,nav.lastElementChild);
-  const groups=[];REG.forEach(r=>{let g=groups.find(x=>x.n===r[3]);if(!g)groups.push(g={n:r[3],items:[]});g.items.push(r)});
-  const fields=groups.map((g,i)=>`<details class="admin-card"${i===0?' open':''}><summary>${g.n}<small>${g.items.length} fields</small></summary>${g.items.map(r=>`<div class="admin-field"><label>${esc(r[1])}</label><textarea data-ckey="${r[0]}" rows="${r[4]?3:1}" style="min-height:${r[4]?84:44}px"></textarea></div>`).join('')}</details>`).join('');
-  const s=document.createElement('section');s.className='admin-view';s.dataset.view='advanced';
-  s.innerHTML=`<div class="admin-view-head"><div><div class="admin-kicker">Power tools</div><h2>Advanced settings.</h2><p>Control whether you take orders, post an announcement, and rewrite the text of every section.</p></div><div class="admin-toolbar"><button class="btn btn-primary" id="advSaveBtn" type="button">Save Advanced Settings</button></div></div>
-  <div class="admin-tabs" id="advTabs"><button class="admin-tab active" data-pane="orders" type="button">Orders</button><button class="admin-tab" data-pane="banner" type="button">Announcement</button><button class="admin-tab" data-pane="text" type="button">Page text</button></div>
-  <div class="adv-pane active" data-pane="orders"><div class="admin-card full"><div class="adv-row"><div><strong>Accepting new orders</strong><span>Turn off to pause. Visitors see a notice, the calculator becomes a waitlist, and every order button explains why.</span></div><input class="adv-switch" id="advOpen" type="checkbox" aria-label="Accepting new orders"></div></div>
-  <div class="admin-card full" style="margin-top:14px"><h4>What visitors see when paused</h4><p>Leave blank to use the friendly default.</p><div class="admin-field"><label for="advTitle">Notice title</label><input id="advTitle" maxlength="90"></div><div class="admin-field"><label for="advMsg">Message</label><textarea id="advMsg" maxlength="400"></textarea></div><div class="admin-field"><label for="advReopen">Expected reopening (optional)</label><input id="advReopen" maxlength="40" placeholder="e.g. 15 April"></div></div></div>
-  <div class="adv-pane" data-pane="banner"><div class="admin-card full"><div class="adv-row"><div><strong>Show announcement pill</strong><span>Appears at the top of the home page (e.g. festive offer, holiday delay).</span></div><input class="adv-switch" id="advBannerOn" type="checkbox" aria-label="Show announcement"></div><div class="admin-field"><label for="advBannerText">Announcement text</label><input id="advBannerText" maxlength="140"></div></div></div>
-  <div class="adv-pane" data-pane="text"><p class="adv-hint">Edit any text below. Leave a field empty to keep the original. Use *asterisks* for italic words and Enter for a new line.</p>${fields}</div>`;
-  content.appendChild(s);
-  $('#advTabs').addEventListener('click',e=>{const t=e.target.closest('[data-pane]');if(!t)return;$$('#advTabs .admin-tab').forEach(x=>x.classList.toggle('active',x===t));$$('.adv-pane').forEach(p=>p.classList.toggle('active',p.dataset.pane===t.dataset.pane))});
-  $('#advSaveBtn').onclick=saveAdvanced;
-}
-if(dg){const c=document.createElement('div');c.className='admin-card full';
-  c.innerHTML='<div class="adv-row"><div><strong>Taking orders: <span id="ordersState">ON</span></strong><span>Quick switch. Saves instantly and updates the public site everywhere.</span></div><input class="adv-switch" id="quickOrders" type="checkbox" aria-label="Taking orders"></div>';
-  dg.insertBefore(c,dg.firstChild);
-  $('#quickOrders').addEventListener('change',async e=>{const want=e.target.checked;
-    try{await requireAdmin();assertWritten(await supabaseClient.from('site_settings').update({orders_open:want}).eq('id',1).select('id'),'Order switch');
-      window.STJ_ROW=Object.assign(window.STJ_ROW||{},{orders_open:want});readRow();applyAdvanced();syncAdmin();setAdminStatus(want?'Orders are now OPEN · saved to cloud':'Orders are now PAUSED · saved to cloud')}
-    catch(err){e.target.checked=!want;const m=err.message||'';setAdminStatus(/column|schema/i.test(m)?'Run supabase-update.sql in the Supabase SQL Editor first.':m||'Failed',true)}})}
-function syncAdmin(){
-  const set=(id,v)=>{const e=$('#'+id);if(e)e.value=v||''};
-  const qo=$('#quickOrders');if(qo)qo.checked=ADV.open;const ao=$('#advOpen');if(ao)ao.checked=ADV.open;const os=$('#ordersState');if(os)os.textContent=ADV.open?'ON':'PAUSED';
-  set('advTitle',ADV.title);set('advMsg',ADV.message);set('advReopen',ADV.reopen);
-  const bo=$('#advBannerOn');if(bo)bo.checked=!!ADV.content._banner_on;set('advBannerText',ADV.content._banner_text);
-  $$('[data-ckey]').forEach(t=>{t.value=ADV.content[t.dataset.ckey]||'';t.placeholder=DEF[t.dataset.ckey]||''})}
-async function saveAdvanced(){
-  const b=$('#advSaveBtn');b.disabled=true;
-  try{await requireAdmin();
-    const c={};$$('[data-ckey]').forEach(t=>{const v=t.value.trim();if(v)c[t.dataset.ckey]=v});
-    const bt=$('#advBannerText').value.trim();if($('#advBannerOn').checked&&bt){c._banner_on=true;c._banner_text=bt}
-    const patch={orders_open:$('#advOpen').checked,orders_title:$('#advTitle').value.trim(),orders_message:$('#advMsg').value.trim(),orders_reopen:$('#advReopen').value.trim(),content:c};
-    assertWritten(await supabaseClient.from('site_settings').update(patch).eq('id',1).select('id'),'Advanced settings');
-    window.STJ_ROW=Object.assign(window.STJ_ROW||{},patch);readRow();applyAdvanced();syncAdmin();
-    setAdminStatus('Advanced settings saved to cloud · all devices updated')}
-  catch(err){const m=err.message||'';setAdminStatus(/column|schema/i.test(m)?'Run supabase-update.sql in the Supabase SQL Editor first, then try again.':m||'Save failed',true)}
-  finally{b.disabled=false}}
-document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'&&$('#adminPanel.admin-visible')&&$('.admin-view[data-view="advanced"].active')){e.preventDefault();e.stopImmediatePropagation();saveAdvanced()}},true);
-const po=window.populateAdmin;if(typeof po==='function')window.populateAdmin=function(){po.apply(this,arguments);syncAdmin()};
 })();
 </script>
 </body></html>
